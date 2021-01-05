@@ -11,7 +11,6 @@ import os
 import urllib
 import bs4
 import re
-import youtube_dl
 from discord.ext import commands
 from urllib.request import URLError
 from urllib.request import HTTPError
@@ -81,6 +80,7 @@ async def on_message(message):
         embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
         embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
+        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)        
         embed.add_field(name='!자기소개', value=' 도리봇이 제작자의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         
 
@@ -1520,7 +1520,21 @@ async def on_message(message):
         if randomNum==7:
             await message.channel.send(embed=discord.Embed(title="대한민국의 궁금증 해결 유튜버 겸 래퍼, 진용진을 추천합니다.", color=0xff0000))
           
-
+    if message.content.startswith("!자살이란"):       #추가바람.
+        randomNum = random.randrange(1, 7)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="'희생자 자신이 결과를 알면서도 적극적, 소극적 행동으로 직접, 또는 타인을 통해 행하는 죽음을 자살이라고 부른다.' -에밀 뒤르켐(1897)-", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="'사망자 자신이 희생이 아닌 어떠한 의도를 가지고 혹은 죽음을 위해 행한 행위가 일으킨 죽음을 모두 자살이라고 부른다.' -알버크(1930)-", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="'자살은 삶을 선택할 수도 있겠지만 모든 사회적 의무에서 벗어나기 위해 죽음을 고른 명석한 인간이 행한 행위를 말한다.' -아킬 델마(1932)-", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="'자살은 죽음을 수단이나 결과로 여겨 스스로 죽는 행위다.' -드에(1947)-", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="'자살은 실존에 관한 문제를 해결하는 방법을 주체의 자발적인 죽음에서 구하고 찾는 일이다.' -바에슐러(1975)-", color=0x00ff00))
+          
         
     if message.content.startswith("!오늘의시한편"):
         randomNum = random.randrange(1, 12)
