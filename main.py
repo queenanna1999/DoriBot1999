@@ -79,11 +79,12 @@ async def on_message(message):
         embed.add_field(name='!모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
         embed.add_field(name='!주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
         embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
-        embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False) 
+        embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다.  ', inline=False)
+        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)
         embed.add_field(name='!자기소개', value=' 도리봇이 제작자의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         
+
         await message.channel.send(channel,embed=embed)
 
         
@@ -782,7 +783,10 @@ async def on_message(message):
       
     if message.content.startswith("타르코프"):
         await message.channel.send(" 망겜 언급해서 추방 존나 마렵네;; ")
-            
+      
+    if message.content.startswith("사람"):
+        await message.channel.send(" #Stay at Home #사회적 거리두기 ")
+      
     if message.content.startswith("인간"):
         await message.channel.send(" #Stay at Home #사회적 거리두기 ")
       
@@ -859,7 +863,8 @@ async def on_message(message):
         await message.channel.send(" 상대방이 원하는 대로 하려고 노력하지만 연애를 하면서 에너지 소모가 커서 금방 지치는 성향을 가지고 있으며, ")
         await message.channel.send(" 상대방에게 관심이 식으면 빠르게 손절하는 경향이 있다. 개인주의적 성향이 강한 INTP는 연인에게 의지하기보다는 ")
         await message.channel.send(" 독립적인 성향이 강하며 독신주의자가 은근히 많다. INTP에게 연애나 사랑이 1순위가 아닌 경우가 많다. ")
-      
+
+
     if message.content.startswith("!INFP"):
         await message.channel.send(" 당신의 MBTI는 INFP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ENTJ 이며, ")
@@ -1158,7 +1163,7 @@ async def on_message(message):
         await message.channel.send(" 또한 가능한 건강한 관계를 만들기 위해 헌신하며, 열정을 다하지만 관계에 있어서 스스로를 위한 여유를 필요로 하기도 합니다. ")
         await message.channel.send(" 이들은 자신의 연인들이 느끼는 감정을 잘 알아차리는 능력을 가지고 있기 때문에 자신의 연인이 원하는 것을 쉽게 파악하며, 만족시켜줍니다. ")
         await message.channel.send(" ENFP의 정신적, 감정적, 물리적 욕구를 잘파악하고 잘 지원해주는 것이 중요합니다. ")
-        
+
     if message.content.startswith("!A"):
         await message.channel.send(" 당신의 혈액형은 A형 입니다. ") 
         await message.channel.send(" A형은 원리원칙주의, 완전주의자로 불리는 경우가 많습니다.")
@@ -1248,13 +1253,10 @@ async def on_message(message):
         await message.channel.send(" *서로가 어떤 생각인지 잘 알기 때문에 싸울일이 적고 오랜 연인들 처럼 편안하게 관계를 이어나갈 수 있습니다.")
         await message.channel.send(" ============")
         await message.channel.send(" *AB-O 25%의 궁합을 보입니다.")
-        await message.channel.send(" *AB형이 여자라면 힘든 상황에서 무슨일이든지 함께하려는 O형에게 호감을 느끼면서 관계가 유지됩니다.")      
-        await message.channel.send(" *하지만 이해하려고 노력하지 않으면 금방 한계에 부딪히게 됩니다. ") 
-        
-    if message.content.startswith("7호선"):
-        await message.channel.send("당신은 언급할 자격이 있습니다. 맘껏 언급하세요. ")
-        await message.channel.send("@도리도리곰도리 ")      
-       
+        await message.channel.send(" *AB형이 여자라면 힘든 상황에서 무슨일이든지 함께하려는 O형에게 호감을 느끼면서 관계가 유지됩니다.")
+        await message.channel.send(" *하지만 이해하려고 노력하지 않으면 금방 한계에 부딪히게 됩니다. ")
+      
+
     if message.content.startswith("샹년"):
         await message.channel.send("욕하지 말자 부모님 안 계시니? ")    
       
@@ -1272,7 +1274,7 @@ async def on_message(message):
       
     if message.content.startswith("상놈"):
         await message.channel.send("욕하지 말자 부모님 안 계시니? ")
-      
+
     if message.content.startswith("자살하고싶어"):
         await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다 ")
 
@@ -1298,10 +1300,9 @@ async def on_message(message):
         await message.channel.send("많이 힘들었지? ")
 
     if message.content.startswith("죽고"):
-        await message.channel.send("뒷감당 잘해요? ")      
+        await message.channel.send("뒷감당 잘해요? ")
        
-       
-      
+        
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
@@ -1394,8 +1395,8 @@ async def on_message(message):
         randomNum = random.randrange(0, len(emoji)) 
         print("랜덤수 값 :" + str(randomNum))
         print(emoji[randomNum])
-        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))         
-        
+        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
+
     if message.content.startswith("!MBTI"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
@@ -1412,8 +1413,8 @@ async def on_message(message):
         randomNum = random.randrange(0, len(emoji)) 
         print("랜덤수 값 :" + str(randomNum))
         print(emoji[randomNum])
-        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))  
-        
+        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
+
     if message.content.startswith("!혈액형"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
@@ -1431,6 +1432,8 @@ async def on_message(message):
         print("랜덤수 값 :" + str(randomNum))
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
+
+        
         
         
     if message.content.startswith("!PC 게임 추천"):      #다소 편협함. 추가바람.
@@ -1655,32 +1658,18 @@ async def on_message(message):
             await message.channel.send("뒷문 밖에는 갈잎의 노래")
             await message.channel.send("엄마야 누나야 강변 살자")
             
-        if message.content.startswith("!자살"):       #추가바람.
-            randomNum = random.randrange(1, 7)
-            if randomNum==1:
-                await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
-            if randomNum==2:
-                await message.channel.send(embed=discord.Embed(title="'희생자 자신이 결과를 알면서도 적극적, 소극적 행동으로 직접, 또는 타인을 통해 행하는 죽음을 자살이라고 부른다.' -에밀 뒤르켐(1897)-", color=0x00ff00))
-            if randomNum==3:
-                await message.channel.send(embed=discord.Embed(title="'사망자 자신이 희생이 아닌 어떠한 의도를 가지고 혹은 죽음을 위해 행한 행위가 일으킨 죽음을 모두 자살이라고 부른다.' -알버크(1930)-", color=0x00ff00))
-            if randomNum==4:
-                await message.channel.send(embed=discord.Embed(title="'자살은 삶을 선택할 수도 있겠지만 모든 사회적 의무에서 벗어나기 위해 죽음을 고른 명석한 인간이 행한 행위를 말한다.' -아킬 델마(1932)-", color=0x00ff00))
-            if randomNum==5:
-                await message.channel.send(embed=discord.Embed(title="'자살은 죽음을 수단이나 결과로 여겨 스스로 죽는 행위다.' -드에(1947)-", color=0x00ff00))
-            if randomNum==6:
-                await message.channel.send(embed=discord.Embed(title="'자살은 실존에 관한 문제를 해결하는 방법을 주체의 자발적인 죽음에서 구하고 찾는 일이다.' -바에슐러(1975)-", color=0x00ff00))
-          
-          
+                  
     if message.content.startswith("!MBTI") or message.content.startswith('MBTI') or message.content.startswith('엠비티아이') or message.content.startswith('성격') or message.content.startswith('!mbti') or message.content.startswith('mbti'):
         await message.channel.send("당신의 MBTI 를 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) !ENFP (느낌표 + ENFP) ")
-       
+
     if message.content.startswith("!혈액형") or message.content.startswith('혈관고') or message.content.startswith('혈액유형') or message.content.startswith('혈엑형'):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) !O (느낌표 + O) ")
-       
+
+
     if message.content.startswith("!자기소개"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 제작자는 2000년 봄과 여름의 사이인 달에 태어났으며  ")
+        embed = discord.Embed(title=" 도리도리곰도리는 2000년 봄과 여름의 사이인 달에 태어났으며  ")
         await message.channel.send(embed=embed)
         embed = discord.Embed(title=" 남자같아 보이지만 사실 여자다.  ")
         await message.channel.send(embed=embed)
@@ -1695,7 +1684,28 @@ async def on_message(message):
         msg = "-끝-{0.author.mention} ".format(message)
         await message.channel.send( msg)
 
-      
-           
+    if message.content.startswith("!자살"):       #추가바람.
+        randomNum = random.randrange(1, 7)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="'희생자 자신이 결과를 알면서도 적극적, 소극적 행동으로 직접, 또는 타인을 통해 행하는 죽음을 자살이라고 부른다.' -에밀 뒤르켐(1897)-", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="'사망자 자신이 희생이 아닌 어떠한 의도를 가지고 혹은 죽음을 위해 행한 행위가 일으킨 죽음을 모두 자살이라고 부른다.' -알버크(1930)-", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="'자살은 삶을 선택할 수도 있겠지만 모든 사회적 의무에서 벗어나기 위해 죽음을 고른 명석한 인간이 행한 행위를 말한다.' -아킬 델마(1932)-", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="'자살은 죽음을 수단이나 결과로 여겨 스스로 죽는 행위다.' -드에(1947)-", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="'자살은 실존에 관한 문제를 해결하는 방법을 주체의 자발적인 죽음에서 구하고 찾는 일이다.' -바에슐러(1975)-", color=0x00ff00))
+
+
+
+
+
+       
+
+       
+       
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
