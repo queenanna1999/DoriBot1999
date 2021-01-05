@@ -1301,6 +1301,34 @@ async def on_message(message):
     if message.content.startswith("죽고"):
         await message.channel.send("뒷감당 잘해요? ")
        
+    if message.content.startswith("롤"):
+        await message.channel.send("LOL이 왜 애미뒤진 게임인줄 아냐? 대답을 듣고 싶으면 '!롤'을 채팅창에 입력해라 ")
+
+    if message.content.startswith("!롤"):
+        await message.channel.send("간단함. 애미뒤진애들만 모아서 하니까 애미뒤진게임인거야")
+        await message.channel.send("LOL은애미뒤진 희대의 좆병신 팀운게임이맞음.")
+        await message.channel.send("이걸 부정하는 새끼들도 애미뒤진게맞고 저능아새끼들임.")
+        await message.channel.send("지금부터 왜 LOL이 애미뒤진 좆병신 팀운게임이라는건지 설명한다.")
+        await message.channel.send("============")
+        await message.channel.send("1.일단 게임장르부터 5대5 기반 게임이다.")
+        await message.channel.send("따라서 팀중에서 한놈이 저능아에 1인분도 못하는 병신새끼면")
+        await message.channel.send("그 팀중에서 다른애가 그 싸는새끼 몫까지 해야 커버가 가능하다.")
+        await message.channel.send("2.여왕벌과 대리충")
+        await message.channel.send("노력조차 안 하고 그저 티어만 올리려는 애미뒤진 생각을 가진")
+        await message.channel.send("저능아새끼들이 LOL에는 유독 많아서")
+        await message.channel.send("이런새끼 실력도없이 고티어로가서 팀에게 민폐주고")
+        await message.channel.send("이런 현상이 많다는곳도 문제가 심각하다.")
+        await message.channel.send("3.챔피언 상성과 벨런스의 문제")
+        await message.channel.send("LOL은 애미뒤진 패치를 많이하고 벨런스가 좆망한 GAME이다.")
+        await message.channel.send("GAME 승패따윈 안중에도없고 그저")
+        await message.channel.send("지 하고싶은챔하고 트롤하는새끼들이 있는 팀이 불리하단 소리다.")
+        await message.channel.send("고티어로 갈수록 그런새끼들이 많이 줄어드는 건 맞지만")
+        await message.channel.send("그래도 아에 안 걸릴거라 장담할수는없다.")
+        await message.channel.send("그저 같은편에 장애인이 안 걸리길 비는게 최선이지.")
+        await message.channel.send("============")
+        await message.channel.send("결론, LOL 한판이라도 한사람은 다 애미뒤진놈들임.")
+        await message.channel.send("대한민국 피시방 순위 1위를 이딴 애미뒤진 GAME이 먹은것부터가")
+        await message.channel.send("조센징들은 애미애비 둘다 쌍으로 뒤진 개시발 민족이라는 증거임.") 
         
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
 
