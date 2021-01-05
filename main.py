@@ -1271,6 +1271,32 @@ async def on_message(message):
     if message.content.startswith("상놈"):
         await message.channel.send("욕하지 말자 부모님 안 계시니? ")
       
+    if message.content.startswith("자살하고싶어"):
+        await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다 ")
+
+    if message.content.startswith("자살하고싶다"):
+        await message.channel.send("힘들 땐 가만히 눈을 감고 스스로에게 말을 걸어주세요. 나는 어떤 사람인지 얼마나 소중한 사람인지 ")
+
+    if message.content.startswith("자살할래"):
+        await message.channel.send("젊었을 때 고민 같은 거, 암 것도 아니여, 나이들어봐 ")
+
+    if message.content.startswith("자살하고프다"):
+        await message.channel.send("음... 힘든 일들 모두 그냥, 지나가는 바람이라 생각해 보면 어떨까? ")
+
+    if message.content.startswith("자살마렵다"):
+        await message.channel.send("풋 하고 웃지 말고 하하하하하하하")
+
+    if message.content.startswith("자살마려워"):
+        await message.channel.send("3년 전에 고민한 거 기억나세요? 기억 안 나죠? 이번에도 그럴 거예요. ")
+
+    if message.content.startswith("죽여주"):
+        await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
+
+    if message.content.startswith("죽을"):
+        await message.channel.send("많이 힘들었지? ")
+
+    if message.content.startswith("죽고"):
+        await message.channel.send("뒷감당 잘해요? ")      
        
        
       
