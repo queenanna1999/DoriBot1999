@@ -1735,7 +1735,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)     
         embed = discord.Embed(title=" 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다.  ")
         await message.channel.send(embed=embed)  
-        embed = discord.Embed(title=" 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다.  ")
+        embed = discord.Embed(title=" 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. (오버워치 좆망겜 클라스가 여기서 보일거라곤 상상도 못했다.) ")
         await message.channel.send(embed=embed)        
         msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
         await message.channel.send( msg)
