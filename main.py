@@ -1721,13 +1721,23 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         embed = discord.Embed(title=" 혈액형은 O 이다. ")
         await message.channel.send(embed=embed)
-        msg = "-끝-{0.author.mention} ".format(message)
+        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
         await message.channel.send( msg)
         
     if message.content.startswith("!!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 넣을 자기소개 문구 추천 좀  ")
+        embed = discord.Embed(title=" 대한민국의 고딩이고,  ")
         await message.channel.send(embed=embed)
-        msg = "-끝-{0.author.mention} ".format(message)
+        embed = discord.Embed(title=" 타르코프와 오버워치를 즐겨하며,   ")
+        await message.channel.send(embed=embed)
+        embed = discord.Embed(title=" 오버워치에서는 라인 원챔이다.   ")
+        await message.channel.send(embed=embed)     
+        embed = discord.Embed(title=" 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다.  ")
+        await message.channel.send(embed=embed)     
+        embed = discord.Embed(title=" 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다.  ")
+        await message.channel.send(embed=embed)  
+        embed = discord.Embed(title=" 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다.  ")
+        await message.channel.send(embed=embed)        
+        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
         await message.channel.send( msg)
         
     if message.content.startswith("!나냡"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
