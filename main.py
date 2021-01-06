@@ -766,12 +766,10 @@ async def on_message(message):
         await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")  
       
     if message.content.startswith("도리 병신"):
-        await message.channel.send("신성모독하는건가요?")
-        await message.channel.send("@도리도리곰도리")
+        await message.channel.send("지금 신성모독하는건가요?")
        
     if message.content.startswith("도리"):
-        await message.channel.send("넌 그분의 존함을 언급할 자격이 없다. 한번만 더하면 추방시킬거임. ")
-        await message.channel.send("@도리도리곰도리")
+        await message.channel.send("개새끼야 천한 신분 주제에 감히 그분의 존함을 언급했느냐? ")
       
     if message.content.startswith("ㅊㅋㅊㅋ"):
         await message.channel.send(" 이시발 존나 띠껍네? ")
@@ -837,8 +835,7 @@ async def on_message(message):
         await message.channel.send(" 욕하지 마라 ")
 
     if message.content.startswith("나냡"):
-        await message.channel.send("당신의 닉네임이 7호선인가요? 당신은 언급할 자격이 없습니다. 한번만 더 언급할시 추방합니다. ")
-        await message.channel.send("@도리도리곰도리")
+        await message.channel.send("7호선새키야 이분 이름 언급할거면 신분 상승부터 하라고  ")
       
     if message.content.startswith("밴스드"):
         await message.channel.send(" 순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
@@ -1728,13 +1725,13 @@ async def on_message(message):
         await message.channel.send( msg)
         
     if message.content.startswith("!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 넣을 자기소개 문구 신청 좀  ")
+        embed = discord.Embed(title=" 넣을 자기소개 문구 추천 좀  ")
         await message.channel.send(embed=embed)
         msg = "-끝-{0.author.mention} ".format(message)
         await message.channel.send( msg)
         
     if message.content.startswith("!나냡"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 넣을 자기소개 문구 신청 좀  ")
+        embed = discord.Embed(title=" 넣을 자기소개 문구  좀  ")
         await message.channel.send(embed=embed)
         msg = "-끝-{0.author.mention} ".format(message)
         await message.channel.send( msg)        
