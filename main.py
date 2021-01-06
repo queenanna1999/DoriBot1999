@@ -766,10 +766,10 @@ async def on_message(message):
         await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")  
       
     if message.content.startswith("도리 병신"):
-        await message.channel.send("지금 신성모독하는건가요?")
+        await message.channel.send("씹/새/끼야 천한 신분 주제에 감히 그분을 욕하느냐?")
        
     if message.content.startswith("도리"):
-        await message.channel.send("개새끼야 천한 신분 주제에 감히 그분의 존함을 언급했느냐? ")
+        await message.channel.send("개/새/끼야 천한 신분 주제에 감히 그분의 존함을 언급했느냐? ")
       
     if message.content.startswith("ㅊㅋㅊㅋ"):
         await message.channel.send(" 이시발 존나 띠껍네? ")
