@@ -81,7 +81,9 @@ async def on_message(message):
         embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)        
-        embed.add_field(name='!자기소개', value=' 도리봇이 제작자의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         
 
         await message.channel.send(channel,embed=embed)
@@ -1709,7 +1711,7 @@ async def on_message(message):
         await message.channel.send("예시) !O (느낌표 + O) ")
 
 
-    if message.content.startswith("!자기소개"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
+    if message.content.startswith("!도리도리곰도리"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
         embed = discord.Embed(title=" 도리도리곰도리는 2000년 봄과 여름의 사이인 달에 태어났으며  ")
         await message.channel.send(embed=embed)
         embed = discord.Embed(title=" 남자같아 보이지만 사실 여자다.  ")
@@ -1724,6 +1726,18 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         msg = "-끝-{0.author.mention} ".format(message)
         await message.channel.send( msg)
+        
+    if message.content.startswith("!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
+        embed = discord.Embed(title=" 넣을 자기소개 문구 신청 좀  ")
+        await message.channel.send(embed=embed)
+        msg = "-끝-{0.author.mention} ".format(message)
+        await message.channel.send( msg)
+        
+    if message.content.startswith("!나냡"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
+        embed = discord.Embed(title=" 넣을 자기소개 문구 신청 좀  ")
+        await message.channel.send(embed=embed)
+        msg = "-끝-{0.author.mention} ".format(message)
+        await message.channel.send( msg)        
        
 
             
