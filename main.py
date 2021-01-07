@@ -80,10 +80,11 @@ async def on_message(message):
         embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
         embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)        
+        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)
+        embed.add_field(name='!조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
-        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)        
         
 
         await message.channel.send(channel,embed=embed)
@@ -1564,7 +1565,7 @@ async def on_message(message):
           
         
     if message.content.startswith("!오늘의시한편"):
-        randomNum = random.randrange(1, 12)
+        randomNum = random.randrange(1, 15)
         if randomNum==1:
             await message.channel.send("방문객")
             await message.channel.send("정현종 시인")
@@ -1697,6 +1698,58 @@ async def on_message(message):
             await message.channel.send("뜰에는 반짝이는 금모래 빛 ")
             await message.channel.send("뒷문 밖에는 갈잎의 노래")
             await message.channel.send("엄마야 누나야 강변 살자")
+        if randomNum==12:
+            await message.channel.send("꽃")
+            await message.channel.send("김춘수 시인")
+            await message.channel.send("===========")
+            await message.channel.send("내가 그의 이름을 불러 주기 전에는  ")
+            await message.channel.send("그는 다만 ")
+            await message.channel.send("하나의 몸짓에 지나지 않았다.")
+            await message.channel.send("===========")   
+            await message.channel.send("내가 그의 이름을 불러 주었을 때  ")
+            await message.channel.send("그는 나에게로 와서 ")
+            await message.channel.send("꽃이 되었다.")
+            await message.channel.send("===========")   
+            await message.channel.send("내가 그의 이름을 불러 준 것처럼  ")
+            await message.channel.send("나의 이 빛깔과 향기에 알맞는 ")
+            await message.channel.send("누가 나의 이름을 불러다오.")
+            await message.channel.send("그에게로 가서 나도 그의 꽃이 되고 싶다.")  
+            await message.channel.send("===========") 
+            await message.channel.send("우리들은 모두  ")
+            await message.channel.send("무엇이 되고 싶다.")
+            await message.channel.send("너는 나에게 나는 너에게")
+            await message.channel.send("잊혀지지 않는 하나의 눈짓이 되고 싶다.")  
+        if randomNum==13:
+            await message.channel.send("서시")
+            await message.channel.send("윤동주 시인")
+            await message.channel.send("===========")
+            await message.channel.send("죽는 날까지 하늘을 우러러  ")
+            await message.channel.send("한 점 부끄럼 없기를 ")
+            await message.channel.send("잎새에 이는 바람에도")
+            await message.channel.send("나는 괴로워했다.")   
+            await message.channel.send("============  ")
+            await message.channel.send("별을 노래하는 마음으로 ")
+            await message.channel.send("모든 죽어가는 것들을 사랑해야지")
+            await message.channel.send("그리고 나에게 주어진 길을 걸어가야겠다.")   
+            await message.channel.send("============ ")
+            await message.channel.send("오늘 밤에도 별이 바람에 스치운다. ")   
+        if randomNum==14:
+            await message.channel.send("토닥토닥")
+            await message.channel.send("김재진 시인")
+            await message.channel.send("===========")
+            await message.channel.send("나는 너를 토닥거리고  ")
+            await message.channel.send("너는 나를 토닥거린다. ")
+            await message.channel.send("삶이 자꾸 아프다고 말하고")
+            await message.channel.send("너는 자꾸 괜찮다고 말한다.")   
+            await message.channel.send("바람이 불어도 괜찮다. ")
+            await message.channel.send("혼자 있어도 괜찮다. ")
+            await message.channel.send("너는 자꾸 토닥거린다.")
+            await message.channel.send("나도 자꾸 토닥거린다.")   
+            await message.channel.send("============ ")
+            await message.channel.send("다 지나간다고 ")  
+            await message.channel.send("다 지나갈거라고 ") 
+            await message.channel.send("토닥거리다가 잠든다. ")             
+            
             
                   
     if message.content.startswith("!MBTI") or message.content.startswith('MBTI') or message.content.startswith('엠비티아이') or message.content.startswith('성격') or message.content.startswith('!mbti') or message.content.startswith('mbti'):
@@ -1760,6 +1813,14 @@ async def on_message(message):
         msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
         await message.channel.send( msg)        
        
+    if message.content == "!조선시대 내 이름":
+        channel = message.channel
+        urllib.request.urlretrieve("https://i.imgur.com/KoougXb.jpeg", "explain.png")
+        image = discord.File("explain.png", filename="image.png")
+        embed = discord.Embed(title="조선시대 내 이름", description="조선시대에 태어났으면 나의 이름은 현재 무엇일까? ", color=0x00ff56)
+        embed.set_thumbnail(url="https://i.imgur.com/P6HdGr1.png")
+        embed.add_field(name="과몰입 하지마세요.", value="그냥 재미로만 보세요. ", inline=True)
+        await channel.send(embed=embed, file=image)
 
             
 accross_token = os.environ["BOT_TOKEN"]
