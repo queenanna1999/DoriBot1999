@@ -1845,8 +1845,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았어요 :)", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
             else:
                 accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
@@ -1873,8 +1872,7 @@ async def on_message(message):
                 if rankElements[0].find('div',{'class' : 'no_record'}) != None: 
                     embed = discord.Embed(title="Record not found", description="Rank TPP record not found.",color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information",embed=embed) 
                 else:
                    
@@ -1929,8 +1927,7 @@ async def on_message(message):
                     embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
                     embed.add_field(name="평균등수", value=statsList[5],inline=True)
                     embed.set_thumbnail(url=f'https:{tierMedalImage}')
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information", embed=embed)
                     
             
@@ -1957,8 +1954,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
             else:
                 accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
@@ -1988,8 +1984,7 @@ async def on_message(message):
                     embed = discord.Embed(title="Record not found", description="Solo que record not found.",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information",embed=embed) 
                 else:
                     
@@ -2044,8 +2039,7 @@ async def on_message(message):
                     embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
                     embed.add_field(name="평균등수", value=statsList[5],inline=True)
                     embed.set_thumbnail(url=f'https:{tierMedalImage}')
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information", embed=embed)
                     
             
@@ -2069,8 +2063,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2132,8 +2125,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7], inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP solo que information", embed=embed)
         except HTTPError as e:
             embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
@@ -2155,8 +2147,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2217,8 +2208,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7], inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP duo que information", embed=embed)
         except HTTPError as e:
             embed = discord.Embed(title="Not existing plyer",
@@ -2242,8 +2232,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2303,8 +2292,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7], inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP squad que information", embed=embed)
         except HTTPError as e:
             embed = discord.Embed(title="Not existing plyer",
@@ -2328,8 +2316,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2393,8 +2380,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7], inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8] , inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP solo que information",
                                                embed=embed)
         except HTTPError as e:
@@ -2419,8 +2405,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2483,8 +2468,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7] , inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8] , inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP duo que information",
                                                embed=embed)
         except HTTPError as e:
@@ -2509,8 +2493,7 @@ async def on_message(message):
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
                                 value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
-                embed.set_footer(text='Service provided by Hoplin.',
-                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
             else:
@@ -2574,8 +2557,7 @@ async def on_message(message):
                     embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
                     embed.add_field(name="저격거리", value=comInfo[7], inline=True)
                     embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
-                    embed.set_footer(text='Service provided by Hoplin.',
-                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP squad que information",
                                                embed=embed)
         except HTTPError as e:
