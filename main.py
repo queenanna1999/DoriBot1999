@@ -86,7 +86,9 @@ async def on_message(message):
         embed.add_field(name='!조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
-        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)        
+        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!엘사', value=' 도리봇이 엘사 정령님의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='!안나', value=' 도리봇이 안나 여왕님의 자기소개를 대신 무료로 해줍니다 ', inline=False)        
         embed.add_field(name='!컴배경쟁전1', value=' 도리봇이 당신의 배틀그라운드 3인칭 경쟁전 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배경쟁전2', value=' 도리봇이 당신의 배틀그라운드 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배솔로1', value=' 도리봇이 당신의 배틀그라운드 3인칭 솔로 전적을 불러옵니다 ', inline=False)
@@ -1340,7 +1342,49 @@ async def on_message(message):
         await message.channel.send("결론, LOL 한판이라도 한사람은 다 애미뒤진놈들임.")
         await message.channel.send("대한민국 피시방 순위 1위를 이딴 애미뒤진 GAME이 먹은것부터가")
         await message.channel.send("조센징들은 애미애비 둘다 쌍으로 뒤진 개시발 민족이라는 증거임.") 
-        
+
+    if message.content.startswith("한손에총들고"):
+        await message.channel.send(" 아프리카TV BJ 보겸의 던전앤파이터와 아프리카 TV 계정 닉네임이다. ")
+      
+    if message.content.startswith("뒷광고"):
+        await message.channel.send(" 양팡 ")
+      
+    if message.content.startswith("양팡"):
+        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인 ")
+      
+    if message.content.startswith("보겸뒷광고"):
+        await message.channel.send(" 언급하지 마라. 입 조심해. 씨발새끼야 ") 
+      
+    if message.content.startswith("양팡뒷광고"):
+        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인들은 대한민국에서 추방해야됨;;")
+      
+    if message.content.startswith("문복희"):
+        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인이지만 사과 한마디도 없었음. ㅋ 이런 뻔뻔한 태도 리스펙한다. ") 
+      
+    if message.content.startswith("보겸"):
+        await message.channel.send(" 아프리카 TV BJ 출신이면서 순수 한국인 구독자로 4백만명을 모은 유튜브 크리에이터는 지금까지 아무도 없었어. 이런 사람은 역사책에 기록해서 위인으로 기억되야됨. ")
+
+    if message.content == "!엘사 or message.content.startswith("엘사"):
+        channel = message.channel
+        urllib.request.urlretrieve("https://w.namu.la/s/27ca7dc08cc553c02407a5aa6fc8f9955de58ce2d14f15e550073403b9adea5c237ca0f137a859968c393209b1390cd9f1ccce7ba81e3f1f815b37260ff296c068deabf0812761e8597c217c028dc604125b824b57c0ce8664dfd22e3eebf464", "explain.png")
+        image = discord.File("explain.png", filename="image.png")
+        embed = discord.Embed(title="엘사 정령님", description="디즈니 애니메이션 겨울왕국의 등장인물이자 스토리의 주축이 되는 주인공. 또 다른 주인공 안나의 언니.,color=0x00ff56)
+        embed.set_thumbnail(url="https://ww.namu.la/s/9a5153d661a245548dbaf2ed4f7fad46f2610b3646b96ff741850e0f9aa1a37866fac4e6648ae003f8660ea091d0125c690fa03d42a3e99181050ccf81943ccd15842a517abdf5587f3634f8fc8e8844bae4568c14d34c8c9fe173dc3050fa595913f5bf1125d3f2e7584a284e1a0ec9")
+        embed.add_field(name="작품이 출시된 2013년부터 현재까지 디즈니에서 ", value="가장 영향력 있는 인기 캐릭터 중 하나이다. ", inline=True)
+        await channel.send(embed=embed, file=image)     
+                              
+    if message.content == "!안나 or message.content.startswith("안나"):
+        channel = message.channel
+        urllib.request.urlretrieve("https://w.namu.la/s/27ca7dc08cc553c02407a5aa6fc8f9955de58ce2d14f15e550073403b9adea5c237ca0f137a859968c393209b1390cd9f1ccce7ba81e3f1f815b37260ff296c068deabf0812761e8597c217c028dc604125b824b57c0ce8664dfd22e3eebf464", "explain.png")
+        image = discord.File("explain.png", filename="image.png")
+        embed = discord.Embed(title="안나 여왕님", description="디즈니의 애니메이션 겨울왕국의 등장인물. 영화의 스토리를 이끌어 나가는 주인공. 또 다른 주인공 엘사의 여동생이다.,color=0x00ff56)
+        embed.set_thumbnail(url="https://w.namu.la/s/7a5ce3a88c2d073cf575b3c1b39eb5d0397483549b30c1b439fcffe39f92eaea1e6332faac1f8f08d909ec79a339778d3f4ec60ceb6ed9563fa19d7f4799a5392ca46798eeb6feecfc23513453eb28b524a3b83e19b94410e66504c3fd31b11d0199637b6dc3016c2338232939e7c596")
+        embed.add_field(name="밝고 명랑하고 적극적이며,  ", value=" 순수하면서 활발한 말괄량이 소녀 성격이다. ", inline=True)
+        await channel.send(embed=embed, file=image)                                 
+      
+      
+      
+      
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
