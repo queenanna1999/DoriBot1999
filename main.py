@@ -1367,7 +1367,7 @@ async def on_message(message):
     if message.content == "!엘사" or message.content == "엘사":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/UufmudR.jpg", "explain.png")
-        image = discord.File("explain.png", filename="image.png")
+        image = discord.File("explain1.png", filename="image1.png")
         embed = discord.Embed(title="엘사 정령님", description="디즈니 애니메이션 겨울왕국의 등장인물이자 스토리의 주축이 되는 주인공. 또 다른 주인공 안나의 언니.", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/PLDPnJG.jpg")
         embed.add_field(name="작품이 출시된 2013년부터 현재까지 디즈니에서", value="가장 영향력 있는 인기 캐릭터 중 하나이다.", inline=True)
@@ -1376,13 +1376,20 @@ async def on_message(message):
     if message.content == "!안나" or message.content == "안나":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/8LCt6LU.jpg", "explain.png")
-        image = discord.File("explain.png", filename="image.png")
+        image = discord.File("explain2.png", filename="image2.png")
         embed = discord.Embed(title="안나 여왕님", description="디즈니의 애니메이션 겨울왕국의 등장인물. 영화의 스토리를 이끌어 나가는 주인공. 또 다른 주인공 엘사의 여동생이다.", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/PLDPnJG.jpg")
         embed.add_field(name="밝고 명랑하고 적극적이며, ", value="순수하면서 활발한 말괄량이 소녀 성격이다.", inline=True)
         await channel.send(embed=embed, file=image)                                 
       
-      
+    if message.content == "!도리도리곰도리":
+        channel = message.channel
+        urllib.request.urlretrieve("https://i.imgur.com/Ny6e2BS.jpeg")
+        image = discord.File("explain3.png", filename="image3.png")
+        embed = discord.Embed(title="도리도리곰도리", description="2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.", color=0x00ff56)
+        embed.set_thumbnail(url="https://i.imgur.com/6nNn9Vu.png")
+        embed.add_field(name="그녀의 MBTI는 ENFP 이고, 혈액형은 O형 이다.", value="배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.", inline=True)
+        await channel.send(embed=embed, file=image)         
       
       
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
@@ -1815,26 +1822,6 @@ async def on_message(message):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) !O (느낌표 + O) ")
 
-
-    if message.content.startswith("!도리도리곰도리"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 도리도리곰도리는 2000년 봄과 여름의 사이인 달에 태어났으며  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 남자같아 보이지만 사실 여자다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 원래는 인터넷 상에서 남자인척 하고 다녔지만, ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 이제는 오히려 여자라고 말하면 넷카마라고 불리워지는 상황이 되어버렸다. ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" MBTI는 ENFP 이고, 혈액형은 O 이다.")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 배틀그라운드 모바일을 즐겨하고, 오버워치는 초창기때 질리도록 하고나서 경쟁전의 비매너 유저들때문에 오버워치를 손절했다. ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 타르코프는 7호선새키때문에 7만원에 정가로 사서 대가리가 단단히 깨져서 환불도 안하고 방치중이며, 배틀그라운드는 핵쟁이들때문에 사실상 방치중이다. ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 사실 배틀그라운드 모바일도 솔로 모드와 듀오 에서 핵쟁이들에게 대가리가 단단히 깨져서 그런지 복귀할 엄두도 못내고 있다.  ")
-        await message.channel.send(embed=embed)
-        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
-        await message.channel.send( msg)
         
     if message.content.startswith("!!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
         embed = discord.Embed(title=" 대한민국의 고딩이고,  ")
