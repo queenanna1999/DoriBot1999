@@ -11,6 +11,8 @@ import os
 import urllib
 import bs4
 import re
+from urllib.parse import quote
+import warnings
 from discord.ext import commands
 from urllib.request import URLError
 from urllib.request import HTTPError
@@ -292,7 +294,7 @@ async def on_message(message):
         
 
         
-    if message.content.startswith('!코로나') or message.content.startswith('코로나') or message.content.startswith('3단계') or message.content.startswith('우한폐렴') or message.content.startswith('서울페렴') or message.content.startswith('대구폐렴'):
+    if message.content.startswith("!코로나"):
         # 보건복지부 코로나 바이러스 정보사이트"
         covidSite = "http://ncov.mohw.go.kr/index.jsp"
         covidNotice = "http://ncov.mohw.go.kr"
@@ -324,20 +326,20 @@ async def on_message(message):
         totalPeopletoInt = statNum[0].split(')')[-1].split(',')
         tpInt = ''.join(totalPeopletoInt)
         lethatRate = round((int(statNum[3]) / int(tpInt)) * 100, 2)
-        embed = discord.Embed(title="Covid-19 Virus Korea Status", description="",color=0x5CD1E5)
-        embed.add_field(name="Data source : Ministry of Health and Welfare of Korea", value="http://ncov.mohw.go.kr/index.jsp", inline=False)
+        embed = discord.Embed(title="코로나 바이러스 - 대한민국", description=".",color=0x5CD1E5)
+        embed.add_field(name="Data source : 한국 보건복지부", value="http://ncov.mohw.go.kr/index.jsp", inline=False)
         embed.add_field(name="Latest data refred time",value="해당 자료는 " + latestupdateTime[0] + "월 " + latestupdateTime[1] + "일 "+latestupdateTime[2] +" 자료입니다.", inline=False)
-        embed.add_field(name="확진환자(누적)", value=statNum[0].split(')')[-1]+"("+beforeNum[0]+")",inline=True)
-        embed.add_field(name="완치환자(격리해제)", value=statNum[1] + "(" + beforeNum[1] + ")", inline=True)
-        embed.add_field(name="치료중(격리 중)", value=statNum[2] + "(" + beforeNum[2] + ")", inline=True)
+        embed.add_field(name="누적 확진환자", value=statNum[0].split(')')[-1]+"("+beforeNum[0]+")",inline=True)
+        embed.add_field(name="격리해제된 완치환자", value=statNum[1] + "(" + beforeNum[1] + ")", inline=True)
+        embed.add_field(name="격리중/치료중", value=statNum[2] + "(" + beforeNum[2] + ")", inline=True)
         embed.add_field(name="사망", value=statNum[3] + "(" + beforeNum[3] + ")", inline=True)
         embed.add_field(name="누적확진률", value=statNum[6], inline=True)
         embed.add_field(name="치사율", value=str(lethatRate) + " %",inline=True)
-        embed.add_field(name="- 최신 브리핑 1 : " + briefTasks[0][0],value="Link : " + briefTasks[0][1],inline=False)
-        embed.add_field(name="- 최신 브리핑 2 : " + briefTasks[1][0], value="Link : " + briefTasks[1][1], inline=False)
+        embed.add_field(name="- 첫번째 최신 요약 보고 : " + briefTasks[0][0],value="Link : " + briefTasks[0][1],inline=False)
+        embed.add_field(name="- 두번째 최신 요약 보고 : " + briefTasks[1][0], value="Link : " + briefTasks[1][1], inline=False)
         embed.set_thumbnail(url="https://wikis.krsocsci.org/images/7/79/%EB%8C%80%ED%95%9C%EC%99%95%EA%B5%AD_%ED%83%9C%EA%B7%B9%EA%B8%B0.jpg")
-        embed.set_footer(text='#Stay at Home #사회적 거리두기')
-        await message.channel.send("Covid-19 Virus Korea Status", embed=embed)        
+        embed.set_footer(text='#Stay at Home #사회적 거리두기')        
+        await message.channel.send("Covid-19 Virus Korea Status", embed=embed)       
         
         
     if message.content.startswith("닥쳐"):
