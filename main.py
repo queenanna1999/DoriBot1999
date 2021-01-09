@@ -87,6 +87,15 @@ async def on_message(message):
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
         embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)        
+        embed.add_field(name='!컴배경쟁전1', value=' 도리봇이 당신의 배틀그라운드 3인칭 경쟁전 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배경쟁전2', value=' 도리봇이 당신의 배틀그라운드 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배솔로1', value=' 도리봇이 당신의 배틀그라운드 3인칭 솔로 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배솔로2', value=' 도리봇이 당신의 배틀그라운드 1인칭 솔로 전적을 불러옵니다', inline=False)
+        embed.add_field(name='!컴배듀오1', value=' 도리봇이 당신의 배틀그라운드 3인칭 듀오 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배듀오2', value=' 도리봇이 당신의 배틀그라운드 1인칭 듀오 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배스쿼드1', value=' 도리봇이 당신의 배틀그라운드 3인칭 스쿼드 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배스쿼드2', value=' 도리봇이 당신의 배틀그라운드 1인칭 솔로 전적을 불러옵니다 ', inline=False)
+        
         
 
         await message.channel.send(channel,embed=embed)
@@ -1824,6 +1833,762 @@ async def on_message(message):
         embed.add_field(name=".", value=". ", inline=True)
         await channel.send(embed=embed, file=image)
 
+    if message.content.startswith("!컴배경쟁전1"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았어요 :)", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+                
+                rankElements = bs.findAll('div',{'class' : re.compile('squad ranked [A-Za-z0-9]')})
+                
+                '''
+                -> 클래스 값을 가져와서 판별하는 것도 있지만 이 방법을 사용해 본다.
+                -> 만약 기록이 존재 하지 않는 경우 class 가 no_record라는 값을 가진 <div>가 생성된다. 이 태그로 데이터 유무 판별하면된다.
+                print(rankElements[1].find('div',{'class' : 'no_record'}))
+                '''
+                
+                if rankElements[0].find('div',{'class' : 'no_record'}) != None: 
+                    embed = discord.Embed(title="Record not found", description="Rank TPP record not found.",color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information",embed=embed) 
+                else:
+                   
+                    fR = rankElements[0]
+                    
+    
+                    
+                    tierMedalImage = fR.find('div',{'class' : 'grade-info'}).img['src']
+                    
+                    tierInfo = fR.find('div',{'class' : 'grade-info'}).img['alt']
+    
+
+                    
+                    RPScore = fR.find('div',{'class' : 'rating'}).find('span',{'class' : 'caption'}).text
+    
+                    
+                    
+                    
+                    topRatioRank  = topRatio = fR.find('p',{'class' : 'desc'}).find('span',{'class' : 'rank'}).text     
+                                             
+                    topRatio = fR.find('p',{'class' : 'desc'}).find('span',{'class' : 'top'}).text
+    
+                    
+    
+                    mainStatsLayout = fR.find('div',{'class' : 'stats'})
+    
+                    
+    
+                    statsList = mainStatsLayout.findAll('p',{'class' : 'value'})
+                    statsRatingList = mainStatsLayout.findAll('span',{'class' : 'top'})
             
+                    for r in range(0,len(statsList)):
+                    
+                        statsList[r] = statsList[r].text.strip().split('\n')[0]
+                        statsRatingList[r] = statsRatingList[r].text
+                    
+                    statsRatingList = statsRatingList[0:5]
+                                               
+                    
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)  
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server", inline=False)
+                    embed.add_field(name = "Tier / Top Rate / Average Rank",
+                                   value = tierInfo + " (" + RPScore + ") / "+topRatio + " / " + topRatioRank,inline=False)
+                    embed.add_field(name="K/D", value=statsList[0] + "/" + statsRatingList[0], inline=True)
+                    embed.add_field(name="승률", value=statsList[1] + "/" + statsRatingList[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=statsList[2] + "/" + statsRatingList[2], inline=True)
+                    embed.add_field(name="평균딜량", value=statsList[3] + "/" + statsRatingList[3], inline=True)
+                    embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
+                    embed.add_field(name="평균등수", value=statsList[5],inline=True)
+                    embed.set_thumbnail(url=f'https:{tierMedalImage}')
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information", embed=embed)
+                    
+            
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+            print(e)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+            print(e)
+    
+    if message.content.startswith("!컴배경쟁전2"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+
+
+                
+                
+                rankElements = bs.findAll('div',{'class' : re.compile('squad ranked [A-Za-z0-9]')})
+                
+                '''
+                -> 클래스 값을 가져와서 판별하는 것도 있지만 이 방법을 사용해 본다.
+                -> 만약 기록이 존재 하지 않는 경우 class 가 no_record라는 값을 가진 <div>가 생성된다. 이 태그로 데이터 유무 판별하면된다.
+                print(rankElements[1].find('div',{'class' : 'no_record'}))
+                '''
+                
+                if rankElements[1].find('div',{'class' : 'no_record'}) != None: 
+                    embed = discord.Embed(title="Record not found", description="Solo que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information",embed=embed) 
+                else:
+                    
+                    fR = rankElements[1]
+                    
+    
+                    
+                    tierMedalImage = fR.find('div',{'class' : 'grade-info'}).img['src']
+                    
+                    tierInfo = fR.find('div',{'class' : 'grade-info'}).img['alt']
+    
+                    
+                    
+                    RPScore = fR.find('div',{'class' : 'rating'}).find('span',{'class' : 'caption'}).text
+    
+                    
+                    
+                    
+                    topRatioRank  = topRatio = fR.find('p',{'class' : 'desc'}).find('span',{'class' : 'rank'}).text     
+                                              
+                    topRatio = fR.find('p',{'class' : 'desc'}).find('span',{'class' : 'top'}).text
+    
+                    
+    
+                    mainStatsLayout = fR.find('div',{'class' : 'stats'})
+    
+                    
+    
+                    statsList = mainStatsLayout.findAll('p',{'class' : 'value'})
+                    statsRatingList = mainStatsLayout.findAll('span',{'class' : 'top'})
+            
+                    for r in range(0,len(statsList)):
+                    
+                        statsList[r] = statsList[r].text.strip().split('\n')[0]
+                        statsRatingList[r] = statsRatingList[r].text
+                    
+                    statsRatingList = statsRatingList[0:5]
+                                               
+                    
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)  
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server", inline=False)
+                    embed.add_field(name = "Tier / Top Rate / Average Rank",
+                                   value = tierInfo + " (" + RPScore + ") / "+topRatio + " / " + topRatioRank,inline=False)
+                    embed.add_field(name="K/D", value=statsList[0] + "/" + statsRatingList[0], inline=True)
+                    embed.add_field(name="승률", value=statsList[1] + "/" + statsRatingList[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=statsList[2] + "/" + statsRatingList[2], inline=True)
+                    embed.add_field(name="평균딜량", value=statsList[3] + "/" + statsRatingList[3], inline=True)
+                    embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
+                    embed.add_field(name="평균등수", value=statsList[5],inline=True)
+                    embed.set_thumbnail(url=f'https:{tierMedalImage}')
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information", embed=embed)
+                    
+            
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배솔로1"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                soloQueInfo = bs.find('section', {'class': "solo modeItem"}).find('div', {'class': "mode-section tpp"})
+                if soloQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Solo que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP solo que information", embed=embed)
+                else:
+                    
+                    
+                    soloQueTotalPlayTime = soloQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    soloQueGameWL = soloQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = soloQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = soloQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    print(tierImage)
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in soloQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server / Total playtime : " +soloQueTotalPlayTime, inline=False)
+                    embed.add_field(name="Tier",
+                                    value=tier + " ("+rankPoint+"p)" , inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0], inline=True)
+                    embed.add_field(name="승률", value=comInfo[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2], inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3], inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판", inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬", inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7], inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP solo que information", embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배듀오1"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                duoQueInfo = bs.find('section',{'class' : "duo modeItem"}).find('div',{'class' : "mode-section tpp"})
+                if duoQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Duo que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP duo que information", embed=embed)
+                else:
+                    
+                    
+                    duoQueTotalPlayTime = duoQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    duoQueGameWL = duoQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = duoQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = duoQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in duoQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+
+                    embed = discord.Embed(title="핵틀그라운드  player search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server and total playtime", value=seasonInfo[2] + " Server / Total playtime : " +duoQueTotalPlayTime, inline=False)
+                    embed.add_field(name="Tier(Rank Point)",
+                                    value=tier + " ("+rankPoint+"p)", inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0], inline=True)
+                    embed.add_field(name="승률", value=comInfo[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2], inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3], inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판", inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬", inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7], inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP duo que information", embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배스쿼드1"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                squadQueInfo = bs.find('section',{'class' : "squad modeItem"}).find('div',{'class' : "mode-section tpp"})
+                if squadQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Squad que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP squad que information", embed=embed)
+                else:
+                    
+                    
+                    squadQueTotalPlayTime = squadQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    squadQueGameWL = squadQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = squadQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = squadQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in squadQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server / Total playtime : " +squadQueTotalPlayTime, inline=False)
+                    embed.add_field(name="Tier(Rank Point)",
+                                    value=tier + " (" + rankPoint + "p)", inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0] , inline=True)
+                    embed.add_field(name="승률", value=comInfo[1] , inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2] , inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3] , inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판", inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬", inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6], inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7], inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP squad que information", embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배솔로2"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                soloQueInfo = bs.find('section', {'class': "solo modeItem"}).find('div', {'class': "mode-section fpp"})
+                if soloQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Solo que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP solo que information",
+                                               embed=embed)
+                else:
+                    
+                    
+                    soloQueTotalPlayTime = soloQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    soloQueGameWL = soloQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = soloQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = soloQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    print(tierImage)
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in soloQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server",
+                                    value=seasonInfo[2] + " Server / Total playtime : " + soloQueTotalPlayTime,
+                                    inline=False)
+                    embed.add_field(name="Tier(Rank Point)",
+                                    value=tier + " (" + rankPoint + "p)", inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0], inline=True)
+                    embed.add_field(name="승률", value=comInfo[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2], inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3], inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판" , inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬" , inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7], inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8] , inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP solo que information",
+                                               embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배듀오2"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                duoQueInfo = bs.find('section', {'class': "duo modeItem"}).find('div', {'class': "mode-section fpp"})
+                if duoQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Duo que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP duo que information",
+                                               embed=embed)
+                else:
+                    
+                    
+                    duoQueTotalPlayTime = duoQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    duoQueGameWL = duoQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = duoQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = duoQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in duoQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server and total playtime",
+                                    value=seasonInfo[2] + " Server / Total playtime : " + duoQueTotalPlayTime,
+                                    inline=False)
+                    embed.add_field(name="Tier(Rank Point)",
+                                    value=tier + " (" + rankPoint + "p)", inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0] , inline=True)
+                    embed.add_field(name="승률", value=comInfo[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2], inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3], inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판", inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬", inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7] , inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8] , inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP duo que information",
+                                               embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+
+    if message.content.startswith("!컴배스쿼드2"):
+        baseURL = "https://dak.gg/profile/"
+        playerNickname = ''.join((message.content).split(' ')[1:])
+        URL = baseURL + quote(playerNickname)
+        try:
+            html = urlopen(URL)
+            bs = BeautifulSoup(html, 'html.parser')
+            if len(message.content.split(" ")) == 1:
+                embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
+                embed.add_field(name="Player nickname not entered",
+                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                embed.set_footer(text='Service provided by Hoplin.',
+                                 icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                await message.channel.send("Error : Incorrect command usage ", embed=embed)
+
+            else:
+                accessors = bs.findAll('a', {'href': re.compile('\/statistics\/[A-Za-z]')})
+
+                
+                seasonInfo = []
+                for si in bs.findAll('li', {'class': "active"}):
+                    seasonInfo.append(si.text.strip())
+                serverAccessorAndStatus = []
+                
+                for a in accessors:
+                    serverAccessorAndStatus.append(re.sub(pattern='[\n]', repl="", string=a.text.strip()))
+
+                
+
+                squadQueInfo = bs.find('section', {'class': "squad modeItem"}).find('div',
+                                                                                    {'class': "mode-section fpp"})
+                if squadQueInfo == None:
+                    embed = discord.Embed(title="Record not found", description="Squad que record not found.",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP squad que information",
+                                               embed=embed)
+                else:
+                    
+                    
+                    squadQueTotalPlayTime = squadQueInfo.find('span', {'class': "time_played"}).text.strip()
+                    
+                    squadQueGameWL = squadQueInfo.find('em').text.strip().split(' ')
+                    
+                    rankPoint = squadQueInfo.find('span', {'class': 'value'}).text
+                    
+                    tierInfos = squadQueInfo.find('img', {
+                        'src': re.compile('\/\/static\.dak\.gg\/images\/icons\/tier\/[A-Za-z0-9_.]')})
+                    tierImage = "https:" + tierInfos['src']
+                    tier = tierInfos['alt']
+
+                    
+                    comInfo = []
+                    
+                    for ci in squadQueInfo.findAll('p', {'class': 'value'}):
+                        comInfo.append(''.join(ci.text.split()))
+                    embed = discord.Embed(title="핵틀그라운드  search from dak.gg", description="",
+                                          color=0x5CD1E5)
+                    embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
+                    embed.add_field(name="Real Time Accessors and Server Status",
+                                    value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
+                                          serverAccessorAndStatus[1].split(':')[-1], inline=False)
+                    embed.add_field(name="Player located server",
+                                    value=seasonInfo[2] + " Server / Total playtime : " + squadQueTotalPlayTime,
+                                    inline=False)
+                    embed.add_field(name="Tier(Rank Point)",
+                                    value=tier + " (" + rankPoint + "p)", inline=False)
+                    embed.add_field(name="K/D", value=comInfo[0], inline=True)
+                    embed.add_field(name="승률", value=comInfo[1], inline=True)
+                    embed.add_field(name="Top 10 비율", value=comInfo[2], inline=True)
+                    embed.add_field(name="평균딜량", value=comInfo[3], inline=True)
+                    embed.add_field(name="게임수", value=comInfo[4] + "판", inline=True)
+                    embed.add_field(name="최다킬수", value=comInfo[5] + "킬", inline=True)
+                    embed.add_field(name="헤드샷 비율", value=comInfo[6] , inline=True)
+                    embed.add_field(name="저격거리", value=comInfo[7], inline=True)
+                    embed.add_field(name="평균생존시간", value=comInfo[8], inline=True)
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP squad que information",
+                                               embed=embed)
+        except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+           
+           
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
