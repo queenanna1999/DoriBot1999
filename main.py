@@ -1381,18 +1381,9 @@ async def on_message(message):
         embed.set_thumbnail(url="https://i.imgur.com/PLDPnJG.jpg")
         embed.add_field(name="밝고 명랑하고 적극적이며, ", value="순수하면서 활발한 말괄량이 소녀 성격이다.", inline=True)
         await channel.send(embed=embed, file=image)                                 
-             
-    if message.content == "!도리도리곰도리":
-     channel = message.channel
-     urllib.request.urlretrieve("https://i.imgur.com/Ny6e2BS.jpeg")
-     image = discord.File("explain.png", filename="image.png")
-     embed = discord.Embed(title="도리도리곰도리", description="2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.", color=0x00ff56)
-     embed.set_thumbnail(url="https://i.imgur.com/6nNn9Vu.png")
-     embed.add_field(name="그녀의 MBTI는 ENFP 이고, 혈액형은 O형 이다.", value="배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.", inline=True)
-     await channel.send(embed=embed, file=image)         
-        
+                            
     if message.content.startswith("!!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 대한민국의 고딩이고,  ")
+        embed = discord.Embed(title=" 대한민국의 고딩이고, MBTI는 INFP 이다  ")
         await message.channel.send(embed=embed)
         embed = discord.Embed(title=" 타르코프와 오버워치를 즐겨하며,   ")
         await message.channel.send(embed=embed)
@@ -1408,7 +1399,7 @@ async def on_message(message):
         await message.channel.send( msg)
 
     if message.content.startswith("!나냡"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 대한민국의 직장인이고,  ")
+        embed = discord.Embed(title=" 대한민국의 직장인이고, MBTI는 ISFP 이다 ")
         await message.channel.send(embed=embed)
         embed = discord.Embed(title=" 오버워치와 배틀그라운드 모바일을 즐겨하며,  ")
         await message.channel.send(embed=embed)
@@ -1421,7 +1412,21 @@ async def on_message(message):
         embed = discord.Embed(title=" 아마도, 오버워치 경쟁전을 한번도 제대로 해본적이 없어서, 오버워치를 진짜 순수하게 즐기는 마인드다 보니 팀탓, 남탓을 안하는 것 같다. (사실, 빠대 유저들이 부럽다. 나도 2016년으로 돌아가고 싶다. 다시 돌아간다면 경쟁전은 절대 안돌릴 것)   ")
         await message.channel.send(embed=embed)
         msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
-        await message.channel.send( msg)          
+        await message.channel.send( msg) 
+        
+    if message.content.startswith("!도리도리곰도리"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
+        embed = discord.Embed(title="2000년 봄과 여름의 사이인 달에 태어난 여자아이다.  ")
+        await message.channel.send(embed=embed)
+        embed = discord.Embed(title=" 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.  ")
+        await message.channel.send(embed=embed)
+        embed = discord.Embed(title=" 그녀의 MBTI는 ENFP 이고, 혈액형은 O형 이다.  ")
+        await message.channel.send(embed=embed)
+        embed = discord.Embed(title=" 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. ")
+        await message.channel.send(embed=embed)
+        embed = discord.Embed(title=" 이유는 배틀그라운드 모바일 핵쟁이들 때문.  ")
+        await message.channel.send(embed=embed)
+        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
+        await message.channel.send( msg)         
         
         
       
