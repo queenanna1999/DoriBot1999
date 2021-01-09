@@ -1383,7 +1383,7 @@ async def on_message(message):
         await channel.send(embed=embed, file=image)                                 
       
         
-    if message.content == "!!!7호선":
+    if message.content == "!!7호선":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/OzuHWX1.jpeg")
         image = discord.File("explain.png", filename="image.png")
@@ -1392,7 +1392,7 @@ async def on_message(message):
         embed.add_field(name="그의 MBTI는 INFP이다.", value="타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다.   ", inline=True)
         await channel.send(embed=embed, file=image) 
         
-    if message.content == "!!나냡":
+    if message.content == "!나냡":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/BXaGTeC.jpeg")
         image = discord.File("explain.png", filename="image.png")
