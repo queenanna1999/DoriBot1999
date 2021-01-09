@@ -1367,7 +1367,7 @@ async def on_message(message):
     if message.content == "!엘사" or message.content == "엘사":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/UufmudR.jpg", "explain.png")
-        image = discord.File("explain1.png", filename="image1.png")
+        image = discord.File("explain.png", filename="image.png")
         embed = discord.Embed(title="엘사 정령님", description="디즈니 애니메이션 겨울왕국의 등장인물이자 스토리의 주축이 되는 주인공. 또 다른 주인공 안나의 언니.", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/PLDPnJG.jpg")
         embed.add_field(name="작품이 출시된 2013년부터 현재까지 디즈니에서", value="가장 영향력 있는 인기 캐릭터 중 하나이다.", inline=True)
@@ -1376,7 +1376,7 @@ async def on_message(message):
     if message.content == "!안나" or message.content == "안나":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/8LCt6LU.jpg", "explain.png")
-        image = discord.File("explain2.png", filename="image2.png")
+        image = discord.File("explain.png", filename="image.png")
         embed = discord.Embed(title="안나 여왕님", description="디즈니의 애니메이션 겨울왕국의 등장인물. 영화의 스토리를 이끌어 나가는 주인공. 또 다른 주인공 엘사의 여동생이다.", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/PLDPnJG.jpg")
         embed.add_field(name="밝고 명랑하고 적극적이며, ", value="순수하면서 활발한 말괄량이 소녀 성격이다.", inline=True)
@@ -1385,7 +1385,7 @@ async def on_message(message):
     if message.content == "!도리도리곰도리":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/Ny6e2BS.jpeg")
-        image = discord.File("explain3.png", filename="image3.png")
+        image = discord.File("explain.png", filename="image.png")
         embed = discord.Embed(title="도리도리곰도리", description="2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/6nNn9Vu.png")
         embed.add_field(name="그녀의 MBTI는 ENFP 이고, 혈액형은 O형 이다.", value="배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.", inline=True)
