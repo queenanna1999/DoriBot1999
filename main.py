@@ -1347,19 +1347,19 @@ async def on_message(message):
         await message.channel.send(" 아프리카TV BJ 보겸의 던전앤파이터와 아프리카 TV 계정 닉네임이다. ")
       
     if message.content.startswith("뒷광고"):
-        await message.channel.send(" 양팡 ")
+        await message.channel.send(" [양팡] ")
       
     if message.content.startswith("양팡"):
-        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인 ")
+        await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인 ")
       
     if message.content.startswith("보겸뒷광고"):
         await message.channel.send(" 언급하지 마라. 입 조심해. 씨발새끼야 ") 
       
     if message.content.startswith("양팡뒷광고"):
-        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인들은 대한민국에서 추방해야됨;;")
+        await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인들은 대한민국에서 추방해야됨;;")
       
     if message.content.startswith("문복희"):
-        await message.channel.send(" 뒷광고로 시청자들 기만한 악덕 방송인이지만 사과 한마디도 없었음. ㅋ 이런 뻔뻔한 태도 리스펙한다. ") 
+        await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인이지만 사과 한마디도 없었음. ㅋ 이런 뻔뻔한 태도 리스펙한다. ") 
       
     if message.content.startswith("보겸"):
         await message.channel.send(" 아프리카 TV BJ 출신이면서 순수 한국인 구독자로 4백만명을 모은 유튜브 크리에이터는 지금까지 아무도 없었어. 이런 사람은 역사책에 기록해서 위인으로 기억되야됨. ")
