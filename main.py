@@ -1382,51 +1382,72 @@ async def on_message(message):
         embed.add_field(name="밝고 명랑하고 적극적이며, ", value="순수하면서 활발한 말괄량이 소녀 성격이다.", inline=True)
         await channel.send(embed=embed, file=image)                                 
                             
-    if message.content.startswith("!!7호선"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 대한민국의 고딩이고, MBTI는 INFP 이다  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 타르코프와 오버워치를 즐겨하며,   ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 오버워치에서는 라인 원챔이다.   ")
-        await message.channel.send(embed=embed)     
-        embed = discord.Embed(title=" 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다.  ")
-        await message.channel.send(embed=embed)     
-        embed = discord.Embed(title=" 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다.  ")
-        await message.channel.send(embed=embed)  
-        embed = discord.Embed(title=" 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. (오버워치 좆망겜 클라스가 여기서 보일거라곤 상상도 못했다.) ")
-        await message.channel.send(embed=embed)        
-        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
-        await message.channel.send( msg)
+    if message.content.startswith("!!7호선"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '7호선을 소개합니다  ',
+            description = '',
+            color = discord.Color.red()
+        )
 
-    if message.content.startswith("!나냡"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title=" 대한민국의 직장인이고, MBTI는 ISFP 이다 ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 오버워치와 배틀그라운드 모바일을 즐겨하며,  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 아마도, 오버워치 경쟁전을 한번도 제대로 해본적이 없어서, 오버워치를 진짜 순수하게 즐기는 마인드다 보니 팀탓, 남탓을 안하는 것 같다. (사실, 빠대 유저들이 부럽다. 나도 2016년으로 돌아가고 싶다. 다시 돌아간다면 경쟁전은 절대 안돌릴 것)   ")
-        await message.channel.send(embed=embed)
-        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
-        await message.channel.send( msg) 
+        #embed.set_footer(text = '')
+        dtime = datetime.datetime.now()
+        #print(dtime[0:4]) # 년도
+        #print(dtime[5:7]) #월
+        #print(dtime[8:11])#일
+        #print(dtime[11:13])#시
+        #print(dtime[14:16])#분
+        #print(dtime[17:19])#초
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
+        embed.add_field(name = '7호선', value = '대한민국의 고딩이다. ',inline = False)
+        embed.add_field(name='그의', value='MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. ', inline=False)
+        await message.channel.send(channel,embed=embed)
+
+    if message.content.startswith("!나냡"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '나냡을 소개합니다  ',
+            description = '',
+            color = discord.Color.red()
+        )
+
+        #embed.set_footer(text = '')
+        dtime = datetime.datetime.now()
+        #print(dtime[0:4]) # 년도
+        #print(dtime[5:7]) #월
+        #print(dtime[8:11])#일
+        #print(dtime[11:13])#시
+        #print(dtime[14:16])#분
+        #print(dtime[17:19])#초
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
+        embed.add_field(name = '나냡', value = '대한민국의 직장인이다. ',inline = False)
+        embed.add_field(name='그의', value='MBTI는 ISFP 이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
+        await message.channel.send(channel,embed=embed)
         
-    if message.content.startswith("!도리도리곰도리"):        #이 부분은 이 소스를 수정해서 새로운 자작봇을 만드실 분들에 해당하시는 분들만 수정 부탁드립니다.
-        embed = discord.Embed(title="2000년 봄과 여름의 사이인 달에 태어난 여자아이다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 그녀의 MBTI는 ENFP 이고, 혈액형은 O형 이다.  ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. ")
-        await message.channel.send(embed=embed)
-        embed = discord.Embed(title=" 이유는 배틀그라운드 모바일 핵쟁이들 때문.  ")
-        await message.channel.send(embed=embed)
-        msg = "이상 마치도록 하겠다.{0.author.mention} ".format(message)
-        await message.channel.send( msg)         
+        
+    if message.content.startswith("!도리도리곰도리"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '위대하신 여왕, 도리 여왕을 소개합니다 ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        #embed.set_footer(text = '')
+        dtime = datetime.datetime.now()
+        #print(dtime[0:4]) # 년도
+        #print(dtime[5:7]) #월
+        #print(dtime[8:11])#일
+        #print(dtime[11:13])#시
+        #print(dtime[14:16])#분
+        #print(dtime[17:19])#초
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
+        embed.add_field(name = '도리도리곰도리', value = '2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.',inline = False)
+        embed.add_field(name='그녀의', value='MBTI는 ENFP 이고, 혈액형은 O형 이다. 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.', inline=False)
+        await message.channel.send(channel,embed=embed)        
         
         
       
