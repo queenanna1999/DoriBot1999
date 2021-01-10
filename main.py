@@ -82,7 +82,7 @@ async def on_message(message):
         embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
         embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!자살', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)
+        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)
         embed.add_field(name='!조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
