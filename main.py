@@ -87,8 +87,6 @@ async def on_message(message):
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
         embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='!엘사', value=' 도리봇이 엘사 정령님의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='!안나', value=' 도리봇이 안나 여왕님의 자기소개를 대신 무료로 해줍니다 ', inline=False)  
         embed.add_field(name='!배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
         embed.add_field(name='!컴배경쟁전1', value=' 도리봇이 당신의 배틀그라운드 3인칭 경쟁전 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배경쟁전2', value=' 도리봇이 당신의 배틀그라운드 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
