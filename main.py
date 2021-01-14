@@ -98,6 +98,7 @@ async def on_message(message):
         embed.add_field(name='!컴배듀오2', value=' 도리봇이 당신의 배틀그라운드 1인칭 듀오 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배스쿼드1', value=' 도리봇이 당신의 배틀그라운드 3인칭 스쿼드 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배스쿼드2', value=' 도리봇이 당신의 배틀그라운드 1인칭 솔로 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!!자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)         
         
         
 
@@ -114,6 +115,36 @@ async def on_message(message):
     if message.content.startswith("!배틀그라운드 지도"):
         await message.channel.send("당신이 보고 싶은 배틀그라운드의 맵을 한글로 채팅창에 입력해주세요. (에란겔, 미라마, 사녹, 비켄디, 카라킨, 헤이븐) ")
         await message.channel.send("예시) !에란겔 (느낌표 + 에란겔) ")      
+
+    if message.content.startswith('!!자살유발정보'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/QnSoj5h.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+
+    if message.content.startswith("!!자살유발정보"):
+        await message.channel.send("[자살유발정보 처벌 대상 입니다!] ")
+        await message.channel.send("온라인상 유통되는 [자살유발정보가 급증]하고 있다는 사실, 알고계셨나요? ")
+        await message.channel.send("중앙자살예방센터가 주요 포털, SNS, 커뮤니티 등을 대상으로 실시하는 국민 참여 클리닝 활동결과에 따르면 자살유발정보가 매년 급증하고 있는 것으로 나타났는데요 ")
+        await message.channel.send("특히, 2018년도에 발표한 활동결과에 따르면 확산속도가 빠른 SNS를 통해 유포되는 게시물과 직접적이고 자극적인 사진이나 동영상이 급증하여 그 심각성이 커지고 있는 것으로 나타났습니다. ")
+        await message.channel.send("온라인상 유통되는 자살유발정보가 심각한 사회문제로 대두됨에 따라, ")
+        await message.channel.send("============ ")
+        await message.channel.send("2019년 7월 16일 부터 새롭게 시행하는 2019년에 개정된 [자살예방 및 생명존중문화 조성을 위한 법률]에는 [자살유발정보 유통에 대한 처벌을 담고 있습니다.] ")
+        await message.channel.send("{제19조 제1항을 위반하여 자살유발정보를 정보통신망을 통하여 유통한 사람은 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.} -자살예방 및 생명존중문화 조성을 위한 법률 제 25조 제3항-  ")
+        await message.channel.send("[[자살유발정보 근절해야 합니다!]] ")
+        await message.channel.send("생명을 지키는 방법은 어려운 것이 아닙니다. ")
+        await message.channel.send("[[함께 지켜주세요.]] ")
+        await message.channel.send("여러분의 노력이 소중한 생명을 살릴 수 있습니다.  ")
+        await message.channel.send("더 이상 혼자가 아닙니다. 당신곁엔 [[1393]] ")
+        await message.channel.send("{{도리봇은 중앙자살예방센터와 함께합니다.}} ")
+        
         
     if message.content.startswith("!오늘의운세"):       #추가바람.
         dtime = datetime.datetime.now()
