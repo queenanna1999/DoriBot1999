@@ -1450,6 +1450,44 @@ async def on_message(message):
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
         await message.channel.send(channel,embed=embed)        
         
+    if message.content.startswith('!도리도리곰도리'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/Ny6e2BS.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+    if message.content.startswith('!!7호선'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/OzuHWX1.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+    if message.content.startswith('!나냡'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/BXaGTeC.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
         
       
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
