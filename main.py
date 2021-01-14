@@ -88,7 +88,8 @@ async def on_message(message):
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
         embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!엘사', value=' 도리봇이 엘사 정령님의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='!안나', value=' 도리봇이 안나 여왕님의 자기소개를 대신 무료로 해줍니다 ', inline=False)        
+        embed.add_field(name='!안나', value=' 도리봇이 안나 여왕님의 자기소개를 대신 무료로 해줍니다 ', inline=False)  
+        embed.add_field(name='!배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
         embed.add_field(name='!컴배경쟁전1', value=' 도리봇이 당신의 배틀그라운드 3인칭 경쟁전 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배경쟁전2', value=' 도리봇이 당신의 배틀그라운드 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!컴배솔로1', value=' 도리봇이 당신의 배틀그라운드 3인칭 솔로 전적을 불러옵니다 ', inline=False)
@@ -110,7 +111,9 @@ async def on_message(message):
         msg = "{0.author.mention} 안녕하세요?? 오늘 하루도 잘 보내셨나요?".format(message)
         await message.channel.send( msg)
     
-      
+    if message.content.startswith("!배틀그라운드 지도"):
+        await message.channel.send("당신이 보고 싶은 배틀그라운드의 맵을 한글로 채팅창에 입력해주세요. (에란겔, 미라마, 사녹, 비켄디, 카라킨, 헤이븐) ")
+        await message.channel.send("예시) !에란겔 (느낌표 + 에란겔) ")      
         
     if message.content.startswith("!오늘의운세"):       #추가바람.
         dtime = datetime.datetime.now()
@@ -1527,7 +1530,91 @@ async def on_message(message):
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
+
         
+    if message.content.startswith('!에란겔'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/fNj59oD.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+
+    if message.content.startswith('!미라마'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/Lf8OOXZ.png'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+
+    if message.content.startswith('!사녹'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/FAdN4Kk.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+
+
+    if message.content.startswith('!비켄디'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/WzuS5TS.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+
+    if message.content.startswith('!카라킨'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/8Fh2bes.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+         
+        
+    if message.content.startswith('!헤이븐'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/MRVDJqa.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send( embed=embed)
+         
+         
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
