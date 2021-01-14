@@ -1489,7 +1489,45 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
         
-      
+    if message.content.startswith('!도리도리곰도리'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/vRpRYu5.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+    if message.content.startswith('!!7호선'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/orOghv1.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+
+    if message.content.startswith('!나냡'):
+        embed = discord.Embed(
+        title='',
+        description='',
+
+        )
+
+        urlBase = 'https://i.imgur.com/Bb4mWtS.jpg'
+        randomNum = random.randrange(1, 2)
+        urlF = urlBase+str(randomNum)
+        embed.set_image(url = urlF)
+        await message.channel.send( embed=embed)
+        
     if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
