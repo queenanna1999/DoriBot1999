@@ -82,20 +82,15 @@ async def on_message(message):
         embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
         embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!자살이란', value=' 도리봇이 자살의 정의들을 불러옵니다. ', inline=False)
         embed.add_field(name='!조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
         embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
         embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
-        embed.add_field(name='!컴배경쟁전1', value=' 도리봇이 당신의 배틀그라운드 3인칭 경쟁전 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배경쟁전2', value=' 도리봇이 당신의 배틀그라운드 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배솔로1', value=' 도리봇이 당신의 배틀그라운드 3인칭 솔로 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배솔로2', value=' 도리봇이 당신의 배틀그라운드 1인칭 솔로 전적을 불러옵니다', inline=False)
-        embed.add_field(name='!컴배듀오1', value=' 도리봇이 당신의 배틀그라운드 3인칭 듀오 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배듀오2', value=' 도리봇이 당신의 배틀그라운드 1인칭 듀오 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배스쿼드1', value=' 도리봇이 당신의 배틀그라운드 3인칭 스쿼드 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배스쿼드2', value=' 도리봇이 당신의 배틀그라운드 1인칭 솔로 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배스쿼드1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 스쿼드 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!!자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)         
         
         
@@ -1862,7 +1857,7 @@ async def on_message(message):
         if randomNum==7:
             await message.channel.send(embed=discord.Embed(title="대한민국의 궁금증 해결 유튜버 겸 래퍼, 진용진을 추천합니다.", color=0xff0000))
           
-    if message.content.startswith("!자살이란"):       #추가바람.
+    if message.content.startswith("!자살"):       #추가바람.
         randomNum = random.randrange(1, 7)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
