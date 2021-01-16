@@ -87,9 +87,9 @@ async def on_message(message):
         embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
         embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
         embed.add_field(name='!배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
-        embed.add_field(name='!컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='!컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
+        embed.add_field(name='!컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
+        embed.add_field(name='!컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
         embed.add_field(name='!컴배스쿼드1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 스쿼드 전적을 불러옵니다 ', inline=False)
         embed.add_field(name='!!자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)         
         
@@ -1271,7 +1271,7 @@ async def on_message(message):
         await message.channel.send(" *어디서나 잘 어울리는 O형이지만 비슷한 성격의 O형과는 전혀 다른 양상을 보입니다. ")
         await message.channel.send(" *서로가 너무 비슷하기 때문에 자주 싸우게되고 승부욕이 강하기 때문에 한번 싸우게 되면 쉽게 풀리지 않습니다. ")
 
-    if message.content.startswith("!AB"):
+    if message.content.startswith("!!AB"):
         await message.channel.send(" 당신의 혈액형은 AB형 입니다. ") 
         await message.channel.send(" AB형은 A형과 B형의 성격이 조금씩 섞여있는 형태로 어느쪽으로 더 많이 가중되는가에 따라 성격이 달라집니다.")
         await message.channel.send(" 한마디로 어떠하다고 단정짓기가 쉽지 않습니다. ")
@@ -2067,7 +2067,7 @@ async def on_message(message):
 
     if message.content.startswith("!혈액형") or message.content.startswith('혈관고') or message.content.startswith('혈액유형') or message.content.startswith('혈엑형'):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
-        await message.channel.send("예시) !O (느낌표 + O) ")
+        await message.channel.send("예시) !O (느낌표 + O), 하지만 AB형은 !!AB 입니다. 느낌표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
 
         
      
