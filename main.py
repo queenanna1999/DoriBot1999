@@ -1450,7 +1450,7 @@ async def on_message(message):
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
         embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었다',inline = False)
-        embed.add_field(name='그의', value='MBTI는 ISFP 이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
+        embed.add_field(name='그의', value='MBTI는 ISFP 이고, 혈액형은 AB형이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
         await message.channel.send(channel,embed=embed)
         
         
