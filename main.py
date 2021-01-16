@@ -75,7 +75,8 @@ async def on_message(message):
         embed.add_field(name = '!안녕', value = '도리봇이 인사를 해줍니다',inline = False)
         embed.add_field(name='!코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
         embed.add_field(name='!오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
-        embed.add_field(name='!오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)        
+        embed.add_field(name='!오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)
+        embed.add_field(name='!오늘의말씀', value=' 도리봇이 오늘의 성경 구절을 읽어줍니다 ', inline=False)        
         embed.add_field(name='!PC 게임 추천', value=' 도리봇이 PC 게임을 추천해줍니다 ', inline=False)
         embed.add_field(name='!모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
         embed.add_field(name='!주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
@@ -138,7 +139,35 @@ async def on_message(message):
         await message.channel.send("더 이상 혼자가 아닙니다. 당신곁엔 [[1393]] ")
         await message.channel.send("{{도리봇은 중앙자살예방센터와 함께합니다.}} ")
         
-        
+    if message.content.startswith("!오늘의말씀"):       #추가바람.
+        dtime = datetime.datetime.now()
+        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        await message.channel.send(embed=embed)
+        await message.channel.send(embed=discord.Embed(title="계속 꾸준히 한 구절씩 추가중입니다;", color=0xfefefe))
+        randomNum = random.randrange(1, 12)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리니 -시편91:2", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라 -시편46:1", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="너희가 즐겨 순종하면 땅의 아름다운 소산을 먹을 것이요 -사1:19", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="누가 누구에게 불만이 있거든 서로 용납하여 피차 용서하되 주께서 너희를 용서하신 것 같이 너희도 그러하고 -골3:13", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="나는 주의 힘을 노래하며 아침에 주의 인자하심을 높이 부르오리니 주는 나의 요새이시며 나의 환난 날에 피난처심이니이다 -시59:16", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="오직 내 말을 듣는 자는 평안히 살며 재앙의 두려움이 없이 안전하리라 인자와 진리가 네게서 떠나지 말게 하고 그것을 네 목에 매며 네 마음판에 새기라 그리하면 네가 하나님과 사람 앞에서 은총과 귀중히 여김을 받으리라 -잠언3:3~4", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="그를 높이라 그리하면 그가 너를 높이 들리라 만일 그를 품으면 그가 너를 영화롭게 하리라 -잠언4:8", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="여호와를 경외하는 것은 악을 미워하는 것이라 나는 교만과 거만과 악한 행실과 패역한 입을 미워하느니라 -잠언8:13", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="바른 길로 행하는 자는 걸음이 평안하려니와 굽은 길로 행하는 자는 드러나리라 -잠언10:9", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="의인의 빝은 환하게 빛나고 악인의 등불은 꺼지느니라 -잠언13:9", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라 -잠언14:16", color=0xff0000))
+          
     if message.content.startswith("!오늘의운세"):       #추가바람.
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
