@@ -29,7 +29,7 @@ async def on_ready():
     print(app.user.name)                                   #그냥 사람으로치면 웹사이트에 로그인하는 과정이라고 보시면 됩니다.
     print(app.user.id)
     print('===============')
-    game = discord.Game("도리봇에게 !도와줘라고 도움을 요청해보세요!")
+    game = discord.Game("?도와줘 = 명령어 모음")
     await app.change_presence(status=discord.Status.online, activity=game)
     
 @app.event
@@ -54,7 +54,7 @@ async def on_member_remove(member):
 @app.event
 async def on_message(message):
 
-    if message.content.startswith("!도와줘"):
+    if message.content.startswith("?도와줘"):
         channel = message.channel
         embed = discord.Embed(
             title = '명령어 목록',
@@ -72,45 +72,42 @@ async def on_message(message):
         #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
-        embed.add_field(name = '!안녕', value = '도리봇이 인사를 해줍니다',inline = False)
-        embed.add_field(name='!코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
-        embed.add_field(name='!오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
-        embed.add_field(name='!오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)
-        embed.add_field(name='!오늘의말씀', value=' 도리봇이 오늘의 성경 구절을 읽어줍니다 ', inline=False)        
-        embed.add_field(name='!PC 게임 추천', value=' 도리봇이 PC 게임을 추천해줍니다 ', inline=False)
-        embed.add_field(name='!모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
-        embed.add_field(name='!주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
-        embed.add_field(name='!유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
-        embed.add_field(name='!MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='!조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
-        embed.add_field(name='!도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='!!7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
-        embed.add_field(name='!나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='!배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
-        embed.add_field(name='!컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='!컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='!컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='!컴배스쿼드1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 스쿼드 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='!!자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)         
-        
-        
-
+        embed.add_field(name = '?안녕', value = '도리봇이 인사를 해줍니다',inline = False)
+        embed.add_field(name='?코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
+        embed.add_field(name='?오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
+        embed.add_field(name='?오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)
+        embed.add_field(name='?오늘의말씀', value=' 도리봇이 오늘의 성경 구절을 읽어줍니다 ', inline=False)        
+        embed.add_field(name='?PC 게임 추천', value=' 도리봇이 PC 게임을 추천해줍니다 ', inline=False)
+        embed.add_field(name='?모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
+        embed.add_field(name='?주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
+        embed.add_field(name='?유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
+        embed.add_field(name='?MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
+        embed.add_field(name='?혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
+        embed.add_field(name='?조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
+        embed.add_field(name='?도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='??7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
+        embed.add_field(name='?나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
+        embed.add_field(name='?배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
+        embed.add_field(name='?컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
+        embed.add_field(name='?컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
+        embed.add_field(name='?컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
+        embed.add_field(name='?컴배스쿼드1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 스쿼드 전적을 불러옵니다 ', inline=False)
+        embed.add_field(name='??자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)         
         await message.channel.send(channel,embed=embed)
 
         
-    if message.content.startswith("!안녕"):             
+    if message.content.startswith("?안녕"):             
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)       
         msg = "{0.author.mention} 안녕하세요?? 오늘 하루도 잘 보내셨나요?".format(message)
         await message.channel.send( msg)
     
-    if message.content.startswith("!배틀그라운드 지도"):
+    if message.content.startswith("?배틀그라운드 지도"):
         await message.channel.send("당신이 보고 싶은 배틀그라운드의 맵을 한글로 채팅창에 입력해주세요. (에란겔, 미라마, 사녹, 비켄디, 카라킨, 헤이븐) ")
-        await message.channel.send("예시) !에란겔 (느낌표 + 에란겔) ")      
+        await message.channel.send("예시) ?에란겔 (물음표 + 에란겔) ")      
 
-    if message.content.startswith('!!자살유발정보'):
+    if message.content.startswith('??자살유발정보'):
          embed = discord.Embed(
          title='',
          description='',
@@ -123,7 +120,7 @@ async def on_message(message):
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)
 
-    if message.content.startswith("!!자살유발정보"):
+    if message.content.startswith("??자살유발정보"):
         await message.channel.send("[자살유발정보 처벌 대상 입니다!] ")
         await message.channel.send("온라인상 유통되는 [자살유발정보가 급증]하고 있다는 사실, 알고계셨나요? ")
         await message.channel.send("중앙자살예방센터가 주요 포털, SNS, 커뮤니티 등을 대상으로 실시하는 국민 참여 클리닝 활동결과에 따르면 자살유발정보가 매년 급증하고 있는 것으로 나타났는데요 ")
@@ -139,7 +136,7 @@ async def on_message(message):
         await message.channel.send("더 이상 혼자가 아닙니다. 당신곁엔 [[1393]] ")
         await message.channel.send("{{도리봇은 중앙자살예방센터와 함께합니다.}} ")
         
-    if message.content.startswith("!오늘의말씀"):       #추가바람.
+    if message.content.startswith("?오늘의말씀"):       #추가바람.
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)
@@ -168,11 +165,11 @@ async def on_message(message):
         if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라 -잠언14:16", color=0xff0000))
           
-    if message.content.startswith("!오늘의운세"):       #추가바람.
+    if message.content.startswith("?오늘의운세"):       #추가바람.
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)
-        await message.channel.send(embed=discord.Embed(title="당신이 받은 숫자를 [!숫자]와 동일한 형식으로 채팅창에 적어주시길 바랍니다.", color=0xfefefe))
+        await message.channel.send(embed=discord.Embed(title="당신이 받은 숫자를 [?숫자]와 동일한 형식으로 채팅창에 적어주시길 바랍니다.", color=0xfefefe))
         randomNum = random.randrange(1, 12)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="10", color=0x00ff00))
@@ -197,7 +194,7 @@ async def on_message(message):
         if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="일시적인 오류 발생! 잠시만 기다리세요...", color=0xff0000))
             
-    if message.content.startswith("!3"):
+    if message.content.startswith("?3"):
         await message.channel.send("당신의 행운의 숫자는 3 입니다. ")
         await message.channel.send("행운의 색 - 흰색 ")
         await message.channel.send("행운의 아이템 및 장소 - 부드러운 소재의 블라우스 또는 스커트. 진주, 다이아, 물가, 공원 ")
@@ -215,7 +212,7 @@ async def on_message(message):
         await message.channel.send("당신만을 생각하기 보다는 좀 더 상대를 배려해주세요. 그리고 사소한 잘못은 용서해 주는 것이 포인트이니 이 점을 명심하십시오.  ")
         await message.channel.send("그리하면 훗날 당신에게 더 좋은 운이 돌아올 것입니다.  ")
         
-    if message.content.startswith("!7"):
+    if message.content.startswith("?7"):
         await message.channel.send("당신의 행운의 숫자는 7 입니다. ")
         await message.channel.send("행운의 색 - 금색")
         await message.channel.send("행운의 아이템 및 장소 - 잘 빠진 정장, 오팔, 오닉스, 캐치아이, 은행 ")
@@ -232,7 +229,7 @@ async def on_message(message):
         await message.channel.send("더불어 많은 이득을 얻을 수도 있다는 것을 명심하고 모든 상황에 자신감있게, 추진력있게 대응하십시오. ")
         
       
-    if message.content.startswith("!8"):
+    if message.content.startswith("?8"):
         await message.channel.send("당신의 행운의 숫자는 8 입니다. ")
         await message.channel.send("행운의 색 - 빨간색")
         await message.channel.send("행운의 아이템 및 장소 - 보송보송하고 얇은 소재의 니트, 인조모피, 루비, 가닛(석류석), 출생지 ")
@@ -250,7 +247,7 @@ async def on_message(message):
         await message.channel.send("싫어도 내색하지 않을 수 있는 인내심을 기르십시오.  ")
         
         
-    if message.content.startswith("!9"):
+    if message.content.startswith("?9"):
         await message.channel.send("당신의 행운의 숫자는 9 입니다. ")
         await message.channel.send("행운의 색 - 보라색")
         await message.channel.send("행운의 아이템 및 장소 - 모자, 깔끔하게 정리한 머리, 자수정, 청금속, 서점, 도서관")
@@ -266,7 +263,7 @@ async def on_message(message):
         await message.channel.send("솔직한 것도 좋지만, 가끔은 개성있는 당신의 모습이 사람들에게 조금은 신비감을 느끼도록 하는 것이 당신 주변의 사람들을 쉽게 질리지 않게 하는 방법 임을 잊지 마십시오.")
 
         
-    if message.content.startswith("!10"):
+    if message.content.startswith("?10"):
         await message.channel.send("당신의 행운의 숫자는 10 입니다. ")
         await message.channel.send("행운의 색 - 은색")
         await message.channel.send("행운의 아이템 및 장소 - 실크소재의 옷, 다이아, 메이브 펄(진주색), 속도감을 느낄 수 있는 곳")
@@ -280,7 +277,7 @@ async def on_message(message):
         await message.channel.send("때문에 항상 대인관계에 있어서 인내하고 배려하는 태도가 필요하다는 것을 잊지 마시고 모든 인간관계에 신중을 기하도록 하심이 좋습니다.")
         
         
-    if message.content.startswith("!1"):
+    if message.content.startswith("?1"):
         await message.channel.send("당신의 행운의 숫자는 1 입니다. ")
         await message.channel.send("행운의 색 - 파란색")
         await message.channel.send("행운의 아이템 및 장소 - 파란색 계통의 포인트가 들어간 코디, 청바지, 사파이어, 아쿠아마린, 바다, 섬, 강 ")
@@ -296,7 +293,7 @@ async def on_message(message):
         await message.channel.send("그들의 당신에 생각도 변하지 않을 것이니 기억하시고 늘 보살피는 태도를 유지하십시오. ")
         
         
-    if message.content.startswith("!2"):
+    if message.content.startswith("?2"):
         await message.channel.send("당신의 행운의 숫자는 2 입니다. ")
         await message.channel.send("행운의 색 - 검정색")
         await message.channel.send("행운의 아이템 및 장소 - 롱코트나 가디건, 오닉스, 검은 돌, 빌딩, 도시")
@@ -312,7 +309,7 @@ async def on_message(message):
         await message.channel.send("사람들 앞에서 좀 더 솔직하게 자신의 모습을 드러내 보십시오.")
         
         
-    if message.content.startswith("!4"):
+    if message.content.startswith("?4"):
         await message.channel.send("당신의 행운의 숫자는 4 입니다. ")
         await message.channel.send("행운의 색 - 초록색")
         await message.channel.send("행운의 아이템 및 장소 - 바지(팬츠)스타일, 에메랄드, 양산, 틀루마린, 나무, 산, 숲, 호수")
@@ -330,7 +327,7 @@ async def on_message(message):
         await message.channel.send("늘 성격좋고 뭐든 다 받아주는 사람, 가끔은 남에게 얕보일 소지가 있기도 하다는 것을 잊지 마시고")
         await message.channel.send("그럴 근원이 되는 일은 아예 만들지 않는 것이 좋습니다.")
         
-    if message.content.startswith("!5"):
+    if message.content.startswith("?5"):
         await message.channel.send("당신의 행운의 숫자는 5 입니다. ")
         await message.channel.send("행운의 색 - 노란색")
         await message.channel.send("행운의 아이템 및 장소 - 금으로 된 액세서리, 토파즈, 옐로우 사파이어, 술집, BAR ")
@@ -346,7 +343,7 @@ async def on_message(message):
         await message.channel.send("매사 주변 사람들을 먼저 배려하는 생활태도는 늘 그들을 당신의 편이 되게 하여 줄 것입니다.")
         
         
-    if message.content.startswith("!6"):
+    if message.content.startswith("?6"):
         await message.channel.send("당신의 행운의 숫자는 6 입니다. ")
         await message.channel.send("행운의 색 - 은색")
         await message.channel.send("행운의 아이템 및 장소 - 실크소재의 옷, 다이아, 메이브 펄(진주색), 속도감을 느낄 수 있는 곳")
@@ -361,7 +358,7 @@ async def on_message(message):
         
 
         
-    if message.content.startswith("!코로나"):
+    if message.content.startswith("?코로나"):
         # 보건복지부 코로나 바이러스 정보사이트"
         covidSite = "http://ncov.mohw.go.kr/index.jsp"
         covidNotice = "http://ncov.mohw.go.kr"
@@ -916,7 +913,7 @@ async def on_message(message):
     if message.content.startswith("유튜브밴스드"):
         await message.channel.send(" 순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
       
-    if message.content.startswith("!INTP"):
+    if message.content.startswith("?INTP"):
         await message.channel.send(" 당신의 MBTI는 INTP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ENTJ 이며, ")
         await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, INFP, INTJ, ENTP, INTP 이고, ")
@@ -933,7 +930,7 @@ async def on_message(message):
         await message.channel.send(" 독립적인 성향이 강하며 독신주의자가 은근히 많다. INTP에게 연애나 사랑이 1순위가 아닌 경우가 많다. ")
 
 
-    if message.content.startswith("!INFP"):
+    if message.content.startswith("?INFP"):
         await message.channel.send(" 당신의 MBTI는 INFP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ENTJ 이며, ")
         await message.channel.send(" 잘맞는 타입은 INFP, ENFP, INFJ, INTJ, INTP, ENTP 이고, ")
@@ -948,7 +945,7 @@ async def on_message(message):
         await message.channel.send(" *허세, 감정호소 싫어함 ")
         await message.channel.send(" *차분한 성격을 좋아함 ")
 
-    if message.content.startswith("!ISTJ"):
+    if message.content.startswith("?ISTJ"):
         await message.channel.send(" 당신의 MBTI는 ISTJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
@@ -969,7 +966,7 @@ async def on_message(message):
         await message.channel.send(" 배려심이 강하고 책임감도 강하기 때문에 상대를 슬프게 하는 행동은 하지 않으며 참는 경우도 많아 폭발한다면 감당하기 어려울 수 있습니다. ")
         await message.channel.send(" 동료 의식이 높기 때문에 동료에 대해 나쁘게 말하면 관계가 무너지기 쉬운 것도 특징입니다. ")
 
-    if message.content.startswith("!ISFJ"):
+    if message.content.startswith("?ISFJ"):
         await message.channel.send(" 당신의 MBTI는 ISFJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
@@ -990,7 +987,7 @@ async def on_message(message):
         await message.channel.send(" 필요로 하는 것들을 꽤 정확하게 알아 맞춥니다. 당신은 그들의 이러한 행동들에 의존해지거나 익숙해지기 쉽지만, 이들 스스로 당신을 위해 하는 행동들에  ")
         await message.channel.send(" 매우 신경을 쓰고 있다는 것을 알아야 합니다. 당신이 이들의 배려와 호의에 대해서 고마움과 애정을 자주 표현해주는 것이 중요합니다. ")
 
-    if message.content.startswith("!ENFJ"):
+    if message.content.startswith("?ENFJ"):
         await message.channel.send(" 당신의 MBTI는 ENFJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFP와 ISFP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, ENFJ, INTJ, ENTJ, INTP, ENTP 이고, ")
@@ -1006,7 +1003,7 @@ async def on_message(message):
         await message.channel.send(" 문제가 있을 때는 좋은 극복 방법이 되기도 합니다. 하지만 너무 많은 질문은 오히려 관계를 방해하는 요소가 될 수 있습니다. 상대방의 감정을 ")
         await message.channel.send(" 살피는 것도 좋지만 끊임없이 사랑을 확인하려는 자세는 그만 두는 것이 좋습니다. ")
 
-    if message.content.startswith("!ENTP"):
+    if message.content.startswith("?ENTP"):
         await message.channel.send(" 당신의 MBTI는 ENTP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFJ와 INTJ 이며, ")
         await message.channel.send(" 잘맞는 타입은 INFP, ENFP, ENFJ, ENTJ, INTP, ENTP 이고, ")
@@ -1030,7 +1027,7 @@ async def on_message(message):
         await message.channel.send(" 지금 사귀는 상대에게 진지하건 아니건, ENTP는 여러 사람들과의 가능성을 열어두는 것을 좋아합니다. 당신은 연인에게 솔직하고 진지하게 행동하는 게 좋습니다. ")
 
 
-    if message.content.startswith("!ENTJ"):
+    if message.content.startswith("?ENTJ"):
         await message.channel.send(" 당신의 MBTI는 ENTJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFP와 INTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, ENFJ, INTJ, ENTJ, INTP, ENTP 이고, ")
@@ -1053,7 +1050,7 @@ async def on_message(message):
         await message.channel.send(" 강압적인 태도를 가끔씩 드러내어 갈등의 원인이 되기도 합니다. ")
         await message.channel.send(" 자신의 직감에 확신이 있는 ENTJ는 헤어지고 싶다고 생가갛면 배려없고 단호해질 수 있습니다. 당신의 의사를 전달하는 방식과 시점을 생각하고 관계를 정리하는 것이 좋습니다. ")        
 
-    if message.content.startswith("!ESFP"):
+    if message.content.startswith("?ESFP"):
         await message.channel.send(" 당신의 MBTI는 ESFP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ISFJ와 ISTJ 이며, ")
         await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP, ESFJ, ESTJ 이고, ")
@@ -1069,7 +1066,7 @@ async def on_message(message):
         await message.channel.send(" 자주 만나는 것을 좋아하며 감정적으로도 물질적으로도 표현에 적극적입니다. 대상을 지배하려고 하지 않으며, 우연한 만남에 포인트를 만들며 친구 같은 연애를 좋아합니다. ")
         await message.channel.send(" ESFP는 자신이 맘에 드는 사람이 우선이지만 쉽게 상대방에게 질리는 편이며, 연애를 시작하는 자주 연락을 하며 평화로운 관계를 추구합니다. 아주 열정적으로 연애를 하기 때문에 이별 후엔 미련이 없습니다. ")
 
-    if message.content.startswith("!ESFJ"):
+    if message.content.startswith("?ESFJ"):
         await message.channel.send(" 당신의 MBTI는 ESFJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은ISFP와 ISTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
@@ -1090,7 +1087,7 @@ async def on_message(message):
         await message.channel.send(" 성향이 강해서인지 마음이 있어도 상대와 내가 현재 조건이 맞지 않는다면 그 관계에 대해 크게 고민한다. 그러나 연애 발전 단계에서는 ")
         await message.channel.send(" 생각보다 그렇게 적극적이지 않다. 상대의 반응에 따라 단계를 발전시키며, 이들은 관계 발전 전까지는 상대와 내가 맞는지를 고민을 많이하지만, 막상 연애가 시작되면 장기 연애하는 경우가 많다.")
 
-    if message.content.startswith("!ESTP"):
+    if message.content.startswith("?ESTP"):
         await message.channel.send(" 당신의 MBTI는 ESTP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ISFJ와 ISTJ 이며, ")
         await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP 이고, ")
@@ -1110,7 +1107,7 @@ async def on_message(message):
         await message.channel.send(" 적극적이고 활발해서 인기가 많은 ESTP는 스스로가 원하는 상대를 고를 수 잇습니다. ESTP는 사교적이고 재미있지만 상대와의 진지한 관계에 대해 생각하지 않으며, 관계가 지루해지면 떠나는 편 입니다. ")
         await message.channel.send(" 장기 연애는 낯선 것일지도 모르지만, 관계에서 가장 좋은 시기는 초반의 설레임이 지나간 이후라는 사실을 기억해야 합니다. 어느 순간부터 상대의 소중함을 돌아보는 것이 중요합니다.  ")
 
-    if message.content.startswith("!ISFP"):
+    if message.content.startswith("?ISFP"):
         await message.channel.send(" 당신의 MBTI는 ISFP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ESFJ, ESTJ 이며, ")
         await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP, ISFJ, ISTJ 이고, ")
@@ -1127,7 +1124,7 @@ async def on_message(message):
         await message.channel.send(" 수수께끼 투성에 흥미로운 ISFP는 진지한 관계에 오픈 마인드입니다. 하지만 관계가 깊어질수록 두려움이 앞서기 때문에 속마음을 숨기고 도망 갈 수도 있습니다. ")
         await message.channel.send(" 상대에게 당신의 감정에 대해 솔직하게 말하는 것이 좋습니다.")
 
-    if message.content.startswith("!INTJ"):
+    if message.content.startswith("?INTJ"):
         await message.channel.send(" 당신의 MBTI는 INTJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFP와 ENTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 INFP, INFJ, ENFJ, INTJ, ENTJ, INTP 이고, ")
@@ -1149,7 +1146,7 @@ async def on_message(message):
         await message.channel.send(" INTJ는 사랑때문에 시간낭비를 하지 않습니다. 관계에 있어 서로를 알아보는 등의 과정은 없고, 갑자기 너무 깊은 대화로 넘어가 버립니다.  ")
         await message.channel.send(" 이런 태도에 상대방은 겁을 먹거나 피하고 싶어집니다. 소소한 잡담은 당신 스타일이 아니기는 하지만 진지한 관계로 넘어가기 앞서 가볍게 서로를 알아가는 단계를 거치는 것이 좋습니다.  ")
 
-    if message.content.startswith("!ISTP"):
+    if message.content.startswith("?ISTP"):
         await message.channel.send(" 당신의 MBTI는 ISTP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
@@ -1168,7 +1165,7 @@ async def on_message(message):
         await message.channel.send(" ISTP의 열정과 독립심은 관계에서 좋은 역할을 합니다. 하지만 썸타는 시간을 늘리면서 여러가지 옵션을 열어두고 싶어합니다. 다른 사람들 자신의 인생에 포함시키기를 원하지 않기 때문입니다.  ")
         await message.channel.send(" 서로를 알아가는데 지나치게 오랜시간이 걸릴 필요는 없습니다. 사랑하는 사람과의 관계가 진심이라고 느껴질 때, 비밀스러운 당신의 곁은 내어주는 것도 필요합니다. ")
 
-    if message.content.startswith("!ESTJ"):
+    if message.content.startswith("?ESTJ"):
         await message.channel.send(" 당신의 MBTI는 ESTJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENTJ와ISFP, ISTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
@@ -1187,7 +1184,7 @@ async def on_message(message):
         await message.channel.send(" 직설적이고 자기 주장이 강한 ESTJ는 초반에 너무 좋은 감정과 미묘한 관계를 유지하는 것을 힘들어 합니다. 강렬한 감정을 잠시 그대로 두십시오.")
         await message.channel.send(" 우리가 어떤 사인인지 묻기 전에 두 사람의 감정이 자연스럽게 발전할 시간을 주는 것이 좋습니다.")
 
-    if message.content.startswith("!INFJ"):
+    if message.content.startswith("?INFJ"):
         await message.channel.send(" 당신의 MBTI는 INFJ 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFP와 ENTP 이며, ")
         await message.channel.send(" 잘맞는 타입은 INFP, INFJ, ISTJ, ENFJ, INTJ, ENTJ, INTP 이고, ")
@@ -1206,7 +1203,7 @@ async def on_message(message):
         await message.channel.send(" 때문에 이별하는게 맞는 상황임에도 불구하고 결단을 내리지 못합니다. 당신과 상대방의 시간과 에너지를 낭비하지 말고 필요할 때에는 ")
         await message.channel.send(" 과감한 선택을 할 필요가 있습니다. ")
         
-    if message.content.startswith("!ENFP"):
+    if message.content.startswith("?ENFP"):
         await message.channel.send(" 당신의 MBTI는 ENFP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFJ와 INTJ 이며, ")
         await message.channel.send(" 잘맞는 타입은 INFP, ENFP, ENFJ, ENTJ, INTP, ENTP 이고, ")
@@ -1232,7 +1229,7 @@ async def on_message(message):
         await message.channel.send(" 이들은 자신의 연인들이 느끼는 감정을 잘 알아차리는 능력을 가지고 있기 때문에 자신의 연인이 원하는 것을 쉽게 파악하며, 만족시켜줍니다. ")
         await message.channel.send(" ENFP의 정신적, 감정적, 물리적 욕구를 잘파악하고 잘 지원해주는 것이 중요합니다. ")
 
-    if message.content.startswith("!A"):
+    if message.content.startswith("?A"):
         await message.channel.send(" 당신의 혈액형은 A형 입니다. ") 
         await message.channel.send(" A형은 원리원칙주의, 완전주의자로 불리는 경우가 많습니다.")
         await message.channel.send(" 책임감이 강하고 한번 맡은 일은 끝까지 해내는 경향이 있기 때문에 조직에서 신뢰를 받는 경우가 많습니다. ")
@@ -1255,7 +1252,7 @@ async def on_message(message):
         await message.channel.send(" *O형은 어딜가도 잘 어울리는 편이기 때문에 A형과도 잘맞고 가장 높은 궁합을 자랑합니다. ")
         await message.channel.send(" *결혼까지 생각할 수 있는 조합입니다. ")
 
-    if message.content.startswith("!B"):
+    if message.content.startswith("?B"):
         await message.channel.send(" 당신의 혈액형은 B형 입니다. ") 
         await message.channel.send(" B형은 상당히 재미있는 성격을 보유하고 있는 경우가 많습니다.")
         await message.channel.send(" 호기심이 상당히 많고 창의적인 발상을 함으로 주변에 항상 많은 이야기가 존재하게 됩니다. ")
@@ -1277,7 +1274,7 @@ async def on_message(message):
         await message.channel.send(" *O형은 누구나 잘 어울리는 성격으로 멋대로인 B형과도 비교적 잘 어울립니다.")
         await message.channel.send(" *B형 옆을 지키면서 잘 다독여주고 계속해서 관계를 지속해 나가는 형태를 보입니다. ")
 
-    if message.content.startswith("!O"):
+    if message.content.startswith("?O"):
         await message.channel.send(" 당신의 혈액형은 O형 입니다. ") 
         await message.channel.send(" O형은 인간미가 있고 목표지향적인 성격으로 작은일에 크게 연연하지 않는 무던한 스타일입니다.")
         await message.channel.send(" 열정적으로 일에 몰두하기 때문에 리더가 되는 경우가 많으며 동료의식 또한 강하게 나타냅니다. ")
@@ -1300,7 +1297,7 @@ async def on_message(message):
         await message.channel.send(" *어디서나 잘 어울리는 O형이지만 비슷한 성격의 O형과는 전혀 다른 양상을 보입니다. ")
         await message.channel.send(" *서로가 너무 비슷하기 때문에 자주 싸우게되고 승부욕이 강하기 때문에 한번 싸우게 되면 쉽게 풀리지 않습니다. ")
 
-    if message.content.startswith("!!AB"):
+    if message.content.startswith("??AB"):
         await message.channel.send(" 당신의 혈액형은 AB형 입니다. ") 
         await message.channel.send(" AB형은 A형과 B형의 성격이 조금씩 섞여있는 형태로 어느쪽으로 더 많이 가중되는가에 따라 성격이 달라집니다.")
         await message.channel.send(" 한마디로 어떠하다고 단정짓기가 쉽지 않습니다. ")
@@ -1371,9 +1368,9 @@ async def on_message(message):
         await message.channel.send("뒷감당 잘해요? ")
        
     if message.content.startswith("롤"):
-        await message.channel.send("LOL이 왜 애미뒤진 게임인줄 아냐? 대답을 듣고 싶으면 '!롤'을 채팅창에 입력해라 ")
+        await message.channel.send("LOL이 왜 애미뒤진 게임인줄 아냐? 대답을 듣고 싶으면 '?롤'을 채팅창에 입력해라 ")
 
-    if message.content.startswith("!롤"):
+    if message.content.startswith("?롤"):
         await message.channel.send("간단함. 애미뒤진애들만 모아서 하니까 애미뒤진게임인거야")
         await message.channel.send("LOL은애미뒤진 희대의 좆병신 팀운게임이맞음.")
         await message.channel.send("이걸 부정하는 새끼들도 애미뒤진게맞고 저능아새끼들임.")
@@ -1420,7 +1417,7 @@ async def on_message(message):
     if message.content.startswith("보겸"):
         await message.channel.send(" 아프리카 TV BJ 출신이면서 순수 한국인 구독자로 4백만명을 모은 유튜브 크리에이터는 지금까지 아무도 없었어. 이런 사람은 역사책에 기록해서 위인으로 기억되야됨. ")
 
-    if message.content == "!엘사" or message.content == "엘사":
+    if message.content == "?엘사" or message.content == "엘사":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/UufmudR.jpg", "explain.png")
         image = discord.File("explain.png", filename="image.png")
@@ -1429,7 +1426,7 @@ async def on_message(message):
         embed.add_field(name="작품이 출시된 2013년부터 현재까지 디즈니에서", value="가장 영향력 있는 인기 캐릭터 중 하나이다.", inline=True)
         await channel.send(embed=embed, file=image)
 
-    if message.content == "!안나" or message.content == "안나":
+    if message.content == "?안나" or message.content == "안나":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/8LCt6LU.jpg", "explain.png")
         image = discord.File("explain.png", filename="image.png")
@@ -1438,7 +1435,7 @@ async def on_message(message):
         embed.add_field(name="밝고 명랑하고 적극적이며, ", value="순수하면서 활발한 말괄량이 소녀 성격이다.", inline=True)
         await channel.send(embed=embed, file=image)                                 
                             
-    if message.content.startswith("!!7호선"):
+    if message.content.startswith("??7호선"):
         channel = message.channel
         embed = discord.Embed(
             title = '7호선을 소개합니다  ',
@@ -1460,7 +1457,7 @@ async def on_message(message):
         embed.add_field(name='그의', value='MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. ', inline=False)
         await message.channel.send(channel,embed=embed)
 
-    if message.content.startswith("!나냡"):
+    if message.content.startswith("?나냡"):
         channel = message.channel
         embed = discord.Embed(
             title = '나냡을 소개합니다  ',
@@ -1483,7 +1480,7 @@ async def on_message(message):
         await message.channel.send(channel,embed=embed)
         
         
-    if message.content.startswith("!도리도리곰도리"):
+    if message.content.startswith("?도리도리곰도리"):
         channel = message.channel
         embed = discord.Embed(
             title = '도리도리곰도리를 소개합니다  ',
@@ -1506,7 +1503,7 @@ async def on_message(message):
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
         await message.channel.send(channel,embed=embed)        
         
-    if message.content.startswith('!도리도리곰도리'):
+    if message.content.startswith('?도리도리곰도리'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1519,7 +1516,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('!!7호선'):
+    if message.content.startswith('??7호선'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1532,7 +1529,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('!나냡'):
+    if message.content.startswith('?나냡'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1545,7 +1542,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
         
-    if message.content.startswith('!도리도리곰도리'):
+    if message.content.startswith('?도리도리곰도리'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1558,7 +1555,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('!!7호선'):
+    if message.content.startswith('??7호선'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1571,7 +1568,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('!나냡'):
+    if message.content.startswith('?나냡'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1585,7 +1582,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
         
-    if message.content.startswith('!에란겔'):
+    if message.content.startswith('?에란겔'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1599,7 +1596,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('!미라마'):
+    if message.content.startswith('?미라마'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1613,7 +1610,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('!사녹'):
+    if message.content.startswith('?사녹'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1627,7 +1624,7 @@ async def on_message(message):
          await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('!비켄디'):
+    if message.content.startswith('?비켄디'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1640,7 +1637,7 @@ async def on_message(message):
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)
 
-    if message.content.startswith('!카라킨'):
+    if message.content.startswith('?카라킨'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1654,7 +1651,7 @@ async def on_message(message):
          await message.channel.send( embed=embed)
          
         
-    if message.content.startswith('!헤이븐'):
+    if message.content.startswith('?헤이븐'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1706,7 +1703,7 @@ async def on_message(message):
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
 
-    if message.content.startswith("!코로나"):     #없어도 되는 기능.
+    if message.content.startswith("?코로나"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -1725,7 +1722,7 @@ async def on_message(message):
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
 
-    if message.content.startswith("!도와줘"):     #없어도 되는 기능.
+    if message.content.startswith("?도와줘"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -1762,7 +1759,7 @@ async def on_message(message):
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
-    if message.content.startswith("!MBTI"):     #없어도 되는 기능.
+    if message.content.startswith("?MBTI"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -1780,7 +1777,7 @@ async def on_message(message):
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
-    if message.content.startswith("!혈액형"):     #없어도 되는 기능.
+    if message.content.startswith("?혈액형"):     #없어도 되는 기능.
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -1801,7 +1798,7 @@ async def on_message(message):
         
         
         
-    if message.content.startswith("!PC 게임 추천"):      #다소 편협함. 추가바람.
+    if message.content.startswith("?PC 게임 추천"):      #다소 편협함. 추가바람.
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)
@@ -1827,7 +1824,7 @@ async def on_message(message):
 
           
           
-    if message.content.startswith("!모바일 게임 추천"):       #추가바람
+    if message.content.startswith("?모바일 게임 추천"):       #추가바람
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)
@@ -1846,7 +1843,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="붕괴학원2와 붕괴3rd의 개발사인 miHoYo에서 제작한 3D 오픈 월드 액션 어드벤처 게임, 원신을 추천합니다. ", color=0x0000ff))  
           
           
-    if message.content.startswith("!주사위굴리기"):         #이것도 없어도 지장없는 기능. 
+    if message.content.startswith("?주사위굴리기"):         #이것도 없어도 지장없는 기능. 
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)        
@@ -1866,7 +1863,7 @@ async def on_message(message):
             await message.channel.send( embed=discord.Embed(description=':game_die: ' + ':six: ',color=0xfefe00))
           
           
-    if message.content.startswith("!유튜버 추천"):             #다소 편협함. 추가바람.
+    if message.content.startswith("?유튜버 추천"):             #다소 편협함. 추가바람.
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)        
@@ -1886,7 +1883,7 @@ async def on_message(message):
         if randomNum==7:
             await message.channel.send(embed=discord.Embed(title="대한민국의 궁금증 해결 유튜버 겸 래퍼, 진용진을 추천합니다.", color=0xff0000))
           
-    if message.content.startswith("!자살"):       #추가바람.
+    if message.content.startswith("?자살"):       #추가바람.
         randomNum = random.randrange(1, 7)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
@@ -1902,7 +1899,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="'자살은 실존에 관한 문제를 해결하는 방법을 주체의 자발적인 죽음에서 구하고 찾는 일이다.' -바에슐러(1975)-", color=0x00ff00))
           
         
-    if message.content.startswith("!오늘의시한편"):
+    if message.content.startswith("?오늘의시한편"):
         randomNum = random.randrange(1, 15)
         if randomNum==1:
             await message.channel.send("방문객")
@@ -2090,18 +2087,18 @@ async def on_message(message):
             
             
                   
-    if message.content.startswith("!MBTI") or message.content.startswith('MBTI') or message.content.startswith('엠비티아이') or message.content.startswith('성격') or message.content.startswith('!mbti') or message.content.startswith('mbti'):
+    if message.content.startswith("?MBTI") or message.content.startswith('MBTI') or message.content.startswith('엠비티아이') or message.content.startswith('성격') or message.content.startswith('!mbti') or message.content.startswith('mbti'):
         await message.channel.send("당신의 MBTI 를 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
-        await message.channel.send("예시) !ENFP (느낌표 + ENFP) ")
+        await message.channel.send("예시) ?ENFP (물음표 + ENFP) ")
 
-    if message.content.startswith("!혈액형") or message.content.startswith('혈관고') or message.content.startswith('혈액유형') or message.content.startswith('혈엑형'):
+    if message.content.startswith("?혈액형") or message.content.startswith('혈관고') or message.content.startswith('혈액유형') or message.content.startswith('혈엑형'):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
-        await message.channel.send("예시) !O (느낌표 + O), 하지만 AB형은 !!AB 입니다. 느낌표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
+        await message.channel.send("예시) ?O (물음표 + O), 하지만 AB형은 ??AB 입니다. 물음표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
 
         
      
        
-    if message.content == "!조선시대 내 이름":
+    if message.content == "?조선시대 내 이름":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/KoougXb.jpeg", "explain.png")
         image = discord.File("explain.png", filename="image.png")
@@ -2110,7 +2107,7 @@ async def on_message(message):
         embed.add_field(name=".", value=". ", inline=True)
         await channel.send(embed=embed, file=image)
 
-    if message.content.startswith("!컴배경쟁전1"):
+    if message.content.startswith("?컴배경쟁전1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2121,7 +2118,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았어요 :)", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
+                                value="To use command ?컴배경쟁전(1 : TPP or 2 : FPP) : ?컴배경쟁전 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
             else:
@@ -2219,7 +2216,7 @@ async def on_message(message):
             await message.channel.send("Error : Not existing player", embed=embed)
             print(e)
     
-    if message.content.startswith("!컴배경쟁전2"):
+    if message.content.startswith("?컴배경쟁전2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2230,7 +2227,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배경쟁전(1 : TPP or 2 : FPP) : !컴배경쟁전 (Nickname)", inline=False)
+                                value="To use command ?컴배경쟁전(1 : TPP or 2 : FPP) : ?컴배경쟁전 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
             else:
@@ -2329,7 +2326,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배솔로1"):
+    if message.content.startswith("?컴배솔로1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2339,7 +2336,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                                value="To use command ?컴배솔로 : ?컴배솔로 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
@@ -2413,7 +2410,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배듀오1"):
+    if message.content.startswith("?컴배듀오1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2423,7 +2420,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
+                                value="To use command ?컴배스쿼드 : ?컴배스쿼드 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
@@ -2498,7 +2495,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배스쿼드1"):
+    if message.content.startswith("?컴배스쿼드1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2508,7 +2505,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                                value="To use command ?컴배솔로 : ?컴배솔로 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
@@ -2582,7 +2579,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배솔로2"):
+    if message.content.startswith("?컴배솔로2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2592,7 +2589,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                                value="To use command ?컴배솔로 : ?컴배솔로 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
@@ -2671,7 +2668,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배듀오2"):
+    if message.content.startswith("?컴배듀오2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2681,7 +2678,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배스쿼드 : !컴배스쿼드 (Nickname)", inline=False)
+                                value="To use command ?컴배스쿼드 : ?컴배스쿼드 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
@@ -2759,7 +2756,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("!컴배스쿼드2"):
+    if message.content.startswith("?컴배스쿼드2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2769,7 +2766,7 @@ async def on_message(message):
             if len(message.content.split(" ")) == 1:
                 embed = discord.Embed(title="닉네임이 입력되지 않았습니다", description="", color=0x5CD1E5)
                 embed.add_field(name="Player nickname not entered",
-                                value="To use command !컴배솔로 : !컴배솔로 (Nickname)", inline=False)
+                                value="To use command ?컴배솔로 : ?컴배솔로 (Nickname)", inline=False)
 
                 await message.channel.send("Error : Incorrect command usage ", embed=embed)
 
