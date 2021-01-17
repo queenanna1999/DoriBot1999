@@ -115,7 +115,7 @@ async def on_message(message):
         await message.channel.send("============")
         await message.channel.send("*2021년 01월* ")
         await message.channel.send("*사용자의 MBTI 특성 및 궁합, 혈액형의 특성 및 궁합을 불러오는 기능, 배틀그라운드 전적 검색 기능 및 중앙자살예방센터와 함께하는 자살 예방 캠페인 대응,* ")
-        await message.channel.send("*그리고 오늘의말씀 기능과 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 쓴 후 우주선 안으로 들어가 꿀잠을 잤습니다. *")
+        await message.channel.send("*그리고 오늘의말씀 기능과 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 쓴 후 우주선 안으로 들어가 꿀잠을 잤습니다.*")
 
         
         
