@@ -1465,7 +1465,7 @@ async def on_message(message):
         #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
-        embed.add_field(name = '7호선', value = '대한민국의 고딩이다. 05년생으로 확인되었다; (근데, 05년생이 몇살이야? 실존하긴 함?) ',inline = False)
+        embed.add_field(name = '7호선', value = '대한민국의 고딩이다. 05년생으로 확인되었으며, 디시인사이드에선 iPhoneOS(iphoneos)라는 고닉으로 활동하고, 디스코드 태그는 iPhoneOS#3138 이다.  주 활동 갤러리는 타르코프 갤러리이다. [타르코프 하는 놈들을 두려워해라. 그들은 평범한 생명체가 아니다.] (근데, 05년생이 몇살이야? 실존하긴 함?) ',inline = False)
         embed.add_field(name='그의', value='MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. ', inline=False)
         await message.channel.send(channel,embed=embed)
 
@@ -1487,7 +1487,7 @@ async def on_message(message):
         #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
-        embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었다',inline = False)
+        embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이다. 아마 파딱이라 모배갤만 주로 한 것 같다.',inline = False)
         embed.add_field(name='그의', value='MBTI는 ISFP 이고, 혈액형은 AB형이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
         await message.channel.send(channel,embed=embed)
         
@@ -1510,7 +1510,7 @@ async def on_message(message):
         #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
         #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
-        embed.add_field(name = '도리도리곰도리', value = '2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다.',inline = False)
+        embed.add_field(name = '도리도리곰도리', value = '2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다. 주 활동 갤러리는 겨울왕국 갤러리이며, 디스코드 태그는 도리봇#2014 이다.',inline = False)
         embed.add_field(name='그녀의', value='MBTI는 ENFP 이고, 혈액형은 O형 이다. 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.', inline=False)
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
         await message.channel.send(channel,embed=embed)        
