@@ -62,16 +62,8 @@ async def on_message(message):
             colour = discord.Colour.red()
         )
 
-        #embed.set_footer(text = '')
         dtime = datetime.datetime.now()
-        #print(dtime[0:4]) # 년도
-        #print(dtime[5:7]) #월
-        #print(dtime[8:11])#일
-        #print(dtime[11:13])#시
-        #print(dtime[14:16])#분
-        #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
         embed.add_field(name = '?안녕', value = '도리봇이 인사를 해줍니다',inline = False)
         embed.add_field(name='?코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
         embed.add_field(name='?오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
@@ -371,7 +363,6 @@ async def on_message(message):
 
         
     if message.content.startswith("?코로나"):
-        # 보건복지부 코로나 바이러스 정보사이트"
         covidSite = "http://ncov.mohw.go.kr/index.jsp"
         covidNotice = "http://ncov.mohw.go.kr"
         html = urlopen(covidSite)
@@ -380,7 +371,6 @@ async def on_message(message):
         statisticalNumbers = bs.findAll('span', {'class': 'num'})
         beforedayNumbers = bs.findAll('span', {'class': 'before'})
 
-        #주요 브리핑 및 뉴스링크
         briefTasks = []
         mainbrief = bs.findAll('a',{'href' : re.compile('\/tcmBoardView\.do\?contSeq=[0-9]*')})
         for brf in mainbrief:
@@ -390,9 +380,7 @@ async def on_message(message):
             briefTasks.append(container)
         print(briefTasks)
 
-        # 통계수치
         statNum = []
-        # 전일대비 수치
         beforeNum = []
         for num in range(7):
             statNum.append(statisticalNumbers[num].text)
@@ -418,7 +406,7 @@ async def on_message(message):
         await message.channel.send("Covid-19 Virus Korea Status", embed=embed)       
         
         
-    if message.content.startswith("닥쳐"):
+    if message.content.startswith("닥쳐"):               #비속어에 도리봇이 반응하도록 추가했습니다. 추가하지 못한 비속어가 있다면, 더 추가하겠습니다.
         await message.channel.send("욕하지 마라 ")
 
     if message.content.startswith("시발"):
@@ -710,7 +698,7 @@ async def on_message(message):
         await message.channel.send("일베충아 꺼지렴~~^^ ")
 
     if message.content.startswith("틀딱"):
-        await message.channel.send("그런 표현 쓰지마라.. 니네 애미 애비도 틀딱이라 곧 뒤질 나이인데;; 너도 그렇고, 나도 그렇고 모든 인간은 다 틀딱이 되어 죽을 운명이다. ")
+        await message.channel.send("그런 표현 쓰지마라.. 니네 애미 애비도 틀딱이라 곧 뒤질 나이인데;; ")
 
     if message.content.startswith("빡쳐서"):
         await message.channel.send("난 니얼굴 봐서 빡침..  ")
@@ -925,7 +913,7 @@ async def on_message(message):
     if message.content.startswith("유튜브밴스드"):
         await message.channel.send(" 순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
       
-    if message.content.startswith("?INTP"):
+    if message.content.startswith("?INTP"):                             
         await message.channel.send(" 당신의 MBTI는 INTP 입니다. ") 
         await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ENTJ 이며, ")
         await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, INFP, INTJ, ENTP, INTP 이고, ")
@@ -1455,16 +1443,8 @@ async def on_message(message):
             color = discord.Color.red()
         )
 
-        #embed.set_footer(text = '')
         dtime = datetime.datetime.now()
-        #print(dtime[0:4]) # 년도
-        #print(dtime[5:7]) #월
-        #print(dtime[8:11])#일
-        #print(dtime[11:13])#시
-        #print(dtime[14:16])#분
-        #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
         embed.add_field(name = '7호선', value = '대한민국의 고딩이다. 05년생으로 확인되었으며, 디시인사이드에선 iPhoneOS(iphoneos)라는 고닉으로 활동하고, 디스코드 태그는 iPhoneOS#3138 이다.  주 활동 갤러리는 타르코프 갤러리이다. [타르코프 하는 놈들을 두려워해라. 그들은 평범한 생명체가 아니다.] (근데, 05년생이 몇살이야? 실존하긴 함?) ',inline = False)
         embed.add_field(name='그의', value='MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. ', inline=False)
         await message.channel.send(channel,embed=embed)
@@ -1477,16 +1457,8 @@ async def on_message(message):
             color = discord.Color.red()
         )
 
-        #embed.set_footer(text = '')
         dtime = datetime.datetime.now()
-        #print(dtime[0:4]) # 년도
-        #print(dtime[5:7]) #월
-        #print(dtime[8:11])#일
-        #print(dtime[11:13])#시
-        #print(dtime[14:16])#분
-        #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
         embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이다. 아마 파딱이라 모배갤만 주로 한 것 같다.',inline = False)
         embed.add_field(name='그의', value='MBTI는 ISFP 이고, 혈액형은 AB형이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
         await message.channel.send(channel,embed=embed)
@@ -1500,16 +1472,8 @@ async def on_message(message):
             colour = discord.Colour.red()
         )
 
-        #embed.set_footer(text = '')
         dtime = datetime.datetime.now()
-        #print(dtime[0:4]) # 년도
-        #print(dtime[5:7]) #월
-        #print(dtime[8:11])#일
-        #print(dtime[11:13])#시
-        #print(dtime[14:16])#분
-        #print(dtime[17:19])#초
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        #embed.set_footer(text=dtime[0:4]+"년 "+dtime[5:7]+"월 "+dtime[8:11]+"일 "+dtime[11:13]+"시 "+dtime[14:16]+"분 "+dtime[17:19]+"초")
         embed.add_field(name = '도리도리곰도리', value = '2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다. 주 활동 갤러리는 겨울왕국 갤러리이며, 디스코드 태그는 도리봇#2014 이다.',inline = False)
         embed.add_field(name='그녀의', value='MBTI는 ENFP 이고, 혈액형은 O형 이다. 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.', inline=False)
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
