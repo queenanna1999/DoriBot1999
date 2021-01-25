@@ -529,391 +529,371 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000)) 
 
     if message.content.startswith("ㅇㅈㄹ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("이지랄"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("추미애"):
-        await message.channel.send(" 진짜 욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("박원순"):
-        await message.channel.send("패드립보다 심한 욕을 박네 니네 엄마가 그리 가르쳤냐 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("대깨문"):
-        await message.channel.send("와.. 이건 좀 심했다... 상처 받음.. ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("문빠"):
-        await message.channel.send("와.. 이건 좀 심했다... 상처 받음.. ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("씹새끼"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("10새끼"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("십새끼"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("십새기"):
-        await message.channel.send("욕하지 마라")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("씹새기"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("10새기"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
 
     if message.content.startswith("개독"):
-        await message.channel.send("종교 비하 발언 하지 마라 진짜 추방당하기 싫으면 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅁㄹ"):
-        await message.channel.send("좆까 ")
+        await message.channel.send("도리봇이 병신같은 표현을 감지한 문구입니다.  ")
       
     if message.content.startswith("좆까"):
-        await message.channel.send("욕 작작해 시발련아 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅈㄲ"):
-        await message.channel.send("하시발 추방 마렵다 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("좃까"):
-        await message.channel.send("진짜 뒤지기 전에 작작해라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("조까"):
-        await message.channel.send("욕 작작 하렴^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("조카"):
-        await message.channel.send("욕 하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("좃카"):
-        await message.channel.send("욕 하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
    
     if message.content.startswith("삼성"):
-        await message.channel.send("대한민국을 먹여살리는 국내 1위 기업 삼성전자. 삼성전자 제품을 사용하는 대한민국의 청소년들과 대학생들은 미래가 밝습니다. ")
+        await message.channel.send("삼성은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다.")
 
     if message.content.startswith("애플"):
-        await message.channel.send("좋은 것만 쓰면서 자라야 할 청소년들을 지옥길로 인도하는 저주 받은 기업, 애플. 대한민국의 청소년들과 대학생들을 위해 애플을 대한민국에서 추방해야만 합니다. 대한민국의 미래가 달린 문제니 청원 부탁드립니다. ")
+        await message.channel.send("멋진 도구를 사람들에게 주세요.멋진 일을 해낼 겁니다")
 
     if message.content.startswith("아이폰"):
-        await message.channel.send("대가리 없는 저능아들이나 환장하는 쓰레기 기업이 만든 쓰레기 폰 ")
+        await message.channel.send("Today, Apple is going to reinvent the phone. ")
 
     if message.content.startswith("갤럭시"):
-        await message.channel.send("이 시대 최고의 엘리트들이 선호하는 대한민국 1위 기업 삼성의 스마트폰  ")
+        await message.channel.send("삼성전자의 모든 스마트 디바이스 브랜드. 향후 유일하게 판매되는 한국산 모바일 기기 브랜드이죠. ")
 
     if message.content.startswith("앱등이"):
-        await message.channel.send("중증 장애인들 중에 유독 앱등이가 많다. 그것은 과학이다. ")
+        await message.channel.send("맹목적이고 배타적인 악성 Apple 팬보이를 의미하죠. ")
 
     if message.content.startswith("삼엽충"):
-        await message.channel.send("이 시대 최고의 엘리트 ")
+        await message.channel.send("삼성과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
 
     if message.content.startswith("애플빠"):
-        await message.channel.send("중증 장애인들 중에 유독 애플빠가 많다. 그것은 과학이다. ")
+        await message.channel.send("맹목적이고 배타적인 악성 Apple 팬보이를 의미하죠.")
 
     if message.content.startswith("삼성빠"):
-        await message.channel.send("이 시대 최고의 엘리트이자 천재이며 인싸 ")
+        await message.channel.send("삼성과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개씹"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개좆"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개씹할"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개지랄"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개족새"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("아다"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("동정"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("걸레"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("간나새끼"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개새"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개돼지"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개나리"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개쓰레기"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("고자"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("거지"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("졸라"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("존나"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("좆나"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("좃나"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("ㅈㄴ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("김치녀"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("꺼저"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("꺼져"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("급식"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("급식충"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개초딩"):
-        await message.channel.send("욕하지 마라 ")   
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")   
 
-    if message.content.startswith("게임"):
-        await message.channel.send(" 그럴 시간에 공부를 하렴.. ")
+    if message.content.startswith("게임"):          #게임에 대한 경고를 도리봇이 날려줍니다.
+        dtime = datetime.datetime.now()
+        randomNum = random.randrange(1, 14)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="게임은 질병입니다.", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="게임중독.. 무엇을 상상하든 그이상을 파괴합니다.", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="게임은 마약입니다.", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="부모님께 게임 시간을 정해달라고 부탁드려보세요." ,color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="부모님과 자녀가 게임을 같이하면 오히려 역효과가 납니다. 서로 하지 말아주세요.", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="컴퓨터를 켜고 끄는 시간을 정합시다.", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="컴퓨터를 거실같은 공개된 장소로 옮기세요. 지금 당장! ", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="게임을 안하면 불안한가요? 게임을 함으로써 당신 인생이 위험합니다.", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="지금 당장 게임을 삭제합시다. 게임을 삭제했나요? 당신은 새 사람이 되었습니다.", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="처음부터 게임을 기피하기는 힘들죠. 우리 사용 시간을 정해보아요.", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="우리함께 산책나갈래요?, color=0xff0000))  
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="사람들과 대화를 많이 합시다. 물론 오프라인으로요. ", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="게임말고 새로운 취미는 없나요? 우리 함께 새로운 취미를 탐색해볼까요?", color=0xff0000))
         
     if message.content.startswith("중국놈"):
-        await message.channel.send(" 넌 조센징이라는걸 항상 명심하렴^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("중국년"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("중국새끼"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("중국"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("일본"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("일본놈"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("일본년"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("일본새끼"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨놈"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨년"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨새끼"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽발이"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("쪽바리"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽발이놈"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽바리놈"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽발이년"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽바리새끼"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("쪽발이새끼"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("문재앙"):
-        await message.channel.send(" 패드립보다 심한 욕을 하네? 알았으면 삭제해라^^ 추방해버리기전에^^  ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("디시"):
-        await message.channel.send("일베충아 꺼지렴~~^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("틀딱"):
-        await message.channel.send("그런 표현 쓰지마라.. 니네 애미 애비도 틀딱이라 곧 뒤질 나이인데;; ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("빡쳐서"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("빡침"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("빡치네"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("빡친다"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("빡치넹"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("빡쳐"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("빡치기전에"):
-        await message.channel.send("난 니얼굴 봐서 빡침..  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("노예"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("노예놈"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("노예년"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("노예새끼"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("노예새기"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("쪽바리새기"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^  ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽발이새기"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨새기"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("일본새기"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("중국새기"):
-        await message.channel.send("넌 조센징이라는걸 항상 명심하렴^^ ")
-
-    if message.content.startswith("틀딱새기"):
-        await message.channel.send("애미애비도 없는 새끼 ")
-
-    if message.content.startswith("틀딱새끼"):
-        await message.channel.send("애미애비도 없는 새끼 ")
-
-    if message.content.startswith("틀딱샛기"):
-        await message.channel.send("애미애비도 없는 새끼 ")
-
-    if message.content.startswith("틀니딱딱"):
-        await message.channel.send("애미애비도 없는 새끼 ")
-
-    if message.content.startswith("틀니딱딱이"):
-        await message.channel.send("애미애비도 없는 새끼 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("틀"):
-        await message.channel.send("애미애비도 없는 새끼 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("나무위키"):
-        await message.channel.send("꺼라위키, 대가리에 든거 없는 애미애비 등골 빨아먹는 새끼들이나 좋아한다는 희대의 위키 사이트. ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("병신"):
-        await message.channel.send(" 이시발 추방 존나 마렵네? 적당히 하자~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("병신놈"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^  ")
-
-    if message.content.startswith("병신년"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^  ")
-
-    if message.content.startswith("병신새기"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
-
-    if message.content.startswith("병신새끼"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
-
-    if message.content.startswith("병신샛기"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^")
-
-    if message.content.startswith("ㅂㅅㅅㄲ"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
 
     if message.content.startswith("ㅂㅅ"):
-        await message.channel.send("욕하지 말자구~~^^ 사이좋게 지내자구~^^")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("ㅂㅅㄴ"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
 
     if message.content.startswith("ㅄ"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
-    if message.content.startswith("ㅄㅅㄲ"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
-
-    if message.content.startswith("ㅄㄴ"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
 
     if message.content.startswith("시발아"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("퍼큐"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("뻐큐"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅈ같네"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("개같네"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
       
     if message.content.startswith("시1발"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
      
     if message.content.startswith("씨1발"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")
-      
-    if message.content.startswith("씨1발년"):
-        await message.channel.send(" 욕하지 말자구~~^^ 사이좋게 지내자구~^^ ")  
-      
-    if message.content.startswith("도리 병신"):
-        await message.channel.send("씹/새/끼야 천한 신분 주제에 감히 그분을 욕하느냐?")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
        
-    if message.content.startswith("도리"):
-        await message.channel.send("개/새/끼야 천한 신분 주제에 감히 그분의 존함을 언급했느냐? ")
       
     if message.content.startswith("ㅊㅋㅊㅋ"):
-        await message.channel.send(" 이시발 존나 띠껍네? ")
+        await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
       
     if message.content.startswith("졸려"):
-        await message.channel.send(" 라면먹구갈래? ")
+        await message.channel.send("잠들기 전에 그대 목소리 들었으면 좋겠습니다")
       
     if message.content.startswith("졸리다"):
-        await message.channel.send(" 라면먹구갈래? ") 
+        await message.channel.send("잠들기 전에 그대 목소리 들었으면 좋겠습니다 ") 
       
     if message.content.startswith("타르코프"):
-        await message.channel.send(" 망겜 언급해서 추방 존나 마렵네;; ")
+        await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
       
     if message.content.startswith("사람"):
         await message.channel.send(" #Stay at Home #사회적 거리두기 ")
@@ -922,7 +902,7 @@ async def on_message(message):
         await message.channel.send(" #Stay at Home #사회적 거리두기 ")
       
     if message.content.startswith("유튜브"):
-        await message.channel.send(" 좋은 것만 보고 자라야 할 대한민국의 꿈나무들을 병들게 하는 악마의 기업, 유튜브. 유튜브 사이트를 국내에서 접속할 수 없게 막아야합니다. 대한민국의 미래가 달린 문제니 청원 부탁드립니다. ")
+        await message.channel.send(" 유튜브는 구글이 서비스하는 동영상 공유 플랫폼입니다. ")
       
     if message.content.startswith("사회적거리두기"):
         await message.channel.send(" #Stay at Home ")
@@ -931,52 +911,44 @@ async def on_message(message):
         await message.channel.send(" #Stay at Home ")
       
     if message.content.startswith("안 졸려"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다. ")
+        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
 
     if message.content.startswith("안졸려"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다.")
+        await message.channel.send("누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
 
     if message.content.startswith("안졸리다"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다. ")
+        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어?  ")
 
     if message.content.startswith("안 졸리다"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다. ")
+        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
 
     if message.content.startswith("안졸림"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다. ")
+        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어?  ")
 
     if message.content.startswith("안 졸림"):
-        await message.channel.send(" 그러다 몸 씹창나면 아무도 책임 안져준다.. 좋은 말로 할때 자라... 젊을 때는 모르겠지만, 늙고나면 땅을 치고 후회할거다. ")
+        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
       
     if message.content.startswith("왜"):
         await message.channel.send(" ? ")
 
-    if message.content.startswith("!좆까"):
-        await message.channel.send(" 욕하지 마라")
+    if message.content.startswith("?좆까"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("!좃까"):
-        await message.channel.send(" 욕하지 마라 ")
+    if message.content.startswith("?좃까"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
-    if message.content.startswith("!좇까"):
-        await message.channel.send(" 욕하지 마라 ")
+    if message.content.startswith("?좇까"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("!족까"):
-        await message.channel.send(" 욕하지 마라 ")
+    if message.content.startswith("?족까"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
-    if message.content.startswith("!ㅈㄲ"):
-        await message.channel.send(" 욕하지 마라 ")
+    if message.content.startswith("?ㅈㄲ"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("나냡"):
-        await message.channel.send("7호선새키야 이분 이름 언급할거면 신분 상승부터 하라고  ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
       
-    if message.content.startswith("밴스드"):
-        await message.channel.send(" 순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
-
-    if message.content.startswith("유튜브 밴스드"):
-        await message.channel.send("순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
-
-    if message.content.startswith("유튜브밴스드"):
-        await message.channel.send(" 순정 유튜브 앱에 여러 강력한 편의 기능을 더한 앱이다. 유튜브 프리미엄과 비슷하게 보이지만 실제로는 유튜브 앱을 뜯어고친 Mod 버전이다. ")
       
     if message.content.startswith("?INTP"):                             
         channel = message.channel
@@ -1427,22 +1399,22 @@ async def on_message(message):
       
 
     if message.content.startswith("샹년"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ")    
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")    
       
     if message.content.startswith("썅년"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ") 
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.") 
       
     if message.content.startswith("샹놈"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ")   
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")   
        
     if message.content.startswith("썅놈"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ") 
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.") 
        
     if message.content.startswith("상년"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ")   
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")   
       
     if message.content.startswith("상놈"):
-        await message.channel.send("욕하지 말자 부모님 안 계시니? ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("자살하고싶어"):
         await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다 ")
@@ -1471,34 +1443,6 @@ async def on_message(message):
     if message.content.startswith("죽고"):
         await message.channel.send("뒷감당 잘해요? ")
        
-    if message.content.startswith("롤"):
-        await message.channel.send("LOL이 왜 애미뒤진 게임인줄 아냐? 대답을 듣고 싶으면 '?롤'을 채팅창에 입력해라 ")
-
-    if message.content.startswith("?롤"):
-        await message.channel.send("간단함. 애미뒤진애들만 모아서 하니까 애미뒤진게임인거야")
-        await message.channel.send("LOL은애미뒤진 희대의 좆병신 팀운게임이맞음.")
-        await message.channel.send("이걸 부정하는 새끼들도 애미뒤진게맞고 저능아새끼들임.")
-        await message.channel.send("지금부터 왜 LOL이 애미뒤진 좆병신 팀운게임이라는건지 설명한다.")
-        await message.channel.send("============")
-        await message.channel.send("1.일단 게임장르부터 5대5 기반 게임이다.")
-        await message.channel.send("따라서 팀중에서 한놈이 저능아에 1인분도 못하는 병신새끼면")
-        await message.channel.send("그 팀중에서 다른애가 그 싸는새끼 몫까지 해야 커버가 가능하다.")
-        await message.channel.send("2.여왕벌과 대리충")
-        await message.channel.send("노력조차 안 하고 그저 티어만 올리려는 애미뒤진 생각을 가진")
-        await message.channel.send("저능아새끼들이 LOL에는 유독 많아서")
-        await message.channel.send("이런새끼 실력도없이 고티어로가서 팀에게 민폐주고")
-        await message.channel.send("이런 현상이 많다는곳도 문제가 심각하다.")
-        await message.channel.send("3.챔피언 상성과 벨런스의 문제")
-        await message.channel.send("LOL은 애미뒤진 패치를 많이하고 벨런스가 좆망한 GAME이다.")
-        await message.channel.send("GAME 승패따윈 안중에도없고 그저")
-        await message.channel.send("지 하고싶은챔하고 트롤하는새끼들이 있는 팀이 불리하단 소리다.")
-        await message.channel.send("고티어로 갈수록 그런새끼들이 많이 줄어드는 건 맞지만")
-        await message.channel.send("그래도 아에 안 걸릴거라 장담할수는없다.")
-        await message.channel.send("그저 같은편에 장애인이 안 걸리길 비는게 최선이지.")
-        await message.channel.send("============")
-        await message.channel.send("결론, LOL 한판이라도 한사람은 다 애미뒤진놈들임.")
-        await message.channel.send("대한민국 피시방 순위 1위를 이딴 애미뒤진 GAME이 먹은것부터가")
-        await message.channel.send("조센징들은 애미애비 둘다 쌍으로 뒤진 개시발 민족이라는 증거임.") 
 
     if message.content.startswith("한손에총들고"):
         await message.channel.send(" 아프리카TV BJ 보겸의 던전앤파이터와 아프리카 TV 계정 닉네임이다. ")
@@ -1764,23 +1708,6 @@ async def on_message(message):
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))  
         
         
-    if message.content.startswith("도리야"):     #없어도 되는 기능.
-
-        emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
-                 " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
-                 " ( •́ ̯•̀ ) ",
-                 " •̀.̫•́✧ ", " '͡•_'͡• ", " (΄◞ิ౪◟ิ‵) ", " ˵¯͒ བ¯͒˵ ", " ͡° ͜ʖ ͡° ", " ͡~ ͜ʖ ͡° ", " (づ｡◕‿‿◕｡)づ ",
-                 " ´_ゝ` ", " ٩(͡◕_͡◕ ", " ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ ", " ٩(͡ï_͡ï☂ ", " ௐ ", " (´･ʖ̫･`) ", " ε⌯(ง ˙ω˙)ว ",
-                 " (っ˘ڡ˘ς) ", "●▅▇█▇▆▅▄▇", "╋╋◀", "︻╦̵̵̿╤──", "ー═┻┳︻▄", "︻╦̵̵͇̿̿̿̿══╤─",
-                 " ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ", "∑◙█▇▆▅▄▃▂", " ♋♉♋ ", " (๑╹ω╹๑) ", " (╯°□°）╯︵ ┻━┻ ",
-                 " (///▽///) ", " σ(oдolll) ", " 【o´ﾟ□ﾟ`o】 ", " ＼(^o^)／ ", " (◕‿‿◕｡) ", " ･ᴥ･ ", " ꈍ﹃ꈍ "
-                                                                                                 " ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ",
-                 " ( ◍•㉦•◍ ) ", " (｡ì_í｡) ", " (╭•̀ﮧ •́╮) ", " ଘ(੭*ˊᵕˋ)੭ ", " ´_ゝ` ", " (~˘▾˘)~ "] 
-
-        randomNum = random.randrange(0, len(emoji)) 
-        print("랜덤수 값 :" + str(randomNum))
-        print(emoji[randomNum])
-        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
 
     if message.content.startswith("?코로나"):     #없어도 되는 기능.
@@ -1819,25 +1746,7 @@ async def on_message(message):
         print("랜덤수 값 :" + str(randomNum))
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))   
-        
-        
-    if message.content.startswith("도리도리곰도리"):     #없어도 되는 기능.
-
-        emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
-                 " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
-                 " ( •́ ̯•̀ ) ",
-                 " •̀.̫•́✧ ", " '͡•_'͡• ", " (΄◞ิ౪◟ิ‵) ", " ˵¯͒ བ¯͒˵ ", " ͡° ͜ʖ ͡° ", " ͡~ ͜ʖ ͡° ", " (づ｡◕‿‿◕｡)づ ",
-                 " ´_ゝ` ", " ٩(͡◕_͡◕ ", " ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄ ", " ٩(͡ï_͡ï☂ ", " ௐ ", " (´･ʖ̫･`) ", " ε⌯(ง ˙ω˙)ว ",
-                 " (っ˘ڡ˘ς) ", "●▅▇█▇▆▅▄▇", "╋╋◀", "︻╦̵̵̿╤──", "ー═┻┳︻▄", "︻╦̵̵͇̿̿̿̿══╤─",
-                 " ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ ", "∑◙█▇▆▅▄▃▂", " ♋♉♋ ", " (๑╹ω╹๑) ", " (╯°□°）╯︵ ┻━┻ ",
-                 " (///▽///) ", " σ(oдolll) ", " 【o´ﾟ□ﾟ`o】 ", " ＼(^o^)／ ", " (◕‿‿◕｡) ", " ･ᴥ･ ", " ꈍ﹃ꈍ "
-                                                                                                 " ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ",
-                 " ( ◍•㉦•◍ ) ", " (｡ì_í｡) ", " (╭•̀ﮧ •́╮) ", " ଘ(੭*ˊᵕˋ)੭ ", " ´_ゝ` ", " (~˘▾˘)~ "] 
-
-        randomNum = random.randrange(0, len(emoji)) 
-        print("랜덤수 값 :" + str(randomNum))
-        print(emoji[randomNum])
-        await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
+         
 
     if message.content.startswith("?MBTI"):     #없어도 되는 기능.
 
