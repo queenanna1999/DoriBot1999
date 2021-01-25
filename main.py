@@ -445,61 +445,88 @@ async def on_message(message):
         
         
     if message.content.startswith("닥쳐"):               #비속어에 도리봇이 반응하도록 추가했습니다. 추가하지 못한 비속어가 있다면, 더 추가하겠습니다.
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("시발"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("씨발"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("니애미"):
-        await message.channel.send("응 니애미 창녀")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㄴㅇㅁ"):
-        await message.channel.send("응 느그애미")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("니애비"):
-        await message.channel.send("응 니애비 외노자 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㄴㅇㅂ"):
-        await message.channel.send("응 느그애비 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("개새끼"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("닭쳐"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("개새기"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("개샛기"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("문재인"):
-        await message.channel.send("욕 하지마라 진짜 뒤진다 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("전라도"):
-        await message.channel.send("지역 비하하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅗ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅅㅂ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅆㅂ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㄱㅅㄲ"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("개자식"):
-        await message.channel.send("욕하지 마라 ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("ㅋㅋㅋ"):
-        await message.channel.send("쪼개지마라  ")
+        dtime = datetime.datetime.now()
+        randomNum = random.randrange(1, 14)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="보통 사람은 남을 보고 웃지만, 꿈이 있는 사람은 꿈을 보고 웃어요", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="행복하기 떄문에 웃는 것이 아니라, 웃기 때문에 행복해지는 거죠.", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="사람은 함께 웃을 때 서로 가까워지는 것을 느낀다네요.", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="웃음은 전염되요. 우리 함께 웃읍시다." ,color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="개구리 뒷다리 구이", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="메뚜기구이", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="구운 양 머리", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="초콜릿을 곁들인 초코감자튀김", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="민트초코 아이스크림", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="초콜릿을 버무린 초코치킨", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="개고기", color=0xff0000))  
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000)) 
 
     if message.content.startswith("ㅇㅈㄹ"):
         await message.channel.send("욕하지 마라 ")
