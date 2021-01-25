@@ -720,7 +720,7 @@ async def on_message(message):
         if randomNum==10:
             await message.channel.send(embed=discord.Embed(title="처음부터 게임을 기피하기는 힘들죠. 우리 사용 시간을 정해보아요.", color=0x00ff00))
         if randomNum==11:
-            await message.channel.send(embed=discord.Embed(title="우리함께 산책나갈래요?, color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="우리함께 산책나갈래요?", color=0xff0000))  
         if randomNum==12:
             await message.channel.send(embed=discord.Embed(title="사람들과 대화를 많이 합시다. 물론 오프라인으로요. ", color=0xff0000)) 
         if randomNum==13:
