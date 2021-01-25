@@ -498,7 +498,7 @@ async def on_message(message):
     if message.content.startswith("개자식"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
-    if message.content.startswith("ㅋㅋㅋ"):
+    if message.content.startswith("ㅋㅋㅋ"):         #ㅋㅋㅋ라는 문구가 인식되면 도리봇이 웃음에 관한 명언들을 읊어줍니다.
         dtime = datetime.datetime.now()
         randomNum = random.randrange(1, 14)
         if randomNum==1:
@@ -510,23 +510,23 @@ async def on_message(message):
         if randomNum==4:
             await message.channel.send(embed=discord.Embed(title="웃음은 전염되요. 우리 함께 웃읍시다." ,color=0x00ff00))
         if randomNum==5:
-            await message.channel.send(embed=discord.Embed(title="개구리 뒷다리 구이", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="웃음은 만국공통의 언어죠.", color=0x00ff00))
         if randomNum==6:
-            await message.channel.send(embed=discord.Embed(title="메뚜기구이", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="그거 알아요? 당신은 웃을때 매력적이에요.", color=0x00ff00))
         if randomNum==7:
-            await message.channel.send(embed=discord.Embed(title="구운 양 머리", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="전 저 하나가 웃음거리가 되어 제 친구들이 즐거울 수 있다면 얼마든지 바보가 될 수 있어요. ", color=0x00ff00))
         if randomNum==8:
-            await message.channel.send(embed=discord.Embed(title="초콜릿을 곁들인 초코감자튀김", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="오늘 가장 좋게 웃는 자는 역시 죽기 직전에도 웃을거에요. 항상 웃으세요.", color=0x00ff00))
         if randomNum==9:
-            await message.channel.send(embed=discord.Embed(title="민트초코 아이스크림", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="유머감각은 리더의 필수 조건이죠. 노잼인 사람들은 사형시켜야 제맛이죠. 그들은 인간의 존엄성을 지켜줘서는 안됩니다.", color=0x00ff00))
         if randomNum==10:
-            await message.channel.send(embed=discord.Embed(title="초콜릿을 버무린 초코치킨", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="웃음은 최고의 결말을 보장하죠.", color=0x00ff00))
         if randomNum==11:
-            await message.channel.send(embed=discord.Embed(title="개고기", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="성인이 하루 15번만 웃고 살면 병원의 수많은 환자들이 반으로 줄어들 겁니다. 항상 웃으세요! ", color=0xff0000))  
         if randomNum==12:
-            await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="웃음은 늘 지니고 있어야 합니다. ", color=0xff0000)) 
         if randomNum==13:
-            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000)) 
 
     if message.content.startswith("ㅇㅈㄹ"):
         await message.channel.send("욕하지 마라 ")
