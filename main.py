@@ -68,6 +68,7 @@ async def on_message(message):
         embed.add_field(name='?코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
         embed.add_field(name='?오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
         embed.add_field(name='?오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)
+        embed.add_field(name='?오늘의음식', value=' 도리봇이 오늘의음식 하나를 추천합니다 ', inline=False) 
         embed.add_field(name='?오늘의말씀', value=' 도리봇이 오늘의 성경 구절을 읽어줍니다 ', inline=False)        
         embed.add_field(name='?PC 게임 추천', value=' 도리봇이 PC 게임을 추천해줍니다 ', inline=False)
         embed.add_field(name='?모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
@@ -108,6 +109,10 @@ async def on_message(message):
         await message.channel.send("*2021년 01월* ")
         await message.channel.send("*사용자의 MBTI 특성 및 궁합, 혈액형의 특성 및 궁합을 불러오는 기능, 배틀그라운드 전적 검색 기능 및 중앙자살예방센터와 함께하는 자살 예방 캠페인 대응,* ")
         await message.channel.send("*그리고 오늘의말씀 기능과 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 쓴 후 우주선 안으로 들어가 꿀잠을 잤습니다.*")
+        await message.channel.send("============")
+        await message.channel.send("*2021년 01월25일 월요일* ")
+        await message.channel.send("*이제 도리봇에게서 음식 추천을 받을 수 있습니다.* ")
+        await message.channel.send("*그리고 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 썼습니다.현재 부산 앞바다입니다.*")
 
         
         
@@ -197,6 +202,38 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="6", color=0x00ff00))
         if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="일시적인 오류 발생! 잠시만 기다리세요...", color=0xff0000))
+          
+    if message.content.startswith("?오늘의음식"):       #추가바람.
+        dtime = datetime.datetime.now()
+        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        await message.channel.send(embed=embed)
+        randomNum = random.randrange(1, 14)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="바퀴벌레튀김", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="뱀술", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="루왁커피", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="번데기", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="개구리 뒷다리 구이", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="메뚜기구이", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="구운 양 머리", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="초콜릿을 곁들인 초코감자튀김", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="민트초코 아이스크림", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="초콜릿을 버무린 초코치킨", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="개고기", color=0xff0000))  
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000))           
             
     if message.content.startswith("?3"):
         await message.channel.send("당신의 행운의 숫자는 3 입니다. ")
