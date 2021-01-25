@@ -976,199 +976,231 @@ async def on_message(message):
 
 
     if message.content.startswith("?INFP"):
-        await message.channel.send(" 당신의 MBTI는 INFP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ENTJ 이며, ")
-        await message.channel.send(" 잘맞는 타입은 INFP, ENFP, INFJ, INTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 ISFP, ESFP, ISTP, ESTP, ISFJ, ESFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *한결같은 사람, 예의바르고 배려하는 사람 ")
-        await message.channel.send(" *사생활 존중할 것, 당일 연락 싫어함 ")
-        await message.channel.send(" *선경에 모순이 보이지 않을 것 ")
-        await message.channel.send(" *똑똑하고 배울 것 많은 사람, 논리적인 사람 ")
-        await message.channel.send(" *자기자랑 안통함 ")
-        await message.channel.send(" *말 많은 사람 싫어함 ")
-        await message.channel.send(" *허세, 감정호소 싫어함 ")
-        await message.channel.send(" *차분한 성격을 좋아함 ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [열정적인 중재자]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '중재자형 사람은', value = '최악의 상황이나 악한 사람에게서도 좋은 면만을 바라보며 긍정적이고 더 나은 상황을 만들고자 노력하는 진정한 이상주의자입니다. 간혹 침착하고 내성적이며 심지어는 수줍음이 많은 사람처럼 비추어지기도 하지만, 이들 안에는 불만 지피면 활활 타오를 수 있는 열정의 불꽃이 숨어있습니다. 인구의 대략 4%를 차지하는 이들은 간혹 사람들의 오해를 사기도 하지만, 일단 마음이 맞는 사람을 만나면 이들 안에 내재한 충만한 즐거움과 넘치는 영감을 경험할 수 있을 것입니다.',inline = False)
+        embed.add_field(name='이들은', value='논리나 단순한 흥미로움, 혹은 인생의 실용적인 부분이 아닌 그들 나름의 원리원칙에 근거하여 사고하고 행동합니다. 더욱이 성취에 따르는 보상이나 그렇지 못할 경우에 생길 수 있는 불이익 여부에 상관없이 순수한 의도로 인생의 아름다움이나 명예 그리고 도덕적 양심과 미덕을 좇으며 나름의 인생을 설계해 나갑니다. 그리고 그러한 본인들의 생각과 행동에 자부심을 느끼기도 하는데, 이는 마땅한 일입니다. 하지만 모든 사람이 그들의 생각 뒤에 숨은 동기나 의미를 정확히 파악하지는 못하는데, 이는 자칫 이들을 외톨이로 만들 수도 있습니다.', inline=False)
+        embed.add_field(name='금', value='이라고 해서 다 반짝이는 것은 아니며, 헤매고 다니는 자가 모두 길을 잃은 것은 아닙니다. 오래되었어도 강한 것은 시들지 않으며, 깊게 뻗은 뿌리에는 서리가 닿지 않습니다.', inline=False)        
+        embed.add_field(name = '자기 자신에 대한 깊은 통찰력', value = '중재자형 사람이 가진 가장 큰 장점은 적절한 은유나 이야기를 통해 그들의 생각을 상징화하여 다른 이들과 깊이 있는 의사소통을 한다는 점입니다. 이러한 직관적인 성향은 이들로 하여금 더 창의적인 일에 몰두하게 합니다. 이를 비추어보면 여러 유명 시인이나 작가, 그리고 배우가 이 성격 유형에 속하는 것이 그리 놀랍지만은 않습니다. 중재자형 사람에게 있어 본인 자신에 대한 이해뿐만 아니라 자신이 속한 세상을 이해하는 것이 매우 중요한데, 이들은 종종 작품에 자신을 투영시켜 세상을 탐구하기도 합니다.',inline = False)
+        embed.add_field(name='자기표현에', value='특출난 재주를 가지고 있는 이 유형의 사람은 아름다움에 대한 고찰이나 그들이 가지고 있는 비밀을 은유적인 방법이나 작품 속 허구 인물을 등장시켜 표현하기도 합니다.', inline=False)
+        embed.add_field(name='이들은 또한', value='뛰어난 언어적 소질을 보이는데 이는 비단 모국어뿐 아니라 제2외국어(심지어는 제3외국어까지!)를 습득하는 데에까지 재능을 보입니다. 이들의 뛰어난 의사소통 능력은 사람들 간의 화합을 도모하며, 그들이 목표한 바를 달성하기 위해 나아가는 데 도움을 줍니다.', inline=False)   
+        embed.add_field(name='다수가 아닌 소수에 더 많은 관심', value='다른 외향적 성격 유형에 속하는 사람과 달리, 중재자형 사람은 소수의 몇몇, 그리고 의미 있다고 판단되는 한 가지 목표에만 관심을 기울이는 등 한 번에 많은 일을 달성하려 하지 않습니다. 만일 모든 사회악을 근절하는 데 그들이 할 수 있는 일이 한정되어 있음을 깨닫는 순간, 이들의 에너지는 빛을 잃고 좌절감을 맛보거나 처한 상황에 압도되기도 합니다. 그리고 이는 밝은 장밋빛 미래를 함께 꿈꾸며 가까이에서 지켜보는 다른 이들의 마음을 안타깝게 하기도 합니다.', inline=False)          
+        embed.add_field(name='자칫하면', value='중재자형 사람은 선(善)을 위해 하던 행위를 갑자기 멈추거나 하루하루 일상생활을 영위하는 일조차 등한시할 수도 있습니다. 이들은 종종 깊은 생각의 나락으로 자신을 내몰아 이론적 가설이나 혹은 철학적 논리에 빠지기도 하는데, 꾸준한 관심을 가지고 이들을 지켜보지 않으면 이들은 연락을 끊고 '은둔자' 생활을 하기도 합니다. 그리고 추후 이들을 현실 밖으로 다시 돌아오게 하기까지 주위 사람들의 많은 에너지와 노력을 필요로 합니다.', inline=False) 
+        embed.add_field(name='다행인 것은', value='깊은 나락에 빠져 있던 이들도 봄이 오면 다시금 봉오리를 피우는 꽃과 같이 이들의 애정 어린 마음과 창의적인 생각, 이타주의적이며 이상주의적인 생각 역시 제자리로 돌아와 자신뿐 아니라 곁에서 지켜보는 이들로 하여금 뿌듯함에 미소 짓게 합니다. 그리고 다시금 사실적 논리나 현실적인 유용성의 관점이 아닌 넘치는 영감과 인간애, 친절함, 그리고 따뜻한 마음으로 세상을 바라봅니다.', inline=False) 
+        embed.add_field(name='열정적인 중재자형에 속하는 유명인', value='J.R.R 톨킨, 윌리엄 쉐익스피어, 톰 히들스턴(한국에서의 그는 MCU의 빌런이자 아스가르드의 신, 천둥의 신 토르의 동생, 요툰헤임의 왕족, 로키역으로 유명함), 줄리아 로버츠, 조니 뎁, 프로도 배긴즈(반지의제왕), 아웬(반지의제왕),   ', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
 
     if message.content.startswith("?ISTJ"):
-        await message.channel.send(" 당신의 MBTI는 ISTJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
-        await message.channel.send(" 반반 타입은 ISTP, ISFP, ENTJ 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 INTJ, INTP, ENTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *과묵하고 책임감 있는, 나대지 않는 사람 ")
-        await message.channel.send(" *갈등 싫음, 평화주의자인 사람 ")
-        await message.channel.send(" *ISTJ를 잘 이해해줄 것 ")
-        await message.channel.send(" *신뢰감을 줄 것 ")
-        await message.channel.send(" *조용히 챙겨주고, 먼저 도와주는 사람 ")
-        await message.channel.send(" *충동적인 모습을 싫어함 ")
-        await message.channel.send(" *지나치게 활동적인 것은 부담스러움 ")
-        await message.channel.send(" *지적이나 평가 싫어함 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ISTJ형은 신중하게 상대를 선택하는 경향이 있으며, 적극적으로 접근하는 것에 그다지 자신있어 하지 않습니다. ")
-        await message.channel.send(" 배려심이 강하고 책임감도 강하기 때문에 상대를 슬프게 하는 행동은 하지 않으며 참는 경우도 많아 폭발한다면 감당하기 어려울 수 있습니다. ")
-        await message.channel.send(" 동료 의식이 높기 때문에 동료에 대해 나쁘게 말하면 관계가 무너지기 쉬운 것도 특징입니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ISFJ"):
-        await message.channel.send(" 당신의 MBTI는 ISFJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
-        await message.channel.send(" 반반 타입은 ISFP, ISTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 INTJ, INTP, ENTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *성실하고 똑똑한 사람 ")
-        await message.channel.send(" *매사 열심히 할 것 ")
-        await message.channel.send(" *인권의식 높은 사람 ")
-        await message.channel.send(" *내가 해주는 만큼 돌려주는 사람에게 크게 감동 ")
-        await message.channel.send(" *10주고 2받아도 감동하는 스타일 ")
-        await message.channel.send(" *잘해주는데 나한테만 잘해줘야함 ")
-        await message.channel.send(" *칭찬은 크게 필요 없음 ")
-        await message.channel.send(" *노력한 결과에 대해서 칭찬 OK ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ISFJ 유형에게 있어서 관계를 맺는 일은 매우 가치 있는 일입니다. 당신을 기쁘게 하는 일을 하는 것을 아주 좋아하며, 보통 그들은 당신이 원하거나 ")
-        await message.channel.send(" 필요로 하는 것들을 꽤 정확하게 알아 맞춥니다. 당신은 그들의 이러한 행동들에 의존해지거나 익숙해지기 쉽지만, 이들 스스로 당신을 위해 하는 행동들에  ")
-        await message.channel.send(" 매우 신경을 쓰고 있다는 것을 알아야 합니다. 당신이 이들의 배려와 호의에 대해서 고마움과 애정을 자주 표현해주는 것이 중요합니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ENFJ"):
-        await message.channel.send(" 당신의 MBTI는 ENFJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFP와 ISFP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, ENFJ, INTJ, ENTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 ESFP, ISTP, ESTP, ISFJ, ESFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *고맙게 여길줄아는 사람 ")
-        await message.channel.send(" *ENFJ가 주는 것에 감동하기 ")
-        await message.channel.send(" *먼저 다가와주기 ")
-        await message.channel.send(" *얘기 많이 들어주기")
-        await message.channel.send(" *ENFJ의 영향력을 긍정적으로 평가해줄 것 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ENFJ는 자신에게 공감하는지, 상대방의 감정이 내 감정과 같은지, 우리 관계는 어떤지 등에 대해서 여러번 물어봅니다. 이것은 종종 관계에 ")
-        await message.channel.send(" 문제가 있을 때는 좋은 극복 방법이 되기도 합니다. 하지만 너무 많은 질문은 오히려 관계를 방해하는 요소가 될 수 있습니다. 상대방의 감정을 ")
-        await message.channel.send(" 살피는 것도 좋지만 끊임없이 사랑을 확인하려는 자세는 그만 두는 것이 좋습니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ENTP"):
-        await message.channel.send(" 당신의 MBTI는 ENTP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFJ와 INTJ 이며, ")
-        await message.channel.send(" 잘맞는 타입은 INFP, ENFP, ENFJ, ENTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 반반 타입은 ISFP, ESFP, ISTP, ESTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *내 맘에 드는 사람 ")
-        await message.channel.send(" *지속적인 플러팅 필요 ")
-        await message.channel.send(" *말보다 행동 ")
-        await message.channel.send(" *희생적인 태도, 살뜰히 챙겨주기 ")
-        await message.channel.send(" *함께있을때 ENTP를 성장시킬 수 있는 사람 ")
-        await message.channel.send(" *스스로 성장하고 비전있는 사람 ")
-        await message.channel.send(" *공감 잘 해주고 우쭈쭈 잘해 줄것 ")
-        await message.channel.send(" *리액션 필수, 관심 계속 가져주기 ")
-        await message.channel.send(" *독특하고 자유분방하되 허세는 절대 금물 ")
-        await message.channel.send(" *플러팅 난이도 높음 ")
-        await message.channel.send(" *밀당 싫음 ")
-        await message.channel.send(" *논쟁에서 져주는 사람")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ENTP는 재치있고 활기차기 때문에 흥미진진한 연인입니다. 하지만 관계가 안정되멩 따라 지루한 관계를 견디지 못해서 더 많은 즐거움을 만드려는 경향이 있습니다. ")
-        await message.channel.send(" 지금 사귀는 상대에게 진지하건 아니건, ENTP는 여러 사람들과의 가능성을 열어두는 것을 좋아합니다. 당신은 연인에게 솔직하고 진지하게 행동하는 게 좋습니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ENTJ"):
-        await message.channel.send(" 당신의 MBTI는 ENTJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFP와 INTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ENFP, INFJ, ENFJ, INTJ, ENTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 반반 타입은 ISFP, ESFP, ISTP, ESTP, ISFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *플러팅이 의미가 없음, 먼저 올 때까지 기다릴 것 ")
-        await message.channel.send(" *팀플 같이해서 빡세게 일하는 모습 보일 것 ")
-        await message.channel.send(" *순수하게 똑똑한 벗 선호 ")
-        await message.channel.send(" *가벼운 관계 싫어함 ")
-        await message.channel.send(" *불호가 매우 강함 ")
-        await message.channel.send(" *기준이 매우 높음 ")
-        await message.channel.send(" *인간적으로 존중할 수 있는 모습 보일 것 ")
-        await message.channel.send(" *퍼주는 건 좋은데 너무 부담스러운건 자제 ")
-        await message.channel.send(" *밀당하지 말것 ")
-        await message.channel.send(" *무성애자 많음, 상처 받지 말것 ")
-        await message.channel.send(" *ENTJ는 기본적으로 자기애가 강함 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 연애도 주도적으로 많이하며, 연애 상대에게 꽤 충실한 편 입니다. 이들이 끌리는 스타일은 자신이 못하는 것을 잘하는 상대에게 ")
-        await message.channel.send(" 유능함을 느껴 빠지기도 하며, 자신의 말을 잘 들어주는 상대에게 끌리기도 합니다. 이들은 연애에 나름 충실하고 연인을 잘 챙기지만 연인에게도 ")
-        await message.channel.send(" 강압적인 태도를 가끔씩 드러내어 갈등의 원인이 되기도 합니다. ")
-        await message.channel.send(" 자신의 직감에 확신이 있는 ENTJ는 헤어지고 싶다고 생가갛면 배려없고 단호해질 수 있습니다. 당신의 의사를 전달하는 방식과 시점을 생각하고 관계를 정리하는 것이 좋습니다. ")        
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
+        
     if message.content.startswith("?ESFP"):
-        await message.channel.send(" 당신의 MBTI는 ESFP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ISFJ와 ISTJ 이며, ")
-        await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP, ESFJ, ESTJ 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 ISFP, ESFP, ISTP, ESTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *연락 자주하고 약속 많이 잡기 ")
-        await message.channel.send(" *심심할때마다 연락하기 ")
-        await message.channel.send(" *ESFP가 맘에 드는 사람 ")
-        await message.channel.send(" *우연한 만남포인트 자주 만들기 ")
-        await message.channel.send(" *선물 많이 주기 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 자주 만나는 것을 좋아하며 감정적으로도 물질적으로도 표현에 적극적입니다. 대상을 지배하려고 하지 않으며, 우연한 만남에 포인트를 만들며 친구 같은 연애를 좋아합니다. ")
-        await message.channel.send(" ESFP는 자신이 맘에 드는 사람이 우선이지만 쉽게 상대방에게 질리는 편이며, 연애를 시작하는 자주 연락을 하며 평화로운 관계를 추구합니다. 아주 열정적으로 연애를 하기 때문에 이별 후엔 미련이 없습니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
+        
     if message.content.startswith("?ESFJ"):
-        await message.channel.send(" 당신의 MBTI는 ESFJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은ISFP와 ISTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
-        await message.channel.send(" 반반 타입은 ESFP, ESTP, ENTJ 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 INTJ, INTP, ENTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *'내 사람'이 될 것 ")
-        await message.channel.send(" *먼저 다가갈 것 ")
-        await message.channel.send(" *적당한 선에서 적당히 다가올 것 ")
-        await message.channel.send(" *친한 사이 아니면 플러팅 비추")
-        await message.channel.send(" *공통점 많이 만들기, 배려해주기, 취미공유 ")
-        await message.channel.send(" *다정다감, 배려, 쏘스윗 ")
-        await message.channel.send(" *직접적인 표현 ")
-        await message.channel.send(" *다정한 영상 선호 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 사회성이 대부분 좋고 다정한 편이라 인기가 많다. 주변에 이성도 많아서 본인이 활동하는 영역에서 연인관계를 발전시킨다. 현실적인  ")
-        await message.channel.send(" 성향이 강해서인지 마음이 있어도 상대와 내가 현재 조건이 맞지 않는다면 그 관계에 대해 크게 고민한다. 그러나 연애 발전 단계에서는 ")
-        await message.channel.send(" 생각보다 그렇게 적극적이지 않다. 상대의 반응에 따라 단계를 발전시키며, 이들은 관계 발전 전까지는 상대와 내가 맞는지를 고민을 많이하지만, 막상 연애가 시작되면 장기 연애하는 경우가 많다.")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
+        
     if message.content.startswith("?ESTP"):
-        await message.channel.send(" 당신의 MBTI는 ESTP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ISFJ와 ISTJ 이며, ")
-        await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 ISFP, ESFP, ISTP, ESTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *관심 지나치게 절대 X ")
-        await message.channel.send(" *개인영역 침범 금지 ")
-        await message.channel.send(" *ESTP를 알려고 하지 말고 그에 대해 느끼는 감정표현을 해줄 것 ")
-        await message.channel.send(" *잘난척 금지 ")
-        await message.channel.send(" *나를 좋아해주는 사람 ")
-        await message.channel.send(" *나만 아는 무언가를 가진 사람 ")
-        await message.channel.send(" *즉흥적인 것 좋아함 ")
-        await message.channel.send(" *변덕에 맞추어 융통성있게 대응해줄 수 있는 사람 ")
-        await message.channel.send(" *토론 좋아하고 취미 공유 가능한 사람 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 적극적이고 활발해서 인기가 많은 ESTP는 스스로가 원하는 상대를 고를 수 잇습니다. ESTP는 사교적이고 재미있지만 상대와의 진지한 관계에 대해 생각하지 않으며, 관계가 지루해지면 떠나는 편 입니다. ")
-        await message.channel.send(" 장기 연애는 낯선 것일지도 모르지만, 관계에서 가장 좋은 시기는 초반의 설레임이 지나간 이후라는 사실을 기억해야 합니다. 어느 순간부터 상대의 소중함을 돌아보는 것이 중요합니다.  ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
+        
     if message.content.startswith("?ISFP"):
-        await message.channel.send(" 당신의 MBTI는 ISFP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFJ와 ESFJ, ESTJ 이며, ")
-        await message.channel.send(" 반반 타입은 INTJ, ENTJ, INTP, ENTP, ISFJ, ISTJ 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 ISFP, ESFP, ISTP, ESTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *개인 영역 침범 금지 ")
-        await message.channel.send(" *플러팅 부담 ")
-        await message.channel.send(" *첫인상 중요 ")
-        await message.channel.send(" *연애 자체가 그닥 관심 없음 ")
-        await message.channel.send(" *좋아하는 사람 생기면 혼자 안절부절함. ")
-        await message.channel.send(" *사소한것에 크게 신경씀 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 수수께끼 투성에 흥미로운 ISFP는 진지한 관계에 오픈 마인드입니다. 하지만 관계가 깊어질수록 두려움이 앞서기 때문에 속마음을 숨기고 도망 갈 수도 있습니다. ")
-        await message.channel.send(" 상대에게 당신의 감정에 대해 솔직하게 말하는 것이 좋습니다.")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: []  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
 
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)        
+        embed.add_field(name = '', value = '',inline = False)
+        embed.add_field(name='', value='', inline=False)
+        embed.add_field(name='', value='', inline=False)   
+        embed.add_field(name='', value='', inline=False)          
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='', value='', inline=False) 
+        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        await message.channel.send(channel,embed=embed) 
+        
+        
     if message.content.startswith("?INTJ"):
         channel = message.channel
         embed = discord.Embed(
