@@ -1204,42 +1204,45 @@ async def on_message(message):
         await message.channel.send(" 서로를 알아가는데 지나치게 오랜시간이 걸릴 필요는 없습니다. 사랑하는 사람과의 관계가 진심이라고 느껴질 때, 비밀스러운 당신의 곁은 내어주는 것도 필요합니다. ")
 
     if message.content.startswith("?ESTJ"):
-        await message.channel.send(" 당신의 MBTI는 ESTJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENTJ와ISFP, ISTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
-        await message.channel.send(" 반반 타입은 ENTJ, ESFP, ESTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 INTJ, ENTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *둥기둥기 니가 최고 ")
-        await message.channel.send(" *일단 ESTJ가 표현하는 만큼 표현해줄 것 ")
-        await message.channel.send(" *유머로 승부하지 말것, 진증한 사람 ")
-        await message.channel.send(" *깊은 얘기 통하는 사람")
-        await message.channel.send(" *물질적으로 챙겨주고 기념일 까먹으면 안됨 ")
-        await message.channel.send(" *한말을 꼭 지킬 것, 즉흥 싫음 ")
-        await message.channel.send(" *티나게 챙겨주고 티나게 표현하기")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 직설적이고 자기 주장이 강한 ESTJ는 초반에 너무 좋은 감정과 미묘한 관계를 유지하는 것을 힘들어 합니다. 강렬한 감정을 잠시 그대로 두십시오.")
-        await message.channel.send(" 우리가 어떤 사인인지 묻기 전에 두 사람의 감정이 자연스럽게 발전할 시간을 주는 것이 좋습니다.")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [엄격한 관리자]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '훌륭한', value = '질서는 모든 것의 기초이다.',inline = False)
+        embed.add_field(name='관리자형', value='사람은 그들 생각에 반추하여 무엇이 옳고 그른지를 따져 사회나 가족을 하나로 단결시키기 위해 사회적으로 받아들여지는 통념이나 전통 등 필요한 질서를 정립하는 데 이바지하는 대표적인 유형입니다. 정직하고 헌신적이며 위풍당당한 이들은 비록 험난한 가시밭길이라도 조언을 통하여 그들이 옳다고 생각하는 길로 사람들을 인도합니다. 군중을 단결시키는 데에 일가견이 있기도 한 이들은 종종 사회에서 지역사회조직가와 같은 임무를 수행하며, 지역 사회 발전을 위한 축제나 행사에서부터 가족이나 사회를 하나로 결집하기 위한 사회 운동을 펼치는 데 사람들을 모으는 역할을 하기도 합니다.', inline=False)
+        embed.add_field(name='옳다고 생각되는 일은 거침없이 밀고 나가는 굳은 의지!', value=' 특히 민주주의 사회에서 더욱 필요로 하는 이 유형의 사람은 인구의 대략 11%를 차지합니다. 전 세계 유명 비즈니스 리더나 정치인 중 상당수가 이 유형에 속하는 것이 어찌 보면 그리 놀랍지 만은 않을 것입니다. 법과 사회 질서의 중요함을 굳게 믿는 이들은 헌신과 공명정대한 삶을 통해 다른 이들에게 본보기가 되고자 하는데, 특히 업무적으로 게으르거나 부정을 저지르는 이들은 가차 없이 벌하기도 합니다. 만일 누군가 고되고 힘든 사회 운동을 자처하여 그들의 됨됨이를 증명해 보이고자 하는 이들이 있다면 이들은 바로 관리자형 사람일 것입니다.', inline=False)        
+        embed.add_field(name = '이들은', value = '주변 상황을 잘 판단하여 명확하고 증명이 가능한 확실한 사실에 근거하여 사고하는 경향이 있습니다. 이리하여 만일 이들의 의견이나 결정 내린 사항이 심한 반대 의견에 부딪혔을 때 이들로 하여금 무엇이 가능하고 불가능한지를 정확히 판단하여 본연의 믿음이나 생각을 고수한 채 꿋꿋이 헤쳐나갈 수 있게 합니다. 말을 허투루 하지 않는 이들은 성취하기 어려운 고된 일도 마다치 않고 기꺼이 뛰어들어 구체적으로 실행 계획을 세워 난해해 보이는 일도 수월히 실행해 나갑니다.',inline = False)
+        embed.add_field(name='이들은', value='또한 타인과 스스럼없이 잘 어울리며, 대화 시 단순한 논리나 사실에 입각한 딱딱한 대화가 아닌 따뜻하고 섬세한 언어를 사용하여 인간 대 인간으로 이야기를 나눕니다. 이로 인해 주변 가까운 친구나 동료는 이들을 사교성이 많은 사람으로 오해하기도 하지만, 사실 이들은 갑자기 물러서야 하는 상황이 생겼을 때 마음의 평정심을 잃지 않을 수 있도록 잠시 생각을 비우고 재충전할 수 있는 혼자만의 시간을 가지기를 원합니다. 선의의 옹호자형 사람은 다른 이들의 감정을 섬세히 잘 살피며, 다른 이들도 역시 마찬가지로 그렇게 해주기를 바랍니다. 이는 때로 이들이 단 며칠간만이라도 혼자 있을 수 있는 여유를 가지는 것을 의미하기도 합니다.', inline=False)
+        embed.add_field(name='나아가', value='이들은 업무를 수행하는 데 있어 그들의 엄격한 가치관이 함께 일하는 다른 이들에게도 반영되기를 원합니다. 기본적으로 사람들과의 약속을 충실히 이행하는 이들의 기본 성향 때문에 함께 일하는 동업자나 부하의 무능력함, 태만, 심지어는 부정직함으로 이들을 시험에 들게 하는 경우 심한 불호령도 마다하지 않습니다. 이 때문에 종종 융통성 없는 성격으로 비추어지기도 하지만, 이는 이들의 성격이 외골수여서가 아니라 이것들이 건강한 사회 건설을 위하여 지켜져야 할 중요한 덕목이라고 굳게 믿기 때문입니다.', inline=False)   
+        embed.add_field(name='부족함을 인정할 줄 아는 지혜', value='법질서를 준수하고 이웃을 도우며 지역 사회나 조직 발전을 위해 타인의 동참을 유도하는 관리자형 사람은 전형적인 모범시민이라고 할 수 있습니다.', inline=False)          
+        embed.add_field(name='단,', value='이들이 명심해야 할 한 가지 사항은 모든 이들이 그들과 같은 노력을 기울이며 동일한 길을 가지는 않는다는 것입니다. 진정한 리더의 역할은 그룹 혹은 개개인의 장점을 잘 살펴 그들의 생각을 마음껏 펼칠 수 있도록 돕는 데 있습니다. 만일 이러한 이들의 노력이 선행된다면 모든 필요한 자질과 사실을 가지고 모든 이가 원하는 방향으로 이들을 통솔할 수 있을 것입니다.', inline=False) 
+        embed.add_field(name='엄격한 관리자형에 속하는 유명인', value='존 D.록펠러, 프랭크 시나트라, 제임스 먼로, 보로미르(반지의제왕), 랍 스타크(왕좌의게임),  ', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?INFJ"):
-        await message.channel.send(" 당신의 MBTI는 INFJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFP와 ENTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 INFP, INFJ, ISTJ, ENFJ, INTJ, ENTJ, INTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 ISFP, ESFP, ISTP, ESTP, ISFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *호의에는 호의로 ")
-        await message.channel.send(" *믿을 수 있는 사람 ")
-        await message.channel.send(" *서서히 스며들기 ")
-        await message.channel.send(" *도덕적인 사람 ")
-        await message.channel.send(" *적극적으로 다가오는 사람 ")
-        await message.channel.send(" *표현 잘해주고 다정하고 배려심 있는 사람 ")
-        await message.channel.send(" *혼자만의 시간을 주는 사람 ")
-        await message.channel.send(" *귀여워 해줄 사람 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" 가볍게 데이트하는게 불가능한 타입이며, 정말 믿을만한 사람을 기다릴 수 있는 사람입니다. INFJ는 대립을 싫어하고 조화를 우선시하기 ")
-        await message.channel.send(" 때문에 이별하는게 맞는 상황임에도 불구하고 결단을 내리지 못합니다. 당신과 상대방의 시간과 에너지를 낭비하지 말고 필요할 때에는 ")
-        await message.channel.send(" 과감한 선택을 할 필요가 있습니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [선의의 옹호자]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '선의의 옹호자형은', value = '가장 흔치 않은 성격 유형으로 인구의 채 1%도 되지 않습니다. 그럼에도 불구하고 나름의 고유 성향으로 세상에서 그들만의 입지를 확고히 다집니다. 이들 안에는 깊이 내재한 이상향이나 도덕적 관념이 자리하고 있는데, 다른 외교형 사람과 다른 점은 이들은 단호함과 결단력이 있다는 것입니다. 바라는 이상향을 꿈꾸는데 절대 게으름 피우는 법이 없으며, 목적을 달성하고 지속적으로 긍정적인 영향을 미치고자 구체적으로 계획을 세워 이행해 나갑니다.',inline = False)
+        embed.add_field(name='종종', value='구조 작업이나 자선 활동을 하는 곳에서 쉬이 볼 수 있는 이 유형의 사람은 다른 이들을 돕는 것을 인생의 목적으로 여깁니다. 특히나 이들은 문제를 야기하는 핵심 사안에 관심이 많은데, 이는 근본적인 문제를 해결함으로써 궁극적으로 어떠한 노력이나 도움 자체가 필요치 않기를 희망하는 이들의 순수한 열망 때문입니다.', inline=False)
+        embed.add_field(name='서로 돕는 세상', value='선의의 옹호자형 사람은 진정 그들만의 고유한 성향을 내포하고 있습니다. 나긋나긋한 목소리 뒤에는 강직함이 숨어 있으며, 의견을 강력하게 피력할 줄 알며 옳다고 생각되는 일에는 지칠 줄 모르고 투쟁합니다. 강한 의지와 분별력이 있는 이들은 단순히 개인의 이득을 취하는 데 이를 활용하는 것이 아닌, 그들의 창의적인 상상력과 강한 신념, 그리고 특유의 섬세함으로 균형 이루는 세상을 만들고자 합니다. 평등주의나 인간의 업보(karma)와 같은 관념에 관심이 많은 이들은 세상에 해악을 끼치는 사람의 마음을 녹이는 데에는 진정한 사랑과 인간애보다 더 좋은 것은 없다고 믿습니다. ', inline=False)        
+        embed.add_field(name = '모든', value = '인간은 창의적인 이타주의의 빛 속을 걸을 것인지, 아니면 파괴적인 이기주의의 노선을 걸을 것인지 중 하나를 선택해야 합니다.',inline = False)
+        embed.add_field(name='이들은', value='또한 타인과 스스럼없이 잘 어울리며, 대화 시 단순한 논리나 사실에 입각한 딱딱한 대화가 아닌 따뜻하고 섬세한 언어를 사용하여 인간 대 인간으로 이야기를 나눕니다. 이로 인해 주변 가까운 친구나 동료는 이들을 사교성이 많은 사람으로 오해하기도 하지만, 사실 이들은 갑자기 물러서야 하는 상황이 생겼을 때 마음의 평정심을 잃지 않을 수 있도록 잠시 생각을 비우고 재충전할 수 있는 혼자만의 시간을 가지기를 원합니다. 선의의 옹호자형 사람은 다른 이들의 감정을 섬세히 잘 살피며, 다른 이들도 역시 마찬가지로 그렇게 해주기를 바랍니다. 이는 때로 이들이 단 며칠간만이라도 혼자 있을 수 있는 여유를 가지는 것을 의미하기도 합니다.', inline=False)
+        embed.add_field(name='투쟁을 위해 한 박자 쉬어가는 여유', value='무엇보다도 선의의 옹호자형 사람은 자신을 챙기고 돌보는 일을 게을리하지 말아야 합니다. 비록 강한 신념에서 기인한 열정으로 어느 정도 그들이 가진 한계점을 넘어설 수는 있지만, 이러한 열망이 자신들이 감내할 수 있는 수준을 넘어서는 경우 이들은 쉬이 지치거나 극심한 스트레스를 호소하는 등 이들의 건강에 적신호가 켜질 수도 있습니다. 특히나 심한 반대나 갈등 상황이 조성되는 경우, 예민하고 섬세한 이들의 성격에 발동이 걸려 무슨 수를 써서라도 그들에게 가해지는 음모나 모함이라고 판단되는 상황과 맞서 싸우고자 합니다. 만일 상황이 여의치 않거나 피할 수 없는 상황이라면, 이들은 비상식적인 방법이나 옳지 않은 방식으로 투쟁을 벌이기도 합니다. ', inline=False)   
+        embed.add_field(name='꼭 그렇지 않음', value='에도 불구하고 선의의 옹호자형 사람에게 있어 세상은 불평등과 불공정함이 난무하는 곳입니다. 크든 작든 세상의 잘못된 것을 바로잡고자 하는 데 이들보다 열심인 사람은 없을 것입니다. 다만 이들은 세상을 살피느라 분주한 자신 또한 잘 챙기고 살펴야 할 필요가 있음을 잊지 말아야 합니다.', inline=False)          
+        embed.add_field(name='선의의 옹호자형에 속하는 유명인', value='마틴 루터 킹, 넬슨 만델라, 마더 테레사, 레이디 가가, 니콜 키드먼, 모건 프리만, 괴테, 아라고른(반지의제왕), 갈라드리엘(반지의제왕)', inline=False) 
+        await message.channel.send(channel,embed=embed) 
         
     if message.content.startswith("?ENFP"):
         channel = message.channel
@@ -1251,7 +1254,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '당신이', value = '당신이 생계를 위해 무슨 일을 하는지, 저는 관심 없습니다. 다만 제가 알고 싶은 건 당신이 가슴 저리게 동경하는 것이 있는지, 당신 마음속 깊은 바람을 감히 충족시키고자 하는 열망이 있는지입니다. 당신의 나이가 얼마인지는 중요하지 않습니다. 당신이 사랑을 위해, 당신의 꿈을 위해, 그리고 삶이라는 모험을 위해 기꺼이 바보가 될 준비가 되어 있는지, 그것이 궁금할 뿐입니다. ',inline = False)
+        embed.add_field(name = '당신이', value = '생계를 위해 무슨 일을 하는지, 저는 관심 없습니다. 다만 제가 알고 싶은 건 당신이 가슴 저리게 동경하는 것이 있는지, 당신 마음속 깊은 바람을 감히 충족시키고자 하는 열망이 있는지입니다. 당신의 나이가 얼마인지는 중요하지 않습니다. 당신이 사랑을 위해, 당신의 꿈을 위해, 그리고 삶이라는 모험을 위해 기꺼이 바보가 될 준비가 되어 있는지, 그것이 궁금할 뿐입니다. ',inline = False)
         embed.add_field(name='활동가형', value='사람은 자유로운 사고의 소유자입니다. 종종 분위기 메이커 역할을 하기도 하는 이들은 단순한 인생의 즐거움이나 그때그때 상황에서 주는 일시적인 만족이 아닌 타인과 사회적, 정서적으로 깊은 유대 관계를 맺음으로써 행복을 느낍니다. 매력적이며 독립적인 성격으로 활발하면서도 인정이 많은 이들은 인구의 대략 7%에 속하며, 어느 모임을 가든 어렵지 않게 만날 수 있습니다. ', inline=False)
         embed.add_field(name='아이디어 하나로 세상을 바꾸다!', value='타인을 즐겁게 하는 사교적인 특성만이 이들이 가진 전부가 아닙니다. 활동가형 사람은 통찰력 있는 비전으로 호기심과 에너지 사이의 선을 명확히 구분합니다. 이들은 인생을 하나로 연결된 크고 복잡한 퍼즐로 보는 경향이 있는데, 인생을 체계적인 일련의 과정으로 보는 분석가형 사람과 달리 인간의 감정이나 인정(人情), 신비로움을 프리즘에 투영하여 그 안에 숨어있는 깊은 의미를 찾아내고자 합니다.  ', inline=False)        
         embed.add_field(name = '다소', value = '과하리만치 독립적인 성향의 이들은 안정적이거나 안전한 삶이 아닌 창의적이며 자유로운 삶을 갈망합니다.',inline = False)
@@ -1259,7 +1262,7 @@ async def on_message(message):
         embed.add_field(name='[살짝 미치면] 인생이 즐겁다?', value='다행히도 활동가형 사람은 언제 어떻게 휴식을 취해야 하는지 잘 알고 있습니다. 일할 때는 열정적이며 진취적인 모습이었다가 단숨에 무대 위 열성적으로 몸을 흔드는 자유로운 영혼의 모습으로 단숨에 변모하기도 하는 이들은 이러한 갑작스러운 변화로 종종 가까이에 있는 친구들이나 지인들을 놀라게 하기도 합니다. 이들의 다양한 성격적 면모는 다른 이들과의 정서적인 교감을 가능하게 하며, 특히나 친구 혹은 동료들에게 색다른 통찰력을 제공함으로써 영감을 불어 넣기도 합니다. 활동가형 사람은 모든 이들이 자신의 솔직한 감정에 귀 기울이고 이를 표현할 수 있는 시간이 필요하다고 믿습니다. 이러한 이유로 다양한 인간 감정이나 인간관계에 대한 내용이 이들과 대화 시 단골 소재입니다. ', inline=False)   
         embed.add_field(name='하지만', value='이런 활동가형 사람에게도 주의해야 할 사항이 있습니다. 만일 이들이 그들의 직관에 지나치게 의존한 나머지 사람들의 의도를 잘못 해석하는 경우 오해가 생겨 계획에 차질을 빚을 수 있는데, 이는 단도직입적으로 충분히 해결할 수 있는 문제를 더 어렵게 만드는 길입니다. 이러한 사회생활에서 빚어지는 스트레스는 협력과 조화를 중요시 여기는 성격의 사람들에게는 이들의 잠을 설치게 하는 근심 요소가 될 수 있습니다. 이들은 혹 실수로 누군가의 발을 밟았다 할 경우, 이들 역시 발을 밟힌 사람과 같은 고통을 느끼는 감성적이면서도 예민한 성격의 소유자입니다.', inline=False)         
         embed.add_field(name='활동가형 사람은', value='인간관계나 사람의 감정, 혹은 생각과 관련하여 이들이 원하는 만족스러운 대답을 찾을 때까지 끊임없이 찾아 헤매고 다닐 것입니다. 그리고 진정 그들이 원하는 답을 찾는 그 날, 이들의 상상력이나 인간애, 그리고 용기는 어마어마한 빛을 발할 것입니다.', inline=False)   
-        embed.add_field(name='활동가형에 속하는 유명인', value='로버트 다우니 주니어, 윌 스미스, 스파이더맨, 윌리 웡카, 안나 여왕님, 올라프', inline=False) 
+        embed.add_field(name='활동가형에 속하는 유명인', value='로버트 다우니 주니어, 윌 스미스, 스파이더맨(히어로), 윌리 웡카(찰리와 초콜릿 공장), 안나 여왕님(겨울왕국), 올라프(겨울왕국)', inline=False) 
         await message.channel.send(channel,embed=embed)  
 
     if message.content.startswith("?A"):
