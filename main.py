@@ -1163,45 +1163,50 @@ async def on_message(message):
         await message.channel.send(" 상대에게 당신의 감정에 대해 솔직하게 말하는 것이 좋습니다.")
 
     if message.content.startswith("?INTJ"):
-        await message.channel.send(" 당신의 MBTI는 INTJ 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ENFP와 ENTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 INFP, INFJ, ENFJ, INTJ, ENTJ, INTP 이고, ")
-        await message.channel.send(" 반반 타입은 ISFP, ESFP, ISTP, ESTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *금사빠 ")
-        await message.channel.send(" *한결같은 사람, 예의바르고 배려하는 사람 ")
-        await message.channel.send(" *사생활 존중할 것, 당일 연락 싫어함 ")
-        await message.channel.send(" *선경에 모순이 보이지 않을 것 ")
-        await message.channel.send(" *똑똑하고 배울 것이 많은 사람 논리적인 사람 ")
-        await message.channel.send(" *대신 가르치려드는건 좋지 않다 ")
-        await message.channel.send(" *자기자랑 안통함")
-        await message.channel.send(" *말 많은 사람 싫어함 ")
-        await message.channel.send(" *허세 싫어함 ")
-        await message.channel.send(" *감정호소 싫어함 ")
-        await message.channel.send(" *차분한 사람 좋아함 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" INTJ는 사랑때문에 시간낭비를 하지 않습니다. 관계에 있어 서로를 알아보는 등의 과정은 없고, 갑자기 너무 깊은 대화로 넘어가 버립니다.  ")
-        await message.channel.send(" 이런 태도에 상대방은 겁을 먹거나 피하고 싶어집니다. 소소한 잡담은 당신 스타일이 아니기는 하지만 진지한 관계로 넘어가기 앞서 가볍게 서로를 알아가는 단계를 거치는 것이 좋습니다.  ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [용의주도한 전략가]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '윗자리에 있는 사람은', value = '고독한 법, 전략적 사고에 뛰어나며 매우 극소수인 건축가형 사람은 이를 누구보다 뼈저리게 이해합니다. 전체 인구의 2%에 해당하는 이들은 유독 여성에게서는 더욱 찾아보기 힘든 유형으로, 인구의 단 0.8%를 차지합니다. 체스를 두는 듯한 정확하고 계산된 움직임과 풍부한 지식을 소유하고 있는 이들은 그들과 견줄 만한 비슷한 부류의 사람을 찾는 데 종종 어려움을 겪습니다. 건축가형 사람은 상상력이 풍부하면서도 결단력이 있으며, 야망이 있지만 대외적으로 표현하지 않으며, 놀랄 만큼 호기심이 많지만 쓸데없는 데 에너지를 낭비하는 법이 없습니다.',inline = False)
+        embed.add_field(name='올곧은 태도로 계획 달성을 향한 돌진', value='이들의 지식을 향한 갈증은 어릴 적부터 두드러지게 나타나는데, 때문에 건축가형 사람은 어릴 때 '책벌레'라는 소리를 자주 듣습니다. 대개 친구들 사이에서는 놀림의 표현임에도 불구하고 전혀 개의치 않아 하며, 오히려 깊고 넓은 지식을 가지고 있는 그들 자신에게 남다른 자부심을 느낍니다. 이들은 또한 관심 있는 특정 분야에 대한 그들의 방대한 지식을 다른 이들과 공유하고 싶어 하기도 합니다. 반면, 일명 가십거리와 같이 별 볼 일 없는 주제에 대한 잡담거리보다는 그들 나름의 분야에서 용의주도하게 전략을 세우거나 이를 실행해 옮기는 일을 선호합니다.', inline=False)
+        embed.add_field(name='당신은', value='의견을 가질 권리가 없습니다. 다만 제대로 된 의견을 가질 권리만 있을 뿐이죠. 그 누구도 무식할 권리는 없기 때문입니다.', inline=False)        
+        embed.add_field(name = '대부분', value = '사람 누가 봐도 이들은 지극히 모순적인 삶을 살아가는 것처럼 보이지만 이를 객관적이고 이성적으로 놓고 보면 사실 이해가 가기도 합니다. 예를 들면, 이들은 비현실적일 만큼 이상주의자이자인 동시에 매우 신랄한 조롱과 비판을 일삼는 냉소주의자로 이 둘이 같이 공존한다는 것 자체가 불가능해 보입니다. 또한, 기본적으로 지혜와 노력, 그리고 신중함만 있으며 못할 것이 없다고 믿는 한편, 사람들이 실질적으로 그러한 성취를 끌어내는 데 있어서는 게으르고 근시안적이며 자기 잇속만 차린다고 생각합니다. 그렇다고 이러한 냉소적인 태도가 성취하고자 하는 이들의 욕구를 꺾지는 못합니다.',inline = False)
+        embed.add_field(name='돌부처와 같은 원칙주의자', value='확신에 찬 자신감과 함부로 범접할 수 없는 신비로운 아우라를 발산하는 건축가형 사람은 통찰력과 관찰력, 기발한 아이디어, 그리고 뛰어난 논리력에 강한 의지와 인격이 합쳐져 변화를 이끄는 데 앞장섭니다. 이따금 이들이 생각했던 아이디어나 계획을 뒤집고 재수립하는 과정을 거쳐 완벽함을 추구하고자 하거나 도덕적 잣대에 따라 재정비하는 시간을 가지기도 합니다. 건축가형 사람의 업무 스타일을 좇아오지 못하거나 심지어는 이들이 왜 그렇게 행동하는지 전혀 감을 잡지 못하는 사람은 단번에 신임을 잃거나 이들의 인정을 받지 못할 수도 있습니다.', inline=False)
+        embed.add_field(name='건축가형', value='사람이 몸서리치게 싫어하는 것이 있다면 바로 질서, 한계, 그리고 전통과 같은 것들인데, 이들은 세상의 모든 것을 탐구와 발견의 대상으로 여기기 때문입니다. 만일 문제 해결을 위한 방안을 찾은 경우, 간혹 무모할 수 있으나 기술적으로 뛰어나며 언제나 그렇듯 비정통적인 기발한 방법이나 아이디어를 수립하기 위해 홀로 행동에 옮깁니다', inline=False)   
+        embed.add_field(name='그렇다고', value='이들이 충동적이라는 말은 아닙니다. 얼마나 간절히 성취하기를 원하는지 상관없이 건축가형 사람은 기본적으로 이성적인 사고를 합니다. 내부에서 비롯되었든 아니면 외부 세계에서 기인하였든지, 매사 이들의 아이디어는 “실현 가능할까?”와 같은 ‘이성적 사고’라는 필터의 과정을 거칩니다. 이는 사람 혹은 아이디어에 항시 적용되는 기제로, 이 때문에 건축가형 사람은 종종 곤경에 빠지기도 합니다.', inline=False)          
+        embed.add_field(name='홀로 떠나는 여행, 깨달음의 시간', value='오랜 시간 방대한 지식을 쌓아 온 똑똑하고 자신감 넘치는 이들이지만, 인간관계만큼은 이들이 자신 있어 하는 분야가 아닙니다. 진리나 깊이 있는 지식을 좇는 이들에게 선의의 거짓말이나 가벼운 잡담은 그저 낯설기만 합니다. 그럼에도 불구하고 자신을 필요 이상으로 내몰아 부조리투성이인 사회적 관습을 경험하기도 합니다. 가장 좋은 것은 이들이 그들 자신 자체로 온전히 있을 수 있는 곳, 즉 스포트라이트 밖에 있는 것입니다. 건축가형 사람은 익숙하고 편안한 곳에서 본연의 모습으로 있을 때 비로소 연인 관계나 그 외 여러 상황에서 그들 나름의 빛을 발하며 사람들을 끌어들이기 때문입니다.', inline=False) 
+        embed.add_field(name='건축가형', value='사람의 성향을 정의하자면 이들은 인생을 마치 체스를 두듯이 새로운 계획이나 전술, 그리고 대책을 세워가며 상대방 머리 위에서 수를 두며 허를 찌르는 기술로 상황을 유리하게 몰고 가는 듯한 삶을 살아갑니다. 그렇다고 이들이 양심 없는 삶을 살아간다는 말은 아닙니다. 다만 감정에 치우치는 것을 싫어하는 이들의 성격상 타인의 눈에 그렇게 비추어질 수 있습니다. 이를 고려하면 왜 많은 허구 속 등장인물들(종종 오해를 받곤 하는 영화 속 영웅들)이 본 성격 유형으로 묘사되는지 이해할 수 있을 것입니다.', inline=False) 
+        embed.add_field(name='용의주도한 전략가형에 속하는 유명인', value='미카엘라 오바마, 엘론 머스크, 크리스토퍼 놀란, 블라디미르 푸틴, 아놀드 슈워츠네거, 회색의 간달프/백색의 간달프(반지의제왕)   ', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ISTP"):
-        await message.channel.send(" 당신의 MBTI는 ISTP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 ESFP와 ESTP 이며, ")
-        await message.channel.send(" 잘맞는 타입은 ISFJ, ESFJ, ISTJ, ESTJ 이고, ")
-        await message.channel.send(" 반반 타입은 ISTP, ISFP, ENTJ 이고, ")
-        await message.channel.send(" 당신의 MBTI와 안맞는 타입은 INTJ, INTP, ENTP 입니다. ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 INFP, ENFP, INFJ, ENFJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *일상 방해 금지 ")
-        await message.channel.send(" *내버려두기 ")
-        await message.channel.send(" *연락 계속하기 힘들어함 ")
-        await message.channel.send(" *전화보단 카톡 ")
-        await message.channel.send(" *'내'가 좋아하는 사람 ")
-        await message.channel.send(" *의사소통 및 감정표현이 '정확;할 것 ")
-        await message.channel.send(" *질투유발, 헷갈리게 하는 행동 절대 금지 ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ISTP의 열정과 독립심은 관계에서 좋은 역할을 합니다. 하지만 썸타는 시간을 늘리면서 여러가지 옵션을 열어두고 싶어합니다. 다른 사람들 자신의 인생에 포함시키기를 원하지 않기 때문입니다.  ")
-        await message.channel.send(" 서로를 알아가는데 지나치게 오랜시간이 걸릴 필요는 없습니다. 사랑하는 사람과의 관계가 진심이라고 느껴질 때, 비밀스러운 당신의 곁은 내어주는 것도 필요합니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [만능 재주꾼]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '저는', value = '그런 삶을 살고 싶었습니다. 무언가 다른 삶 말이지요. 매일 같은 곳을 가고, 같은 사람을 만나고, 매번 같은 일을 하며 살고 싶지 않았습니다. 전 흥미로운 도전을 원했습니다.',inline = False)
+        embed.add_field(name='냉철한', value='이성주의적 성향과 왕성한 호기심을 가진 만능재주꾼형 사람은 직접 손으로 만지고 눈으로 보면서 주변 세상을 탐색하는 것을 좋아합니다. 무엇을 만드는 데 타고난 재능을 가진 이들은 하나가 완성되면 또 다른 과제로 옮겨 다니는 등 실생활에 유용하면서도 자질구레한 것들을 취미 삼아 만드는 것을 좋아하는데, 그러면서 새로운 기술을 하나하나 터득해 나갑니다. 종종 기술자나 엔지니어이기도 한 이들에게 있어 소매를 걷어붙이고 작업에 뛰어들어 직접 분해하고 조립할 때보다 세상에 즐거운 일이 또 없을 것입니다. 전보다 조금은 더 향상된 모습으로요.', inline=False)
+        embed.add_field(name='만능재주꾼형 사람은', value='창조와 문제 해결을 위한 이해, 그리고 실행 착오와 실질적인 경험을 통해 아이디어를 탐색합니다. 다른 이들이 그들의 과제에 흥미를 보이는 것을 좋아하며, 간혹 다른 이들로 하여금 작업 중인 과제에 참여하도록 유도하기도 합니다. 단, 그들만의 원리원칙이나 자유를 침범하지 않는 범위에 한해서 말이죠. 사람들은 만능재주꾼형 사람이 베푸는 호의에 열린 마음으로 대할 필요가 있습니다.', inline=False)        
+        embed.add_field(name = '타인을', value = '잘 도우며 그들의 경험을 다른 이들과 공유하는 것을 좋아하기도 하는 이들은 특히나 그들이 아끼는 사람일수록 더욱 그러합니다. 이들이 인구의 고작 5%만이 차지하지 않는다는 사실이 그저 안타까울 따름입니다. 더욱이 여성의 경우는 더욱 흔치 않은데, 대개 이 성향의 여성은 사회가 일반적으로 요구하는 이상적인 여성상에 들어맞지 않는 경우가 많으며, 이들은 자라면서 말괄량이 소리를 듣기도 합니다.',inline = False)
+        embed.add_field(name='기꺼이 다름을 지향하다', value='내성적인 성향으로 현실적인 사안에 관심이 많은 이들은 얼핏 보면 단순해 보일 수 있지만, 사실 알고 보면 꽤 복잡한 성향을 가지고 있습니다. 친절하고 상냥하지만 사생활을 중요시 여기며, 침착하면서도 금세 즉흥적인 성향으로 돌변하기도 하며, 호기심이 많으면서도 오래 앉아 수업을 들을 때는 집중하지 못하는 모습을 보이기도 합니다. 이로 인해 주변 가까운 친구나 아끼는 사람들조차 이들의 행동을 예측하는 데 어려움을 겪습니다. 만능재주꾼형 사람은 한동안 헌신적이고 꾸준한 모습을 보이다가도 충동의 에너지를 서서히 쌓아두고 있다가 어느 순간 예고 없이 터뜨리기도 하는데, 이로 인해 관심사가 이전과 전혀 다른 방향으로 바뀌기도 합니다.', inline=False)
+        embed.add_field(name='미래를', value='대비한 비전 수립은커녕 이렇듯 휘몰아치는 변화가 있을 때조차 새로 발견한 관심사의 실행 가능 여부에는 크게 관심을 두지 않습니다.', inline=False)   
+        embed.add_field(name='실질적으로', value='현실에 근거하여 결정을 내리면서도 마음 한가운데에는 '자신이 대접받고 싶은 만큼 다른 이를 대접하라'와 같은 공정함이라는 사고방식이 깊이 박혀있는데, 이는 이들만의 성격적 고유 특성을 잘 설명해 줍니다. 남에게 발을 밟히지 않으려고 아예 발부터 먼저 빼고 보는 이들은 너무 지나치리만치 신중하게 행동하여 종종 필요 이상으로 멀리 가기도 합니다. 이들은 기본적으로 옳든 그르든 자신이 받은 만큼 똑같이 되돌려주는 것이 공정한 행위라고 생각합니다.', inline=False)          
+        embed.add_field(name='만능재주꾼형 사람이', value='당면한 가장 큰 과제는 천성적으로 타인에게 관심이 많은 이들의 성격으로 하여금 다른 이들 역시 그들과 같을 것이라는 착각하에 행동이 먼저 앞선다는 점입니다. 신중치 못한 농담을 먼저 꺼내는 이들을 보면 영락없이 만능재주꾼형 사람입니다. 또한, 타인의 일에 지나치리만치 간섭하여 여기저기 시끄럽게 휘둘리다가 다른 흥미로운 관심거리가 생기면 재빨리 계획을 변경하기도 합니다.', inline=False) 
+        embed.add_field(name='남과 다름의 즐거움', value='만능재주꾼형 사람은 다른 성격 유형의 사람들이 사회에서 수용 가능한 질서나 행위와 같은 비교적 확고하게 구분된 그들 나름의 선이 있다는 것을 깨닫게 될 것입니다. 이들보다 예민한 성향의 사람은 타인의 마음을 헤아리지 않는 가벼운 농담 따위를 좋아하지 않습니다. 당연히 그러한 농담 자체를 던지지 않는 것은 두말할 필요도 없고요. 지나친 장난을 좋아하는 사람은 아무도 없으며, 이는 같이 어울리는 부류 사이에서도 마찬가지입니다. 이미 감정이 많이 상해 있는 상태에서 선을 넘어가는 경우 훗날 뒷감당하기 힘든 상황을 초래할 수 있기 때문입니다.', inline=False) 
+        embed.add_field(name='타인의', value='감정을 파악하는 데 있어 애를 먹는 이들은 자신의 감정이나 동기조차 파악하지 못하는 이들의 천성과 공정함을 추구하고자 하는 성격에 그 이유가 기인한다고 할 수 있습니다. 게다가 인간관계 형성 시 타인을 향한 정서적 공감이 아닌 행동으로 탐색하고자 하는 성향이 있어 간혹 원치 않는 상황을 초래하기도 합니다. 사람들 간의 보이지 않는 선이나 규칙을 지키는 데 어려움을 호소하는 이들은 인간관계 시 자유롭게 그 경계를 넘나들기를 원하며, 혹 필요하면 이를 넘어 다른 색으로 물들이고 싶어 하기도 합니다.', inline=False)         
+        embed.add_field(name='정의적이며', value='유머를 겸비한 동시에 실질적으로 문제 해결을 위해 무언가를 만들어 내는 만능재주꾼형 사람의 실용적인 접근 방식이 이들의 예측 불허한 성격이나 스타일을 이해하는 좋은 사람들과 합쳐져 일하는 환경이 조성된다면, 이들은 마치 물 만난 고기처럼 신이 나 몇 년이고 이것저것 유용한 장난감 거리를 만드는 재미에 흠뻑 빠져 살 수 있을 것입니다. 만인의 우러름을 받으면서 말입니다.', inline=False) 
+        embed.add_field(name='엄격한 관리자형에 속하는 유명인', value='베어 그릴스, 마이클 조던, 클린트 이스트우드, 톰 크루즈, 아리야 스타크(왕좌의게임), 인디아나 존스, 호크아이(어벤져스), 제임스 본드,   ', inline=False) 
+        await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ESTJ"):
         channel = message.channel
