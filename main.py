@@ -113,6 +113,7 @@ async def on_message(message):
         await message.channel.send("*2021년 01월25일 월요일* ")
         await message.channel.send("*이제 도리봇에게서 음식 추천을 받을 수 있습니다.* ")
         await message.channel.send("*그리고 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 썼습니다.현재 부산 앞바다입니다.*")
+        await message.channel.send("*현재, 부산 앞바다이지만, 급하게 근처 카페에서 수정합니다. MBTI 1.0 -> 2.0으로 업그레이드 되었습니다. 도리봇은 이만 부산 앞바다로 다시 나가봅니다.*")
 
         
         
@@ -1241,30 +1242,25 @@ async def on_message(message):
         await message.channel.send(" 과감한 선택을 할 필요가 있습니다. ")
         
     if message.content.startswith("?ENFP"):
-        await message.channel.send(" 당신의 MBTI는 ENFP 입니다. ") 
-        await message.channel.send(" 당신의 MBTI와 가장 잘맞는 궁합은 INFJ와 INTJ 이며, ")
-        await message.channel.send(" 잘맞는 타입은 INFP, ENFP, ENFJ, ENTJ, INTP, ENTP 이고, ")
-        await message.channel.send(" 당신의 MBTI와 최악의 타입은 ISFP, ESFP, ISTP, ESTP, ISFJ, ESFJ, ISTJ, ESTJ 입니다. ")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" *'내가' 좋아하는 사람 ")
-        await message.channel.send(" *알고보니 좋아하는 사람도 ENFP ")
-        await message.channel.send(" *세심한 기억력, 카리스마, 수줍은 인간미 ")
-        await message.channel.send(" *대화자주, 다양한 화제 ")
-        await message.channel.send(" *솔직하게 대답하는 사람 ")
-        await message.channel.send(" *혼자만의 시간을 줄 것 ")
-        await message.channel.send(" *가만있어도 편안한 사람 ")
-        await message.channel.send(" *한 분야의 전문가")
-        await message.channel.send(" *성실한 사람")
-        await message.channel.send(" *ENFP 좋아해줄것")
-        await message.channel.send(" *선 넘지 않고 많은 것을 바라지 않기")
-        await message.channel.send(" *애정표현 적으면 불안해함. 지속적인 애정표현 필요")
-        await message.channel.send(" *지지부진 싫음, 신뢰를 줄것")
-        await message.channel.send(" ============ ")
-        await message.channel.send(" ENFP는 관계를 진지하게 받아들이고, 연인을 행복하게 하기 위해 최선을 다하지만, 이러한 노력에 대해 화답할 필요가 있습니다. ")
-        await message.channel.send(" 이들은 함께하기에 즐거운 사람이고, 애정 관계에 있어서 수줍어 하지 않습니다. 이 덕분에 관계를 쉽게 시작하는 편이기도 합니다.")
-        await message.channel.send(" 또한 가능한 건강한 관계를 만들기 위해 헌신하며, 열정을 다하지만 관계에 있어서 스스로를 위한 여유를 필요로 하기도 합니다. ")
-        await message.channel.send(" 이들은 자신의 연인들이 느끼는 감정을 잘 알아차리는 능력을 가지고 있기 때문에 자신의 연인이 원하는 것을 쉽게 파악하며, 만족시켜줍니다. ")
-        await message.channel.send(" ENFP의 정신적, 감정적, 물리적 욕구를 잘파악하고 잘 지원해주는 것이 중요합니다. ")
+        channel = message.channel
+        embed = discord.Embed(
+            title = '성격유형: [재기발랄한 활동가]  ',
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '당신이', value = '당신이 생계를 위해 무슨 일을 하는지, 저는 관심 없습니다. 다만 제가 알고 싶은 건 당신이 가슴 저리게 동경하는 것이 있는지, 당신 마음속 깊은 바람을 감히 충족시키고자 하는 열망이 있는지입니다. 당신의 나이가 얼마인지는 중요하지 않습니다. 당신이 사랑을 위해, 당신의 꿈을 위해, 그리고 삶이라는 모험을 위해 기꺼이 바보가 될 준비가 되어 있는지, 그것이 궁금할 뿐입니다. ',inline = False)
+        embed.add_field(name='활동가형', value='사람은 자유로운 사고의 소유자입니다. 종종 분위기 메이커 역할을 하기도 하는 이들은 단순한 인생의 즐거움이나 그때그때 상황에서 주는 일시적인 만족이 아닌 타인과 사회적, 정서적으로 깊은 유대 관계를 맺음으로써 행복을 느낍니다. 매력적이며 독립적인 성격으로 활발하면서도 인정이 많은 이들은 인구의 대략 7%에 속하며, 어느 모임을 가든 어렵지 않게 만날 수 있습니다. ', inline=False)
+        embed.add_field(name='아이디어 하나로 세상을 바꾸다!', value='타인을 즐겁게 하는 사교적인 특성만이 이들이 가진 전부가 아닙니다. 활동가형 사람은 통찰력 있는 비전으로 호기심과 에너지 사이의 선을 명확히 구분합니다. 이들은 인생을 하나로 연결된 크고 복잡한 퍼즐로 보는 경향이 있는데, 인생을 체계적인 일련의 과정으로 보는 분석가형 사람과 달리 인간의 감정이나 인정(人情), 신비로움을 프리즘에 투영하여 그 안에 숨어있는 깊은 의미를 찾아내고자 합니다.  ', inline=False)        
+        embed.add_field(name = '다소', value = '과하리만치 독립적인 성향의 이들은 안정적이거나 안전한 삶이 아닌 창의적이며 자유로운 삶을 갈망합니다.',inline = False)
+        embed.add_field(name='다른', value='성격 유형에 속한 사람들은 활동가형 사람들에게서 거부할 수 없는 이들만의 매력을 느낄 수 있습니다. 일단 창의력에 발동이 걸리면 이들은 스포트라이트를 받는 주인공이 되어 동료나 사람들로부터 리더 혹은 전문가로 추앙받기도 합니다. 하지만 이는 독립적이며 자유를 최고로 여기는 활동가형 사람들이 선호하는 바는 아니며, 만일 반복적인 관리 업무를 요구하는 자리에 있는 경우라면 더욱이 그러합니다. 창의적인 문제 해결을 위한 대책을 찾는 데서 큰 자부심을 얻는 활동가형 사람에게 혁신적인 사고를 가능하게 하는 자유의지 여부가 매우 중요합니다. 만일 그들 자신이 지루한 일상적인 업무에 갇혀 있다고 생각될 경우, 이들은 쉬이 낙담하거나 인내심을 잃을 수도 있기 때문입니다. ', inline=False)
+        embed.add_field(name='[살짝 미치면] 인생이 즐겁다?', value='다행히도 활동가형 사람은 언제 어떻게 휴식을 취해야 하는지 잘 알고 있습니다. 일할 때는 열정적이며 진취적인 모습이었다가 단숨에 무대 위 열성적으로 몸을 흔드는 자유로운 영혼의 모습으로 단숨에 변모하기도 하는 이들은 이러한 갑작스러운 변화로 종종 가까이에 있는 친구들이나 지인들을 놀라게 하기도 합니다. 이들의 다양한 성격적 면모는 다른 이들과의 정서적인 교감을 가능하게 하며, 특히나 친구 혹은 동료들에게 색다른 통찰력을 제공함으로써 영감을 불어 넣기도 합니다. 활동가형 사람은 모든 이들이 자신의 솔직한 감정에 귀 기울이고 이를 표현할 수 있는 시간이 필요하다고 믿습니다. 이러한 이유로 다양한 인간 감정이나 인간관계에 대한 내용이 이들과 대화 시 단골 소재입니다. ', inline=False)   
+        embed.add_field(name='하지만', value='이런 활동가형 사람에게도 주의해야 할 사항이 있습니다. 만일 이들이 그들의 직관에 지나치게 의존한 나머지 사람들의 의도를 잘못 해석하는 경우 오해가 생겨 계획에 차질을 빚을 수 있는데, 이는 단도직입적으로 충분히 해결할 수 있는 문제를 더 어렵게 만드는 길입니다. 이러한 사회생활에서 빚어지는 스트레스는 협력과 조화를 중요시 여기는 성격의 사람들에게는 이들의 잠을 설치게 하는 근심 요소가 될 수 있습니다. 이들은 혹 실수로 누군가의 발을 밟았다 할 경우, 이들 역시 발을 밟힌 사람과 같은 고통을 느끼는 감성적이면서도 예민한 성격의 소유자입니다.', inline=False)         
+        embed.add_field(name='활동가형 사람은', value='인간관계나 사람의 감정, 혹은 생각과 관련하여 이들이 원하는 만족스러운 대답을 찾을 때까지 끊임없이 찾아 헤매고 다닐 것입니다. 그리고 진정 그들이 원하는 답을 찾는 그 날, 이들의 상상력이나 인간애, 그리고 용기는 어마어마한 빛을 발할 것입니다.', inline=False)   
+        embed.add_field(name='활동가형에 속하는 유명인', value='로버트 다우니 주니어, 윌 스미스, 스파이더맨, 윌리 웡카, 안나 여왕님, 올라프', inline=False) 
+        await message.channel.send(channel,embed=embed)  
 
     if message.content.startswith("?A"):
         await message.channel.send(" 당신의 혈액형은 A형 입니다. ") 
