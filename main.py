@@ -1001,45 +1001,43 @@ async def on_message(message):
     if message.content.startswith("?ISTJ"):
         channel = message.channel
         embed = discord.Embed(
-            title = '성격유형: []  ',
+            title = '성격유형: [청렴결백한 논리주의자]  ',
             description = '',
             colour = discord.Colour.red()
         )
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '', value = '',inline = False)
-        embed.add_field(name='', value='', inline=False)
-        embed.add_field(name='', value='', inline=False)        
-        embed.add_field(name = '', value = '',inline = False)
-        embed.add_field(name='', value='', inline=False)
-        embed.add_field(name='', value='', inline=False)   
-        embed.add_field(name='', value='', inline=False)          
-        embed.add_field(name='', value='', inline=False) 
-        embed.add_field(name='', value='', inline=False) 
-        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        embed.add_field(name = '내가 본 바에 의하면', value = '임무를 수행함에 있어 한 명이면 족한 일을 둘이서 수행하면 될 일도 안되거니와, 셋 이상이 하는 경우에는 일이 전혀 성사되지 않더군.',inline = False)
+        embed.add_field(name='논리주의자형은 ', value='가장 다수의 사람이 속하는 성격 유형으로 인구의 대략 13%를 차지합니다. 청렴결백하면서도 실용적인 논리력과 헌신적으로 임무를 수행하는 성격으로 묘사되기도 하는 이들은, 가정 내에서뿐 아니라 법률 회사나 법 규제 기관 혹은 군대와 같이 전통이나 질서를 중시하는 조직에서 핵심 구성원 역할을 합니다. 이 유형의 사람은 자신이 맡은 바 책임을 다하며 그들이 하는 일에 큰 자부심을 가지고 있습니다. 또한, 목표를 달성하기 위해 시간과 에너지를 허투루 쓰지 않으며, 이에 필요한 업무를 정확하고 신중하게 처리합니다.', inline=False)
+        embed.add_field(name='뭐든', value='쉽게 가정하여 결론 내리지 않는 이들은, 주변을 객관적으로 분석하고 사실에 입각하여 현실적으로 실행 가능한 계획을 세우는 것을 선호합니다. 허튼짓하는 것을 무엇보다도 싫어하는 사람으로 결정을 내린 후에는 목표를 달성하는 데 필요한 사실을 열거함으로써 다른 이들로 하여금 이를 재빨리 인지하여 즉시 실행해 옮기기를 독려합니다. 특히나 우유부단한 것을 몹시 싫어하며, 혹 결정 내린 실행안이 비현실적인 이유로 장애에 부딪혔을 때 쉬이 인내심을 잃기도 하는데, 특히 목표 달성에 필요한 핵심 세부사항을 놓치는 경우에는 더욱 그러합니다. 만일 마감 시간은 가까워져 오는데 논의가 성사되지 않은 채 시간만 질질 끄는 경우, 이들의 불편함 심기가 얼굴에 그대로 나타나기도 합니다.', inline=False)        
+        embed.add_field(name = '뱉은 말에 대한 책임과 평판', value = '논리주의자형 사람이 무언가를 하겠다고 하면 얼마나 많은 희생이 따르던지 자신이 한 말에 책임을 지고자 기어이는 해내고야 맙니다. 이런 그들이기에 자신이 내뱉은 말에 책임을 지지 않는 이들을 보면 어쩔 줄 몰라 합니다. 태만과 부도덕의 조합만큼 논리주의자형 사람의 적이 되는 가장 빠른 지름길도 없을 것입니다. 때문에 이들은 혼자 일하는 것을 선호하며, 대개 일을 진행하는 데 직장 내 토의를 거치거나 다른 이들의 견해를 들을 필요 없이 자신만의 목표를 설정하고 달성을 가능케 하는 어느 정도의 지위나 권한을 가지고 있는 경우가 많습니다.',inline = False)
+        embed.add_field(name='예리하며', value='사실에 근거하여 사고하는 경향을 가지고 있는 이들은 자율적으로 스스로 알아서 행동하고 책임지기를 원합니다. 이 때문에 이들은 누군가에게 의존하는 것은 약자의 행동이라고 여깁니다. 임무 달성을 위한 열정과 책임감, 그리고 오점 하나 없는 청렴한 이들의 성격으로 하여금 이들을 종종 이러한 오류에 쉽게 빠지게 합니다.', inline=False)
+        embed.add_field(name='이들의', value='청렴결백한 성격은 논리주의자형 사람을 정의하는 핵심사항으로, 이는 그들이 생각하는 것 이상으로 중요한 부분입니다. 얼마나 많은 희생이 따르든 이들은 일단 정해진 체계나 지침을 고수하며, 비록 사실을 있는 그대로 밝히는 것이 결과적으로 더 큰 분란을 야기할지라도 자신의 잘못을 시인하고 사실을 밝히고자 합니다. 논리주의자형 사람에게 있어 감정적인 고려보다 정직함이 보다 우선시 되기 때문입니다. 때로 이러한 그들의 대담한 행보는 사람들에게 냉정하고 로봇 같다는 잘못된 인상을 심어 주기도 합니다. 감정이나 애정을 밖으로 표출하는 것에 익숙하지 않은 이들은 혹 사람들로부터 냉혈인이라든지, 더 심하게는 ‘감정 자체가 있느냐’와 같은 말을 듣기도 하는데 이에 깊은 상처를 받기도 합니다.', inline=False)   
+        embed.add_field(name='백해무익한 무리와 있느니 차라리 혼자가 낫다', value='논리주의자형 사람의 헌신적인 성격은 매우 긍정적인 자질로 이들로 하여금 많은 것을 이루게 합니다. 하지만 이는 동시에 이들의 약점이 되기도 하는데, 간혹 비양심적인 사람들은 이러한 이들의 약점을 이용하기도 합니다. 안전하며 안정된 삶을 추구하는 논리주의자형 사람은 일이 원활하게 돌아갈 수 있도록 맡은 바 임무를 충실히 수행합니다. 뒤치다꺼리를 마다치 않는 이들의 성향을 아는 동료나 주위 사람들은 간혹 이들에게 책임을 전가하는 경우가 있습니다. 더욱이 개인적인 견해가 아닌 사실만을 얘기하고자 하는 이들의 성향 때문에 정확히 사실을 밝혀 낼 증거가 충분히 모일 때까지 시간이 오래 걸리기도 합니다.', inline=False)          
+        embed.add_field(name='이들은', value='그들 자신 또한 챙기고 돌보아야 할 필요가 있음을 잊지 말아야 합니다. 갈수록 기대기만 하는 이들에게 언제고 싫은 내색 한번 않는 논리주의자형 사람들이기 때문에 일단 감정의 골이 쌓여 터진 후 돌아오기 늦어버리는 상황을 초래하기 전 안정과 효율성 추구를 위한 완강하고 헌신적인 이들의 성격을 활용하여 장기간 목표를 달성하기 위한 절충점을 찾아야 합니다. 활기차고 명료하며 안정된 삶을 추구하는 이들의 성향을 진심으로 이해하고 보듬으며 이들이 가진 단점을 보완해주는 동료나 배우자를 만난다면, 이들은 안정을 추구하는 자신의 성향으로 하여금 일을 순리대로 잘 돌아가게 하는 데 지대한 역할을 하고 있다는 생각에 큰 만족감을 느낄 것입니다.', inline=False) 
+        embed.add_field(name='청렴결백한 논리주의자형에 속하는 유명인', value='엥겔라 마르켈, 나탈리 포트만, 안토니 홉킨스, 조지 워싱턴, 조지.H.W 부시, 에드워드 스타크(왕좌의게임), 허마이오니 진 그레인저(오역:헤르미온느 진 그레인저, 주인공 해리포터의 절친이자 로날드 위즐리의 아내(허마이오니 진 위즐리), 그리고 그리핀도르!', inline=False) 
         await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ISFJ"):
         channel = message.channel
         embed = discord.Embed(
-            title = '성격유형: []  ',
+            title = '성격유형: [용감한 수호자]  ',
             description = '',
             colour = discord.Colour.red()
         )
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '', value = '',inline = False)
-        embed.add_field(name='', value='', inline=False)
-        embed.add_field(name='', value='', inline=False)        
-        embed.add_field(name = '', value = '',inline = False)
-        embed.add_field(name='', value='', inline=False)
-        embed.add_field(name='', value='', inline=False)   
-        embed.add_field(name='', value='', inline=False)          
-        embed.add_field(name='', value='', inline=False) 
-        embed.add_field(name='', value='', inline=False) 
-        embed.add_field(name='형에 속하는 유명인', value='', inline=False) 
+        embed.add_field(name = '사랑은', value = '나눌수록 커집니다. 다른 이에게 나누어 주면 줄수록 당신에게 돌아오는 사랑 또한 더욱 커집니다.',inline = False)
+        embed.add_field(name='수호자형', value='사람은 꽤 독특한 특징을 가지고 있는데, 이 유형에 속하는 사람은 이들을 정의하는 성격 특성에 꼭 들어맞지 않는다는 점입니다. 타인을 향한 연민이나 동정심이 있으면서도 가족이나 친구를 보호해야 할 때는 가차 없는 모습을 보이기도 합니다. 조용하고 내성적인 반면 관계술에 뛰어나 인간관계를 잘 만들어갑니다. 안정적인 삶을 지향하지만 이들이 이해받고 존경받는다고 생각되는 한에서는 변화를 잘 수용합니다. 이처럼 수호자형 사람은 한마디로 정의 내리기 힘든 다양한 성향을 내포하고 있는데, 이는 오히려 그들의 장점을 승화시켜 그들 자신을 더욱 돋보이게 합니다.', inline=False)
+        embed.add_field(name='수호자형 사람은', value='무엇을 받으면 몇 배로 베푸는 진정한 이타주의자로 열정과 자애로움으로 일단 믿는 이들이라면 타인과도 잘 어울려 일에 정진합니다.', inline=False)        
+        embed.add_field(name = '약', value = '13%로 꽤 높은 인구 비율을 차지하는데, 인구 대다수를 차지하는 데 있어 이들보다 더 나은 성격 유형은 아마 없을 것입니다. 이들은 종종 의료 부분이나 학문, 혹은 사회단체와 같이 오랜 역사나 전통과 관련된 분야에 종사합니다.',inline = False)
+        embed.add_field(name='수호자형 중', value='특히 신중한 성향을 가진 사람은 완벽주의자만큼이나 세심하고 꼼꼼한 면모를 보이기도 합니다. 간혹 일을 지연하는 경우가 있기는 하지만, 그렇다고 일을 시간 내에 마치지 않는 것은 아닙니다. 이들은 맡은 바 일에 책임감을 가지고 업무에 임하며, 회사나 가정에서 그들의 기대치를 넘어 주위 사람들을 만족시키고자 최선을 다합니다', inline=False)
+        embed.add_field(name='공(功)을 공(功)이라 말할 수 있는 용기', value='수호자형 사람은 그들의 업적이나 실적을 다른 사람들이 알아차리게 하는 데 어려움을 느낍니다. 이들은 종종 자신이 이룬 성취를 과소평가하는 경향이 있는데, 이러한 겸손한 태도로 종종 다른 이들로부터 존경을 받기도 하는가 하면, 이기적이고 냉소적인 사람들은 이들의 겸손함을 역으로 이용하여 수호자형 사람이 세운 공을 자신의 것으로 돌리는 경우도 있습니다. 자신감과 열정을 지키기 위해서는 이들도 [아니요]라고 말해야 할 때와 자기 자신을 방어해야 할 때를 정확히 인지할 필요가 있습니다.', inline=False)   
+        embed.add_field(name='내성적이면서', value='신기하게도 사회적인 성향을 가지고 있기도 한 이들은 좋은 기억력을 자랑합니다. 뛰어난 기억력으로 단순히 데이터나 사소한 정보를 기억하는 것이 아니라, 만나는 사람들이나 그들과 관련한 소소한 사항들을 모두 기억해 놓습니다. 상상력과 타고난 섬세함으로 그들의 자애로운 마음을 표현함으로써 상대방의 가슴을 진심으로 울리는 데 이들보다 더 천부적으로 소질이 있는 이들도 없을 것입니다. 이는 함께 일하는 동료들 사이에서도 자명한 일로, 이들은 동료를 가까운 친구로 여깁니다. 그러나 뭐니 뭐니 해도 이들의 애정과 사랑이 환하게 꽃을 피우는 곳은 바로 가정 내에서 일 것입니다.', inline=False)          
+        embed.add_field(name='해야 할 땐 과감히', value='수호자형 사람은 가치 있다고 여기는 일이 마무리되지 않고 있으면 게으르게 가만히 앉아만 있지 못하는 이타주의적 성격을 가지고 있습니다. 다른 내향적인 성격의 사람들과 견주어 봐도 이들만큼 타인과 친밀한 관계를 유지하는 이들이 없습니다. 또한 서로 응원하고 힘을 북돋워 주며 화목한 가정을 꾸려 나가는 것을 옆에서 지켜보는 것 자체가 가족에게는 큰 축복이 아닐 수 없습니다. 이들은 화려한 스포트라이트를 받는 것을 불편해하며, 다른 이들과 함께 달성한 업무에 있어 공을 인정받는 데에 어색해하기도 합니다. 하지만 이들이 그들 자신의 노력을 알리는 데 조금 더 열중한다면 다른 유형의 사람이었다면 그저 상상만 하고 있을 법한 일을 성취해 냄으로써 더 큰 자신감을 얻을 수 있을 것입니다.', inline=False) 
+        embed.add_field(name='용감한 수호자형에 속하는 유명인', value='엘리자베스 2세 여왕(영국), 앤 해서웨이, 셀레나 고메즈, 케이틀린 스타크(왕좌의게임), 감지네 샘와이즈(반지의제왕), 닥터 왓슨(셜록홈즈), 캡틴 아메리카(히어로), ', inline=False) 
         await message.channel.send(channel,embed=embed) 
 
     if message.content.startswith("?ENFJ"):
