@@ -947,8 +947,13 @@ async def on_message(message):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("나냡"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
       
+    if message.content.startswith("도리야"):
+        await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
+      
+    if message.content.startswith("도리 병신"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")              
       
     if message.content.startswith("?INTP"):                             
         channel = message.channel
