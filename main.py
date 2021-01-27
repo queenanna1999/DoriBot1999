@@ -114,7 +114,11 @@ async def on_message(message):
         await message.channel.send("*이제 도리봇에게서 음식 추천을 받을 수 있습니다.* ")
         await message.channel.send("*그리고 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 썼습니다.현재 부산 앞바다입니다.*")
         await message.channel.send("*현재, 부산 앞바다이지만, 급하게 근처 카페에서 수정합니다. MBTI 1.0 -> 2.0으로 업그레이드 되었습니다. 도리봇은 이만 부산 앞바다로 다시 나가봅니다.*")
-
+        await message.channel.send("============")
+        await message.channel.send("*2021년 01월27일 수요일* ")
+        await message.channel.send("*도리봇이 [삼성] 관련 단어가 인식될시 비정상적으로 반응을 보이는 것을 확인했습니다. 해당 현상은 해결되었으며, 계속 주시중입니다.* ")
+        await message.channel.send("*그리고, 사소한 채팅 문구 대응 패치. 오늘의음식을 한가지 추천해주는 명령어를 개선했습니다.* ")        
+        await message.channel.send("*도리봇은 오늘 개인사정이 있어 빨리 나가봅니다. 코로나 검사를 받아야 합니다. 왜냐하면, 교회 수련회가서 동성간의 성관계를 했거든요.*")
         
         
     if message.content.startswith('??자살유발정보'):
@@ -208,7 +212,7 @@ async def on_message(message):
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
         await message.channel.send(embed=embed)
-        randomNum = random.randrange(1, 14)
+        randomNum = random.randrange(1, 18)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="바퀴벌레튀김", color=0x00ff00))
         if randomNum==2:
@@ -234,7 +238,16 @@ async def on_message(message):
         if randomNum==12:
             await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
         if randomNum==13:
-            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000))           
+            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000))  
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="에스카르고", color=0x00ff00))
+        if randomNum==15:
+            await message.channel.send(embed=discord.Embed(title="자라탕", color=0xff0000))  
+        if randomNum==16:
+            await message.channel.send(embed=discord.Embed(title="박쥐고기", color=0xff0000)) 
+        if randomNum==17:
+            await message.channel.send(embed=discord.Embed(title="똥냄새가 심하게 나는 곱창", color=0xff0000))           
+         
             
     if message.content.startswith("?3"):
         await message.channel.send("당신의 행운의 숫자는 3 입니다. ")
@@ -589,7 +602,7 @@ async def on_message(message):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
    
     if message.content.startswith("삼성"):
-        await message.channel.send("삼성은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다.")
+        await message.channel.send("[삼성]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다.")
 
     if message.content.startswith("애플"):
         await message.channel.send("멋진 도구를 사람들에게 주세요.멋진 일을 해낼 겁니다")
@@ -598,19 +611,34 @@ async def on_message(message):
         await message.channel.send("Today, Apple is going to reinvent the phone. ")
 
     if message.content.startswith("갤럭시"):
-        await message.channel.send("삼성전자의 모든 스마트 디바이스 브랜드. 향후 유일하게 판매되는 한국산 모바일 기기 브랜드이죠. ")
+        await message.channel.send("[삼성전자]의 모든 스마트 디바이스 브랜드. 향후 유일하게 판매되는 한국산 모바일 기기 브랜드이죠. ")
 
     if message.content.startswith("앱등이"):
         await message.channel.send("맹목적이고 배타적인 악성 Apple 팬보이를 의미하죠. ")
 
     if message.content.startswith("삼엽충"):
-        await message.channel.send("삼성과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
+        await message.channel.send("[삼성]과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
 
     if message.content.startswith("애플빠"):
         await message.channel.send("맹목적이고 배타적인 악성 Apple 팬보이를 의미하죠.")
 
     if message.content.startswith("삼성빠"):
-        await message.channel.send("삼성과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
+        await message.channel.send("[삼성]과 관련된 것에 대해 맹목적인 추종을 하는 사람들을 일컫는 말이죠. ")
+      
+    if message.content.startswith("Apple"):
+        await message.channel.send("멋진 도구를 사람들에게 주세요.멋진 일을 해낼 겁니다") 
+      
+    if message.content.startswith("apple"):
+        await message.channel.send("멋진 도구를 사람들에게 주세요.멋진 일을 해낼 겁니다 ") 
+      
+    if message.content.startswith("SAMSUNG"):
+        await message.channel.send("[SAMSUNG]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다. ") 
+      
+    if message.content.startswith("samsung"):
+        await message.channel.send("[samsung]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다. ") 
+      
+    if message.content.startswith("Samsung"):
+        await message.channel.send("[Samsung]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다. ")      
 
     if message.content.startswith("개씨발"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
@@ -726,14 +754,6 @@ async def on_message(message):
         if randomNum==13:
             await message.channel.send(embed=discord.Embed(title="게임말고 새로운 취미는 없나요? 우리 함께 새로운 취미를 탐색해볼까요?", color=0xff0000))
         
-    if message.content.startswith("중국놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
-    if message.content.startswith("중국년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("중국새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("중국"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
@@ -741,26 +761,10 @@ async def on_message(message):
     if message.content.startswith("일본"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
-    if message.content.startswith("일본놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("일본년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
-    if message.content.startswith("일본새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("짱깨"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("짱깨놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("짱깨년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("짱깨새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("쪽발이"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
@@ -768,23 +772,9 @@ async def on_message(message):
     if message.content.startswith("쪽바리"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("쪽발이놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("쪽바리놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("쪽발이년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("쪽바리새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
-    if message.content.startswith("쪽발이새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
     if message.content.startswith("문재앙"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
 
     if message.content.startswith("디시"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
@@ -816,33 +806,6 @@ async def on_message(message):
     if message.content.startswith("노예"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-    if message.content.startswith("노예놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("노예년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("노예새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("노예새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
-    if message.content.startswith("쪽바리새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("쪽발이새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("짱깨새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
-    if message.content.startswith("일본새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
-    if message.content.startswith("중국새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
     if message.content.startswith("틀"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
@@ -852,14 +815,11 @@ async def on_message(message):
     if message.content.startswith("병신"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-
     if message.content.startswith("ㅂㅅ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
 
-
     if message.content.startswith("ㅄ"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
-
 
     if message.content.startswith("시발아"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
@@ -881,8 +841,7 @@ async def on_message(message):
      
     if message.content.startswith("씨1발"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
-       
-      
+             
     if message.content.startswith("ㅊㅋㅊㅋ"):
         await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
       
