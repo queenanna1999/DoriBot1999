@@ -75,6 +75,7 @@ async def on_message(message):
         embed.add_field(name='?주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
         embed.add_field(name='?유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
         embed.add_field(name='?MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
+        embed.add_field(name='?퍼스널컬러테스트', value=' 도리봇이 당신의 성격 유형을 불러옵니다 ', inline=False)
         embed.add_field(name='?혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
         embed.add_field(name='?조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
         embed.add_field(name='?도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
@@ -121,7 +122,7 @@ async def on_message(message):
         await message.channel.send("*도리봇은 오늘 개인사정이 있어 빨리 나가봅니다. 코로나 검사를 받아야 합니다. 왜냐하면, 교회 수련회가서 동성간의 성관계를 했거든요.*")
         await message.channel.send("============")
         await message.channel.send("*2021년 02월05일 금요일* ")
-        await message.channel.send("*도리봇이 MMPI 성격 테스트 기능을 추가했습니다.* ")       
+        await message.channel.send("*도리봇이 퍼스널컬러 테스트 기능을 추가했습니다.* ")       
         await message.channel.send("*도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요?*")        
         
         
@@ -2052,11 +2053,11 @@ async def on_message(message):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) ?O (물음표 + O), 하지만 AB형은 ??AB 입니다. 물음표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
        
-    if message.content.startswith("?MMPI"):
+    if message.content.startswith("?퍼스널컬러테스트"):
         await message.channel.send("*아직, 자기 유형을 모르신다면,")
         await message.channel.send("아래 주소를 클릭해서 테스트를 먼저 받고 오세요!")
         await message.channel.send("https://kapable.github.io/kapable.github.io/personalColor/")
-        await message.channel.send("당신의 MMPI 를 채팅창에 입력해주세요. ")
+        await message.channel.send("당신의 퍼스널컬러를 채팅창에 입력해주세요. ")
         await message.channel.send("예시) ?댄덜라이언 (물음표 + 댄덜라이언) ")      
 
     if message.content.startswith('?다우니'):
@@ -2070,7 +2071,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 다우니이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 다우니이며,")
          await message.channel.send("MBTI 결과는 ENFJ 일것입니다. ")
          await message.channel.send( embed=embed) 
          
@@ -2085,7 +2086,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 오션딥스이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 오션딥스이며,")
          await message.channel.send("MBTI 결과는 ISTP 일것입니다. ")
          await message.channel.send( embed=embed)   
          
@@ -2100,7 +2101,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 오아시스이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 오아시스이며,")
          await message.channel.send("MBTI 결과는 ISFJ 일것입니다. ")
          await message.channel.send( embed=embed) 
          
@@ -2115,7 +2116,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 스프라우트이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 스프라우트이며,")
          await message.channel.send("MBTI 결과는 ISFP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2130,7 +2131,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 퀼트스이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 퀼트스이며,")
          await message.channel.send("MBTI 결과는 INTJ 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2145,7 +2146,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 세룰리안이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 세룰리안이며,")
          await message.channel.send("MBTI 결과는 INTP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2160,7 +2161,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 엘리스블루이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 엘리스블루이며,")
          await message.channel.send("MBTI 결과는 INTJ 일것입니다. ")
          await message.channel.send( embed=embed) 
          
@@ -2175,7 +2176,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 켁터스이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 켁터스이며,")
          await message.channel.send("MBTI 결과는 ESTJ 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2190,7 +2191,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 오션베이이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 오션베이이며,")
          await message.channel.send("MBTI 결과는 INFP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2205,7 +2206,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 로즈버드이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 로즈버드이며,")
          await message.channel.send("MBTI 결과는 ESTP 일것입니다. ")
          await message.channel.send( embed=embed)
          
@@ -2220,7 +2221,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 바닐라아이스이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 바닐라아이스이며,")
          await message.channel.send("MBTI 결과는 ESFJ 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2235,7 +2236,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 스위트핑크이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 스위트핑크이며,")
          await message.channel.send("MBTI 결과는 ESFP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2250,7 +2251,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 네이비피오니이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 네이비피오니이며,")
          await message.channel.send("MBTI 결과는 ENTJ 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2265,7 +2266,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 웜플레임이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 웜플레임이며,")
          await message.channel.send("MBTI 결과는 ENTP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
@@ -2280,7 +2281,7 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("당신의 MMPI 결과는 댄덜라이언이며,")
+         await message.channel.send("당신의 퍼스널컬러 결과는 댄덜라이언이며,")
          await message.channel.send("MBTI 결과는 ENFP 일것입니다. ")
          await message.channel.send( embed=embed)  
          
