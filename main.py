@@ -119,6 +119,10 @@ async def on_message(message):
         await message.channel.send("*도리봇이 [삼성] 관련 단어가 인식될시 비정상적으로 반응을 보이는 것을 확인했습니다. 해당 현상은 해결되었으며, 계속 주시중입니다.* ")
         await message.channel.send("*그리고, 사소한 채팅 문구 대응 패치. 오늘의음식을 한가지 추천해주는 명령어를 개선했습니다.* ")        
         await message.channel.send("*도리봇은 오늘 개인사정이 있어 빨리 나가봅니다. 코로나 검사를 받아야 합니다. 왜냐하면, 교회 수련회가서 동성간의 성관계를 했거든요.*")
+        await message.channel.send("============")
+        await message.channel.send("*2021년 02월05일 금요일* ")
+        await message.channel.send("*도리봇이 MMPI 성격 테스트 기능을 추가했습니다.* ")       
+        await message.channel.send("*도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요?*")        
         
         
     if message.content.startswith('??자살유발정보'):
@@ -2040,13 +2044,20 @@ async def on_message(message):
             
             
                   
-    if message.content.startswith("?MBTI") or message.content.startswith('MBTI') or message.content.startswith('엠비티아이') or message.content.startswith('성격') or message.content.startswith('!mbti') or message.content.startswith('mbti'):
+    if message.content.startswith("?MBTI"):
         await message.channel.send("당신의 MBTI 를 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) ?ENFP (물음표 + ENFP) ")
 
-    if message.content.startswith("?혈액형") or message.content.startswith('혈관고') or message.content.startswith('혈액유형') or message.content.startswith('혈엑형'):
+    if message.content.startswith("?혈액형"):
         await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
         await message.channel.send("예시) ?O (물음표 + O), 하지만 AB형은 ??AB 입니다. 물음표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
+       
+    if message.content.startswith("?MMPI"):
+        await message.channel.send("*아직, 자기 유형을 모르신다면,")
+        await message.channel.send("아래 주소를 클릭해서 테스트를 먼저 받고 오세요!")
+        await message.channel.send("https://kapable.github.io/kapable.github.io/personalColor/")
+        await message.channel.send("당신의 MMPI 를 채팅창에 입력해주세요. ")
+        await message.channel.send("예시) ?댄덜라이언 (물음표 + 댄덜라이언) ")      
 
         
      
