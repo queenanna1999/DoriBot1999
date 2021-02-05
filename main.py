@@ -2054,8 +2054,10 @@ async def on_message(message):
         await message.channel.send("예시) ?O (물음표 + O), 하지만 AB형은 ??AB 입니다. 물음표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
        
     if message.content.startswith("?퍼스널컬러테스트"):
-        await message.channel.send("*아직, 자기 유형을 모르신다면,")
+        await message.channel.send("아직, 자기 유형을 모르신다면,")
         await message.channel.send("아래 주소를 클릭해서 테스트를 먼저 받고 오세요!")
+        await message.channel.send("대부분, 자신의 MBTI 유형과 동일할겁니다.")
+        await message.channel.send("[띄어쓰기 필요없습니다]")
         await message.channel.send("https://kapable.github.io/kapable.github.io/personalColor/")
         await message.channel.send("당신의 퍼스널컬러를 채팅창에 입력해주세요. ")
         await message.channel.send("예시) ?댄덜라이언 (물음표 + 댄덜라이언) ")      
@@ -2284,6 +2286,21 @@ async def on_message(message):
          await message.channel.send("당신의 퍼스널컬러 결과는 댄덜라이언이며,")
          await message.channel.send("MBTI 결과는 ENFP 일것입니다. ")
          await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?페리글라스블루'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/d37AMyW.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 퍼스널컬러 결과는 페리글라스블루이며,")
+         await message.channel.send("MBTI 결과는 ISTJ 일것입니다. ")
+         await message.channel.send( embed=embed)          
          
          
          
