@@ -2059,7 +2059,234 @@ async def on_message(message):
         await message.channel.send("당신의 MMPI 를 채팅창에 입력해주세요. ")
         await message.channel.send("예시) ?댄덜라이언 (물음표 + 댄덜라이언) ")      
 
-        
+    if message.content.startswith('?다우니'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/mHVgxSY.jpg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 다우니이며,")
+         await message.channel.send("MBTI 결과는 ENFJ 일것입니다. ")
+         await message.channel.send( embed=embed) 
+         
+    if message.content.startswith('?오션딥스'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/CXLBolu.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 오션딥스이며,")
+         await message.channel.send("MBTI 결과는 ISTP 일것입니다. ")
+         await message.channel.send( embed=embed)   
+         
+    if message.content.startswith('?오아시스'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/EVtYA0i.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 오아시스이며,")
+         await message.channel.send("MBTI 결과는 ISFJ 일것입니다. ")
+         await message.channel.send( embed=embed) 
+         
+    if message.content.startswith('?스프라우트'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/sW8MfNE.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 스프라우트이며,")
+         await message.channel.send("MBTI 결과는 ISFP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?퀼트스'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/yTo6NJf.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 퀼트스이며,")
+         await message.channel.send("MBTI 결과는 INTJ 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?세룰리안'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/EhHQNqr.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 세룰리안이며,")
+         await message.channel.send("MBTI 결과는 INTP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?엘리스블루'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/N2Ef2KA.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 엘리스블루이며,")
+         await message.channel.send("MBTI 결과는 INTJ 일것입니다. ")
+         await message.channel.send( embed=embed) 
+         
+    if message.content.startswith('?켁터스'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/O0jI0Va.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 켁터스이며,")
+         await message.channel.send("MBTI 결과는 ESTJ 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?오션베이'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/vAikndR.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 오션베이이며,")
+         await message.channel.send("MBTI 결과는 INFP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?로즈버드'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/P0pHIFN.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 로즈버드이며,")
+         await message.channel.send("MBTI 결과는 ESTP 일것입니다. ")
+         await message.channel.send( embed=embed)
+         
+    if message.content.startswith('?바닐라아이스'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/8mVipiA.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 바닐라아이스이며,")
+         await message.channel.send("MBTI 결과는 ESFJ 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?스위트핑크'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/nWCQhSt.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 스위트핑크이며,")
+         await message.channel.send("MBTI 결과는 ESFP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?네이비피오니'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/O7XU9LL.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 네이비피오니이며,")
+         await message.channel.send("MBTI 결과는 ENTJ 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?웜플레임'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/DoqNeiD.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 웜플레임이며,")
+         await message.channel.send("MBTI 결과는 ENTP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+    if message.content.startswith('?댄덜라이언'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/gbJELoA.png'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("당신의 MMPI 결과는 댄덜라이언이며,")
+         await message.channel.send("MBTI 결과는 ENFP 일것입니다. ")
+         await message.channel.send( embed=embed)  
+         
+         
+         
+         
      
        
     if message.content == "?조선시대 내 이름":
