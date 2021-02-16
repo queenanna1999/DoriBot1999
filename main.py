@@ -1503,7 +1503,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/Dori.jpeg'                      
+        urlBase = 'https://i.imgur.com/Ny6e2BS.jpg'                      
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
@@ -1529,7 +1529,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/Nyanap.jpeg'
+        urlBase = 'https://i.imgur.com/BXaGTeC.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
@@ -1542,7 +1542,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/D_PUBGM.jpg'
+        urlBase = 'https://i.imgur.com/vRpRYu5.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
@@ -1555,7 +1555,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/7_PUBGM.jpg'
+        urlBase = 'https://i.imgur.com/orOghv1.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
@@ -1568,7 +1568,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/N_PUBGM.jpg'
+        urlBase = 'https://i.imgur.com/Bb4mWtS.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
