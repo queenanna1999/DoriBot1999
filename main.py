@@ -1496,79 +1496,79 @@ async def on_message(message):
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
         await message.channel.send(channel,embed=embed)        
         
-    if message.content.startswith('?도리도리곰도리'):
+    if message.content.startswith('?도리도리곰도리'):                #닉네임과연관된사진
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/Ny6e2BS.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/Dori.jpeg'                      
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('??7호선'):
+    if message.content.startswith('??7호선'):                      #닉네임과연관된사진
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/OzuHWX1.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/7HS.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('?나냡'):
+    if message.content.startswith('?나냡'):                      #닉네임과연관된사진
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/BXaGTeC.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/Nyanap.jpeg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
         
-    if message.content.startswith('?도리도리곰도리'):
+    if message.content.startswith('?도리도리곰도리'):                 #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/vRpRYu5.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/D_PUBGM.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('??7호선'):
+    if message.content.startswith('??7호선'):                        #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/orOghv1.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/7_PUBGM.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('?나냡'):
+    if message.content.startswith('?나냡'):                           #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
         embed = discord.Embed(
         title='',
         description='',
 
         )
 
-        urlBase = 'https://i.imgur.com/Bb4mWtS.jpg'
+        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/N_PUBGM.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
