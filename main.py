@@ -1516,7 +1516,7 @@ async def on_message(message):
 
         )
 
-        urlBase = 'https://raw.githubusercontent.com/queenanna1999/DoriBot1999/main/image/7HS.jpg'
+        urlBase = 'https://i.imgur.com/OzuHWX1.jpg'
         randomNum = random.randrange(1, 2)
         urlF = urlBase+str(randomNum)
         embed.set_image(url = urlF)
