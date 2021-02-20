@@ -565,9 +565,6 @@ async def on_message(message):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
         await message.delete()  
        
-    if message.content.startswith("페미니즘"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다.")
-        await message.delete()      
 
     if message.content.startswith("Feminism"):
         await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
