@@ -514,7 +514,19 @@ async def on_message(message):
         await message.delete()   
        
     if message.content.startswith("홍어"):
-        await message.channel.send("ㅋㅋㅋ 역시 통구이는 대구산 통구이가 제일 맛나노.. 이러면 기분 좋음? ")
+        await message.channel.send("역시 통구이는 대구산 통구이가 제일 맛난다 이기야! 마 갱상도 아이가! 이러면 기분 좋냐? ")
+        await message.delete()
+       
+    if message.content.startswith("통구이"):
+        await message.channel.send("여윽시 홍어는 광주산 홍어가 젤로 맛나부러! 냄새부터가 클라스가 틀리당께! 이러면 기분 좋을것 같냐?")
+        await message.delete()
+       
+    if message.content.startswith("어묵"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()
+       
+    if message.content.startswith("오뎅"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
         await message.delete()
 
     if message.content.startswith("ㅗ"):
