@@ -1081,11 +1081,11 @@ async def on_message(message):
         await message.delete()      
       
     if message.content.startswith("도리 병신"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
         await message.delete()
        
     if message.content.startswith("주식"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
         await message.delete() 
              
      
