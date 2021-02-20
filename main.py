@@ -103,7 +103,7 @@ async def on_message(message):
         await message.channel.send("예시) ?에란겔 (물음표 + 에란겔) ")      
 
        
-    if message.content.startswith("?베타"):
+    if message.content.startswith("?도리봇의 일기장"):
         channel = message.channel
         embed = discord.Embed(
             title = '도리봇은 그날그날 패치한 내역들을 일기장에다 기록하는 습관을 가지고 있어요.  ',
