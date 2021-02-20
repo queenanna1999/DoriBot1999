@@ -511,7 +511,11 @@ async def on_message(message):
 
     if message.content.startswith("전라도"):
         await message.channel.send("ㅋ? 그럼 대구지하철참사 피해자들은 통구이고?? 야들야들하니 맛나겠노. 이러면 기분좋겠냐? ")
-        await message.delete()       
+        await message.delete()   
+       
+    if message.content.startswith("홍어"):
+        await message.channel.send("ㅋㅋㅋ 역시 통구이는 대구산 통구이가 제일 맛나노.. 이러면 기분 좋음? ")
+        await message.delete()
 
     if message.content.startswith("ㅗ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
