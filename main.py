@@ -1079,6 +1079,165 @@ async def on_message(message):
     if message.content.startswith("주식"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
         await message.delete() 
+       
+    if message.content.startswith("썅"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("샹"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("노무현"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("노짱"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("김대중"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("슨상"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("머중"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("개발자"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("제작자"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("박정희"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("전두환"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("갓카"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("전땅크"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("세월호"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("518"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("523"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("시진핑"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("이승만"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+       
+    if message.content.startswith("518"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("윤보선"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("최규하"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("노태우"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+       
+    if message.content.startswith("김영삼"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("이명박"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("박근혜"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("김정은"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("푸틴"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("펍지"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()
+       
+    if message.content.startswith("텐센트"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("시2발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+     
+    if message.content.startswith("씨2발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()
+       
+    if message.content.startswith("시3발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+     
+    if message.content.startswith("씨3발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()
+       
+    if message.content.startswith("시4발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+     
+    if message.content.startswith("씨4발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()
+       
+    if message.content.startswith("시5발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+     
+    if message.content.startswith("씨5발"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()
+       
+
+       
+       
+       
+       
+       
+       
+       
              
      
  
