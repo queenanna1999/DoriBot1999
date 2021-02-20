@@ -123,7 +123,11 @@ async def on_message(message):
         await message.channel.send("============")
         await message.channel.send("*2021년 02월05일 금요일* ")
         await message.channel.send("*도리봇이 퍼스널컬러 테스트 기능을 추가했습니다.* ")       
-        await message.channel.send("*도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요?*")        
+        await message.channel.send("*도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요?*")  
+        await message.channel.send("============")
+        await message.channel.send("*2021년 02월20일 토요일* ")
+        await message.channel.send("*도리봇이 드디어 부적절한 표현을 삭제할수 있게 개선되었습니다.* ")       
+       
         
         
     if message.content.startswith('??자살유발정보'):
@@ -589,10 +593,7 @@ async def on_message(message):
     if message.content.startswith("꼴페미"):
         await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
         await message.delete() 
-       
-    if message.content.startswith("메갈"):
-        await message.channel.send("대부분의 비정상적인 간악한 일베충들은 페미 = 메갈이라 생각하더군요. 하지만, 전혀 아닙니다. 메갈은 일베입니다. 페미는 메갈이 아닙니다. ")
-        await message.delete()        
+               
 
     if message.content.startswith("ㅋㅋㅋ"):         #ㅋㅋㅋ라는 문구가 인식되면 도리봇이 웃음에 관한 명언들을 읊어줍니다.
         dtime = datetime.datetime.now()
