@@ -464,57 +464,135 @@ async def on_message(message):
         
     if message.content.startswith("닥쳐"):               #비속어에 도리봇이 반응하도록 추가했습니다. 추가하지 못한 비속어가 있다면, 더 추가하겠습니다.
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("시발"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("씨발"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("니애미"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("ㄴㅇㅁ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("니애비"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("ㄴㅇㅂ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("개새끼"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("닭쳐"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("개새기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("개샛기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("문재인"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("전라도"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("ㅋ? 그럼 대구지하철참사 피해자들은 통구이고?? 야들야들하니 맛나겠노. 이러면 기분좋겠냐? ")
+        await message.delete()       
 
     if message.content.startswith("ㅗ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("ㅅㅂ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("ㅆㅂ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()       
 
     if message.content.startswith("ㄱㅅㄲ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("개자식"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("애비"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+
+    if message.content.startswith("애미"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("에비"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+
+    if message.content.startswith("에미"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("엄마"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+
+    if message.content.startswith("아빠"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("어머니"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
+
+    if message.content.startswith("아버지"):
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()  
+       
+    if message.content.startswith("페미니즘"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다.")
+        await message.delete()      
+
+    if message.content.startswith("Feminism"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.delete()   
+       
+    if message.content.startswith("Femi"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("페미"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("패미"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.delete()  
+       
+    if message.content.startswith("꼴페미"):
+        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.delete() 
+       
+    if message.content.startswith("메갈"):
+        await message.channel.send("대부분의 비정상적인 간악한 일베충들은 페미 = 메갈이라 생각하더군요. 하지만, 전혀 아닙니다. 메갈은 일베입니다. 페미는 메갈이 아닙니다. ")
+        await message.delete()        
 
     if message.content.startswith("ㅋㅋㅋ"):         #ㅋㅋㅋ라는 문구가 인식되면 도리봇이 웃음에 관한 명언들을 읊어줍니다.
         dtime = datetime.datetime.now()
@@ -548,63 +626,83 @@ async def on_message(message):
 
     if message.content.startswith("ㅇㅈㄹ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("이지랄"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("추미애"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("박원순"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("대깨문"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("문빠"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("씹새끼"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("10새끼"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("십새끼"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("십새기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("씹새기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("10새기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.delete()      
 
     if message.content.startswith("개독"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("ㅁㄹ"):
         await message.channel.send("도리봇이 병신같은 표현을 감지한 문구입니다.  ")
+        await message.delete()      
       
     if message.content.startswith("좆까"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("ㅈㄲ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("좃까"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("조까"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("조카"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("좃카"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
    
     if message.content.startswith("삼성"):
         await message.channel.send("[삼성]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다.")
@@ -647,87 +745,115 @@ async def on_message(message):
 
     if message.content.startswith("개씨발"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개씹"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개좆"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개씨발"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개씹할"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개지랄"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개족새"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("아다"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("동정"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("걸레"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("간나새끼"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개새"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개돼지"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개나리"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개쓰레기"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("고자"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("거지"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("졸라"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()     
 
     if message.content.startswith("존나"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("좆나"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("좃나"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()     
 
     if message.content.startswith("ㅈㄴ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("김치녀"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("꺼저"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("꺼져"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("급식"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("급식충"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개초딩"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")   
+        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("게임"):          #게임에 대한 경고를 도리봇이 날려줍니다.
         dtime = datetime.datetime.now()
@@ -762,93 +888,122 @@ async def on_message(message):
 
     if message.content.startswith("중국"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("일본"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
 
     if message.content.startswith("짱깨"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
 
     if message.content.startswith("쪽발이"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("쪽바리"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
 
     if message.content.startswith("문재앙"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("디시"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("틀딱"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("빡쳐서"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()     
 
     if message.content.startswith("빡침"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("빡치네"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("빡친다"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("빡치넹"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("빡쳐"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("빡치기전에"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("노예"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("틀"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("나무위키"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("병신"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("ㅂㅅ"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("ㅄ"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("시발아"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("퍼큐"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("뻐큐"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("ㅈ같네"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("개같네"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
       
     if message.content.startswith("시1발"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
      
     if message.content.startswith("씨1발"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
              
     if message.content.startswith("ㅊㅋㅊㅋ"):
         await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
+        await message.delete()      
       
     if message.content.startswith("졸려"):
         await message.channel.send("잠들기 전에 그대 목소리 들었으면 좋겠습니다")
@@ -858,6 +1013,7 @@ async def on_message(message):
       
     if message.content.startswith("타르코프"):
         await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
+        await message.delete()      
       
     if message.content.startswith("사람"):
         await message.channel.send(" #Stay at Home #사회적 거리두기 ")
@@ -897,28 +1053,46 @@ async def on_message(message):
 
     if message.content.startswith("?좆까"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("?좃까"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("?좇까"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.delete()      
 
     if message.content.startswith("?족까"):
         await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("?ㅈㄲ"):
         await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.delete()      
 
     if message.content.startswith("나냡"):
         await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
+        await message.delete()      
       
     if message.content.startswith("도리야"):
         await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
+        await message.delete()      
       
     if message.content.startswith("도리 병신"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")              
-      
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")
+        await message.delete()
+       
+    if message.content.startswith("주식"):
+        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. 조심하세요. ")
+        await message.delete() 
+             
+     
+ 
+       
+        
+     
+     
     if message.content.startswith("?INTP"):                             
         channel = message.channel
         embed = discord.Embed(
