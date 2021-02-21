@@ -29,7 +29,7 @@ async def on_ready():
     print(app.user.name)                                   #그냥 사람으로치면 웹사이트에 로그인하는 과정이라고 보시면 됩니다.
     print(app.user.id)
     print('===============')
-    game = discord.Game("?도와줘/2개의 서버 온라인")
+    game = discord.Game("?도와줘/3개의 서버 온라인")
     await app.change_presence(status=discord.Status.online, activity=game)
     
 @app.event
