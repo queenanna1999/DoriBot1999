@@ -25,8 +25,8 @@ app = discord.Client()
 
 @app.event
 async def on_ready():
-    print('로그인 중 입니다 ..!')                           #이것은 수정할 필요 없음. 유저들에게 보여지지 않는 곳입니다.
-    print(app.user.name)                                   #그냥 사람으로치면 웹사이트에 로그인하는 과정이라고 보시면 됩니다.
+    print('로그인 중 입니다 ..!')  
+    print(app.user.name)                                   
     print(app.user.id)
     print('===============')
     game = discord.Game("?도와줘/3개의 서버 온라인")
