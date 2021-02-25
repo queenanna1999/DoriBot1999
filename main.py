@@ -25,27 +25,24 @@ app = discord.Client()
 
 @app.event
 async def on_ready():
-    print('로그인 중 입니다 ..!')  
+    print("I'm logging in.")  
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("?도와줘/3개의 서버 온라인")
+    game = discord.Game("Say ?help ")
     await app.change_presence(status=discord.Status.online, activity=game)
     
 @app.event
 async def on_member_join(member):
-    fmt = '{1.name} 서버에 온 것을 진심으로 환영합니다 {0.mention} 님'    #신규유저한테만 보여지는 메세지 입니다.
+    fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
     channel = member.server.get_channel("721047251862159416")
     await app.message.channel.send( fmt.format(member, member.server))
-    await app.message.channel.send(member, "안녕하세요? 전 도리봇이라고 해요.")
-    await app.message.channel.send(member, "무슨 도움이 필요하신가요?")
-    await app.message.channel.send(member, "제가 도울 수 있는 범위안에서 도와드릴게요.")
-    await app.message.channel.send(member, "마지막으로, 우리 서버에 오신 것을 환영합니다!")
+    await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
  
 @app.event
 async def on_member_remove(member):
     channel = member.server.get_channel("721047251862159416")         
-    fmt = '{0.mention} 님이 서버를 떠나셨습니다'
+    fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server))
           
 
@@ -54,59 +51,56 @@ async def on_member_remove(member):
 @app.event
 async def on_message(message):
 
-    if message.content.startswith("?도와줘"):
+    if message.content.startswith("?help"):
         channel = message.channel
         embed = discord.Embed(
-            title = '명령어 목록',
-            description = '아래는 명령어 목록 입니다. 명령어 목록은 계속 업데이트 중 입니다.',
+            title = 'Commands List',
+            description = '',
             colour = discord.Colour.red()
         )
 
         dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '?안녕', value = '도리봇이 인사를 해줍니다',inline = False)
-        embed.add_field(name='?코로나', value='도리봇이 실시간 코로나 현황을 불러옵니다', inline=False)
-        embed.add_field(name='?오늘의운세', value=' 도리봇이 오늘의운세를 불러옵니다 ', inline=False)
-        embed.add_field(name='?오늘의시한편', value=' 도리봇이 오늘의 시한편을 읊어줍니다 ', inline=False)
-        embed.add_field(name='?오늘의음식', value=' 도리봇이 오늘의음식 하나를 추천합니다 ', inline=False) 
-        embed.add_field(name='?오늘의말씀', value=' 도리봇이 오늘의 성경 구절을 읽어줍니다 ', inline=False)        
-        embed.add_field(name='?PC 게임 추천', value=' 도리봇이 PC 게임을 추천해줍니다 ', inline=False)
-        embed.add_field(name='?모바일 게임 추천', value=' 도리봇이 모바일 게임을 추천해줍니다 ', inline=False)
-        embed.add_field(name='?주사위굴리기', value=' 도리봇이 주사위를 굴려줍니다 ', inline=False)
-        embed.add_field(name='?유튜버 추천', value=' 도리봇이 검증된 유튜버를 추천해줍니다 ', inline=False)
-        embed.add_field(name='?MBTI', value=' 도리봇이 MBTI끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='?퍼스널컬러테스트', value=' 도리봇이 당신의 성격 유형을 불러옵니다 ', inline=False)
-        embed.add_field(name='?혈액형', value=' 도리봇이 혈액형의 특징,혈액형끼리의 궁합을 불러옵니다 ', inline=False)
-        embed.add_field(name='?조선시대 내 이름', value=' 도리봇이 조선시대에 태어났으면 평생 소유하게될 당신의 이름을 알려줍니다 ', inline=False)        
-        embed.add_field(name='?도리도리곰도리', value=' 도리봇이 도리도리곰도리의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='??7호선', value=' 도리봇이 7호선의 자기소개를 대신 무료로 해줍니다 (느낌표 2개) ', inline=False)
-        embed.add_field(name='?나냡', value=' 도리봇이 나냡의 자기소개를 대신 무료로 해줍니다 ', inline=False)
-        embed.add_field(name='?배틀그라운드 지도', value=' 도리봇이 배틀그라운드의 지도를 불러옵니다. (모바일이랑 좀 다를수도 있음)', inline=False)          
-        embed.add_field(name='?컴배경쟁전1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 경쟁전 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='?컴배솔로1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 솔로 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='?컴배듀오1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 듀오 전적을 불러옵니다 (1은 TPP, 2는 FPP ) ', inline=False)
-        embed.add_field(name='?컴배스쿼드1 또는 2', value=' 도리봇이 당신의 배틀그라운드 3인칭 또는 1인칭 스쿼드 전적을 불러옵니다 ', inline=False)
-        embed.add_field(name='??자살유발정보', value=' 도리봇 이용자들은 필독하세요 ', inline=False)  
-        embed.add_field(name='?도리봇의 일기장', value=' 도리봇의 일기장을 확인해볼수 있어요 ', inline=False)   
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '?Hello', value = 'Doribot will say hello.',inline = False)
+        embed.add_field(name='?Corona', value='Doribot shows the current status of Corona in South Korea.', inline=False)
+        embed.add_field(name='?Fortune of today', value=" Doribot show you today's fortune.(South Korea) ", inline=False)
+        embed.add_field(name="?Today's Poetry", value=" Doribot recites Today's Poetry.(South Korea) ", inline=False)
+        embed.add_field(name="?Today's Food", value=" Doribot recommends Today's Food. ", inline=False) 
+        embed.add_field(name="?Today's Bible", value=" Doribot recommends Today's Bible verses.(South Korea) ", inline=False)        
+        embed.add_field(name='?Recommend a PC game', value=' Doribot will recommend a game suitable for you.(South Korea) ', inline=False)
+        embed.add_field(name='?Recommend a MOBILE game', value=' Doribot will recommend a game suitable for you.(South Korea) ', inline=False)
+        embed.add_field(name='?Dice', value=' Doribot rolls the dice. ', inline=False)
+        embed.add_field(name='?Recommend a Youtuber', value=' Doribot will recommend a proven YouTuber.(South Korea) ', inline=False)
+        embed.add_field(name='?MBTI', value=' Doribot shows MBTI information. ', inline=False)
+        embed.add_field(name='?Personal Color Test', value=' Doribot shows your Personal Color Test information. ', inline=False)
+        embed.add_field(name='?Blood type', value=' Doribot shows information about your blood type. ', inline=False)
+        embed.add_field(name='?My real name', value=' Doribot shows your real name. ', inline=False)        
+        embed.add_field(name='?Members', value=' Introducing D, N, S ', inline=False)
+        embed.add_field(name='?Pubg Maps', value=' Doribot shows the Maps of PUBG.', inline=False)          
+        embed.add_field(name='?PUBG Competitive mode1 또는 2', value=' Doribot shows your PUBG Competitive mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
+        embed.add_field(name='?Pubg Solo mode1 또는 2', value=' Doribot shows your PUBG Solo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
+        embed.add_field(name='?Pubg Duo mode1 또는 2', value=' Doribot shows your PUBG Duo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
+        embed.add_field(name='?Pubg Squad mode1 또는 2', value=' Doribot shows your PUBG Squad mode mode TPP or FPP information. (1= T, 2= F ) ', inline=False)  
+        embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
 
         
-    if message.content.startswith("?안녕"):             
+    if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)       
-        msg = "{0.author.mention} 안녕하세요?? 오늘 하루도 잘 보내셨나요?".format(message)
+        msg = "{0.author.mention} Hi. Did you have a good day?".format(message)
         await message.channel.send( msg)
     
-    if message.content.startswith("?배틀그라운드 지도"):
-        await message.channel.send("당신이 보고 싶은 배틀그라운드의 맵을 한글로 채팅창에 입력해주세요. (에란겔, 미라마, 사녹, 비켄디, 카라킨, 헤이븐) ")
-        await message.channel.send("예시) ?에란겔 (물음표 + 에란겔) ")      
+    if message.content.startswith("?Pubg Maps"):
+        await message.channel.send("Tell me what you want. (Erangel, Miramar, Vikendi, Karakin, HAVEN) ")
+        await message.channel.send("Example) ?Erangel")      
 
        
-    if message.content.startswith("?도리봇의 일기장"):
+    if message.content.startswith("?Doribot's diary"):
         channel = message.channel
         embed = discord.Embed(
-            title = '도리봇은 그날그날 패치한 내역들을 일기장에다 기록하는 습관을 가지고 있어요.  ',
+            title = 'Doribot writes a diary every day.  ',
             description = '',
             colour = discord.Colour.red()
         )
@@ -120,46 +114,20 @@ async def on_message(message):
         embed.add_field(name = '*2021년 02월 05일 금요일', value = '*도리봇이 퍼스널컬러 테스트 기능을 추가했습니다. *도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요? ',inline = False)
         embed.add_field(name = '*2021년 02월 20일 토요일', value = '*도리봇이 드디어 부적절한 표현을 삭제할수 있게 개선되었습니다.',inline = False)
         embed.add_field(name = '*2021년 02월 25일 목요일', value = '*도리봇이 이제 친목 행위 의심 표현들은 가차없이 삭제합니다.',inline = False)
+        embed.add_field(name = '*2021년 02월 26일 금요일', value = '*도리봇이 영어로 새롭게 꽃단장 합니다. ',inline = False)
 
 
         await message.channel.send(channel,embed=embed)       
        
         
         
-    if message.content.startswith('??자살유발정보'):
-         embed = discord.Embed(
-         title='',
-         description='',
 
-        )
-
-         urlBase = 'https://i.imgur.com/QnSoj5h.jpeg'
-         randomNum = random.randrange(1, 2)
-         urlF = urlBase+str(randomNum)
-         embed.set_image(url = urlF)
-         await message.channel.send( embed=embed)
-
-    if message.content.startswith("??자살유발정보"):
-        await message.channel.send("[자살유발정보 처벌 대상 입니다!] ")
-        await message.channel.send("온라인상 유통되는 [자살유발정보가 급증]하고 있다는 사실, 알고계셨나요? ")
-        await message.channel.send("중앙자살예방센터가 주요 포털, SNS, 커뮤니티 등을 대상으로 실시하는 국민 참여 클리닝 활동결과에 따르면 자살유발정보가 매년 급증하고 있는 것으로 나타났는데요 ")
-        await message.channel.send("특히, 2018년도에 발표한 활동결과에 따르면 확산속도가 빠른 SNS를 통해 유포되는 게시물과 직접적이고 자극적인 사진이나 동영상이 급증하여 그 심각성이 커지고 있는 것으로 나타났습니다. ")
-        await message.channel.send("온라인상 유통되는 자살유발정보가 심각한 사회문제로 대두됨에 따라, ")
-        await message.channel.send("============ ")
-        await message.channel.send("2019년 7월 16일 부터 새롭게 시행하는 2019년에 개정된 [자살예방 및 생명존중문화 조성을 위한 법률]에는 [자살유발정보 유통에 대한 처벌을 담고 있습니다.] ")
-        await message.channel.send("{제19조 제1항을 위반하여 자살유발정보를 정보통신망을 통하여 유통한 사람은 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.} -자살예방 및 생명존중문화 조성을 위한 법률 제 25조 제3항-  ")
-        await message.channel.send("[[자살유발정보 근절해야 합니다!]] ")
-        await message.channel.send("생명을 지키는 방법은 어려운 것이 아닙니다. ")
-        await message.channel.send("[[함께 지켜주세요.]] ")
-        await message.channel.send("여러분의 노력이 소중한 생명을 살릴 수 있습니다.  ")
-        await message.channel.send("더 이상 혼자가 아닙니다. 당신곁엔 [[1393]] ")
-        await message.channel.send("{{도리봇은 중앙자살예방센터와 함께합니다.}} ")
         
-    if message.content.startswith("?오늘의말씀"):       #추가바람.
+    if message.content.startswith("?Today's Bible"):       
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
-        await message.channel.send(embed=discord.Embed(title="계속 꾸준히 한 구절씩 추가중입니다;", color=0xfefefe))
+        await message.channel.send(embed=discord.Embed(title="", color=0xfefefe))
         randomNum = random.randrange(1, 12)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리니 -시편91:2", color=0x00ff00))
@@ -183,12 +151,13 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="의인의 빝은 환하게 빛나고 악인의 등불은 꺼지느니라 -잠언13:9", color=0x00ff00))
         if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라 -잠언14:16", color=0xff0000))
+            
           
-    if message.content.startswith("?오늘의운세"):       #추가바람.
+    if message.content.startswith("?오늘의운세"):       
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
-        await message.channel.send(embed=discord.Embed(title="당신이 받은 숫자를 [?숫자]와 동일한 형식으로 채팅창에 적어주시길 바랍니다.", color=0xfefefe))
+        await message.channel.send(embed=discord.Embed(title="?Number", color=0xfefefe))
         randomNum = random.randrange(1, 12)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="10", color=0x00ff00))
@@ -211,50 +180,50 @@ async def on_message(message):
         if randomNum==10:
             await message.channel.send(embed=discord.Embed(title="6", color=0x00ff00))
         if randomNum==11:
-            await message.channel.send(embed=discord.Embed(title="일시적인 오류 발생! 잠시만 기다리세요...", color=0xff0000))
+            await message.channel.send(embed=discord.Embed(title="fatal error...", color=0xff0000))
           
-    if message.content.startswith("?오늘의음식"):       #추가바람.
+    if message.content.startswith("?Today's Food"):       
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
         randomNum = random.randrange(1, 18)
         if randomNum==1:
-            await message.channel.send(embed=discord.Embed(title="바퀴벌레튀김", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Fried cockroaches", color=0x00ff00))
         if randomNum==2:
-            await message.channel.send(embed=discord.Embed(title="뱀술", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Snake wine", color=0x00ff00))
         if randomNum==3:
-            await message.channel.send(embed=discord.Embed(title="루왁커피", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Civet coffee", color=0x00ff00))
         if randomNum==4:
-            await message.channel.send(embed=discord.Embed(title="번데기", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Steamed Silkworm Chrysalis", color=0x00ff00))
         if randomNum==5:
-            await message.channel.send(embed=discord.Embed(title="개구리 뒷다리 구이", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Grilled frog hind legs", color=0x00ff00))
         if randomNum==6:
-            await message.channel.send(embed=discord.Embed(title="메뚜기구이", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Grilled grasshopper", color=0x00ff00))
         if randomNum==7:
-            await message.channel.send(embed=discord.Embed(title="구운 양 머리", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Roasted Sheep's head", color=0x00ff00))
         if randomNum==8:
-            await message.channel.send(embed=discord.Embed(title="초콜릿을 곁들인 초코감자튀김", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Fried Chocolate Potatoes", color=0x00ff00))
         if randomNum==9:
-            await message.channel.send(embed=discord.Embed(title="민트초코 아이스크림", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Mint Chocolate Ice cream", color=0x00ff00))
         if randomNum==10:
-            await message.channel.send(embed=discord.Embed(title="초콜릿을 버무린 초코치킨", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Chocolate Chicken", color=0x00ff00))
         if randomNum==11:
-            await message.channel.send(embed=discord.Embed(title="개고기", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="Dog meat", color=0xff0000))  
         if randomNum==12:
-            await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="Mouse meat", color=0xff0000)) 
         if randomNum==13:
-            await message.channel.send(embed=discord.Embed(title="삭힌 홍어회", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="Fermented Skate Sashimi", color=0xff0000))  
         if randomNum==14:
-            await message.channel.send(embed=discord.Embed(title="에스카르고", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="Escargo", color=0x00ff00))
         if randomNum==15:
-            await message.channel.send(embed=discord.Embed(title="자라탕", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="鼈湯", color=0xff0000))  
         if randomNum==16:
-            await message.channel.send(embed=discord.Embed(title="박쥐고기", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="Bat meat", color=0xff0000)) 
         if randomNum==17:
-            await message.channel.send(embed=discord.Embed(title="똥냄새가 심하게 나는 곱창", color=0xff0000))           
+            await message.channel.send(embed=discord.Embed(title="Pig's Intestine", color=0xff0000))           
          
             
-    if message.content.startswith("?3"):
+    if message.content.startswith("?3"):         #This is today's fortune part.
         await message.channel.send("당신의 행운의 숫자는 3 입니다. ")
         await message.channel.send("행운의 색 - 흰색 ")
         await message.channel.send("행운의 아이템 및 장소 - 부드러운 소재의 블라우스 또는 스커트. 진주, 다이아, 물가, 공원 ")
@@ -418,7 +387,7 @@ async def on_message(message):
         
 
         
-    if message.content.startswith("?코로나"):
+    if message.content.startswith("?코로나"):           #Corona Part
         covidSite = "http://ncov.mohw.go.kr/index.jsp"
         covidNotice = "http://ncov.mohw.go.kr"
         html = urlopen(covidSite)
@@ -462,182 +431,183 @@ async def on_message(message):
         await message.channel.send("Covid-19 Virus Korea Status", embed=embed)       
         
         
-    if message.content.startswith("닥쳐"):               #비속어에 도리봇이 반응하도록 추가했습니다. 추가하지 못한 비속어가 있다면, 더 추가하겠습니다.
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+    if message.content.startswith("닥쳐"):               #Doribot deletes the swear words.
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("시발"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("씨발"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("니애미"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("ㄴㅇㅁ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("니애비"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("ㄴㅇㅂ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("개새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("닭쳐"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("개새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("개샛기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("문재인"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("전라도"):
-        await message.channel.send("ㅋ? 그럼 대구지하철참사 피해자들은 통구이고?? 야들야들하니 맛나겠노. 이러면 기분좋겠냐? ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()   
        
     if message.content.startswith("홍어"):
-        await message.channel.send("역시 통구이는 대구산 통구이가 제일 맛난다 이기야! 마 갱상도 아이가! 이러면 기분 좋냐? ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()
        
     if message.content.startswith("통구이"):
-        await message.channel.send("여윽시 홍어는 광주산 홍어가 젤로 맛나부러! 냄새부터가 클라스가 틀리당께! 이러면 기분 좋을것 같냐?")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()
        
     if message.content.startswith("어묵"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()
        
     if message.content.startswith("오뎅"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()
 
     if message.content.startswith("ㅗ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("ㅅㅂ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()       
 
     if message.content.startswith("ㅆㅂ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()       
 
     if message.content.startswith("ㄱㅅㄲ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("개자식"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("애비"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("애미"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("에비"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("에미"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("엄마"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("아빠"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("어머니"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("아버지"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()  
        
 
     if message.content.startswith("Feminism"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.channel.send("I'm a feminist. ")
         await message.delete()   
        
     if message.content.startswith("Femi"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.channel.send("I'm a feminist. ")
         await message.delete() 
        
     if message.content.startswith("페미"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.channel.send("I'm a feminist. ")
         await message.delete() 
        
     if message.content.startswith("패미"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.channel.send("I'm a feminist. ")
         await message.delete()  
        
     if message.content.startswith("꼴페미"):
-        await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
+        await message.channel.send("I'm a feminist. ")
         await message.delete() 
        
     if message.content.startswith("모배"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()
        
     if message.content.startswith("배그"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()  
        
     if message.content.startswith("구해요"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
     if message.content.startswith("옵치"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()     
        
     if message.content.startswith("오버워치"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()  
        
     if message.content.startswith("모바일배그"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()     
        
     if message.content.startswith("모바일 배그"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()       
        
 
     if message.content.startswith("배틀그라운드"):
-        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
-        await message.delete()       
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()
+        
                
 
-    if message.content.startswith("ㅋㅋㅋ"):         #ㅋㅋㅋ라는 문구가 인식되면 도리봇이 웃음에 관한 명언들을 읊어줍니다.
+    if message.content.startswith("ㅋㅋㅋ"):         
         dtime = datetime.datetime.now()
         randomNum = random.randrange(1, 14)
         if randomNum==1:
@@ -668,93 +638,93 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000)) 
 
     if message.content.startswith("ㅇㅈㄹ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression!  ")
         await message.delete()      
 
     if message.content.startswith("이지랄"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("추미애"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("박원순"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("대깨문"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression!  ")
         await message.delete()      
 
     if message.content.startswith("문빠"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("씹새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("10새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("십새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("십새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("씹새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression!  ")
         await message.delete()      
 
     if message.content.startswith("10새기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("개독"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("ㅁㄹ"):
-        await message.channel.send("도리봇이 병신같은 표현을 감지한 문구입니다.  ")
+        await message.channel.send("Doribot has detected an inappropriate expression!  ")
         await message.delete()      
       
     if message.content.startswith("좆까"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("ㅈㄲ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("좃까"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("조까"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("조카"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("좃카"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
    
     if message.content.startswith("삼성"):
-        await message.channel.send("[삼성]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다.")
+        await message.channel.send("The [Samsung] Group is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.")
 
     if message.content.startswith("애플"):
-        await message.channel.send("멋진 도구를 사람들에게 주세요.멋진 일을 해낼 겁니다")
+        await message.channel.send("[Apple Inc.] is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services.")
 
     if message.content.startswith("아이폰"):
-        await message.channel.send("Today, Apple is going to reinvent the phone. ")
+        await message.channel.send("Today, [Apple] is going to reinvent the phone. ")
 
     if message.content.startswith("갤럭시"):
         await message.channel.send("[삼성전자]의 모든 스마트 디바이스 브랜드. 향후 유일하게 판매되는 한국산 모바일 기기 브랜드이죠. ")
@@ -787,118 +757,118 @@ async def on_message(message):
         await message.channel.send("[Samsung]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다. ")      
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개씹"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개좆"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개씹할"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개지랄"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개족새"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("아다"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("동정"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("걸레"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("간나새끼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개새"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개돼지"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개나리"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!.")
         await message.delete()      
 
     if message.content.startswith("개쓰레기"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("고자"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("거지"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("졸라"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()     
 
     if message.content.startswith("존나"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("좆나"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("좃나"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()     
 
     if message.content.startswith("ㅈㄴ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("김치녀"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("꺼저"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("꺼져"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("급식"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("급식충"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개초딩"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
-    if message.content.startswith("게임"):          #게임에 대한 경고를 도리봇이 날려줍니다.
+    if message.content.startswith("게임"):          
         dtime = datetime.datetime.now()
         randomNum = random.randrange(1, 14)
         if randomNum==1:
@@ -930,132 +900,132 @@ async def on_message(message):
         
 
     if message.content.startswith("중국"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("일본"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
 
     if message.content.startswith("짱깨"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
 
     if message.content.startswith("쪽발이"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("쪽바리"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
 
     if message.content.startswith("문재앙"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("디시"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("틀딱"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("빡쳐서"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()     
 
     if message.content.startswith("빡침"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("빡치네"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("빡친다"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("빡치넹"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("빡쳐"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("빡치기전에"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("노예"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("틀"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("나무위키"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("병신"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("ㅂㅅ"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("ㅄ"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("시발아"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("퍼큐"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("뻐큐"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("ㅈ같네"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("개같네"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
       
     if message.content.startswith("시1발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
      
     if message.content.startswith("씨1발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
              
     if message.content.startswith("ㅊㅋㅊㅋ"):
-        await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
       
     if message.content.startswith("졸려"):
-        await message.channel.send("잠들기 전에 그대 목소리 들었으면 좋겠습니다")
+        await message.channel.send("Do you want to sleep with me?")
       
     if message.content.startswith("졸리다"):
-        await message.channel.send("잠들기 전에 그대 목소리 들었으면 좋겠습니다 ") 
+        await message.channel.send("Do you want to sleep with me? ") 
       
     if message.content.startswith("타르코프"):
-        await message.channel.send(" 도리봇이 병신같은 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
       
     if message.content.startswith("사람"):
@@ -1074,210 +1044,211 @@ async def on_message(message):
         await message.channel.send(" #Stay at Home ")
       
     if message.content.startswith("안 졸려"):
-        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
+        await message.channel.send(" Hey, are you Virgin? ")
 
     if message.content.startswith("안졸려"):
-        await message.channel.send("누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
+        await message.channel.send("Hey, are you Virgin? ")
 
     if message.content.startswith("안졸리다"):
-        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어?  ")
+        await message.channel.send(" Hey, are you Virgin?  ")
 
     if message.content.startswith("안 졸리다"):
-        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
+        await message.channel.send(" Hey, are you Virgin? ")
 
     if message.content.startswith("안졸림"):
-        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어?  ")
+        await message.channel.send(" Hey, are you Virgin?  ")
 
     if message.content.startswith("안 졸림"):
-        await message.channel.send(" 누가 이 시간에 잠을 안자니? 부모한테 못 배웠어? ")
+        await message.channel.send(" Hey, are you Virgin? ")
+
+    if message.content.startswith("ㅅㅅ"):
+        await message.channel.send(" Are you still Virgin? lol :D ")        
       
     if message.content.startswith("왜"):
         await message.channel.send(" ? ")
 
     if message.content.startswith("?좆까"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("?좃까"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("?좇까"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("?족까"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
     if message.content.startswith("?ㅈㄲ"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
 
     if message.content.startswith("나냡"):
-        await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
       
     if message.content.startswith("도리야"):
-        await message.channel.send(" 해당 단어를 언급할 수 있는 권한을 가진 사용자는 도리봇#3725 하나뿐입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
       
     if message.content.startswith("도리 병신"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()
        
     if message.content.startswith("주식"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete() 
        
     if message.content.startswith("썅"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("샹"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("노무현"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("노짱"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("김대중"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("슨상"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("머중"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("개발자"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete() 
        
     if message.content.startswith("제작자"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("박정희"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("전두환"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("갓카"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("전땅크"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("세월호"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("518"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("523"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete() 
        
     if message.content.startswith("시진핑"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("이승만"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
        
-    if message.content.startswith("518"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
-        await message.delete() 
+
        
     if message.content.startswith("윤보선"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("최규하"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("노태우"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
        
     if message.content.startswith("김영삼"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete() 
        
     if message.content.startswith("이명박"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("박근혜"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("김정은"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("푸틴"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("펍지"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()
        
     if message.content.startswith("텐센트"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
     if message.content.startswith("시2발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
      
     if message.content.startswith("씨2발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()
        
     if message.content.startswith("시3발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()      
      
     if message.content.startswith("씨3발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()
        
     if message.content.startswith("시4발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
      
     if message.content.startswith("씨4발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()
        
     if message.content.startswith("시5발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다. ")
+        await message.channel.send(" Doribot has detected an inappropriate expression! ")
         await message.delete()      
      
     if message.content.startswith("씨5발"):
-        await message.channel.send(" 도리봇이 부적절한 표현을 감지한 문구입니다.")
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()
        
 
@@ -3430,6 +3401,8 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
            
+
+
            
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
