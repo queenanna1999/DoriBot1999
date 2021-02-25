@@ -601,6 +601,39 @@ async def on_message(message):
     if message.content.startswith("꼴페미"):
         await message.channel.send("도리봇은 페미니즘을 지지합니다. ")
         await message.delete() 
+       
+    if message.content.startswith("모배"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()
+       
+    if message.content.startswith("배그"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()  
+       
+    if message.content.startswith("구해요"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete() 
+       
+    if message.content.startswith("옵치"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()     
+       
+    if message.content.startswith("오버워치"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()  
+       
+    if message.content.startswith("모바일배그"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()     
+       
+    if message.content.startswith("모바일 배그"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()       
+       
+
+    if message.content.startswith("배틀그라운드"):
+        await message.channel.send("해당 서버에서는 친목 행위가 금지되어있습니다; ")
+        await message.delete()       
                
 
     if message.content.startswith("ㅋㅋㅋ"):         #ㅋㅋㅋ라는 문구가 인식되면 도리봇이 웃음에 관한 명언들을 읊어줍니다.
