@@ -153,7 +153,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라 -잠언14:16", color=0xff0000))
             
           
-    if message.content.startswith("?오늘의운세"):       
+    if message.content.startswith("?Fortune of today"):       
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
