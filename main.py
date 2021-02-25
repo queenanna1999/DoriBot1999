@@ -78,9 +78,9 @@ async def on_message(message):
         embed.add_field(name='?Members', value=' Introducing D, N, S ', inline=False)
         embed.add_field(name='?Pubg Maps', value=' Doribot shows the Maps of PUBG.', inline=False)          
         embed.add_field(name='?PUBG Competitive mode1 또는 2', value=' Doribot shows your PUBG Competitive mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
-        embed.add_field(name='?Pubg Solo mode1 또는 2', value=' Doribot shows your PUBG Solo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
-        embed.add_field(name='?Pubg Duo mode1 또는 2', value=' Doribot shows your PUBG Duo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
-        embed.add_field(name='?Pubg Squad mode1 또는 2', value=' Doribot shows your PUBG Squad mode mode TPP or FPP information. (1= T, 2= F ) ', inline=False)  
+        embed.add_field(name='?PUBG Solo mode1 또는 2', value=' Doribot shows your PUBG Solo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
+        embed.add_field(name='?PUBG Duo mode1 또는 2', value=' Doribot shows your PUBG Duo mode TPP or FPP information. (1= T, 2= F ) ', inline=False)
+        embed.add_field(name='?PUBG Squad mode1 또는 2', value=' Doribot shows your PUBG Squad mode mode TPP or FPP information. (1= T, 2= F ) ', inline=False)  
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
 
@@ -93,7 +93,7 @@ async def on_message(message):
         await message.channel.send( msg)
     
     if message.content.startswith("?Pubg Maps"):
-        await message.channel.send("Tell me what you want. (Erangel, Miramar, Vikendi, Karakin, HAVEN) ")
+        await message.channel.send("Tell me what you want. (Erangel, Miramar, Vikendi, Karakin, HAVEN, Sanhok) ")
         await message.channel.send("Example) ?Erangel")      
 
        
@@ -387,7 +387,7 @@ async def on_message(message):
         
 
         
-    if message.content.startswith("?코로나"):           #Corona Part
+    if message.content.startswith("?Corona"):           #Corona Part
         covidSite = "http://ncov.mohw.go.kr/index.jsp"
         covidNotice = "http://ncov.mohw.go.kr"
         html = urlopen(covidSite)
@@ -1715,72 +1715,97 @@ async def on_message(message):
       
 
     if message.content.startswith("샹년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")    
-      
+        await message.channel.send("Doribot has detected an inappropriate expression!")    
+        await message.delete()
+        
     if message.content.startswith("썅년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.") 
-      
+        await message.channel.send("Doribot has detected an inappropriate expression!") 
+        await message.delete()
+        
     if message.content.startswith("샹놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다. ")   
-       
+        await message.channel.send("Doribot has detected an inappropriate expression!")   
+        await message.delete()
+        
     if message.content.startswith("썅놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.") 
-       
+        await message.channel.send("Doribot has detected an inappropriate expression!") 
+        await message.delete()
+        
     if message.content.startswith("상년"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")   
-      
+        await message.channel.send("Doribot has detected an inappropriate expression!")   
+        await message.delete()
+        
     if message.content.startswith("상놈"):
-        await message.channel.send("도리봇이 부적절한 표현을 감지한 문구입니다.")
-
+        await message.channel.send("Doribot has detected an inappropriate expression!")
+        await message.delete()
+        
     if message.content.startswith("자살하고싶어"):
         await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다 ")
-
+        await message.delete()
+        
     if message.content.startswith("자살하고싶다"):
         await message.channel.send("힘들 땐 가만히 눈을 감고 스스로에게 말을 걸어주세요. 나는 어떤 사람인지 얼마나 소중한 사람인지 ")
-
+        await message.delete()
+        
     if message.content.startswith("자살할래"):
         await message.channel.send("젊었을 때 고민 같은 거, 암 것도 아니여, 나이들어봐 ")
-
+        await message.delete()
+        
     if message.content.startswith("자살하고프다"):
         await message.channel.send("음... 힘든 일들 모두 그냥, 지나가는 바람이라 생각해 보면 어떨까? ")
-
+        await message.delete()
+        
     if message.content.startswith("자살마렵다"):
         await message.channel.send("풋 하고 웃지 말고 하하하하하하하")
-
+        await message.delete()
+        
     if message.content.startswith("자살마려워"):
         await message.channel.send("3년 전에 고민한 거 기억나세요? 기억 안 나죠? 이번에도 그럴 거예요. ")
-
+        await message.delete()
+        
     if message.content.startswith("죽여주"):
         await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
-
+        await message.delete()
+        
     if message.content.startswith("죽을"):
         await message.channel.send("많이 힘들었지? ")
-
+        await message.delete()
+        
     if message.content.startswith("죽고"):
         await message.channel.send("뒷감당 잘해요? ")
-       
+        await message.delete()
 
     if message.content.startswith("한손에총들고"):
         await message.channel.send(" 아프리카TV BJ 보겸의 던전앤파이터와 아프리카 TV 계정 닉네임이다. ")
-      
+        
+        
     if message.content.startswith("뒷광고"):
         await message.channel.send(" [양팡] ")
-      
+        
+        
     if message.content.startswith("양팡"):
         await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인 ")
-      
+        
+        
     if message.content.startswith("보겸뒷광고"):
-        await message.channel.send(" 언급하지 마라. 입 조심해. 씨발새끼야 ") 
-      
+        await message.channel.send(" Doribot has detected an inappropriate expression! ") 
+        await message.delete()
+        
     if message.content.startswith("양팡뒷광고"):
         await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인들은 대한민국에서 추방해야됨;;")
-      
+        
+        
     if message.content.startswith("문복희"):
         await message.channel.send(" [뒷광고]로 시청자들 기만한 악덕 방송인이지만 사과 한마디도 없었음. ㅋ 이런 뻔뻔한 태도 리스펙한다. ") 
-      
+        
+        
     if message.content.startswith("보겸"):
         await message.channel.send(" 아프리카 TV BJ 출신이면서 순수 한국인 구독자로 4백만명을 모은 유튜브 크리에이터는 지금까지 아무도 없었어. 이런 사람은 역사책에 기록해서 위인으로 기억되야됨. ")
+        
 
+    if message.content.startswith("?Members"):
+        await message.channel.send(" Who's the most curious? (? + 도리도리곰도리)")
+
+        
     if message.content == "?엘사" or message.content == "엘사":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/UufmudR.jpg", "explain.png")
@@ -1802,13 +1827,13 @@ async def on_message(message):
     if message.content.startswith("??7호선"):
         channel = message.channel
         embed = discord.Embed(
-            title = '7호선을 소개합니다  ',
+            title = 'Introducing 7호선  ',
             description = '',
             color = discord.Color.red()
         )
 
         dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
         embed.add_field(name = '7호선', value = '대한민국의 고딩이다. 05년생으로 확인되었으며, 디시인사이드에선 iPhoneOS(iphoneos)라는 고닉으로 활동하고, 디스코드 태그는 iPhoneOS#3138 이다.  주 활동 갤러리는 타르코프 갤러리이다. [타르코프 하는 놈들을 두려워해라. 그들은 평범한 생명체가 아니다.] (근데, 05년생이 몇살이야? 실존하긴 함?) ',inline = False)
         embed.add_field(name='그의', value='MBTI는 INFP 이다. 타르코프와 오버워치를 즐겨하며, 오버워치에서는 라인 원챔이다. 심해에서 탱커를 해주는 것은 사실 굉장히 고마운 행위이나, 팀을 생각할 줄 모르는 플레이를 남발한다. 남발하는 수준이 아니다. 매판 솔플 하면서 팀원이 그거에 대해 반응을 보이면 먹잇감을 물은 하이에나처럼 정치질을 시전하기 시작한다. 매판 이렇게 플레이 하지만, 욕설로 정지를 먹은적이 없다. ', inline=False)
         await message.channel.send(channel,embed=embed)
@@ -1816,13 +1841,13 @@ async def on_message(message):
     if message.content.startswith("?나냡"):
         channel = message.channel
         embed = discord.Embed(
-            title = '나냡을 소개합니다  ',
+            title = 'Introducing 냐납  ',
             description = '',
             color = discord.Color.red()
         )
 
         dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
         embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이다. 아마 파딱이라 모배갤만 주로 한 것 같다.',inline = False)
         embed.add_field(name='그의', value='MBTI는 ISFP 이고, 혈액형은 AB형이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
         await message.channel.send(channel,embed=embed)
@@ -1831,19 +1856,19 @@ async def on_message(message):
     if message.content.startswith("?도리도리곰도리"):
         channel = message.channel
         embed = discord.Embed(
-            title = '도리도리곰도리를 소개합니다  ',
+            title = 'Introducing 도리도리곰도리  ',
             description = '',
             colour = discord.Colour.red()
         )
 
         dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
         embed.add_field(name = '도리도리곰도리', value = '2000년 봄과 여름의 사이인 달에 태어난 여자아이다. 사실 남자인척 하는 유우명한 넷카마였지만, 이제는 여자라고 하면 오히려 넷카마 취급 받는다. 주 활동 갤러리는 겨울왕국 갤러리이며, 디스코드 태그는 도리봇#2014 이다.',inline = False)
         embed.add_field(name='그녀의', value='MBTI는 ENFP 이고, 혈액형은 O형 이다. 배틀그라운드 모바일을 즐겨한다. 현재는 빡겜 위주 플레이보다 즐겜 위주 플레이를 더 원한다. 이유는 배틀그라운드 모바일 핵쟁이들 때문.', inline=False)
         embed.add_field(name='왜', value='게임상에서 마이크를 쓰지않냐면 사실 트라우마 때문이다. 아주 못된 한남 냄져 유충들때문에 마음의 상처를 얻었다. 그녀는 한남을 혐오한다. 아니 죽여버리고 싶어한다.  ', inline=False)        
         await message.channel.send(channel,embed=embed)        
         
-    if message.content.startswith('?도리도리곰도리'):                #닉네임과연관된사진
+    if message.content.startswith('?도리도리곰도리'):                
         embed = discord.Embed(
         title='',
         description='',
@@ -1856,7 +1881,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('??7호선'):                      #닉네임과연관된사진
+    if message.content.startswith('??7호선'):                      
         embed = discord.Embed(
         title='',
         description='',
@@ -1869,7 +1894,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('?나냡'):                      #닉네임과연관된사진
+    if message.content.startswith('?나냡'):                      
         embed = discord.Embed(
         title='',
         description='',
@@ -1882,7 +1907,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
         
-    if message.content.startswith('?도리도리곰도리'):                 #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
+    if message.content.startswith('?도리도리곰도리'):                 
         embed = discord.Embed(
         title='',
         description='',
@@ -1895,7 +1920,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('??7호선'):                        #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
+    if message.content.startswith('??7호선'):                        
         embed = discord.Embed(
         title='',
         description='',
@@ -1908,7 +1933,7 @@ async def on_message(message):
         embed.set_image(url = urlF)
         await message.channel.send( embed=embed)
 
-    if message.content.startswith('?나냡'):                           #배틀그라운드모바일덕분에 알게된 사이이므로 관련된 게임 프로필 사진을 올려놓는다.
+    if message.content.startswith('?나냡'):                           
         embed = discord.Embed(
         title='',
         description='',
@@ -1922,7 +1947,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
         
-    if message.content.startswith('?에란겔'):
+    if message.content.startswith('?Erangel'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1936,7 +1961,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('?미라마'):
+    if message.content.startswith('?Miramar'):
         embed = discord.Embed(
         title='',
         description='',
@@ -1950,7 +1975,7 @@ async def on_message(message):
         await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('?사녹'):
+    if message.content.startswith('?Sanhok'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1964,7 +1989,7 @@ async def on_message(message):
          await message.channel.send( embed=embed)
 
 
-    if message.content.startswith('?비켄디'):
+    if message.content.startswith('?Vikendi'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1977,7 +2002,7 @@ async def on_message(message):
          embed.set_image(url = urlF)
          await message.channel.send( embed=embed)
 
-    if message.content.startswith('?카라킨'):
+    if message.content.startswith('?Karakin'):
          embed = discord.Embed(
          title='',
          description='',
@@ -1991,7 +2016,7 @@ async def on_message(message):
          await message.channel.send( embed=embed)
          
         
-    if message.content.startswith('?헤이븐'):
+    if message.content.startswith('?HAVEN'):
          embed = discord.Embed(
          title='',
          description='',
@@ -2005,7 +2030,7 @@ async def on_message(message):
          await message.channel.send( embed=embed)
          
          
-    if message.content.startswith("ㅋㅋㅋ"):     #없어도 되는 기능.
+    if message.content.startswith("ㅋㅋㅋ"):     
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -2026,7 +2051,7 @@ async def on_message(message):
         
 
 
-    if message.content.startswith("?코로나"):     #없어도 되는 기능.
+    if message.content.startswith("?Corona"):     
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -2045,7 +2070,7 @@ async def on_message(message):
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
 
-    if message.content.startswith("?도와줘"):     #없어도 되는 기능.
+    if message.content.startswith("?help"):     
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -2064,7 +2089,7 @@ async def on_message(message):
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))   
          
 
-    if message.content.startswith("?MBTI"):     #없어도 되는 기능.
+    if message.content.startswith("?MBTI"):     
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -2082,7 +2107,7 @@ async def on_message(message):
         print(emoji[randomNum])
         await message.channel.send(embed=discord.Embed(description=emoji[randomNum], color=0xff0000))
 
-    if message.content.startswith("?혈액형"):     #없어도 되는 기능.
+    if message.content.startswith("?Blood type"):     
 
         emoji = [" ꒰⑅ᵕ༚ᵕ꒱ ", " ꒰◍ˊ◡ˋ꒱ ", " ⁽⁽◝꒰ ˙ ꒳ ˙ ꒱◜⁾⁾ ", " ༼ つ ◕_◕ ༽つ ", " ⋌༼ •̀ ⌂ •́ ༽⋋ ",
                  " ( ･ิᴥ･ิ) ", " •ө• ", " ค^•ﻌ•^ค ", " つ╹㉦╹)つ ", " ◕ܫ◕ ", " ᶘ ͡°ᴥ͡°ᶅ ", " ( ؕؔʘ̥̥̥̥ ه ؔؕʘ̥̥̥̥ ) ",
@@ -2103,9 +2128,9 @@ async def on_message(message):
         
         
         
-    if message.content.startswith("?PC 게임 추천"):      #다소 편협함. 추가바람.
+    if message.content.startswith("?Recommend a PC game"):      
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
         randomNum = random.randrange(1, 10)
         if randomNum==1:
@@ -2129,9 +2154,9 @@ async def on_message(message):
 
           
           
-    if message.content.startswith("?모바일 게임 추천"):       #추가바람
+    if message.content.startswith("?Recommend a MOBILE game"):       
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
         randomNum = random.randrange(1, 7)
         if randomNum==1:
@@ -2148,9 +2173,9 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="붕괴학원2와 붕괴3rd의 개발사인 miHoYo에서 제작한 3D 오픈 월드 액션 어드벤처 게임, 원신을 추천합니다. ", color=0x0000ff))  
           
           
-    if message.content.startswith("?주사위굴리기"):         #이것도 없어도 지장없는 기능. 
+    if message.content.startswith("?Dice"):          
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)        
         randomNum = random.randrange(1, 7) 
         print(randomNum)
@@ -2168,9 +2193,9 @@ async def on_message(message):
             await message.channel.send( embed=discord.Embed(description=':game_die: ' + ':six: ',color=0xfefe00))
           
           
-    if message.content.startswith("?유튜버 추천"):             #다소 편협함. 추가바람.
+    if message.content.startswith("?Recommend a Youtuber"):             
         dtime = datetime.datetime.now()
-        embed = discord.Embed(title=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초", color=0xff0000)
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)        
         randomNum = random.randrange(1, 8)
         if randomNum==1:
@@ -2188,7 +2213,7 @@ async def on_message(message):
         if randomNum==7:
             await message.channel.send(embed=discord.Embed(title="대한민국의 궁금증 해결 유튜버 겸 래퍼, 진용진을 추천합니다.", color=0xff0000))
           
-    if message.content.startswith("?자살"):       #추가바람.
+    if message.content.startswith("?자살"):       
         randomNum = random.randrange(1, 7)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="'자살은 스스로 품은 의지를 통해 자기 생명을 해쳐서 죽음이라는 결과에 이르는 자멸 행위이다.' -세계보건기구-", color=0x00ff00))
@@ -2204,7 +2229,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="'자살은 실존에 관한 문제를 해결하는 방법을 주체의 자발적인 죽음에서 구하고 찾는 일이다.' -바에슐러(1975)-", color=0x00ff00))
           
         
-    if message.content.startswith("?오늘의시한편"):
+    if message.content.startswith("?Today's Poetry"):
         randomNum = random.randrange(1, 15)
         if randomNum==1:
             await message.channel.send("방문객")
@@ -2393,21 +2418,21 @@ async def on_message(message):
             
                   
     if message.content.startswith("?MBTI"):
-        await message.channel.send("당신의 MBTI 를 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
-        await message.channel.send("예시) ?ENFP (물음표 + ENFP) ")
+        await message.channel.send("What is your MBTI? ")
+        await message.channel.send("Example) ?ENFP ")
 
-    if message.content.startswith("?혈액형"):
-        await message.channel.send("당신의 혈액형을 채팅창에 입력해주세요.(무조건, 대문자로만 입력해주세요, 대문자만 인식합니다.) ")
-        await message.channel.send("예시) ?O (물음표 + O), 하지만 AB형은 ??AB 입니다. 물음표가 2개에요.. 죄송해요; 빠른 시일안에 해결할게요. ")
+    if message.content.startswith("?Blood type"):
+        await message.channel.send("What is your Blood type? ")
+        await message.channel.send("Example) ?O (Exception: ??AB)")
        
-    if message.content.startswith("?퍼스널컬러테스트"):
+    if message.content.startswith("?Personal Color Test"):                           #Korean Part
         await message.channel.send("아직, 자기 유형을 모르신다면,")
         await message.channel.send("아래 주소를 클릭해서 테스트를 먼저 받고 오세요!")
         await message.channel.send("대부분, 자신의 MBTI 유형과 동일할겁니다.")
         await message.channel.send("[띄어쓰기 필요없습니다]")
         await message.channel.send("https://kapable.github.io/kapable.github.io/personalColor/")
         await message.channel.send("당신의 퍼스널컬러를 채팅창에 입력해주세요. ")
-        await message.channel.send("예시) ?댄덜라이언 (물음표 + 댄덜라이언) ")      
+        await message.channel.send("Example) ?댄덜라이언 ")      
 
     if message.content.startswith('?다우니'):
          embed = discord.Embed(
@@ -2654,16 +2679,16 @@ async def on_message(message):
          
      
        
-    if message.content == "?조선시대 내 이름":
+    if message.content == "?My real name":
         channel = message.channel
         urllib.request.urlretrieve("https://i.imgur.com/KoougXb.jpeg", "explain.png")
         image = discord.File("explain.png", filename="image.png")
-        embed = discord.Embed(title="조선시대 내 이름", description=".", color=0x00ff56)
+        embed = discord.Embed(title="My real name", description=".", color=0x00ff56)
         embed.set_thumbnail(url="https://i.imgur.com/P6HdGr1.png")
         embed.add_field(name=".", value=". ", inline=True)
         await channel.send(embed=embed, file=image)
 
-    if message.content.startswith("?컴배경쟁전1"):
+    if message.content.startswith("?PUBG Competitive mode1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2772,7 +2797,7 @@ async def on_message(message):
             await message.channel.send("Error : Not existing player", embed=embed)
             print(e)
     
-    if message.content.startswith("?컴배경쟁전2"):
+    if message.content.startswith("?PUBG Competitive mode2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2882,7 +2907,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배솔로1"):
+    if message.content.startswith("?PUBG Solo mode1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -2966,7 +2991,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배듀오1"):
+    if message.content.startswith("?PUBG Duo mode1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -3051,7 +3076,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배스쿼드1"):
+    if message.content.startswith("?PUBG Squad mode1"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -3135,7 +3160,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배솔로2"):
+    if message.content.startswith("?PUBG Solo mode2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -3224,7 +3249,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배듀오2"):
+    if message.content.startswith("?PUBG Duo mode2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -3312,7 +3337,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
 
-    if message.content.startswith("?컴배스쿼드2"):
+    if message.content.startswith("?PUBG Squad mode2"):
         baseURL = "https://dak.gg/profile/"
         playerNickname = ''.join((message.content).split(' ')[1:])
         URL = baseURL + quote(playerNickname)
@@ -3401,6 +3426,8 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
            
+
+
 
 
            
