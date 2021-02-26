@@ -63,7 +63,7 @@ async def on_message(message):
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
         embed.add_field(name = '?Hello', value = 'Doribot will say hello.',inline = False)
         embed.add_field(name='?Corona', value='Doribot shows the current status of Corona in South Korea.', inline=False)
-        embed.add_field(name='?Fortune of today', value=" Doribot show you today's fortune.(South Korea) ", inline=False)
+        embed.add_field(name="?Today's fortune", value=" Doribot show you today's fortune.(South Korea) ", inline=False)
         embed.add_field(name="?Today's Poetry", value=" Doribot recites Today's Poetry.(South Korea) ", inline=False)
         embed.add_field(name="?Today's Food", value=" Doribot recommends Today's Food. ", inline=False) 
         embed.add_field(name="?Today's Bible", value=" Doribot recommends Today's Bible verses.(South Korea) ", inline=False)        
@@ -94,7 +94,7 @@ async def on_message(message):
     
     if message.content.startswith("?Pubg Maps"):
         await message.channel.send("Tell me what you want. (Erangel, Miramar, Vikendi, Karakin, HAVEN, Sanhok) ")
-        await message.channel.send("Example) ?Erangel")      
+        await message.channel.send("?Erangel")      
 
        
     if message.content.startswith("?Doribot's diary"):
@@ -153,7 +153,7 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="지혜로운 자는 두려워하여 악을 떠나나 어리석은 자는 방자하여 스스로 믿느니라 -잠언14:16", color=0xff0000))
             
           
-    if message.content.startswith("?Fortune of today"):       
+    if message.content.startswith("?Today's fortune"):       
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
