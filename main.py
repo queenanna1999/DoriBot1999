@@ -208,19 +208,19 @@ async def on_message(message):
         if randomNum==10:
             await message.channel.send(embed=discord.Embed(title="Chocolate Chicken", color=0x00ff00))
         if randomNum==11:
-            await message.channel.send(embed=discord.Embed(title="Dog meat", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="개고기", color=0xff0000))  
         if randomNum==12:
-            await message.channel.send(embed=discord.Embed(title="Mouse meat", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="쥐고기", color=0xff0000)) 
         if randomNum==13:
             await message.channel.send(embed=discord.Embed(title="Fermented Skate Sashimi", color=0xff0000))  
         if randomNum==14:
             await message.channel.send(embed=discord.Embed(title="Escargo", color=0x00ff00))
         if randomNum==15:
-            await message.channel.send(embed=discord.Embed(title="鼈湯", color=0xff0000))  
+            await message.channel.send(embed=discord.Embed(title="자라탕", color=0xff0000))  
         if randomNum==16:
-            await message.channel.send(embed=discord.Embed(title="Bat meat", color=0xff0000)) 
+            await message.channel.send(embed=discord.Embed(title="박쥐고기", color=0xff0000)) 
         if randomNum==17:
-            await message.channel.send(embed=discord.Embed(title="Pig's Intestine", color=0xff0000))           
+            await message.channel.send(embed=discord.Embed(title="곱창", color=0xff0000))           
          
             
     if message.content.startswith("?3"):         #This is today's fortune part.
