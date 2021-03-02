@@ -604,6 +604,38 @@ async def on_message(message):
     if message.content.startswith("배틀그라운드"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
+       
+    if message.content.startswith("베틀그라운드"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()    
+       
+    if message.content.startswith("모바일 베그"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()  
+       
+    if message.content.startswith("모베"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()    
+       
+    if message.content.startswith("탈콥"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()  
+       
+    if message.content.startswith("컴겜"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()   
+       
+    if message.content.startswith("컴퓨터 게임"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()    
+       
+    if message.content.startswith("컴퓨터게임"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()  
+       
+    if message.content.startswith("이스케이프 프롬 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()       
         
                
 
@@ -785,11 +817,11 @@ async def on_message(message):
         await message.delete()      
 
     if message.content.startswith("아다"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        await message.channel.send("너 설마 아직도 무경험자야? 혹시 혼전순결을 지키니? 일단 무경험자는 관련 글 싸지를 자격 없어. 삭제함.")
         await message.delete()      
 
     if message.content.startswith("동정"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        await message.channel.send("무경험자 글은 칼삭. 아직도 안 떼인 사람이 있어? 기독교인이야? 아닌데, 내가 아는 기독교인들은 다 하나같이 경험자던뎅; ")
         await message.delete()      
 
     if message.content.startswith("걸레"):
@@ -1044,22 +1076,22 @@ async def on_message(message):
         await message.channel.send(" #Stay at Home ")
       
     if message.content.startswith("안 졸려"):
-        await message.channel.send(" Hey, are you Virgin? ")
+        await message.channel.send(" Don't you want to grow taller? ")
 
     if message.content.startswith("안졸려"):
-        await message.channel.send("Hey, are you Virgin? ")
+        await message.channel.send(" Don't you want to grow taller? ")
 
     if message.content.startswith("안졸리다"):
-        await message.channel.send(" Hey, are you Virgin?  ")
+        await message.channel.send(" Don't you want to grow taller? ")
 
     if message.content.startswith("안 졸리다"):
-        await message.channel.send(" Hey, are you Virgin? ")
+        await message.channel.send(" Don't you want to grow taller? ")
 
     if message.content.startswith("안졸림"):
-        await message.channel.send(" Hey, are you Virgin?  ")
+        await message.channel.send(" Don't you want to grow taller?  ")
 
     if message.content.startswith("안 졸림"):
-        await message.channel.send(" Hey, are you Virgin? ")
+        await message.channel.send(" Don't you want to grow taller? ")
 
     if message.content.startswith("ㅅㅅ"):
         await message.channel.send(" Are you still Virgin? lol :D ")        
@@ -1250,6 +1282,55 @@ async def on_message(message):
     if message.content.startswith("씨5발"):
         await message.channel.send(" Doribot has detected an inappropriate expression!")
         await message.delete()
+       
+    if message.content.startswith("알바"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()    
+       
+    if message.content.startswith("도리"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()  
+       
+    if message.content.startswith("응"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()    
+       
+    if message.content.startswith("니"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()      
+       
+    if message.content.startswith("항공주"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()   
+       
+    if message.content.startswith("띠용"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()     
+       
+    if message.content.startswith("@도리봇"):
+        await message.channel.send("언급할 권한이 없습니다.")
+        await message.delete()  
+       
+    if message.content.startswith("@므아아악"):
+        await message.channel.send("언급할 권한이 없습니다.")
+        await message.delete()  
+       
+    if message.content.startswith("공산주의"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete() 
+       
+    if message.content.startswith("공산당"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()  
+       
+    if message.content.startswith("아베"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()  
+       
+       
+       
+       
+       
        
 
        
