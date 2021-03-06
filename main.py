@@ -1377,7 +1377,11 @@ async def on_message(message):
        
     if message.content.startswith("병*"):
         await message.channel.send(" Doribot has detected an inappropriate expression!")
-        await message.delete()         
+        await message.delete()  
+       
+    if message.content.startswith("ㅈㄹ"):
+        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()       
        
  
        
