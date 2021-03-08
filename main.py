@@ -93,6 +93,16 @@ async def on_message(message):
         await message.channel.send("https://www.youtube.com/watch?v=5UknEqiXmno")
         await message.channel.send("https://www.youtube.com/watch?v=wdw8KNmr2pc")
         
+    if message.content.startswith("6/25") or message.content.startswith("6월25일") or message.content.startswith("6월"):
+        await message.channel.send("The Korean War | 한국전쟁 ")
+        await message.channel.send("1950년 6월 25일 오전 4시에 조선민주주의인민공화국이 기습적으로 대한민국을 침공하여 발발한 전쟁이다.  ") 
+        await message.channel.send("유엔군과 중국인민지원군 등이 참전하여 세계적인 대규모 전쟁으로 비화될 뻔 하였으나,  ")
+        await message.channel.send("1953년 7월 27일 22시에 체결된 한국휴전협정에 따라 일단락되었다. ")
+        await message.channel.send("대한민국은 전세계에 남은 마지막 냉전지역이다. ")
+        await message.channel.send("https://www.youtube.com/watch?v=yxaegqvl4aE  ")
+        await message.channel.send("https://www.youtube.com/watch?v=PYY7pDNExG0  ")
+        await message.channel.send("https://www.youtube.com/watch?v=_HTuf2bFbpw  ")
+        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
