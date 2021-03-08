@@ -103,6 +103,20 @@ async def on_message(message):
         await message.channel.send("https://www.youtube.com/watch?v=PYY7pDNExG0  ")
         await message.channel.send("https://www.youtube.com/watch?v=_HTuf2bFbpw  ")
         
+    if message.content.startswith("4/16") or message.content.startswith("4월16일") or message.content.startswith("4월"):
+        await message.channel.send("Sinking of MV Sewol | 세월호침몰사고 ")
+        await message.channel.send("2014년 4월 16일 오전 8시 50분경 대한민국 전라남도 진도군 조도면 부근 해상에서 여객선 세월호가 전복되어 침몰한 사고이다 ")
+        await message.channel.send("https://www.youtube.com/watch?v=G6iP0gtprXQ  ")
+        
+    if message.content.startswith("3/10") or message.content.startswith("3월10일"):
+        await message.channel.send("박근혜 전 대통령님 탄핵 ")
+        await message.channel.send("박근혜 대통령 탄핵은 헌법에 위배되는 범죄 의혹(박근혜-최순실 게이트, 비선실세 의혹, 대기업 뇌물 의혹 등)을 사유로 ")
+        await message.channel.send("국회에서 당시 야당(더불어민주당, 국민의당, 정의당) 의원들이 대통령 박근혜에 대한 ") 
+        await message.channel.send("탄핵 소추를 발의해 헌법재판소에서 탄핵을 인용한 일을 말한다.  ") 
+        await message.channel.send("위의 글들은 다 개소리고, 북한 빨갱이들이 박근혜 전 대통령님에게 누명을 씌워 대통령 박근혜를 탄핵한 사건이다.  ")
+        await message.channel.send("https://www.youtube.com/watch?v=pMEO3himBag ")
+
+        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
