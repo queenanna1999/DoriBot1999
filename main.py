@@ -84,6 +84,15 @@ async def on_message(message):
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
 
+    if message.content.startswith("3/8") or message.content.startswith("3월8일") or message.content.startswith("3월"):
+        await message.channel.send("International Women's Day | 세계 여성의 날 ")
+        await message.channel.send("세계 여성의 지위 향상을 위한 날로, 1908년 3월 8일 미국의 여성 노동자들이 근로여건 개선과 ")
+        await message.channel.send("참정권 등을 요구하면서 시위를 벌인 것에서 시작됐다. ")
+        await message.channel.send("이후 유엔은 1975년을 ‘세계 여성의 해’로 지정하고 1977년 3월 8일을 특정해 ‘세계 여성의 날’로 공식 지정하였다.  ")
+        await message.channel.send("https://www.youtube.com/watch?v=YwHNVqPaLWw")
+        await message.channel.send("https://www.youtube.com/watch?v=5UknEqiXmno")
+        await message.channel.send("https://www.youtube.com/watch?v=wdw8KNmr2pc")
+        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
