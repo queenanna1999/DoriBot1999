@@ -109,8 +109,8 @@ async def on_message(message):
         await message.channel.send("https://www.youtube.com/watch?v=G6iP0gtprXQ  ")
         
     if message.content.startswith("3/10"):
-        await message.channel.send("박근혜 전 대통령님 탄핵 ")
-        await message.channel.send("박근혜 대통령 탄핵은 헌법에 위배되는 범죄 의혹(박근혜-최순실 게이트, 비선실세 의혹, 대기업 뇌물 의혹 등)을 사유로 ")
+        await message.channel.send("[박근혜 전 대통령님] 탄핵 ")
+        await message.channel.send("[박근혜 대통령] 탄핵은 헌법에 위배되는 범죄 의혹(박근혜-최순실 게이트, 비선실세 의혹, 대기업 뇌물 의혹 등)을 사유로 ")
         await message.channel.send("국회에서 당시 야당(더불어민주당, 국민의당, 정의당) 의원들이 대통령 박근혜에 대한 ") 
         await message.channel.send("탄핵 소추를 발의해 헌법재판소에서 탄핵을 인용한 일을 말한다.  ") 
         await message.channel.send("위의 글들은 다 개소리고, 북한 빨갱이들이 박근혜 전 대통령님에게 누명을 씌워 대통령 박근혜를 탄핵한 사건이다.  ")
