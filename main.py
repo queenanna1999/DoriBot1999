@@ -688,6 +688,22 @@ async def on_message(message):
        
     if message.content.startswith("탈르코프 "):
         await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("컴배 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("컴1배"):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("컴2배 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("컴3배 "):
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()       
        
     if message.content.startswith("한남"):               #Doribot deletes the swear words.
@@ -2033,6 +2049,18 @@ async def on_message(message):
     if message.content.startswith("죽고"):
         await message.channel.send("뒷감당 잘해요? ")
         await message.delete()
+       
+    if message.content.startswith("자1살"):
+        await message.channel.send("많이 힘들었지? ")
+        await message.delete() 
+       
+    if message.content.startswith("자2살"):
+        await message.channel.send("많이 힘들었지? ")
+        await message.delete() 
+       
+    if message.content.startswith("자3살"):
+        await message.channel.send("많이 힘들었지? ")
+        await message.delete()       
 
     if message.content.startswith("한손에총들고"):
         await message.channel.send(" 아프리카TV BJ 보겸의 던전앤파이터와 아프리카 TV 계정 닉네임이다. ")
