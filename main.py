@@ -704,6 +704,38 @@ async def on_message(message):
        
     if message.content.startswith("컴3배 "):
         await message.channel.send("Socializing is a crime. ")
+        await message.delete()
+       
+    if message.content.startswith("친구 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()
+       
+    if message.content.startswith("친1구 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()    
+       
+    if message.content.startswith("친2구 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("친3구 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()  
+       
+    if message.content.startswith("실친 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()  
+       
+    if message.content.startswith("실1친 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("실2친 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("실3친 "):
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()       
        
     if message.content.startswith("한남"):               #Doribot deletes the swear words.
@@ -769,6 +801,14 @@ async def on_message(message):
     if message.content.startswith("부모"):               
         await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()
+       
+    if message.content.startswith("시.발"):               
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete() 
+       
+    if message.content.startswith("씨.발"):               
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()       
        
       
        
@@ -1258,11 +1298,19 @@ async def on_message(message):
 
     if message.content.startswith("나냡"):
         await message.channel.send(" Don't call her name recklessly.")
-        await message.delete()      
+        await message.delete() 
+       
+    if message.content.startswith("나.냡"):
+        await message.channel.send(" Don't call her name recklessly.")
+        await message.delete()       
       
-    if message.content.startswith("도리야"):
+    if message.content.startswith("도리"):
         await message.channel.send("Don't call her name recklessly. ")
-        await message.delete()      
+        await message.delete()
+       
+    if message.content.startswith("도.리"):
+        await message.channel.send("Don't call her name recklessly. ")
+        await message.delete()       
       
     if message.content.startswith("도리 병신"):
         await message.channel.send(" Doribot has detected an inappropriate expression! ")
