@@ -472,6 +472,22 @@ async def on_message(message):
         await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()  
        
+    if message.content.startswith("닥.쳐"):              
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()  
+       
+    if message.content.startswith("닥1쳐"):              
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()
+       
+    if message.content.startswith("닥2쳐"):              
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()   
+       
+    if message.content.startswith("닥3쳐"):              
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()       
+       
     if message.content.startswith("걍닥쳐"):               
         await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete()  
@@ -1618,6 +1634,46 @@ async def on_message(message):
        
     if message.content.startswith("ㅈㄹ"):
         await message.channel.send(" Doribot has detected an inappropriate expression!")
+        await message.delete()   
+       
+    if message.content.startswith("허버허버"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete() 
+       
+    if message.content.startswith("ㅎㅂㅎㅂ"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()   
+       
+    if message.content.startswith("보이루"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()  
+       
+    if message.content.startswith("ㅂㅇㄹ"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete() 
+       
+    if message.content.startswith("뻑가"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()    
+       
+    if message.content.startswith("고기남자"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()  
+       
+    if message.content.startswith("고기냄저"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()  
+       
+    if message.content.startswith("고기냄져"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete() 
+       
+    if message.content.startswith("고기넴져"):
+        await message.channel.send("Do not use words that cause disputes.")
+        await message.delete()  
+       
+    if message.content.startswith("고기넴저"):
+        await message.channel.send("Do not use words that cause disputes.")
         await message.delete()       
        
  
