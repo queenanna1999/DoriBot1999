@@ -1101,7 +1101,7 @@ async def on_message(message):
         await message.channel.send("Doribot has detected an inappropriate expression!")
         await message.delete()      
 
-    if message.content.startswith("게임"):          
+    if message.content.startswith("게임") or message.content.startswith("겜"):          
         dtime = datetime.datetime.now()
         randomNum = random.randrange(1, 14)
         if randomNum==1:
@@ -1322,7 +1322,22 @@ async def on_message(message):
 
     if message.content.startswith("나냡"):
         await message.channel.send(" Don't call her name recklessly.")
+        await message.delete()
+       
+
+    if message.content.startswith("나1냡"):
+        await message.channel.send(" Don't call her name recklessly.")
+        await message.delete()   
+       
+
+    if message.content.startswith("나2냡"):
+        await message.channel.send(" Don't call her name recklessly.")
         await message.delete() 
+       
+
+    if message.content.startswith("나3냡"):
+        await message.channel.send(" Don't call her name recklessly.")
+        await message.delete()       
        
     if message.content.startswith("나.냡"):
         await message.channel.send(" Don't call her name recklessly.")
@@ -1331,6 +1346,18 @@ async def on_message(message):
     if message.content.startswith("도리"):
         await message.channel.send("Don't call her name recklessly. ")
         await message.delete()
+       
+    if message.content.startswith("도1리"):
+        await message.channel.send("Don't call her name recklessly. ")
+        await message.delete()  
+       
+    if message.content.startswith("도2리"):
+        await message.channel.send("Don't call her name recklessly. ")
+        await message.delete() 
+       
+    if message.content.startswith("도3리"):
+        await message.channel.send("Don't call her name recklessly. ")
+        await message.delete()       
        
     if message.content.startswith("도.리"):
         await message.channel.send("Don't call her name recklessly. ")
