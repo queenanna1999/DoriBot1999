@@ -738,6 +738,18 @@ async def on_message(message):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
+    if message.content.startswith("배1그 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("배2그 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("배3그 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()       
+       
     if message.content.startswith("https:// "):
         await message.channel.send("Public relations is illegal. ")
         await message.delete() 
