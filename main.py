@@ -705,10 +705,7 @@ async def on_message(message):
     if message.content.startswith("컴3배 "):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
-       
-    if message.content.startswith("컴.배 "):
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete()       
+             
        
     if message.content.startswith("친구 "):
         await message.channel.send("Socializing is a crime. ")
@@ -832,6 +829,10 @@ async def on_message(message):
        
     if message.content.startswith("씨.발"):               
         await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()    
+       
+    if message.content.startswith("컴.배"):               
+        await message.channel.send("Socializing is a crime. ")
         await message.delete()       
        
       
