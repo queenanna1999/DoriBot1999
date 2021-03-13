@@ -2046,6 +2046,10 @@ async def on_message(message):
         await message.channel.send(" *하지만 이해하려고 노력하지 않으면 금방 한계에 부딪히게 됩니다. ")
       
 
+    if message.content.startswith("엿"):
+        await message.channel.send("Doribot has detected an inappropriate expression!")    
+        await message.delete()
+       
     if message.content.startswith("샹년"):
         await message.channel.send("Doribot has detected an inappropriate expression!")    
         await message.delete()
