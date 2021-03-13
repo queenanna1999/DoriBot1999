@@ -706,6 +706,10 @@ async def on_message(message):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
        
+    if message.content.startswith("컴.배 "):
+        await message.channel.send("Socializing is a crime. ")
+        await message.delete()       
+       
     if message.content.startswith("친구 "):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
