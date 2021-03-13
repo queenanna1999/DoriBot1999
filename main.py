@@ -2316,7 +2316,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"")
-        embed.add_field(name = '나냡', value = '대한민국의 20대이다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이다. 아마 파딱이라 모배갤만 주로 한 것 같다.',inline = False)
+        embed.add_field(name = '나냡', value = '대한민국의 20대이며, 직업은 요리사이다. 99년생으로 확인되었으며, 디시인사이드에선 비스킷(kkii99)라는 고닉으로 활동하고, 디스코드 태그는 컨하#5913 이다. 주 활동 갤러리는 배틀그라운드 모바일 갤러리이다. 아마 파딱이라 모배갤만 주로 한 것 같다.',inline = False)
         embed.add_field(name='그의', value='MBTI는 ISFP 이고, 혈액형은 AB형이다. 오버워치와 배틀그라운드 모바일을 즐겨하며, 오버워치를 순수하게 즐기는 빠대만 돌리는 유저이다. 메르시 원챔이면서도 메르시보다 모이라를 재밌어한다. 무엇보다 힐러 역할을 즐겨하면서 정치질을 대놓고는 안한다. 이게 빠대의 장점인가 ...? ', inline=False)
         await message.channel.send(channel,embed=embed)
         
