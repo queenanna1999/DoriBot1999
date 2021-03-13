@@ -736,6 +736,14 @@ async def on_message(message):
        
     if message.content.startswith("실3친 "):
         await message.channel.send("Socializing is a crime. ")
+        await message.delete() 
+       
+    if message.content.startswith("https:// "):
+        await message.channel.send("Public relations is illegal. ")
+        await message.delete() 
+       
+    if message.content.startswith("http:// "):
+        await message.channel.send("Public relations is illegal. ")
         await message.delete()       
        
     if message.content.startswith("한남"):               #Doribot deletes the swear words.
