@@ -682,15 +682,15 @@ async def on_message(message):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()  
        
-    if message.content.startswith("이스케이프 프롬 "):
+    if message.content.startswith("이스케이프 프롬"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
        
-    if message.content.startswith("탈르코프 "):
+    if message.content.startswith("탈르코프"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("컴배 "):
+    if message.content.startswith("컴배"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
@@ -698,64 +698,64 @@ async def on_message(message):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("컴2배 "):
+    if message.content.startswith("컴2배"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("컴3배 "):
+    if message.content.startswith("컴3배"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
              
        
-    if message.content.startswith("친구 "):
+    if message.content.startswith("친구"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()
        
-    if message.content.startswith("친1구 "):
+    if message.content.startswith("친1구"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()    
        
-    if message.content.startswith("친2구 "):
+    if message.content.startswith("친2구"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("친3구 "):
+    if message.content.startswith("친3구"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()  
        
-    if message.content.startswith("실친 "):
+    if message.content.startswith("실친"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()  
        
-    if message.content.startswith("실1친 "):
+    if message.content.startswith("실1친"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("실2친 "):
+    if message.content.startswith("실2친"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("실3친 "):
+    if message.content.startswith("실3친"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("배1그 "):
+    if message.content.startswith("배1그"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("배2그 "):
+    if message.content.startswith("배2그"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete() 
        
-    if message.content.startswith("배3그 "):
+    if message.content.startswith("배3그"):
         await message.channel.send("Socializing is a crime. ")
         await message.delete()       
        
-    if message.content.startswith("https:// "):
+    if message.content.startswith("https://"):
         await message.channel.send("Public relations is illegal. ")
         await message.delete() 
        
-    if message.content.startswith("http:// "):
+    if message.content.startswith("http://"):
         await message.channel.send("Public relations is illegal. ")
         await message.delete()       
        
