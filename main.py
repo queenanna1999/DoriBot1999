@@ -1460,6 +1460,26 @@ async def on_message(message):
         await message.channel.send("Doribot has detected an inappropriate expression! ")
         await message.delete() 
        
+    if message.content.startswith("어쩌라고"):
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete() 
+       
+    if message.content.startswith("어1쩌"):
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()  
+       
+    if message.content.startswith("어2쩌"):
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()  
+       
+    if message.content.startswith("어3쩌"):
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete() 
+       
+    if message.content.startswith("어.쩌"):
+        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        await message.delete()         
+       
        
 
        
