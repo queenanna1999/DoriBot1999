@@ -123,10 +123,45 @@ async def on_message(message):
         await message.channel.send("위의 글들은 다 개소리고, 북한 빨갱이들이 박근혜 전 대통령님에게 누명을 씌워 대통령 박근혜를 탄핵한 사건이다.  ")
         await message.channel.send("https://www.youtube.com/watch?v=pMEO3himBag ")
 
-    if message.content.startswith("오"):        
-        msg = await message.channel.send("레오")
+    if message.content.startswith("오"):        #The bot directly modifies the message.
+        msg = await message.channel.send("오레오")
         await asyncio.sleep(4.0)
-        await msg.edit(content="미안해..진짜 미안해..")        
+        await msg.edit(content="미안해..진짜 미안해..") 
+        
+    if message.content.startswith("내일"):        
+        msg = await message.channel.send("내일(네일) 아트")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="미안..;;")     
+        
+    if message.content.startswith("스팀"):        
+        msg = await message.channel.send("스팀 다리미")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="미안..^^")  
+        
+    if message.content.startswith("카카오"):        
+        msg = await message.channel.send("카카오 배그 하는 애들 다 배린이 아니면 잼민이라면서??")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅋㅋ 팩폭 미안..; 자제할게^^")    
+        
+    if message.content.startswith("몰라"):        
+        msg = await message.channel.send("니 인생도 어떻게 될지 몰라~ 미래가 안보여~~")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅋ? 죄송;")
+        
+    if message.content.startswith("맞아"):        
+        msg = await message.channel.send("니 와꾸 못생긴것도 맞아~ 맞말이지 암!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅈㅅ;;ㅋㅋ")   
+        
+    if message.content.startswith("아"):        
+        msg = await message.channel.send("아가리 해 썅년아ㅋ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅎㅎ;;")
+        
+    if message.content.startswith("나"):        
+        msg = await message.channel.send("우리 게이는 노무현이 나무현이노?")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="죄..죄송합니다!! 저 사실 일베충입니다.")         
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
