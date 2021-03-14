@@ -124,22 +124,22 @@ async def on_message(message):
         await message.channel.send("https://www.youtube.com/watch?v=pMEO3himBag ")
 
     if message.content.startswith("오"):        #The bot directly modifies the message.
-        msg = await message.channel.send("오레오")
+        msg = await message.channel.send("[오]레오")
         await asyncio.sleep(4.0)
         await msg.edit(content="미안해..진짜 미안해..") 
         
     if message.content.startswith("내일"):        
-        msg = await message.channel.send("내일(네일) 아트")
+        msg = await message.channel.send("[내]일(네일) 아트")
         await asyncio.sleep(4.0)
         await msg.edit(content="미안..;;")     
         
     if message.content.startswith("스팀"):        
-        msg = await message.channel.send("스팀 다리미")
+        msg = await message.channel.send("[스]팀 다리미")
         await asyncio.sleep(4.0)
         await msg.edit(content="미안..^^")  
         
     if message.content.startswith("카카오"):        
-        msg = await message.channel.send("카카오 배그 하는 애들 다 배린이 아니면 잼민이라면서??")
+        msg = await message.channel.send("[카]카오 배그 하는 애들 다 배린이 아니면 잼민이라면서??")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅋㅋ 팩폭 미안..; 자제할게^^")    
         
@@ -154,7 +154,7 @@ async def on_message(message):
         await msg.edit(content="ㅈㅅ;;ㅋㅋ")   
         
     if message.content.startswith("아"):        
-        msg = await message.channel.send("아가리 해 썅년아ㅋ")
+        msg = await message.channel.send("[아]가리 해 썅년아ㅋ")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅎㅎ;;")
         
