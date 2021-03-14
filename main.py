@@ -123,7 +123,10 @@ async def on_message(message):
         await message.channel.send("위의 글들은 다 개소리고, 북한 빨갱이들이 박근혜 전 대통령님에게 누명을 씌워 대통령 박근혜를 탄핵한 사건이다.  ")
         await message.channel.send("https://www.youtube.com/watch?v=pMEO3himBag ")
 
-        
+    if message.content.startswith("오"):        
+        msg = await message.channel.send("레오")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="미안해..진짜 미안해..")        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
