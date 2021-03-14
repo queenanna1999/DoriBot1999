@@ -148,7 +148,7 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅋ? 죄송;")
         
-    if message.content.startswith("맞아"):        
+    if message.content.startswith("맞아") or message.content.startswith("맞음") or message.content.startswith("맞지"):        
         msg = await message.channel.send("[니 와꾸] 못생긴것도 맞아~ 맞말이지 암!")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅈㅅ;;ㅋㅋ")   
