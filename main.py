@@ -193,6 +193,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 02월 20일 토요일', value = '*도리봇이 드디어 부적절한 표현을 삭제할수 있게 개선되었습니다.',inline = False)
         embed.add_field(name = '*2021년 02월 25일 목요일', value = '*도리봇이 이제 친목 행위 의심 표현들은 가차없이 삭제합니다.',inline = False)
         embed.add_field(name = '*2021년 02월 26일 금요일', value = '*도리봇이 영어로 새롭게 꽃단장 합니다. ',inline = False)
+        embed.add_field(name = '*2021년 03월 14일 일요일', value = '*도리봇이 이제 직접 메세지를 수정할수 있게 개선되었습니다. 다양한 개소리를 하고, 직접 다른 말들로 수정합니다. ',inline = False)
 
 
         await message.channel.send(channel,embed=embed)       
