@@ -36,13 +36,13 @@ async def on_ready():
 @app.event
 async def on_member_join(member):
     fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
-    channel = member.server.get_channel("721047251862159416")
+    channel = member.server.get_channel("802904099816472619")
     await app.message.channel.send( fmt.format(member, member.server))
     await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
  
 @app.event
 async def on_member_remove(member):
-    channel = member.server.get_channel("721047251862159416")         
+    channel = member.server.get_channel("802904099816472619")         
     fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server))
           
@@ -50,7 +50,7 @@ async def on_member_remove(member):
     @tasks.loop(seconds=1)
     async def every_hour_notice(self):
         if datetime.datetime.now().minute == 0 and datetime.datetime.now().second == 0:
-            await client.get_guild("721047251862159416").get_channel("721047251862159416").send("현재 {}시 {}분 입니다.".format(datetime.datetime.now().hour, datetime.datetime.now().minute))
+            await client.get_guild("802904099816472616").get_channel("802904099816472619").send("현재 {}시 {}분 입니다.".format(datetime.datetime.now().hour, datetime.datetime.now().minute))
 
             
             time.sleep(1)
