@@ -19,6 +19,7 @@ from urllib.request import HTTPError
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request
+from discord.ext import tasks
 
  
 app = discord.Client()
@@ -46,7 +47,13 @@ async def on_member_remove(member):
     await app.message.channel.send( fmt.format(member, member.server))
           
 
+    @tasks.loop(seconds=1)
+    async def every_hour_notice(self):
+        if datetime.datetime.now().minute == 0 and datetime.datetime.now().second == 0:
+            await client.get_guild("721047251862159416").get_channel("721047251862159416").send("현재 {}시 {}분 입니다.".format(datetime.datetime.now().hour, datetime.datetime.now().minute))
 
+            
+            time.sleep(1)
         
 @app.event
 async def on_message(message):
