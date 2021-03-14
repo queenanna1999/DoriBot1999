@@ -1,70 +1,52 @@
-p {
-  font-family: 'Sunflower', sans-serif;
-}
-
 body {
-  background-color: white;
+  background: #000;
+  padding: 2rem;
 }
 
-body, h1, p {
-  font-weight: normal;
-  font-family: 'Sunflower', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+h2 {
+  font-family: 'Arial';
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 0.75;
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: 300;
-  font-family: 'Sunflower', sans-serif;
-  margin: 0 0 20px 0;
-  color: darkCyan;
+span {
+  display: block;
 }
 
-p {
-  margin: 0 0 10px;
-  font-family: 'Sunflower', sans-serif;
+span:not(.light) {
+  opacity: 0;
+  animation: flashText .5s ease-out alternate infinite;
 }
 
-a {
-  color: #3282e6;
-  text-decoration: none;
+span.light {
+  position: relative;
+  display: inline-block;
+  
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 120%;
+    background: #fff;
+    filter: blur(10px);
+    content: "";
+    opacity: 0;
+    animation: flash .5s ease-out alternate infinite;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-
-body {
-  background-color: black;
-  color: white;
+@keyframes flash{
+  to {
+    opacity: 1;
+  }
 }
 
-body, h1, p {
-  font-weight: normal;
-  font-family: 'Sunflower', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: white;
-}
-
-h1 {
-  font-size: 48px;
-  font-family: 'Sunflower', sans-serif;
-  font-weight: 300;
-  margin: 0 0 20px 0;
-  color: white;
-}
-
-p {
-  margin: 0 0 10px;
-  font-family: 'Sunflower', sans-serif;
-  color: white;
-}
-
-a {
-  color: #fefefe;
-  text-decoration: none;
-}
-
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
 }
