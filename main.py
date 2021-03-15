@@ -766,7 +766,7 @@ async def on_message(message):
         await message.delete()     
 
        
-    if message.content.startswith("배그"):
+    if message.content.startswith("배그") or message.content.startswith("ㅂH그") or message.content.startswith("ㅎrㅈr") or message.content.startswith("ㄱㄱ") or message.content.startswith("하자") or message.content.startswith("고고"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
