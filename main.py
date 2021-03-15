@@ -2852,7 +2852,7 @@ async def on_message(message):
         await message.delete()   
         
     if message.content.startswith("죽여주"):
-        msg await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
+        msg = await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
         await asyncio.sleep(4.0)
         await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
         await message.delete()   
