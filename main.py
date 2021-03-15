@@ -3801,7 +3801,7 @@ async def on_message(message):
 
         )
 
-         urlBase = 'https://dcimg1.dcinside.com/viewimage.php?no=24b0d769e1d32ca73cee87fa11d02831d3049d5484b72b456f01af270ce720f8dde358d685acd99a48850242f645deb4ee0fabe2b5588b77fd920ee23d1693a3ca26c5b34d062ce9196ce52cc260aee21b73bb75e8d62a191e14&orgExt'
+         urlBase = 'https://i.imgur.com/K80xJ5X.jpeg'
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
