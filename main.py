@@ -754,7 +754,7 @@ async def on_message(message):
         await message.channel.send("I'm a feminist. ")
         await message.delete() 
        
-    if message.content.startswith("모배"):
+    if message.content.startswith("모배") or message.content.startswith("모2배") or message.content.startswith("모1배") or message.content.startswith("모3배") or message.content.startswith("모.배"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
@@ -2767,79 +2767,119 @@ async def on_message(message):
       
 
     if message.content.startswith("엿"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")    
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[니 좆은 새끼손가락만하자나 ㅋㅋ]")      
         await message.delete()
        
     if message.content.startswith("샹년"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")    
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("썅년"):
-        await message.channel.send("Doribot has detected an inappropriate expression!") 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("샹놈"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")   
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("썅놈"):
-        await message.channel.send("Doribot has detected an inappropriate expression!") 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("상년"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")   
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("상놈"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕 왜해요?")      
         await message.delete()
         
     if message.content.startswith("자살하고싶어"):
-        await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다 ")
-        await message.delete()
+        msg = await message.channel.send("우리, 맘 잡고 다시 해 보아요. 행운은 잠시 쉬고 있을 뿐입니다")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()     
+
         
     if message.content.startswith("자살하고싶다"):
-        await message.channel.send("힘들 땐 가만히 눈을 감고 스스로에게 말을 걸어주세요. 나는 어떤 사람인지 얼마나 소중한 사람인지 ")
-        await message.delete()
+        msg = await message.channel.send("힘들 땐 가만히 눈을 감고 스스로에게 말을 걸어주세요. 나는 어떤 사람인지 얼마나 소중한 사람인지 ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()     
+
         
     if message.content.startswith("자살할래"):
-        await message.channel.send("젊었을 때 고민 같은 거, 암 것도 아니여, 나이들어봐 ")
-        await message.delete()
+        msg = await message.channel.send("젊었을 때 고민 같은 거, 암 것도 아니여, 나이들어봐 ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("자살하고프다"):
-        await message.channel.send("음... 힘든 일들 모두 그냥, 지나가는 바람이라 생각해 보면 어떨까? ")
-        await message.delete()
+        msg = await message.channel.send("음... 힘든 일들 모두 그냥, 지나가는 바람이라 생각해 보면 어떨까? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("자살마렵다"):
-        await message.channel.send("풋 하고 웃지 말고 하하하하하하하")
-        await message.delete()
+        msg = await message.channel.send("풋 하고 웃지 말고 하하하하하하하")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("자살마려워"):
-        await message.channel.send("3년 전에 고민한 거 기억나세요? 기억 안 나죠? 이번에도 그럴 거예요. ")
-        await message.delete()
+        msg = await message.channel.send("3년 전에 고민한 거 기억나세요? 기억 안 나죠? 이번에도 그럴 거예요. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("죽여주"):
-        await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
-        await message.delete()
+        msg await message.channel.send("마음을 열어 보세요. 혼자가 아닙니다, 당신은. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("죽을"):
-        await message.channel.send("많이 힘들었지? ")
-        await message.delete()
+        msg = await message.channel.send("많이 힘들었지? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
         
     if message.content.startswith("죽고"):
-        await message.channel.send("뒷감당 잘해요? ")
-        await message.delete()
+        msg = await message.channel.send("뒷감당 잘해요? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()   
        
     if message.content.startswith("자1살"):
-        await message.channel.send("많이 힘들었지? ")
-        await message.delete() 
+        msg = await message.channel.send("많이 힘들었지? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
+        await message.delete()    
        
     if message.content.startswith("자2살"):
-        await message.channel.send("많이 힘들었지? ")
+        msg = await message.channel.send("많이 힘들었지? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
         await message.delete() 
        
     if message.content.startswith("자3살"):
-        await message.channel.send("많이 힘들었지? ")
+        msg = await message.channel.send("많이 힘들었지? ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[자살]은 범죄야.. 절대 죽지마.")      
         await message.delete()       
 
     if message.content.startswith("한손에총들고"):
@@ -2868,7 +2908,14 @@ async def on_message(message):
         
     if message.content.startswith("보겸"):
         await message.channel.send(" 아프리카 TV BJ 출신이면서 순수 한국인 구독자로 4백만명을 모은 유튜브 크리에이터는 지금까지 아무도 없었어. 이런 사람은 역사책에 기록해서 위인으로 기억되야됨. ")
-        
+
+    if message.content.startswith("윤지선"):
+        await message.channel.send(" [페미니즘]을 위한다면서 먹칠을 하는 행위를 일삼은 [가톨릭대학교] 전 교수이자 현재는 스타강사. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[이 사람] 지능적 안티 페미니스트임.")      
+        await message.delete()         
+      
+      
 
     if message.content.startswith("?Members"):
         await message.channel.send(" Who's the most curious? (? + 도리도리곰도리)")
