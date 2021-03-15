@@ -662,79 +662,79 @@ async def on_message(message):
     if message.content.startswith("ㅗ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㅅㅂ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㅆㅂ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㄱㅅㄲ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("개자식"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()
        
     if message.content.startswith("애비"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("애미"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete() 
        
     if message.content.startswith("에비"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()     
 
     if message.content.startswith("에미"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()
        
     if message.content.startswith("엄마"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("아빠"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()
        
     if message.content.startswith("어머니"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("아버지"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await msg.edit(content="[나좀 도와줘]..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()  
        
 
@@ -1485,122 +1485,177 @@ async def on_message(message):
         
 
     if message.content.startswith("중국"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
     if message.content.startswith("일본"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
 
     if message.content.startswith("짱깨"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
 
     if message.content.startswith("쪽발이"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()      
 
     if message.content.startswith("쪽바리"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
 
     if message.content.startswith("문재앙"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
     if message.content.startswith("디시"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()       
 
-    if message.content.startswith("틀딱"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
+    if message.content.startswith("틀"):
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[니 미래야 이 병신아]")      
         await message.delete()      
+     
 
     if message.content.startswith("빡쳐서"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()     
 
     if message.content.startswith("빡침"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("빡치네"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("빡친다"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("빡치넹"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("빡쳐"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("빡치기전에"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("노예"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
-    if message.content.startswith("틀"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+      
 
     if message.content.startswith("나무위키"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("병신"):
-        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("ㅂㅅ"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("ㅄ"):
-        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("시발아"):
-        await message.channel.send(" Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("퍼큐"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("뻐큐"):
-        await message.channel.send(" Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("ㅈ같네"):
-        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
 
     if message.content.startswith("개같네"):
-        await message.channel.send(" Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await message.delete()     
       
     if message.content.startswith("시1발"):
-        await message.channel.send(" Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
      
     if message.content.startswith("씨1발"):
-        await message.channel.send(" Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
              
     if message.content.startswith("ㅊㅋㅊㅋ"):
-        await message.channel.send(" Doribot detected a stupid expression.")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
         await message.delete()      
       
     if message.content.startswith("졸려"):
@@ -1610,23 +1665,59 @@ async def on_message(message):
         await message.channel.send("Do you want to sleep with me? ") 
       
     if message.content.startswith("타르코프"):
-        await message.channel.send(" Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="{좆망겜} 언급 자제 좀요..")      
         await message.delete()      
       
     if message.content.startswith("사람"):
-        await message.channel.send(" #Stay at Home #사회적 거리두기 ")
+        msg = await message.channel.send("#Stay at Home #사회적 거리두기")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
+        msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
+        await asyncio.sleep(4.0)
+        await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
+        msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
+        await asyncio.sleep(4.0)
+        await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")        
+     
+
       
     if message.content.startswith("인간"):
-        await message.channel.send(" #Stay at Home #사회적 거리두기 ")
+        msg = await message.channel.send("#Stay at Home #사회적 거리두기")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
+        msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
+        await asyncio.sleep(4.0)
+        await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
+        msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
+        await asyncio.sleep(4.0)
+        await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("유튜브"):
         await message.channel.send(" [유튜브]는 구글이 서비스하는 동영상 공유 플랫폼입니다. ")
       
     if message.content.startswith("사회적거리두기"):
-        await message.channel.send(" #Stay at Home ")
+        msg = await message.channel.send("#Stay at Home #사회적 거리두기")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
+        msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
+        await asyncio.sleep(4.0)
+        await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
+        msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
+        await asyncio.sleep(4.0)
+        await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("사회적 거리두기"):
-        await message.channel.send(" #Stay at Home ")
+        msg = await message.channel.send("#Stay at Home #사회적 거리두기")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
+        msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
+        await asyncio.sleep(4.0)
+        await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
+        msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
+        await asyncio.sleep(4.0)
+        await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("안 졸려"):
         await message.channel.send(" Don't you want to grow taller? ")
