@@ -3805,8 +3805,8 @@ async def on_message(message):
          randomNum = random.randrange(1, 2)
          urlF = urlBase+str(randomNum)
          embed.set_image(url = urlF)
-         await message.channel.send("")
-         await message.channel.send("")
+         await message.channel.send("[이상한 냄새에 대한 기억]")
+         await message.channel.send("[#냄새]")
          await message.channel.send( embed=embed)          
          
          
