@@ -515,12 +515,16 @@ async def on_message(message):
         await message.delete()   
        
     if message.content.startswith("걍 닥쳐"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()  
        
     if message.content.startswith("닥.쳐"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()  
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete())  
        
     if message.content.startswith("닥1쳐"):              
         await message.channel.send("Doribot has detected an inappropriate expression! ")
