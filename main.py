@@ -155,7 +155,12 @@ async def on_message(message):
     if message.content.startswith("나"):        
         msg = await message.channel.send("우리 게이는 노무현이 나무현이노?")
         await asyncio.sleep(4.0)
-        await msg.edit(content="죄..죄송합니다!! 저 사실 일베충입니다.")         
+        await msg.edit(content="죄..죄송합니다!! 저 사실 일베충입니다.")    
+        
+    if message.content.startswith("봄"):        
+        msg = await message.channel.send("{봄 봄 봄 봄이 왔네요}")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="{봄}은 개뿔 코로나나 종식되라.")        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
