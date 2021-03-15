@@ -47,11 +47,7 @@ async def on_member_remove(member):
     await app.message.channel.send( fmt.format(member, member.server))
           
 
-@tasks.loop(seconds=1)
-async def every_hour_notice(self):
-    if datetime.datetime.now().minute == 0 and datetime.datetime.now().second == 0:
-       await app.get_guild("802904099816472616").get_channel("802904099816472619").send("현재 {}시 {}분 입니다.".format(datetime.datetime.now().hour, datetime.datetime.now().minute))
-       time.sleep(1)
+
         
 @app.event
 async def on_message(message):
