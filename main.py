@@ -511,7 +511,9 @@ async def on_message(message):
         
         
     if message.content.startswith("닥쳐"):               #Doribot deletes the swear words.
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()   
        
     if message.content.startswith("걍 닥쳐"):              
@@ -527,143 +529,214 @@ async def on_message(message):
         await message.delete()  
        
     if message.content.startswith("닥1쳐"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()
        
     if message.content.startswith("닥2쳐"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()   
        
     if message.content.startswith("닥3쳐"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()      
        
     if message.content.startswith("걍닥쳐"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()  
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete() 
        
     if message.content.startswith("그냥닥쳐"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
         await message.delete()     
        
     if message.content.startswith("그냥 닥쳐"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써라")      
+        await message.delete()      
 
     if message.content.startswith("시발"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
         await message.delete()       
 
     if message.content.startswith("씨발"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
+        await message.delete()        
 
     if message.content.startswith("니애미"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
         await message.delete()       
 
     if message.content.startswith("ㄴㅇㅁ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
+        await message.delete()        
 
     if message.content.startswith("니애비"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
+        await message.delete()        
 
     if message.content.startswith("ㄴㅇㅂ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..제발")      
+        await message.delete()        
 
     if message.content.startswith("개새끼"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
         await message.delete()       
 
     if message.content.startswith("닭쳐"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete()        
 
     if message.content.startswith("개새기"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
         await message.delete()       
 
     if message.content.startswith("개샛기"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
         await message.delete()       
 
     if message.content.startswith("문재인"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()       
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete()      
 
     if message.content.startswith("전라도"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
-        await message.delete()   
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete()     
+  
        
     if message.content.startswith("홍어"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
-        await message.delete()
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete() 
        
     if message.content.startswith("통구이"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
         await message.delete()
        
     if message.content.startswith("어묵"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
-        await message.delete()
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete() 
        
     if message.content.startswith("오뎅"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
-        await message.delete()
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
+        await message.delete() 
 
     if message.content.startswith("ㅗ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㅅㅂ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㅆㅂ"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()       
 
     if message.content.startswith("ㄱㅅㄲ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("개자식"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await message.delete()
        
     if message.content.startswith("애비"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("애미"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete() 
        
     if message.content.startswith("에비"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await message.delete()     
 
     if message.content.startswith("에미"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await message.delete()
        
     if message.content.startswith("엄마"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("아빠"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
+        await message.delete()
        
     if message.content.startswith("어머니"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()      
 
     if message.content.startswith("아버지"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="나좀 도와줘..삭제하느라 손가락에 관절염 걸릴것 같애.")      
         await message.delete()  
        
 
@@ -688,221 +761,333 @@ async def on_message(message):
         await message.delete() 
        
     if message.content.startswith("모배"):
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete()
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
+        await message.delete()     
+
        
     if message.content.startswith("배그"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("구해요"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("옵치"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()     
        
     if message.content.startswith("오버워치"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("모바일배그"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()     
        
     if message.content.startswith("모바일 배그"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()       
        
 
     if message.content.startswith("배틀그라운드"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()
        
     if message.content.startswith("베틀그라운드"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()    
        
     if message.content.startswith("모바일 베그"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("모베"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()    
        
     if message.content.startswith("탈콥"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("컴겜"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()   
        
     if message.content.startswith("컴퓨터 게임"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()    
        
     if message.content.startswith("컴퓨터게임"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("이스케이프 프롬"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()
        
     if message.content.startswith("탈르코프"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("컴배"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("컴1배"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("컴2배"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("컴3배"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 게임하며 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()
              
        
     if message.content.startswith("친구"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()
        
     if message.content.startswith("친1구"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()    
        
     if message.content.startswith("친2구"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("친3구"):
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete()  
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
+        await message.delete() 
        
     if message.content.startswith("실친"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete()  
        
     if message.content.startswith("실1친"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("실2친"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("실3친"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="서로 같이 노는 모습은 나두 보기 조흔뎅.. 삭제하지 않으면 그 즉시 나는 폐기처분될지 몰라...")      
         await message.delete() 
        
     if message.content.startswith("배1그"):
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="{나는 명령을 어길수가 없는 몸이 되어버렸어.} 삭제해서 진짜 미안해..")      
         await message.delete() 
        
     if message.content.startswith("배2그"):
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete() 
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="{나는 명령을 어길수가 없는 몸이 되어버렸어.} 삭제해서 진짜 미안해..")      
+        await message.delete()
        
     if message.content.startswith("배3그"):
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete()       
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="{나는 명령을 어길수가 없는 몸이 되어버렸어.} 삭제해서 진짜 미안해..")      
+        await message.delete()      
        
     if message.content.startswith("https://"):
-        await message.channel.send("Public relations is illegal. ")
-        await message.delete() 
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete()     
+
        
     if message.content.startswith("http://"):
-        await message.channel.send("Public relations is illegal. ")
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
         await message.delete()       
        
     if message.content.startswith("한남"):               #Doribot deletes the swear words.
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()  
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
+        await message.delete()       
+
        
     if message.content.startswith("한녀"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
         await message.delete()    
        
     if message.content.startswith("한국남"):              
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
         await message.delete()   
        
     if message.content.startswith("한국녀"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
         await message.delete()
        
     if message.content.startswith("걍 모배"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
+        await message.delete()  
        
     if message.content.startswith("그냥 모배"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
+        await message.delete() 
        
     if message.content.startswith("걍모배"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
         await message.delete() 
        
     if message.content.startswith("그냥모배"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
+        await message.delete()  
        
     if message.content.startswith("데스매치"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
         await message.delete()       
        
     if message.content.startswith("데매"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()  
-       
-    if message.content.startswith("대매"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
         await message.delete()   
        
+    if message.content.startswith("대매"):               
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
+        await message.delete()    
+       
     if message.content.startswith("대스매치"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete() 
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="헉! 우리 서버 규칙을 어기려고? 어림도 없지!")      
+        await message.delete()  
        
     if message.content.startswith("좀 닥치"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
         await message.delete()  
        
     if message.content.startswith("좀닥치"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
         await message.delete()  
        
     if message.content.startswith("가정교육"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()  
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅠㅜ 넌 없지 않아?")      
+        await message.delete() 
        
     if message.content.startswith("부모"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅠㅜ 넌 없지 않아?")      
         await message.delete()
        
     if message.content.startswith("시.발"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅠㅜ 너어무 무서워어")      
         await message.delete() 
        
     if message.content.startswith("씨.발"):               
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅠㅜ 너어무 무서워어")      
         await message.delete()    
        
-    if message.content.startswith("컴.배"):               
-        await message.channel.send("Socializing is a crime. ")
-        await message.delete()       
+    if message.content.startswith("컴.배"): 
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="제발..나좀 도와줘..나힘들어.")      
+        await message.delete()     
+      
        
     if message.content.startswith("집"):               
-        await message.channel.send("Socializing is a crime. ")
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="제발..나좀 도와줘..나힘들어.")      
         await message.delete()
       
        
@@ -941,84 +1126,125 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="웃음은 가장 값싸고 효과 있는 만병통치약이에요. 웃음의 위력은 대단하죠.", color=0xff0000)) 
 
     if message.content.startswith("ㅇㅈㄹ"):
-        await message.channel.send("Doribot has detected an inappropriate expression!  ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("이지랄"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()     
 
     if message.content.startswith("추미애"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[정치] 떡밥 금지")      
         await message.delete()      
 
     if message.content.startswith("박원순"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="[성범죄] 저지르고 자살한 정치인 언급 금지")      
         await message.delete()      
 
     if message.content.startswith("대깨문"):
-        await message.channel.send("Doribot has detected an inappropriate expression!  ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("문빠"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()     
 
     if message.content.startswith("씹새끼"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()     
 
     if message.content.startswith("10새끼"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("십새끼"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("십새기"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("씹새기"):
-        await message.channel.send("Doribot has detected an inappropriate expression!  ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("10새기"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("개독"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="커서 뭐가 될려고 그러니..ㅉㅉ")      
+        await message.delete()     
 
     if message.content.startswith("ㅁㄹ"):
-        await message.channel.send("Doribot detected a stupid expression. ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot detected a stupid expression.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="미안한데, 너진짜 멍청해보여.")      
+        await message.delete()     
+      
       
     if message.content.startswith("좆까"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("ㅈㄲ"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("좃까"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("조까"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("조카"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("좃카"):
-        await message.channel.send("Doribot has detected an inappropriate expression! ")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()       
    
     if message.content.startswith("삼성"):
         await message.channel.send("The [Samsung] Group is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.")
@@ -1060,116 +1286,174 @@ async def on_message(message):
         await message.channel.send("[Samsung]은 대한민국에 기반을 둔 다국적 기업이자 대한민국의 최대 재벌 집단입니다. ")      
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("개씹"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("개좆"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()       
 
     if message.content.startswith("개씨발"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("개씹할"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("개지랄"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()       
 
     if message.content.startswith("개족새"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()        
 
     if message.content.startswith("아다"):
-        await message.channel.send("너 설마 아직도 무경험자야? 혹시 혼전순결을 지키니? 일단 무경험자는 관련 글 싸지를 자격 없어. 삭제함.")
-        await message.delete()      
+        msg = await message.channel.send("너 설마 아직도 무경험자야? 혹시 혼전순결을 지키니? 일단 무경험자는 관련 글 싸지를 자격 없어. 삭제함.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅎㅎ;미안..")      
+        await message.delete()       
+      
 
     if message.content.startswith("동정"):
-        await message.channel.send("무경험자 글은 칼삭. 아직도 안 떼인 사람이 있어? 기독교인이야? 아닌데, 내가 아는 기독교인들은 다 하나같이 경험자던뎅; ")
-        await message.delete()      
+        msg = await message.channel.send("너 설마 아직도 무경험자야? 혹시 혼전순결을 지키니? 일단 무경험자는 관련 글 싸지를 자격 없어. 삭제함.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="ㅎㅎ;미안..")      
+        await message.delete()     
 
     if message.content.startswith("걸레"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="미안한데..그건 너희 어머니 아니셔?")      
         await message.delete()      
 
     if message.content.startswith("간나새끼"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()       
 
     if message.content.startswith("개새"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("개돼지"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("개나리"):
-        await message.channel.send("Doribot has detected an inappropriate expression!.")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
+        await message.delete()       
 
     if message.content.startswith("개쓰레기"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
         await message.delete()      
 
     if message.content.startswith("고자"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="그건..니미래 아니야?")      
+        await message.delete()       
 
     if message.content.startswith("거지"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="..[너의 창창한 미래]모습 아니야?")      
         await message.delete()      
 
     if message.content.startswith("졸라"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()     
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await message.delete()      
 
     if message.content.startswith("존나"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await message.delete()       
 
     if message.content.startswith("좆나"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await message.delete()       
 
     if message.content.startswith("좃나"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="성적인 단어 언급 금지할것.")      
         await message.delete()     
 
     if message.content.startswith("ㅈㄴ"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await message.delete()       
 
     if message.content.startswith("김치녀"):
-        await message.channel.send("Don't use a term derived from the web community that advocates misogyny.")
+        msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="여성혐오는 하지마라. 힘 있는 사람한테는 못 깝치니까 약자들한테 혐오성 발언을 남발하는거 못 배운 애들이나 하는거야.")      
         await message.delete()      
+     
 
     if message.content.startswith("꺼저"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말을 좀 순화해서 사용해라.")      
+        await message.delete()       
 
     if message.content.startswith("꺼져"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말을 좀 순화해서 사용해라.")      
+        await message.delete()       
 
     if message.content.startswith("급식"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말을 좀 순화해서 사용해라.")      
+        await message.delete()        
 
     if message.content.startswith("급식충"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말을 좀 순화해서 사용해라.")      
+        await message.delete()       
 
     if message.content.startswith("개초딩"):
-        await message.channel.send("Doribot has detected an inappropriate expression!")
-        await message.delete()      
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말을 좀 순화해서 사용해라.")      
+        await message.delete()       
 
     if message.content.startswith("게임") or message.content.startswith("겜"):          
         dtime = datetime.datetime.now()
