@@ -123,44 +123,41 @@ async def on_message(message):
         await msg.edit(content="미안해..진짜 미안해..") 
         
     if message.content.startswith("내일"):        
-        msg = await message.channel.send("[내]일(네일) 아트")
+        msg = await message.channel.send("Lㅔ일 아트")
         await asyncio.sleep(4.0)
         await msg.edit(content="미안..;;")     
         
     if message.content.startswith("스팀"):        
-        msg = await message.channel.send("[스]팀 다리미")
+        msg = await message.channel.send("<ㅣ팀 다리미")
         await asyncio.sleep(4.0)
         await msg.edit(content="미안..^^")  
         
     if message.content.startswith("카카오"):        
-        msg = await message.channel.send("[카]카오 배그 하는 애들 다 배린이 아니면 잼민이라면서??")
+        msg = await message.channel.send("KaKao 배그 하는 애들 다 배린이 아니면 잼민이라면서??")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅋㅋ 팩폭 미안..; 자제할게^^")    
         
     if message.content.startswith("몰라"):        
-        msg = await message.channel.send("[니 인생]도 어떻게 될지 몰라~ 미래가 안보여~~")
+        msg = await message.channel.send("Ll 인생도 어떻게 될지 몰라~ 미래가 안보여~~")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅋ? 죄송;")
         
     if message.content.startswith("맞아") or message.content.startswith("맞음") or message.content.startswith("맞지"):        
-        msg = await message.channel.send("[니 와꾸] 못생긴것도 맞아~ 맞말이지 암!")
+        msg = await message.channel.send("Ll 와꾸 개못생긴것도 맞아~ 맞말이지 암!")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅈㅅ;;ㅋㅋ")   
         
     if message.content.startswith("아"):        
-        msg = await message.channel.send("[아]가리 해 썅년아ㅋ")
+        msg = await message.channel.send("Aㅏ가리 해 썅년아ㅋ")
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅎㅎ;;")
         
-    if message.content.startswith("나"):        
-        msg = await message.channel.send("우리 게이는 노무현이 나무현이노?")
-        await asyncio.sleep(4.0)
-        await msg.edit(content="죄..죄송합니다!! 저 사실 일베충입니다.")    
+    
         
     if message.content.startswith("봄"):        
         msg = await message.channel.send("{봄 봄 봄 봄이 왔네요}")
         await asyncio.sleep(4.0)
-        await msg.edit(content="{봄}은 개뿔 코로나나 종식되라.")        
+        await msg.edit(content="VoM은 개뿔 코로나나 종식되라.")        
         
     if message.content.startswith("?Hello"):             
         dtime = datetime.datetime.now()
@@ -1069,6 +1066,8 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="ㅠㅜ 너어무 무서워어")      
         await message.delete() 
+        
+         
        
     if message.content.startswith("씨.발"):               
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
@@ -1515,7 +1514,21 @@ async def on_message(message):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 이쁘게 써라")      
-        await message.delete()       
+        await message.delete() 
+        
+    if message.content.startswith("ㅂㅂ"):               
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="말하는 꼬라지보니 애미나 애비가 없는 자식이로구만!")      
+        await message.delete()  
+        
+    if message.content.startswith("ㅇㅇ"):               
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="그 말뽄새는 자네 애미한테 배웠는가?")      
+        await message.delete()        
+        
+        
 
 
     if message.content.startswith("문재앙"):
@@ -1676,10 +1689,10 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
         msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(5.0)
         await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
         msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(6.0)
         await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")        
      
 
@@ -1689,10 +1702,10 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
         msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(5.0)
         await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
         msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(6.0)
         await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("유튜브"):
@@ -1703,10 +1716,10 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
         msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(5.0)
         await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
         msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(6.0)
         await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("사회적 거리두기"):
@@ -1714,10 +1727,10 @@ async def on_message(message):
         await asyncio.sleep(4.0)
         await msg.edit(content="코로나가 드디어 종식되었어..라고 말하는 날이 올까요?")
         msg2 = await message.channel.send("코로나 끝날때까지 집에서 좀만 존버하자!")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(5.0)
         await msg2.edit(content="{아} 오지요. 당연히 오지요. 올수밖에 없죠.")
         msg3 = await message.channel.send("힘들어도 꼭! 참고, 견디자.")
-        await asyncio.sleep(4.0)
+        await asyncio.sleep(6.0)
         await msg3.edit(content="그런데, 그때가되면은 우린 없을것 같아요..")
       
     if message.content.startswith("안 졸려"):
