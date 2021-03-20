@@ -3820,7 +3820,22 @@ async def on_message(message):
          embed.set_image(url = urlF)
          await message.channel.send("[이상한 냄새에 대한 기억]")
          await message.channel.send("[#냄새]")
-         await message.channel.send( embed=embed)          
+         await message.channel.send( embed=embed)       
+         
+    if message.content.startswith('!MBTI 연애'):
+         embed = discord.Embed(
+         title='',
+         description='',
+
+        )
+
+         urlBase = 'https://i.imgur.com/7NpTDDl.jpeg'
+         randomNum = random.randrange(1, 2)
+         urlF = urlBase+str(randomNum)
+         embed.set_image(url = urlF)
+         await message.channel.send("{MBTI} 유형별 사랑의 성숙도 순위")
+         await message.channel.send("[#2001년]")
+         await message.channel.send( embed=embed)             
          
          
          
