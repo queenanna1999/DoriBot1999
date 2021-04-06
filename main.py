@@ -85,14 +85,44 @@ async def on_message(message):
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
 
-    if message.content.startswith("3/8") or message.content.startswith("3월8일") or message.content.startswith("3월"):
-        await message.channel.send("International Women's Day | 세계 여성의 날 ")
-        await message.channel.send("세계 여성의 지위 향상을 위한 날로, 1908년 3월 8일 미국의 여성 노동자들이 근로여건 개선과 ")
-        await message.channel.send("참정권 등을 요구하면서 시위를 벌인 것에서 시작됐다. ")
-        await message.channel.send("이후 유엔은 1975년을 ‘세계 여성의 해’로 지정하고 1977년 3월 8일을 특정해 ‘세계 여성의 날’로 공식 지정하였다.  ")
-        await message.channel.send("https://www.youtube.com/watch?v=YwHNVqPaLWw")
-        await message.channel.send("https://www.youtube.com/watch?v=5UknEqiXmno")
-        await message.channel.send("https://www.youtube.com/watch?v=wdw8KNmr2pc")
+    if message.content.startswith("3/8"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "International Women's Day | 세계 여성의 날  ",
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '세계', value = '세계 여성의 지위 향상을 위한 날로, 1908년 3월 8일 미국의 여성 노동자들이 근로여건 개선과',inline = False)
+        embed.add_field(name='참정권 ', value='참정권 등을 요구하면서 시위를 벌인 것에서 시작됐다.', inline=False)
+        embed.add_field(name='이후', value='이후 유엔은 1975년을 ‘세계 여성의 해’로 지정하고 1977년 3월 8일을 특정해 ‘세계 여성의 날’로 공식 지정하였다. ', inline=False)        
+        embed.add_field(name = ' ', value = 'https://www.youtube.com/watch?v=YwHNVqPaLWw',inline = False)
+        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=5UknEqiXmno', inline=False)
+        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=wdw8KNmr2pc', inline=False)   
+        await message.channel.send(channel,embed=embed) 
+        
+        
+    if message.content.startswith("6/25"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "The Korean War | 한국전쟁  ",
+            description = '',
+            colour = discord.Colour.red()
+        )
+
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
+        embed.add_field(name = '1950년', value = '1950년 6월 25일 오전 4시에 조선민주주의인민공화국이 기습적으로 대한민국을 침공하여 발발한 전쟁이다.',inline = False)
+        embed.add_field(name='유엔군 ', value='유엔군과 중국인민지원군 등이 참전하여 세계적인 대규모 전쟁으로 비화될 뻔 하였으나, ', inline=False)
+        embed.add_field(name='1953년', value='1953년 7월 27일 22시에 체결된 한국휴전협정에 따라 일단락되었다.', inline=False)        
+        embed.add_field(name = '대한민국은 ', value = '대한민국은 전세계에 남은 마지막 냉전지역이다.',inline = False)
+        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=yxaegqvl4aE ', inline=False)
+        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=PYY7pDNExG0', inline=False) 
+        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=_HTuf2bFbpw ', inline=False)
+        await message.channel.send(channel,embed=embed) 
+        
         
     if message.content.startswith("6/25") or message.content.startswith("6월25일") or message.content.startswith("6월"):
         await message.channel.send("The Korean War | 한국전쟁 ")
@@ -100,14 +130,18 @@ async def on_message(message):
         await message.channel.send("유엔군과 중국인민지원군 등이 참전하여 세계적인 대규모 전쟁으로 비화될 뻔 하였으나,  ")
         await message.channel.send("1953년 7월 27일 22시에 체결된 한국휴전협정에 따라 일단락되었다. ")
         await message.channel.send("대한민국은 전세계에 남은 마지막 냉전지역이다. ")
-        await message.channel.send("https://www.youtube.com/watch?v=yxaegqvl4aE  ")
-        await message.channel.send("https://www.youtube.com/watch?v=PYY7pDNExG0  ")
-        await message.channel.send("https://www.youtube.com/watch?v=_HTuf2bFbpw  ")
+        await message.channel.send("|https://www.youtube.com/watch?v=yxaegqvl4aE  ")
+        await message.channel.send("|https://www.youtube.com/watch?v=PYY7pDNExG0  ")
+        await message.channel.send("|https://www.youtube.com/watch?v=_HTuf2bFbpw  ")
         
     if message.content.startswith("4/16") or message.content.startswith("4월16일") or message.content.startswith("4월"):
         await message.channel.send("Sinking of MV Sewol | 세월호침몰사고 ")
         await message.channel.send("2014년 4월 16일 오전 8시 50분경 대한민국 전라남도 진도군 조도면 부근 해상에서 여객선 세월호가 전복되어 침몰한 사고이다 ")
-        await message.channel.send("https://www.youtube.com/watch?v=G6iP0gtprXQ  ")
+        await message.channel.send("*문제점")
+        await message.channel.send("|해당 사건을 정치적으로 이용해서 당시 박근혜 현직 대통령에게 억울하게 누명을 씌웠다.")
+        await message.channel.send("|박근혜 전 대통령은 죄가 없었던 사건이었음에도 불구하고, 아몰랑 박근혜탓 시전을 한 역대급 쓰레기 사건.  ")
+        await message.channel.send("|진짜 잘못을 따질거면 선장이나 1등 항해사에게 따져야 정상 아닐까..")
+        await message.channel.send("|https://www.youtube.com/watch?v=G6iP0gtprXQ  ")
         
     if message.content.startswith("3/10"):
         await message.channel.send("[박근혜 전 대통령님] 탄핵 ")
@@ -115,7 +149,15 @@ async def on_message(message):
         await message.channel.send("국회에서 당시 야당(더불어민주당, 국민의당, 정의당) 의원들이 대통령 박근혜에 대한 ") 
         await message.channel.send("탄핵 소추를 발의해 헌법재판소에서 탄핵을 인용한 일을 말한다.  ") 
         await message.channel.send("위의 글들은 다 개소리고, 북한 빨갱이들이 박근혜 전 대통령님에게 누명을 씌워 대통령 박근혜를 탄핵한 사건이다.  ")
-        await message.channel.send("https://www.youtube.com/watch?v=pMEO3himBag ")
+        await message.channel.send("|https://www.youtube.com/watch?v=pMEO3himBag ")
+        
+    if message.content.startswith("4/3"):
+        await message.channel.send("제주 4*3 사건 ")
+        await message.channel.send("|제주 4·3 사건은 1947년 3월 1일을 기점으로 1948년 4월 3일 발생한 소요사태 및  ")
+        await message.channel.send("|1954년 9월 21일까지 제주도에서 발생한 무력충돌과 그 진압과정에서 발생한 일련의 제주도민 학살 사건을 말한다 ") 
+        await message.channel.send("|남북한의 이념갈등을 발단으로 이승만 정권 이후 미국 정부의 묵인하에 벌어진 초토화 작전 및 무장대의 학살로, 많은 주민이 억울하게 희생당한 사건이다.  ") 
+        await message.channel.send("|조센징의 적은 조센징을 실현시킨 사건. ")
+        await message.channel.send("|https://www.youtube.com/watch?v=9nHV38_ozjk&ab_channel=KBS%EA%B5%90%EC%96%91")        
 
     if message.content.startswith("오"):        #The bot directly modifies the message.
         msg = await message.channel.send("[오]레오")
