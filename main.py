@@ -85,43 +85,7 @@ async def on_message(message):
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
 
-    if message.content.startswith("3/8"):
-        channel = message.channel
-        embed = discord.Embed(
-            title = "International Women's Day | 세계 여성의 날  ",
-            description = '',
-            colour = discord.Colour.red()
-        )
 
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '세계', value = '세계 여성의 지위 향상을 위한 날로, 1908년 3월 8일 미국의 여성 노동자들이 근로여건 개선과',inline = False)
-        embed.add_field(name='참정권 ', value='참정권 등을 요구하면서 시위를 벌인 것에서 시작됐다.', inline=False)
-        embed.add_field(name='이후', value='이후 유엔은 1975년을 ‘세계 여성의 해’로 지정하고 1977년 3월 8일을 특정해 ‘세계 여성의 날’로 공식 지정하였다. ', inline=False)        
-        embed.add_field(name = ' ', value = 'https://www.youtube.com/watch?v=YwHNVqPaLWw',inline = False)
-        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=5UknEqiXmno', inline=False)
-        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=wdw8KNmr2pc', inline=False)   
-        await message.channel.send(channel,embed=embed) 
-        
-        
-    if message.content.startswith("6/25"):
-        channel = message.channel
-        embed = discord.Embed(
-            title = "The Korean War | 한국전쟁  ",
-            description = '',
-            colour = discord.Colour.red()
-        )
-
-        dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '1950년', value = '1950년 6월 25일 오전 4시에 조선민주주의인민공화국이 기습적으로 대한민국을 침공하여 발발한 전쟁이다.',inline = False)
-        embed.add_field(name='유엔군 ', value='유엔군과 중국인민지원군 등이 참전하여 세계적인 대규모 전쟁으로 비화될 뻔 하였으나, ', inline=False)
-        embed.add_field(name='1953년', value='1953년 7월 27일 22시에 체결된 한국휴전협정에 따라 일단락되었다.', inline=False)        
-        embed.add_field(name = '대한민국은 ', value = '대한민국은 전세계에 남은 마지막 냉전지역이다.',inline = False)
-        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=yxaegqvl4aE ', inline=False)
-        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=PYY7pDNExG0', inline=False) 
-        embed.add_field(name=' ', value='https://www.youtube.com/watch?v=_HTuf2bFbpw ', inline=False)
-        await message.channel.send(channel,embed=embed) 
         
         
     if message.content.startswith("6/25") or message.content.startswith("6월25일") or message.content.startswith("6월"):
