@@ -1249,7 +1249,7 @@ async def on_message(message):
     if message.content.startswith("10새기"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="你母亲去世了)      
+        await msg.edit(content="你母亲去世了")      
         await message.delete()      
 
     if message.content.startswith("개독"):
@@ -1446,31 +1446,31 @@ async def on_message(message):
     if message.content.startswith("졸라"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await msg.edit(content="你爸爸的阴茎太小。")      
         await message.delete()      
 
     if message.content.startswith("존나"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await msg.edit(content="你爸爸的阴茎太小。")      
         await message.delete()       
 
     if message.content.startswith("좆나"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await msg.edit(content="你爸爸的阴茎太小。")      
         await message.delete()       
 
     if message.content.startswith("좃나"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await msg.edit(content="你爸爸的阴茎太小。")      
         await message.delete()     
 
     if message.content.startswith("ㅈㄴ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="성적인 단어 언급 금지할것.")      
+        await msg.edit(content="你爸爸的阴茎太小。")      
         await message.delete()       
 
     if message.content.startswith("김치녀"):
@@ -1640,43 +1640,43 @@ async def on_message(message):
     if message.content.startswith("빡쳐서"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()     
 
     if message.content.startswith("빡침"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("빡치네"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("빡친다"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("빡치넹"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("빡쳐"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("빡치기전에"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="글을 보니 니와꾸가 안봐도 알만한것 같애..딱봐도 안경 쓴 멸치 아니면 돼지일것 같고, 인스턴트 음식들을 저급하게 [허버허버] 먹었겠지.")      
+        await msg.edit(content="韩国男人是世界上最丑的。")      
         await message.delete()      
 
     if message.content.startswith("노예"):
@@ -2132,7 +2132,7 @@ async def on_message(message):
     if message.content.startswith("박근혜"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="[내가] 제일 존경하는 분이야. 그녀의 존함을 함부로 부르지마. 대깨문새끼야.")      
+        await msg.edit(content="'내가' 제일 존경하는 분이야. 그녀의 존함을 함부로 부르지마. 대깨문새끼야.")      
         await message.delete()  
        
     if message.content.startswith("김정은"):
@@ -2273,7 +2273,7 @@ async def on_message(message):
     if message.content.startswith("ㄱ"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
-        await msg.edit(content="'한남'들은 자기 중요부위 닮은 글자를 왤케 좋아함?")      
+        await msg.edit(content="韩国男人的阴茎是世界上最小的。(ㄱ=阴茎)")      
         await message.delete()        
        
        
@@ -2307,7 +2307,7 @@ async def on_message(message):
     if message.content.startswith("추카추카"):
         msg = await message.channel.send("Doribot detected a stupid expression.")
         await asyncio.sleep(4.0)
-        await msg.edit(content="조용히해. 좀;;")      
+        await msg.edit(content="你的母亲被南韩总统强奸了。")      
         await message.delete()      
  
        
