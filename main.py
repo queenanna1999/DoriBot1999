@@ -2352,6 +2352,12 @@ async def on_message(message):
         await message.delete()        
        
        
+    if message.content.startswith("좆"):
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="韩国男人的阴茎是世界上最小的。")      
+        await message.delete()        
+       
        
        
        
