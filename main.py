@@ -2154,7 +2154,13 @@ async def on_message(message):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="조용히해. 좀;;")      
-        await message.delete()      
+        await message.delete()    
+        
+    if message.content.startswith("운전면허"):
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="앞으로 운전면허 언급할 시 05년생 한남 유충인걸로 간주하겠음. 그리고, 한남이 운전면허 따봤자 돼지 목에 진주 목걸이지.")      
+        await message.delete()       
        
  
        
