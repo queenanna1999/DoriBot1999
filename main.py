@@ -1020,6 +1020,43 @@ async def on_message(message):
         await msg.edit(content="游戏是疾病。")      
         await message.delete()  
         
+    if message.content.startswith("모444배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모555배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모666배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모777배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
+        
+        
+    if message.content.startswith("모888배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모999배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
+        
         
     if message.content.startswith("경쟁전"):
         msg = await message.channel.send("Socializing is a crime.")
@@ -1067,12 +1104,331 @@ async def on_message(message):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()  
+        
+    if message.content.startswith("모11배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()  
+        
+    if message.content.startswith("모22배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()    
+        
+    if message.content.startswith("모33배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
         await message.delete()        
         
+    if message.content.startswith("모44배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()  
+        
+    if message.content.startswith("모66배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()  
+        
+    if message.content.startswith("모77배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()   
+        
+    if message.content.startswith("모88배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()  
+        
+    if message.content.startswith("모99배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="你的母亲被游戏开发者强奸了。")      
+        await message.delete()        
+        
+    if message.content.startswith("모1111배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모2222배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()   
+        
+    if message.content.startswith("모3333배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모4444배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모5555배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모6666배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모7777배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
         
         
+    if message.content.startswith("모8888배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모9999배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()          
+        
+    if message.content.startswith("모11111배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모22222배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()   
+        
+    if message.content.startswith("모33333배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모44444배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모55555배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모66666배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("모77777배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
         
         
+    if message.content.startswith("모88888배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("모99999배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()          
+        
+    if message.content.startswith("컴111배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴222배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()   
+        
+    if message.content.startswith("컴333배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴444배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴555배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴666배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴777배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
+        
+        
+    if message.content.startswith("컴888배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴999배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+        
+    if message.content.startswith("컴11배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴22배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()   
+        
+    if message.content.startswith("컴33배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴44배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴55배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴66배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴77배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
+        
+        
+    if message.content.startswith("컴88배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴99배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()          
+        
+    if message.content.startswith("컴1111배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴2222배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()   
+        
+    if message.content.startswith("컴3333배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴4444배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴5555배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴6666배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()  
+        
+    if message.content.startswith("컴7777배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()         
+        
+        
+    if message.content.startswith("컴8888배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete() 
+        
+    if message.content.startswith("컴9999배"):
+        msg = await message.channel.send("Socializing is a crime.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="游戏是疾病。")      
+        await message.delete()          
         
        
     if message.content.startswith("https://"):
