@@ -764,23 +764,23 @@ async def on_message(message):
        
 
     if message.content.startswith("Feminism"):
-        await message.channel.send("I'm a feminist. ")
+        await message.channel.send("韩国男人还是自杀吧。 ")
         await message.delete()   
        
     if message.content.startswith("Femi"):
-        await message.channel.send("I'm a feminist. ")
+        await message.channel.send("韩国男人还是自杀吧。 ")
         await message.delete() 
        
     if message.content.startswith("페미"):
-        await message.channel.send("I'm a feminist. ")
+        await message.channel.send("韩国男人还是自杀吧。 ")
         await message.delete() 
        
     if message.content.startswith("패미"):
-        await message.channel.send("I'm a feminist. ")
+        await message.channel.send("韩国男人还是自杀吧。 ")
         await message.delete()  
        
     if message.content.startswith("꼴페미"):
-        await message.channel.send("I'm a feminist. ")
+        await message.channel.send("韩国男人还是自杀吧。 ")
         await message.delete() 
        
     if message.content.startswith("모배") or message.content.startswith("모2배") or message.content.startswith("모1배") or message.content.startswith("모3배") or message.content.startswith("모.배"):
