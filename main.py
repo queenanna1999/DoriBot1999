@@ -183,7 +183,7 @@ async def on_message(message):
 
     # 2021년 04월 24일 오후 5시 03분 추가했습니다. 
     # Added at 5:03pm on 24 Apr 2021.
-    if message.content.startswith("?RM1"):        
+    if message.content.startswith("?RM01"):        
         msg = await message.channel.send("Ellie Goulding - Love Me Like You Do")
         await asyncio.sleep(4.0)
         await msg.edit(content="https://youtu.be/bgjUzhdmmF0")
@@ -252,7 +252,7 @@ async def on_message(message):
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
-        await message.channel.send(embed=discord.Embed(title="ex) ? + RM1", color=0xfefefe))
+        await message.channel.send(embed=discord.Embed(title="ex) ? + RM01", color=0xfefefe))
         randomNum = random.randrange(1, 14)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="RM13", color=0x00ff00))
@@ -267,7 +267,7 @@ async def on_message(message):
         if randomNum==6:
             await message.channel.send(embed=discord.Embed(title="RM3", color=0x00ff00))
         if randomNum==7:
-            await message.channel.send(embed=discord.Embed(title="RM1", color=0x00ff00))
+            await message.channel.send(embed=discord.Embed(title="RM01", color=0x00ff00))
         if randomNum==8:
             await message.channel.send(embed=discord.Embed(title="RM2", color=0x00ff00))
         if randomNum==9:
