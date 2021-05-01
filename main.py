@@ -77,6 +77,28 @@ async def on_message(message):
         await message.channel.send(channel,embed=embed)
 
 
+    if message.content.startswith("스티브") or message.content.startswith("Steve") or message.content.startswith("steve"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '스티븐 폴 "스티브" 잡스(1955년 2월 24일 ~ 2011년 10월 5일)는 미국의 기업인이었으며 애플의 전 CEO이자 공동 창립자이다. 2011년 10월 5일 췌장암으로 사망했다.',
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '출생배경', value = '스티브 잡스는 1955년 2월 24일 조앤 시블의 아들로 태어났지만, 아버지의 반대로 폴 잡스와 클래라 헤고피언 부부에게 입양되었다. (잡스는 인성이 좋지 않을수밖에 없었다. 대개 어렸을 때부터 삐뚤어진 아이들은 가정사에 문제가 있는 경우가 많다.) 잡스에게 그가 생물학적 부모에게 버림받고 입양되었다는 사실은 그의 정체성을 형성하는데 큰 몫을 하였다. 개발 그룹의 책임자이자 후에 최고 업무 집행 책임자로서 잡스의 오랜 동료인 델 요캄은 그의 가정 환경과 성격의 관계에 대해 이렇게 말하였다. “무엇을 만들든 완전히 통제하려 드는 그의 집착은 출생 직후 버려졌다는 사실과 그의 성격에서 직접적으로 비롯한다고 생각합니다. (<- 잡스의 잔재는 애플의 소프트웨어에서도 찾아볼수 있는데 애플에서 만든 운영체제를 사용해본 사람들은 전부 공감할 것이다. 애플의 운영체제는 모바일과 PC를 막론하고 사용자가 커스터마이즈하는 행위를 좋게 보지 않는다. 그래서 전부 막아놓는다. 커스텀을 하고 싶은 유저들은 결국 탈옥을 한다.)”',inline = False)
+        embed.add_field(name="어린 시절", value="잡스는 초등학교 시절 학교를 자주 빼 먹는 비행 청소년이자 사고뭉치였다. 하지만, 그는 히스키트라는 아마추어 전자공학 키트를 얻는 순간 인생의 터닝포인트에 도달한다. 그는 이 키트 덕분에 어려서부터 전자제품의 작동원리를 익히게 되었다. 당시 캘리포니아에는 군수산업 붐이 일어났으며, 첨단 기술이 밀집된 지역이 되었다. 그 영향을 받아 잡스는 동네의 어른들에게 여러 질문을 하며 엔지니어링에 대한 흥미를 키워 갔다. 여담으로 잡스는 대학에서 쓸모없는 수업들을 무조건 들어야 이수를 할수 있다는 대학의 시스템이 맘에 들지 않았다고 한다. 한국이었으면 잡스는 자신의 재능을 펴보지도 못했을 것이다. 그는 아마도 전생에 나라를 구해서 기회의 땅 미국, 그것도 엔지니어링에 관심을 가질수밖에 없는 완벽한 환경 캘리포니아에 태어난 것이 아닐까싶다. 또한, 잡스의 마케팅 실력은 뛰어났다. 잡스가 마케팅 실력이 좋지 않았다면 지금의 애플은 없었을 것이다. 밤새가면서 빡세게 일했던 수많은 개발자들의 노력 또한 인정 받지 못했을 것이다. 대부분의 잡스까들은 수많은 개발자들의 노력을 잡스 본인이 한것마냥 나불대고 다닌다고 지랄하는데, 다시한번 말하지만 잡스의 마케팅 실력이 뛰어나지 않았다면 개발자들의 노력도 언급되지 않았을것이고, 절대 인정받지 못했을것이다. ", inline=False)
+        embed.add_field(name='식습관', value='잡스의 식습관에 큰 영향을 미친 또 다른 책은 영양학 전문가 아르놀트 에렛의 <디톡스 식습관의 치유 체계>라는 책이었다. 잡스는 이 책을 읽고 채소와 과일만 먹으면 몸에 좋지 않은 점액이 형성되는 것을 막을 수 있으며, 정기적으로 장기 단식을 행해야 몸 속의 독소가 사라진다고 믿게 되었다. 또한 채식을 하면 몸에 냄새가 나는 점액이 분비되지 않는다고 생각해 여러 주 몸을 씻지 않기도 해서 아타리에서 일했을 당시 동료들 사이에서 불만이 많았다.', inline=False)     
+        embed.add_field(name='잡스의 이런 극단적인 식습관은', value='잡스는 2003년 말 췌장암 진단을 받은 후 수술을 거부하다 2004년 7월 31일 스탠버드 대학교 의학 센터에서 변형 휘플 수술을 받았다. 변형 휘플 수술을 통해 잡스의 췌장 일부분이 제거되었고, 따라서 잡스는 단백질을 더 많이 섭취해야 했다. 하지만 잡스는 10대 때부터 지속해 온 채식 및 금식 습관을 버리지 않으려고 했고, 의사의 권고를 무시했다. 결국 잡스의 극단적인 식습관이 그의 건강을 더더욱 해친 것이다.', inline=False)  
+        embed.add_field(name='Steve Jobs introduces iPhone in 2007', value='*https://youtu.be/MnrJzXM7a6o', inline=False)          
+        await message.channel.send(channel,embed=embed)
+    if message.content.startswith("스티브") or message.content.startswith("Steve") or message.content.startswith("steve"):
+        await message.channel.send("*https://youtu.be/MnrJzXM7a6o")
+      
+      
+        
+        
     if message.content.startswith("6/25") or message.content.startswith("06/25"):
         channel = message.channel
         embed = discord.Embed(
