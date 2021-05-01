@@ -362,6 +362,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 02월 26일 금요일', value = '*도리봇이 영어로 새롭게 꽃단장 합니다. ',inline = False)
         embed.add_field(name = '*2021년 03월 14일 일요일', value = '*도리봇이 이제 직접 메세지를 수정할수 있게 개선되었습니다. 다양한 개소리를 하고, 직접 다른 말들로 수정합니다. ',inline = False)
         embed.add_field(name = '*2021년 04월 24일 토요일', value = '*도리봇의 내부 코드가 깔끔하게 정리되고, 무작위로 노래를 추천해줍니다. ',inline = False)
+        embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
