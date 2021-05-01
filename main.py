@@ -247,6 +247,11 @@ async def on_message(message):
         msg = await message.channel.send("Adele - Rolling in the Deep")
         await asyncio.sleep(4.0)
         await msg.edit(content="https://youtu.be/rYEDA3JcQqw") 
+        
+    if message.content.startswith("?RM14"):        
+        msg = await message.channel.send("Ellie Goulding - How Long Will I Love You")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="https://youtu.be/B2KKcjSOBmk") 
 
     if message.content.startswith("?Random Music"):       
         dtime = datetime.datetime.now()
@@ -279,7 +284,9 @@ async def on_message(message):
         if randomNum==12:
             await message.channel.send(embed=discord.Embed(title="RM10", color=0xff0000)) 
         if randomNum==13:
-            await message.channel.send(embed=discord.Embed(title="RM12", color=0xff0000))      
+            await message.channel.send(embed=discord.Embed(title="RM12", color=0xff0000)) 
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="RM14", color=0xff0000)) 
 
     #The bot directly modifies the message.
     if message.content.startswith("오"):                     
@@ -835,7 +842,53 @@ async def on_message(message):
         msg = await message.channel.send("Public relations is illegal.")
         await asyncio.sleep(4.0)
         await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
-        await message.delete()           
+        await message.delete()   
+        
+        
+    if message.content.startswith("youtu.be"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+    if message.content.startswith("gall.dcinside.com"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+    if message.content.startswith("news.naver.com"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+    if message.content.startswith("n.news.naver.com"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+        
+    if message.content.startswith("news.v.daum.net"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+    if message.content.startswith("www.ilbe.com"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+        
+        
+    if message.content.startswith("m.ilbe.com"):
+        msg = await message.channel.send("Public relations is illegal.")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
+        await message.delete() 
+       
 
 
     #Doribot deletes the swear words.       
