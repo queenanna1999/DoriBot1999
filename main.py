@@ -905,8 +905,8 @@ async def on_message(message):
         await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
         await message.delete() 
         
-        
-    if message.content.startswith("m.ilbe.com"):
+       
+    if message.content.startswith("m.ilbe.com") or message.content.startswith("m.dcinside.com/board/"):
         msg = await message.channel.send("Public relations is illegal.")
         await asyncio.sleep(4.0)
         await msg.edit(content="우리 서버 규칙을 어기려고 하는거니?")      
