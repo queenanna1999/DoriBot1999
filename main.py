@@ -406,6 +406,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 03월 14일 일요일', value = '*도리봇이 이제 직접 메세지를 수정할수 있게 개선되었습니다. 다양한 개소리를 하고, 직접 다른 말들로 수정합니다. ',inline = False)
         embed.add_field(name = '*2021년 04월 24일 토요일', value = '*도리봇의 내부 코드가 깔끔하게 정리되고, 무작위로 노래를 추천해줍니다. ',inline = False)
         embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
+        embed.add_field(name = '*2021년 05월 03일 월요일', value = '*도리봇이 From Score to Film - About Time - The About Time Theme과 Kristen Bell - Home (From "Frozen 2"/Outtake/Audio Only), Anne-Marie - 2002을 Random Music에 추가했습니다.',inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
@@ -751,7 +752,7 @@ async def on_message(message):
         await message.delete()      
 
        
-    if message.content.startswith("어묵") or message.content.startswith("오뎅"):
+    if message.content.startswith("어묵") or message.content.startswith("오뎅") or message.content.startswith("광주") or message.content.startswith("폭동"):
         msg = await message.channel.send("Don't use a term derived from the web community that advocates misogyny. ")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 이쁘게 써라..")      
@@ -771,7 +772,7 @@ async def on_message(message):
         await message.delete()   
        
        
-    if message.content.startswith("모배") or message.content.startswith("모2배") or message.content.startswith("모1배") or message.content.startswith("모3배") or message.content.startswith("모.배"):
+    if message.content.startswith("모배") or message.content.startswith("모2배") or message.content.startswith("모1배") or message.content.startswith("모3배") or message.content.startswith("모.배") or message.content.startswith("디아블로"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="친목은 죄를 짓는 것이에요.")      
