@@ -274,6 +274,21 @@ async def on_message(message):
         msg = await message.channel.send("Ellie Goulding - How Long Will I Love You")
         await asyncio.sleep(4.0)
         await msg.edit(content="https://youtu.be/B2KKcjSOBmk") 
+        
+    if message.content.startswith("?RM15"):        
+        msg = await message.channel.send("From Score to Film - About Time - The About Time Theme")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="https://youtu.be/-wBCLzg9d54") 
+        
+    if message.content.startswith("?RM16"):        
+        msg = await message.channel.send("Kristen Bell - Home (From 'Frozen 2'/Outtake/Audio Only)")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="https://youtu.be/AVhvmprzFX4")   
+        
+    if message.content.startswith("?RM17"):        
+        msg = await message.channel.send("Anne-Marie - 2002")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="https://youtu.be/Il-an3K9pjg")         
 
     if message.content.startswith("?Random Music"):       
         dtime = datetime.datetime.now()
@@ -309,6 +324,12 @@ async def on_message(message):
             await message.channel.send(embed=discord.Embed(title="RM12", color=0xff0000)) 
         if randomNum==14:
             await message.channel.send(embed=discord.Embed(title="RM14", color=0xff0000)) 
+        if randomNum==15:
+            await message.channel.send(embed=discord.Embed(title="RM15", color=0xff0000)) 
+        if randomNum==16:
+            await message.channel.send(embed=discord.Embed(title="RM16", color=0xff0000))
+        if randomNum==17:
+            await message.channel.send(embed=discord.Embed(title="RM17", color=0xff0000))          
 
     #The bot directly modifies the message.
     if message.content.startswith("오"):                     
