@@ -62,6 +62,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '?M_Birthday', value = "Doribot reads the members' birthdays in order.",inline = False)
         embed.add_field(name = '?Hello', value = 'Doribot will say hello.',inline = False)
         embed.add_field(name="?Today's fortune", value=" Doribot show you today's fortune.(South Korea) ", inline=False)
         embed.add_field(name="?Today's Poetry", value=" Doribot recites Today's Poetry.(South Korea) ", inline=False)
@@ -75,6 +76,32 @@ async def on_message(message):
         embed.add_field(name='?Members', value=' Introducing D, N, S, M ', inline=False)         
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
         await message.channel.send(channel,embed=embed)
+
+
+    if message.content.startswith("?M_Birthday"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "Members' birthday dates.",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '1월', value = '*추가되지않음',inline = False)    
+        embed.add_field(name = '2월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '3월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '4월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '5월', value = '*도리공주',inline = False) 
+        embed.add_field(name = '6월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '7월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '8월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '9월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '10월', value = '*추가되지않음',inline = False)    
+        embed.add_field(name = '11월', value = '*추가되지않음',inline = False)   
+        embed.add_field(name = '12월', value = '*추가되지않음',inline = False)             
+        await message.channel.send(channel,embed=embed)
+
 
 
     if message.content.startswith("스티브") or message.content.startswith("Steve") or message.content.startswith("steve"):
@@ -407,6 +434,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 04월 24일 토요일', value = '*도리봇의 내부 코드가 깔끔하게 정리되고, 무작위로 노래를 추천해줍니다. ',inline = False)
         embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
         embed.add_field(name = '*2021년 05월 03일 월요일', value = '*도리봇이 From Score to Film - About Time - The About Time Theme과 Kristen Bell - Home (From "Frozen 2"/Outtake/Audio Only), Anne-Marie - 2002을 Random Music에 추가했습니다.',inline = False)
+        embed.add_field(name = '*2021년 05월 05일 수요일', value = "*도리봇이 멤버들의 생일 날짜 리스트를 추가했습니다. ?M_Birthday를 사용하여 해당 명령어의 결과값을 출력해보세요! ?Today's Poetry가 개선됩니다. 그리고, 새로운 Poetry가 추가됩니다.",inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
