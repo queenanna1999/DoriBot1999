@@ -2275,20 +2275,18 @@ async def on_message(message):
         if randomNum==7:
             await message.channel.send(embed=discord.Embed(title="?TP13", color=0x00ff00))
         if randomNum==8:
-            await message.channel.send(embed=discord.Embed(title="?TP15", color=0x00ff00))
-        if randomNum==9:
             await message.channel.send(embed=discord.Embed(title="?TP02", color=0x00ff00))
-        if randomNum==10:
+        if randomNum==9:
             await message.channel.send(embed=discord.Embed(title="?TP04", color=0x00ff00))
-        if randomNum==11:
+        if randomNum==10:
             await message.channel.send(embed=discord.Embed(title="?TP06", color=0x00ff00))
-        if randomNum==12:
+        if randomNum==11:
             await message.channel.send(embed=discord.Embed(title="?TP08", color=0x00ff00))
-        if randomNum==13:
+        if randomNum==12:
             await message.channel.send(embed=discord.Embed(title="?TP10", color=0x00ff00))
-        if randomNum==14:
+        if randomNum==13:
             await message.channel.send(embed=discord.Embed(title="?TP12", color=0x00ff00))
-        if randomNum==15:
+        if randomNum==14:
             await message.channel.send(embed=discord.Embed(title="?TP14", color=0x00ff00))
 
 #2021.5.5 ?Today's Poetry를 개선하여 훨씬 더 보기 편하도록 변경했습니다.
