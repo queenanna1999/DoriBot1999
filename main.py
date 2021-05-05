@@ -315,14 +315,19 @@ async def on_message(message):
     if message.content.startswith("?RM17"):        
         msg = await message.channel.send("Anne-Marie - 2002")
         await asyncio.sleep(4.0)
-        await msg.edit(content="https://youtu.be/Il-an3K9pjg")         
+        await msg.edit(content="https://youtu.be/Il-an3K9pjg") 
+
+    if message.content.startswith("?RM18"):        
+        msg = await message.channel.send("One Direction - They Don't Know About Us")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="https://www.youtube.com/watch?v=unTus4ukPB0")         
 
     if message.content.startswith("?Random Music"):       
         dtime = datetime.datetime.now()
         embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
         await message.channel.send(embed=embed)
         await message.channel.send(embed=discord.Embed(title="ex) ? + RM01", color=0xfefefe))
-        randomNum = random.randrange(1, 14)
+        randomNum = random.randrange(1, 19)
         if randomNum==1:
             await message.channel.send(embed=discord.Embed(title="RM13", color=0x00ff00))
         if randomNum==2:
@@ -356,7 +361,9 @@ async def on_message(message):
         if randomNum==16:
             await message.channel.send(embed=discord.Embed(title="RM16", color=0xff0000))
         if randomNum==17:
-            await message.channel.send(embed=discord.Embed(title="RM17", color=0xff0000))          
+            await message.channel.send(embed=discord.Embed(title="RM17", color=0xff0000))  
+        if randomNum==18:
+            await message.channel.send(embed=discord.Embed(title="RM18", color=0xff0000))         
 
     #The bot directly modifies the message.
     if message.content.startswith("오"):                     
@@ -434,7 +441,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 04월 24일 토요일', value = '*도리봇의 내부 코드가 깔끔하게 정리되고, 무작위로 노래를 추천해줍니다. ',inline = False)
         embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
         embed.add_field(name = '*2021년 05월 03일 월요일', value = '*도리봇이 From Score to Film - About Time - The About Time Theme과 Kristen Bell - Home (From "Frozen 2"/Outtake/Audio Only), Anne-Marie - 2002을 Random Music에 추가했습니다.',inline = False)
-        embed.add_field(name = '*2021년 05월 05일 수요일', value = "*도리봇이 멤버들의 생일 날짜 리스트를 추가했습니다. ?M_Birthday를 사용하여 해당 명령어의 결과값을 출력해보세요! ?Today's Poetry가 개선됩니다. 그리고, 새로운 Poetry가 추가됩니다.",inline = False)
+        embed.add_field(name = '*2021년 05월 05일 수요일', value = "*도리봇이 멤버들의 생일 날짜 리스트를 추가했습니다. ?M_Birthday를 사용하여 해당 명령어의 결과값을 출력해보세요! ?Today's Poetry가 개선됩니다. 그리고, ?RandomMusic에 One Direction- They Don't Know About Us가 추가됩니다.",inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
@@ -3644,8 +3651,8 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
                           
-                     
 
-                          
+
+                                                  
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
