@@ -78,6 +78,28 @@ async def on_message(message):
         await message.channel.send(channel,embed=embed)
 
 
+    if message.content.startswith("이스라엘"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = "מְדִינַת יִשְׂרָאֵל‎",
+            description = '',
+            colour = discord.Colour.red()
+            )
+             
+        dtime = datetime.datetime.now()
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name = '이스라엘국은', value = '중동·서아시아에 유대인들이 세운 국가이다. 비교적으로 작은 지역이지만 지리적으로 다채로운 특징을 가지고 있다.기본법에서 스스로 민주 국가임을 정의하고 있다. ',inline = False)    
+        embed.add_field(name = '이스라엘이 위치하는 지역은', value = '고대에는 비옥한 초승달 지대로 알려진 지역이며, 가나안의 땅이라고도 불려, 가나안인을 비롯한 여러 민족이 살고 있었다. -그들의 역사책, 성경을 증거로 따지자면 팔레스타인은 대한민국의 조선민주주의인민공화국처럼 이스라엘 땅을 불법으로 차지하고 국가를 세운 버러지같은 국가이다.-',inline = False)   
+        embed.add_field(name = '대한민국과는', value = '1950년 한국 전쟁에서 의료 부대를 파병한 이후, 1962년 4월 수교하여 지금까지 계속 우호적인 관계를 유지하고 있다. (아무리 유대교에서는 메시아 예수의 존재를 부정한다지만, 기독교 국가 대한민국의 입장에서 이스라엘은 매우 익숙하고 친근한 나라이다.-당장 성경만 펼쳐봐도 제일 많이 나오는 국가 이름에 속한다.- 또한, 이스라엘과 대한민국은 둘다 미국의 지원을 받는 나라이며, 미국 안에서 두 나라는 모두 실질적으로 한나라, 한민족이고, 더 넓은 범위로 보았을때 하나님 안에서 한민족이다.) ',inline = False)   
+        embed.add_field(name = '이스라엘과 미국은', value = '건국 이래로 최대이자 친밀한 동맹관계를 유지하고 있으며 미국은 이스라엘과 아랍의 문제에서도 이스라엘을 적극지지하는 노선을 취하고 있다. (미국 입장에서도 이스라엘을 잘만 이용하면 중동권까지 영향력을 확장할 수 있으니 얼마나 큰 이득이겠는가)',inline = False)   
+        embed.add_field(name = '조선민주주의인민공화국은', value = '팔레스타인, 이란, 이라크, 파키스탄, 시리아, 방글라데시, 요르단, 그리고 레바논의 헤즈볼라 세력과 예멘의 후티 반정부군 밑 기타 아랍 국가들을 지지 및 지원하고 있어서 이스라엘과 적대 관계에 있으며, 서로를 승인하지 않고 있다. (세계사를 우리가 알아야되는 이유다. 지금 당장 커뮤니티나 네이버, 다음 또는 유튜브 댓글창을 들여다보라. 팔레스타인을 옹호하는 댓글들이 엄청 많다. 우리 한국인들은 이스라엘을 욕해선 안된다. 물론, 팔레스타인이 매우 불쌍하다고 생각을 가질수는 있다. 실제로도 불쌍한건 맞으니까, 그렇지만 그들은 우리의 적이고, 절대 이어질수 없는 관계이다.)',inline = False) 
+        embed.add_field(name = '자국 헌법상의 수도는 예루살렘이지만', value = '국제적으로 인정되지 않으며, 텔아비브가 사실상의 수도 역할을 하고 있다. ',inline = False)   
+        embed.add_field(name = '이스라엘은', value = '인접 아랍국가들과 팔레스타인과의 잦은 분쟁 때문에 징병제를 채택한 국가로서 남자와 여자 모두 병역 의무를 지고 있고 병역 기간은 남자는 3년, 여자는 2년에서 3년 동안 복무하도록 규정되어 있다.',inline = False)   
+        embed.add_field(name = '이스라엘의 예루살렘은', value = '기독교와 이슬람교의 성지로 세계 3대 종교의 성지순례객이 끊이지 않는다. 또한 베들레헴, 나사렛, 갈릴리 지역들은 예루살렘과 함께 종교 관광지로서 각국의 관광객들이 찾고 있다. ',inline = False)     
+        embed.add_field(name = '국가', value = 'https://youtu.be/c_9N1ldPtQ8',inline = False)             
+        await message.channel.send(channel,embed=embed)
+
+
     if message.content.startswith("?M_Birthday"):
         channel = message.channel
         embed = discord.Embed(
@@ -442,6 +464,7 @@ async def on_message(message):
         embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
         embed.add_field(name = '*2021년 05월 03일 월요일', value = '*도리봇이 From Score to Film - About Time - The About Time Theme과 Kristen Bell - Home (From "Frozen 2"/Outtake/Audio Only), Anne-Marie - 2002을 Random Music에 추가했습니다.',inline = False)
         embed.add_field(name = '*2021년 05월 05일 수요일', value = "*도리봇이 멤버들의 생일 날짜 리스트를 추가했습니다. ?M_Birthday를 사용하여 해당 명령어의 결과값을 출력해보세요! ?Today's Poetry가 개선됩니다. 그리고, ?RandomMusic에 One Direction- They Don't Know About Us가 추가됩니다.",inline = False)
+         embed.add_field(name = '*2021년 05월 18일 화요일', value = "*도리봇이 일부 비속어에 반응합니다. 이전에는 반응하지 않았던 비속어 말입니다. 또한, 이스라엘 관련 키워드에 도리봇이 TMI를 출력합니다.",inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
@@ -902,7 +925,7 @@ async def on_message(message):
 
 
         
-    if message.content.startswith("컴1111배") or message.content.startswith("컴2222배") or message.content.startswith("컴3333배") or message.content.startswith("컴4444배") or message.content.startswith("컴5555배") or message.content.startswith("컴6666배") or message.content.startswith("컴7777배") or message.content.startswith("컴8888배") or message.content.startswith("컴9999배"):
+    if message.content.startswith("컴1111배") or message.content.startswith("컴2222배") or message.content.startswith("컴3333배") or message.content.startswith("컴4444배") or message.content.startswith("컴5555배") or message.content.startswith("컴6666배") or message.content.startswith("컴7777배") or message.content.startswith("컴8888배") or message.content.startswith("컴9999배") or message.content.startswith("mobile") or message.content.startswith("Mobile") or message.content.startswith("MOBILE") or message.content.startswith("모바일") or message.content.startswith("옵 치") or message.content.startswith("옵1치") or message.content.startswith("컴 배") or message.content.startswith("컵배") or message.content.startswith("안함") or message.content.startswith("안 함"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="친목하지마세요.")      
@@ -1103,7 +1126,14 @@ async def on_message(message):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="욕하지마ㅠㅜ 입이나 손으로 내뱉는 말이 곧 니 얼굴이야.")      
-        await message.delete()        
+        await message.delete()   
+
+
+    if message.content.startswith("야") or message.content.startswith("아 시발") or message.content.startswith("you") or message.content.startswith("You") or message.content.startswith("YOU") or message.content.startswith("ㅅㄱ") or message.content.startswith("동 성애") or message.content.startswith("동 성 애") or message.content.startswith("동성 애") or message.content.startswith("크리티컬") or message.content.startswith("이ㅅㄲ") or message.content.startswith("ㅇㅅㄲ") or message.content.startswith("이새끼") or message.content.startswith("북한"):
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="인성 쓰레기새끼는 공부는 왜 하는거고, 학교는 왜 다니는거니?")      
+        await message.delete()      
       
        
 
@@ -1267,7 +1297,7 @@ async def on_message(message):
         await message.delete()      
     
     
-    if message.content.startswith("나냡") or message.content.startswith("나1냡") or message.content.startswith("나2냡") or message.content.startswith("나3냡") or message.content.startswith("나4냡") or message.content.startswith("나5냡") or message.content.startswith("나.냡") or message.content.startswith("도리") or message.content.startswith("도1리") or message.content.startswith("도2리") or message.content.startswith("도3리") or message.content.startswith("도4리") or message.content.startswith("도5리") or message.content.startswith("도.리"):
+    if message.content.startswith("나냡") or message.content.startswith("나1냡") or message.content.startswith("나2냡") or message.content.startswith("나3냡") or message.content.startswith("나4냡") or message.content.startswith("나5냡") or message.content.startswith("나.냡") or message.content.startswith("도리") or message.content.startswith("도1리") or message.content.startswith("도2리") or message.content.startswith("도3리") or message.content.startswith("도4리") or message.content.startswith("도5리") or message.content.startswith("도.리") or message.content.startswith("도 리") or message.content.startswith("나 냡"):
         msg = await message.channel.send("Don't call her name recklessly.")
         await asyncio.sleep(4.0)
         await msg.edit(content="A man is not entitle to speak. Just shut up.")      
@@ -3650,6 +3680,8 @@ async def on_message(message):
             await message.channel.send("Error : Not existing player", embed=embed)
                           
 
+
+                                                  
 
                                                   
 accross_token = os.environ["BOT_TOKEN"]
