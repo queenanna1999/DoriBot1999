@@ -451,20 +451,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"년 "+str(dtime.month)+"월 "+str(dtime.day)+"일 "+str(dtime.minute)+"분 "+str(dtime.second)+"초")
-        embed.add_field(name = '*2020년 12월', value = '*코로나 현황 알리미, 오늘의운세, 무작위로 추천해주는 기능, 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 우주선 안으로 들어가 꿀잠을 잤습니다.',inline = False)
-        embed.add_field(name = '*2020년 01월', value = '*사용자의 MBTI 특성 및 궁합, 혈액형의 특성 및 궁합을 불러오는 기능, 배틀그라운드 전적 검색 기능 및 중앙자살예방센터와 함께하는 자살 예방 캠페인 대응, 그리고 오늘의말씀 기능과 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 쓴 후 우주선 안으로 들어가 꿀잠을 잤습니다.',inline = False)
-        embed.add_field(name = '*2021년 01월 25일 월요일', value = '*이제 도리봇에게서 음식 추천을 받을 수 있습니다. *그리고 사소한 비속어 대응 패치. 도리봇은 이 글을 끝으로 오후 반차를 썼습니다.현재 부산 앞바다입니다. *현재, 부산 앞바다이지만, 급하게 근처 카페에서 수정합니다. MBTI 1.0 -> 2.0으로 업그레이드 되었습니다. 도리봇은 이만 부산 앞바다로 다시 나가봅니다.',inline = False)
-        embed.add_field(name = '*2021년 01월 27일 수요일', value = '*도리봇이 [삼성] 관련 단어가 인식될시 비정상적으로 반응을 보이는 것을 확인했습니다. 해당 현상은 해결되었으며, 계속 주시중입니다. *그리고, 사소한 채팅 문구 대응 패치. 오늘의음식을 한가지 추천해주는 명령어를 개선했습니다. *도리봇은 오늘 개인사정이 있어 빨리 나가봅니다. 코로나 검사를 받아야 합니다. 왜냐하면, 교회 수련회가서 동성간의 성관계를 했거든요.',inline = False)
-        embed.add_field(name = '*2021년 02월 05일 금요일', value = '*도리봇이 퍼스널컬러 테스트 기능을 추가했습니다. *도리봇은 오늘도 바쁘답니다, 왜냐구요? 오늘은 불금이잖아요ㅎㅎ 사회적거리두기? 그거 찐따들이나 하는거 아닌가요? ',inline = False)
-        embed.add_field(name = '*2021년 02월 20일 토요일', value = '*도리봇이 드디어 부적절한 표현을 삭제할수 있게 개선되었습니다.',inline = False)
-        embed.add_field(name = '*2021년 02월 25일 목요일', value = '*도리봇이 이제 친목 행위 의심 표현들은 가차없이 삭제합니다.',inline = False)
-        embed.add_field(name = '*2021년 02월 26일 금요일', value = '*도리봇이 영어로 새롭게 꽃단장 합니다. ',inline = False)
-        embed.add_field(name = '*2021년 03월 14일 일요일', value = '*도리봇이 이제 직접 메세지를 수정할수 있게 개선되었습니다. 다양한 개소리를 하고, 직접 다른 말들로 수정합니다. ',inline = False)
-        embed.add_field(name = '*2021년 04월 24일 토요일', value = '*도리봇의 내부 코드가 깔끔하게 정리되고, 무작위로 노래를 추천해줍니다. ',inline = False)
-        embed.add_field(name = '*2021년 05월 01일 토요일', value = '*도리봇이 Random Music에 Ellie Goulding - How Long Will I Love You을 추가했습니다. 유튜브, 디시인사이드, 일베, 네이버 뉴스, 다음 뉴스 링크를 디스코드 서버내에서 언급할시 바로 삭제합니다. 퍼오지마세요.제발..',inline = False)
-        embed.add_field(name = '*2021년 05월 03일 월요일', value = '*도리봇이 From Score to Film - About Time - The About Time Theme과 Kristen Bell - Home (From "Frozen 2"/Outtake/Audio Only), Anne-Marie - 2002을 Random Music에 추가했습니다.',inline = False)
-        embed.add_field(name = '*2021년 05월 05일 수요일', value = "*도리봇이 멤버들의 생일 날짜 리스트를 추가했습니다. ?M_Birthday를 사용하여 해당 명령어의 결과값을 출력해보세요! ?Today's Poetry가 개선됩니다. 그리고, ?RandomMusic에 One Direction- They Don't Know About Us가 추가됩니다.",inline = False)
-         embed.add_field(name = '*2021년 05월 18일 화요일', value = "*도리봇이 일부 비속어에 반응합니다. 이전에는 반응하지 않았던 비속어 말입니다. 또한, 이스라엘 관련 키워드에 도리봇이 TMI를 출력합니다.",inline = False)
+        embed.add_field(name = '*2021년 05월 18일부터', value = '도리봇 공식 웹사이트에서 릴리즈 노트를 확인하실수 있습니다.',inline = False)
         await message.channel.send(channel,embed=embed)       
 
         
@@ -3679,10 +3666,7 @@ async def on_message(message):
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
                           
-
-
-                                                  
-
+                                          
                                                   
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
