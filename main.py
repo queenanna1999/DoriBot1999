@@ -114,7 +114,7 @@ async def on_message(message):
         embed.add_field(name = '2월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '3월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '4월', value = '*추가되지않음',inline = False)   
-        embed.add_field(name = '5월', value = '*도리공주',inline = False) 
+        embed.add_field(name = '5월', value = '#5/5 도리공주 #5/19 나냡',inline = False) 
         embed.add_field(name = '6월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '7월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '8월', value = '*추가되지않음',inline = False)   
@@ -224,7 +224,7 @@ async def on_message(message):
         embed.add_field(name = '어린이날은', value = '어린이의 지위 향상을 위해 제정한 날로 여러 나라에서 기념일로 정하고 있다.  ',inline = False)
         embed.add_field(name="이 날에는 ", value=" 특별히 부모들이 어린이들과 함께 시간을 보내거나, 어린이가 평소에 가지고 싶어 했던 물건 등을 선물해 주기도 한다. ", inline=False)
         embed.add_field(name='어린이날이 생일인 어린이는', value='생일 선물과 어린이날 선물을 하나로 퉁치기도 한다.', inline=False)     
-        embed.add_field(name='생일자들', value='최순실의 아버지 최태민(1912.5.5), 영국의 가수 아델(1988.5.5), 일본의 아이돌 요다 유우키(2000.5.5) ', inline=False)  
+        embed.add_field(name='생일자들', value='최순실의 아버지 최태민(1912.5.5), 영국의 가수 아델(1988.5.5), 일본의 아이돌 요다 유우키(2000.5.5)', inline=False)  
         embed.add_field(name='Song', value='https://youtu.be/rYEDA3JcQqw', inline=False)          
         await message.channel.send(channel,embed=embed)
     if message.content.startswith("5/5") or message.content.startswith("05/05"):
