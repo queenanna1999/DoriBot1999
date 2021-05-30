@@ -61,8 +61,7 @@ async def on_message(message):
         )
 
         dtime = datetime.datetime.now()
-        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
-        embed.add_field(name="?커뮤니티", value=" 익명으로 도리봇 제작자에게 욕설을 내뱉으세요. ", inline=False)     
+        embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")  
         embed.add_field(name = '?M_Birthday', value = "Doribot reads the members' birthdays in order.",inline = False)
         embed.add_field(name = '?Hello', value = 'Doribot will say hello.',inline = False)
         embed.add_field(name="?Today's fortune", value=" Doribot show you today's fortune.(South Korea) ", inline=False)
@@ -983,7 +982,7 @@ async def on_message(message):
 
 
     #Doribot deletes the swear words.       
-    if message.content.startswith("한남") or message.content.startswith("한녀") or message.content.startswith("한국남") or message.content.startswith("한국녀") or message.content.startswith("쒸빨") or message.content.startswith("일론") or message.content.startswith("머스크") or message.content.startswith("술") or message.content.startswith("생각") or message.content.startswith("또") or message.content.startswith("잘") or message.content.startswith("신난다") or message.content.startswith("바이크") or message.content.startswith("K"):
+    if message.content.startswith("한남") or message.content.startswith("한녀") or message.content.startswith("한국남") or message.content.startswith("한국녀") or message.content.startswith("쒸빨") or message.content.startswith("일론") or message.content.startswith("머스크") or message.content.startswith("술") or message.content.startswith("생각") or message.content.startswith("또") or message.content.startswith("잘") or message.content.startswith("신난다") or message.content.startswith("바이크") or message.content.startswith("K") or message.content.startswith("네"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
