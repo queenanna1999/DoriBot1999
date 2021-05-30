@@ -62,6 +62,7 @@ async def on_message(message):
 
         dtime = datetime.datetime.now()
         embed.set_footer(text=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+" ")
+        embed.add_field(name="?커뮤니티", value=" 익명으로 도리봇 제작자에게 욕설을 내뱉으세요. ", inline=False)     
         embed.add_field(name = '?M_Birthday', value = "Doribot reads the members' birthdays in order.",inline = False)
         embed.add_field(name = '?Hello', value = 'Doribot will say hello.',inline = False)
         embed.add_field(name="?Today's fortune", value=" Doribot show you today's fortune.(South Korea) ", inline=False)
