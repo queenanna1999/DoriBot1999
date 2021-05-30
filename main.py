@@ -830,7 +830,7 @@ async def on_message(message):
         await msg.edit(content="친목은 죄를 짓는 것이에요.")      
         await message.delete()  
        
-    if message.content.startswith("구해요") or message.content.startswith("옵치") or message.content.startswith("오버워치") or message.content.startswith("모바일배그") or message.content.startswith("모바일 배그") or message.content.startswith("베틀그라운드") or message.content.startswith("베틀그라운드") or message.content.startswith("모바일 베그") or message.content.startswith("모베") or message.content.startswith("탈콥") or message.content.startswith("컴퓨터") or message.content.startswith("컴겜") or message.content.startswith("탈르코프"):
+    if message.content.startswith("구해요") or message.content.startswith("옵치") or message.content.startswith("오버워치") or message.content.startswith("모바일배그") or message.content.startswith("모바일 배그") or message.content.startswith("베틀그라운드") or message.content.startswith("베틀그라운드") or message.content.startswith("모바일 베그") or message.content.startswith("모베") or message.content.startswith("탈콥") or message.content.startswith("컴퓨터") or message.content.startswith("컴겜") or message.content.startswith("탈르코프") or message.content.startswith("맥크리") or message.content.startswith("트롤") or message.content.startswith("모   배") or message.content.startswith("넌"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="친목은 죄를 짓는 것이에요.")      
@@ -982,7 +982,7 @@ async def on_message(message):
 
 
     #Doribot deletes the swear words.       
-    if message.content.startswith("한남") or message.content.startswith("한녀") or message.content.startswith("한국남") or message.content.startswith("한국녀"):        
+    if message.content.startswith("한남") or message.content.startswith("한녀") or message.content.startswith("한국남") or message.content.startswith("한국녀") or message.content.startswith("쒸빨") or message.content.startswith("일론") or message.content.startswith("머스크") or message.content.startswith("술") or message.content.startswith("생각") or message.content.startswith("또") or message.content.startswith("잘") or message.content.startswith("신난다") or message.content.startswith("바이크") or message.content.startswith("K"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 험하게 사용하지 말아줘..ㅠㅜ")      
