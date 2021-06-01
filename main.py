@@ -42,13 +42,13 @@ async def on_member_join(member):
 @app.event
 async def on_member_join(member):
     fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
-    channel = member.server.get_channel(802904099816472616)
+    channel = member.server.get_channel('802904099816472616')
     await app.message.channel.send( fmt.format(member, member.server))
     await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
  
 @app.event
 async def on_member_remove(member):
-    channel = member.server.get_channel(802904099816472616)         
+    channel = member.server.get_channel('802904099816472616')         
     fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server))
           
