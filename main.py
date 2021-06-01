@@ -51,9 +51,49 @@ async def on_member_remove(member):
     channel = member.server.get_channel('802904099816472616')         
     fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server))
+    
+@app.event
+async def on_member_join(member):
+    if member.bot:
+        embed = discord.Embed(title="{1.name} I sincerely welcome you to our server. {0.mention} 님", description=member.mention + "님은 뉴비 역할을 자동으로 부여받으셨습니다.", color=0x00aaaa)
+        await member.add_roles(app.get_guild(721047251862159416).get_role(792380204550717480), reason="뉴비 역할 겟또다제!")    
+    
+@app.event
+async def on_member_join(member):
+    fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
+    channel = member.server.get_channel('721047251862159416')
+    await app.message.channel.send( fmt.format(member, member.server))
+    await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
+ 
+@app.event
+async def on_member_remove(member):
+    channel = member.server.get_channel('721047251862159416')         
+    fmt = '{0.mention} Bye. See you in my next life.'
+    await app.message.channel.send( fmt.format(member, member.server))   
           
 
-
+@app.event
+async def on_member_join(member):
+    if member.bot:
+        embed = discord.Embed(title="{1.name} I sincerely welcome you to our server. {0.mention} 님", description=member.mention + "님은 뉴비 역할을 자동으로 부여받으셨습니다.", color=0x00aaaa)
+        await member.add_roles(app.get_guild(585087748948623380).get_role(585096605594681354), reason="뉴비 역할 겟또다제!")    
+    
+@app.event
+async def on_member_join(member):
+    fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
+    channel = member.server.get_channel('585087748948623380')
+    await app.message.channel.send( fmt.format(member, member.server))
+    await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
+ 
+@app.event
+async def on_member_remove(member):
+    channel = member.server.get_channel('585087748948623380')         
+    fmt = '{0.mention} Bye. See you in my next life.'
+    await app.message.channel.send( fmt.format(member, member.server)) 
+    
+    
+    
+    
         
 @app.event
 async def on_message(message):
