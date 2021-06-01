@@ -114,7 +114,7 @@ async def on_message(message):
         embed.add_field(name = '2월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '3월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '4월', value = '*추가되지않음',inline = False)   
-        embed.add_field(name = '5월', value = '#5/5 도리공주 #5/19 나냡',inline = False) 
+        embed.add_field(name = '5월', value = '#00/5/5 도리공주 #99/5/19 나냡',inline = False) 
         embed.add_field(name = '6월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '7월', value = '*추가되지않음',inline = False)   
         embed.add_field(name = '8월', value = '*추가되지않음',inline = False)   
@@ -769,7 +769,7 @@ async def on_message(message):
         await message.delete()   
              
 
-    if message.content.startswith("시발") or message.content.startswith("시1발") or message.content.startswith("시11발") or message.content.startswith("시111발") or message.content.startswith("시2발") or message.content.startswith("시22발") or message.content.startswith("시222발") or message.content.startswith("시3발") or message.content.startswith("시33발") or message.content.startswith("시333발") or message.content.startswith("시4발") or message.content.startswith("시44발") or message.content.startswith("시444발") or message.content.startswith("시5발") or message.content.startswith("시55발") or message.content.startswith("시555발") or message.content.startswith("시6발") or message.content.startswith("시66발") or message.content.startswith("시666발") or message.content.startswith("시7발") or message.content.startswith("시77발") or message.content.startswith("시777발") or message.content.startswith("시8발") or message.content.startswith("시88발") or message.content.startswith("시888발") or message.content.startswith("시9발") or message.content.startswith("시99발") or message.content.startswith("시999발"):
+    if message.content.startswith("시발") or message.content.startswith("시1발") or message.content.startswith("시11발") or message.content.startswith("시111발") or message.content.startswith("시2발") or message.content.startswith("시22발") or message.content.startswith("시222발") or message.content.startswith("시3발") or message.content.startswith("시33발") or message.content.startswith("시333발") or message.content.startswith("시4발") or message.content.startswith("시44발") or message.content.startswith("시444발") or message.content.startswith("시5발") or message.content.startswith("시55발") or message.content.startswith("시555발") or message.content.startswith("시6발") or message.content.startswith("시66발") or message.content.startswith("시666발") or message.content.startswith("시7발") or message.content.startswith("시77발") or message.content.startswith("시777발") or message.content.startswith("시8발") or message.content.startswith("시88발") or message.content.startswith("시888발") or message.content.startswith("시9발") or message.content.startswith("시99발") or message.content.startswith("시999발") or message.content.startswith("모       배") or message.content.startswith("핵") or message.content.startswith("헥") or message.content.startswith("햌") or message.content.startswith("헼"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 이쁘게 써줘..제발")      
@@ -858,7 +858,7 @@ async def on_message(message):
         await message.delete()  
        
        
-    if message.content.startswith("배1그") or message.content.startswith("배11그") or message.content.startswith("배111그") or message.content.startswith("배2그") or message.content.startswith("배22그") or message.content.startswith("배222그") or message.content.startswith("배3그") or message.content.startswith("배33그") or message.content.startswith("배333그") or message.content.startswith("배4그") or message.content.startswith("배44그") or message.content.startswith("배444그") or message.content.startswith("배5그") or message.content.startswith("배55그") or message.content.startswith("배555그") or message.content.startswith("배6그") or message.content.startswith("배66그") or message.content.startswith("배666그") or message.content.startswith("배7그") or message.content.startswith("배77그") or message.content.startswith("배777그") or message.content.startswith("배8그") or message.content.startswith("배88그") or message.content.startswith("배888그") or message.content.startswith("배9그") or message.content.startswith("배99그") or message.content.startswith("배999그"):
+    if message.content.startswith("배1그") or message.content.startswith("배11그") or message.content.startswith("배111그") or message.content.startswith("배2그") or message.content.startswith("배22그") or message.content.startswith("배222그") or message.content.startswith("배3그") or message.content.startswith("배33그") or message.content.startswith("배333그") or message.content.startswith("배4그") or message.content.startswith("배44그") or message.content.startswith("배444그") or message.content.startswith("배5그") or message.content.startswith("배55그") or message.content.startswith("배555그") or message.content.startswith("배6그") or message.content.startswith("배66그") or message.content.startswith("배666그") or message.content.startswith("배7그") or message.content.startswith("배77그") or message.content.startswith("배777그") or message.content.startswith("배8그") or message.content.startswith("배88그") or message.content.startswith("배888그") or message.content.startswith("배9그") or message.content.startswith("배99그") or message.content.startswith("배999그") or message.content.startswith("컴바그"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="친목은 나쁜거에요!")      
@@ -1152,7 +1152,7 @@ async def on_message(message):
         await message.delete()       
      
 
-    if message.content.startswith("졸라") or message.content.startswith("조용히") or message.content.startswith("존나") or message.content.startswith("좆나") or message.content.startswith("좃나") or message.content.startswith("ㅈㄴ"):
+    if message.content.startswith("졸라") or message.content.startswith("조용히") or message.content.startswith("존나") or message.content.startswith("좆나") or message.content.startswith("좃나") or message.content.startswith("ㅈㄴ") or message.content.startswith("뭔") or message.content.startswith("이미") or message.content.startswith("그러던지"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="욕 작작해.")      
@@ -1179,7 +1179,13 @@ async def on_message(message):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말을 좀 순화해서 사용해라.")      
-        await message.delete()        
+        await message.delete()   
+        
+    if message.content.startswith("7시") or message.content.startswith("5시"):
+        msg = await message.channel.send("Doribot has detected an inappropriate expression!")
+        await asyncio.sleep(4.0)
+        await msg.edit(content="지역 비하 발언이 감지되었네요;")      
+        await message.delete()      
       
 
     if message.content.startswith("게임") or message.content.startswith("겜"):          
