@@ -32,17 +32,23 @@ async def on_ready():
     print('===============')
     game = discord.Game("Say ?help ")
     await app.change_presence(status=discord.Status.online, activity=game)
+
+@app.event
+async def on_member_join(member):
+    if member.bot:
+        embed = discord.Embed(title="{1.name} I sincerely welcome you to our server. {0.mention} 님", description=member.mention + "님은 맑은물 역할을 자동으로 부여받으셨습니다.", color=0x00aaaa)
+        await member.add_roles(app.get_guild(802904099816472616).get_role(802905338198097950), reason="맑은물 역할 겟또다제!")    
     
 @app.event
 async def on_member_join(member):
     fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
-    channel = member.server.get_channel("802904099816472619")
+    channel = member.server.get_channel(802904099816472616)
     await app.message.channel.send( fmt.format(member, member.server))
     await app.message.channel.send(member, "Hi, I'm DoriBot1999.")
  
 @app.event
 async def on_member_remove(member):
-    channel = member.server.get_channel("802904099816472619")         
+    channel = member.server.get_channel(802904099816472616)         
     fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server))
           
