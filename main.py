@@ -38,7 +38,8 @@ async def on_member_join(member):
     if member.bot:
         embed = discord.Embed(title="{1.name} I sincerely welcome you to our server. {0.mention} 님", description=member.mention + "님은 맑은물 역할을 자동으로 부여받으셨습니다.", color=0x00aaaa)
         await member.add_roles(app.get_guild(802904099816472616).get_role(802905338198097950), reason="맑은물 역할 겟또다제!")    
-    
+
+     
 @app.event
 async def on_member_join(member):
     fmt = '{1.name} I sincerely welcome you to our server. {0.mention} 님'    #It's only visible to Newbie.
@@ -120,9 +121,31 @@ async def on_message(message):
         embed.add_field(name='?MBTI', value=' Doribot shows MBTI information. ', inline=False)
         embed.add_field(name='?Blood type', value=' Doribot shows information about your blood type. ', inline=False)      
         embed.add_field(name='?Members', value=' Introducing D, N, S, M ', inline=False)         
-        embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False)   
+        embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False) 
+        embed.add_field(name="?Version", value=" Doribot's Version", inline=False)           
         await message.channel.send(channel,embed=embed)
 
+        
+    if message.content.startswith("?Version") or message.content.startswith("?version"):
+        await message.delete()
+        
+    if message.content == "?Version" or message.content.startswith("?version"):
+        if message.author.dm_channel:
+            await message.author.dm_channel.send("###############################")
+            await message.author.dm_channel.send("기존 DM 채널로 전송됨;")
+            await message.author.dm_channel.send("###############################")
+            await message.author.dm_channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("Would recommend to you.")
+            await message.author.dm_channel.send("Say ?MBTI")
+        elif message.author.dm_channel is None:
+            channel = await message.author.create_dm()
+            await message.author.dm_channel.send("###############################")
+            await message.author.dm_channel.send("DM 채널로 전송됨;")
+            await message.author.dm_channel.send("###############################")
+            await channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
+            await channel.send("Would recommend to you.")
+            await channel.send("Say ?MBTI")    
+        
 
     if message.content.startswith("이스라엘"):
         channel = message.channel
