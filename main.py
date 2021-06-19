@@ -132,17 +132,17 @@ async def on_message(message):
     if message.content == "?Version" or message.content.startswith("?version"):
         if message.author.dm_channel:
             await message.author.dm_channel.send("###############################")
-            await message.author.dm_channel.send("기존 DM 채널로 전송됨;")
-            await message.author.dm_channel.send("###############################")
             await message.author.dm_channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("2021.06.19.Sat부터 '이제 디스코드 서버내에서 ?Version을 호출하면 간단하게 디스코드 내 다이렉트 메시지로 확인할 수 있습니다.'") 
+            await message.author.dm_channel.send("###############################")            
             await message.author.dm_channel.send("Would recommend to you.")
             await message.author.dm_channel.send("Say ?MBTI")
         elif message.author.dm_channel is None:
             channel = await message.author.create_dm()
             await message.author.dm_channel.send("###############################")
-            await message.author.dm_channel.send("DM 채널로 전송됨;")
-            await message.author.dm_channel.send("###############################")
             await channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("2021.06.19.Sat부터 '이제 디스코드 서버내에서 ?Version을 호출하면 간단하게 디스코드 내 다이렉트 메시지로 확인할 수 있습니다.'")  
+            await message.author.dm_channel.send("###############################")            
             await channel.send("Would recommend to you.")
             await channel.send("Say ?MBTI")    
         
