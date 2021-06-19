@@ -1362,7 +1362,7 @@ async def on_message(message):
     if message.content.startswith("나냡") or message.content.startswith("나1냡") or message.content.startswith("나2냡") or message.content.startswith("나3냡") or message.content.startswith("나4냡") or message.content.startswith("나5냡") or message.content.startswith("나.냡") or message.content.startswith("도리") or message.content.startswith("도1리") or message.content.startswith("도2리") or message.content.startswith("도3리") or message.content.startswith("도4리") or message.content.startswith("도5리") or message.content.startswith("도.리") or message.content.startswith("도 리") or message.content.startswith("나 냡"):
         msg = await message.channel.send("Don't call her name recklessly.")
         await asyncio.sleep(4.0)
-        await msg.edit(content="A man is not entitle to speak. Just shut up.")      
+        await msg.edit(content="Male do not deserve to speak. Just shut up.")      
         await message.delete()     
      
 
