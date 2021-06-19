@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("Say ?help ")
+    game = discord.Game("?Version을 입력해봐!")
     await app.change_presence(status=discord.Status.online, activity=game)
 
 @app.event
