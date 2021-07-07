@@ -127,7 +127,7 @@ async def on_message(message):
 
         
     if message.content.startswith("?Version") or message.content.startswith("?version"):        
-        msg = "{0.author.mention} 도리봇은 2021년 07월 07일에 4.2.7.1 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요.".format(message)
+        msg = "{0.author.mention} 도리봇은 2021년 07월 07일에 4.2.7.1 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요.(도리봇이 응답이 없으면, 한번더! 명령어를 입력해주세요!!)".format(message)
         await message.channel.send( msg)
         await message.delete()
         
