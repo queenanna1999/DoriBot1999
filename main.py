@@ -517,7 +517,7 @@ async def on_message(message):
         if randomNum==23:
             await message.channel.send(embed=discord.Embed(title="페이스북", color=0xff0000))
 
-    if message.content.startswith("?RDKEY0") or message.content.startswith("?RDKEY1"):                                                                                                                                             
+    if message.content.startswith("?RDKEY0") or message.content.startswith("?RDKEY1") or message.content.startswith("?RDKEY2") or message.content.startswith("?RDKEY3"):                                                                                                                                             
 
         
         dtime = datetime.datetime.now()
