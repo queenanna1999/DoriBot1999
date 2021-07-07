@@ -1282,7 +1282,7 @@ async def on_message(message):
        
 
 
-    if message.content.startswith("집") or message.content.startswith("피시") or message.content.startswith("pc") or message.content.startswith("PC") or message.content.startswith("Pc"):
+    if message.content.startswith("집") or message.content.startswith("피시") or message.content.startswith("pc") or message.content.startswith("PC") or message.content.startswith("Pc") or message.content.startswith("돌이") or message.content.startswith("돌2"):
         msg = await message.channel.send("Socializing is a crime.")
         await asyncio.sleep(4.0)
         await msg.edit(content="제발..나좀 도와줘..나힘들어.")      
