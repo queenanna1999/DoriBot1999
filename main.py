@@ -30,7 +30,7 @@ async def on_ready():
     print(app.user.name)                                   
     print(app.user.id)
     print('===============')
-    game = discord.Game("?Version을 입력해봐!")
+    game = discord.Game("?Version / ?help")
     await app.change_presence(status=discord.Status.online, activity=game)
 
 @app.event
@@ -92,9 +92,7 @@ async def on_member_remove(member):
     fmt = '{0.mention} Bye. See you in my next life.'
     await app.message.channel.send( fmt.format(member, member.server)) 
     
-    
-    
-    
+
         
 @app.event
 async def on_message(message):
@@ -122,26 +120,30 @@ async def on_message(message):
         embed.add_field(name='?Blood type', value=' Doribot shows information about your blood type. ', inline=False)      
         embed.add_field(name='?Members', value=' Introducing D, N, S, M ', inline=False)         
         embed.add_field(name="?Doribot's diary", value=" Check Doribot's diary. ", inline=False) 
-        embed.add_field(name="?Version", value=" Doribot's Version", inline=False)           
+        embed.add_field(name="?Version", value=" Doribot's Version", inline=False)
+        embed.add_field(name="?RD_PassCode or ?보안코드 생성 or ?비밀번호 생성", value=" Use random security codes!", inline=False)
+        embed.add_field(name="?주식추천 or ?주식", value=" Investing makes you happy.", inline=False) 
         await message.channel.send(channel,embed=embed)
 
         
-    if message.content.startswith("?Version") or message.content.startswith("?version"):
+    if message.content.startswith("?Version") or message.content.startswith("?version"):        
+        msg = "{0.author.mention} 도리봇은 2021년 07월 07일에 4.2.7.1 버전으로 업데이트되었어요. 나머지 내용들은 DM을 확인해주세요.".format(message)
+        await message.channel.send( msg)
         await message.delete()
         
     if message.content == "?Version" or message.content.startswith("?version"):
         if message.author.dm_channel:
             await message.author.dm_channel.send("###############################")
-            await message.author.dm_channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
-            await message.author.dm_channel.send("2021.06.19.Sat부터 '이제 디스코드 서버내에서 ?Version을 호출하면 간단하게 디스코드 내 다이렉트 메시지로 확인할 수 있습니다.'") 
+            await message.author.dm_channel.send("제 버전은 4.2.7.1로 가장 최신버전이에요.")
+            await message.author.dm_channel.send("2021.07.07.수요일부터 도리봇은 미래가 창창한 기업들을 추천해주며, 개인정보 보호를 위한 보안용 랜덤 비밀번호를 생성합니다. ") 
             await message.author.dm_channel.send("###############################")            
             await message.author.dm_channel.send("Would recommend to you.")
             await message.author.dm_channel.send("Say ?MBTI")
         elif message.author.dm_channel is None:
             channel = await message.author.create_dm()
             await message.send("###############################")
-            await channel.send("제 버전은 4.2.5로 가장 최신버전이에요.")
-            await message.send("2021.06.19.Sat부터 '이제 디스코드 서버내에서 ?Version을 호출하면 간단하게 디스코드 내 다이렉트 메시지로 확인할 수 있습니다.'")  
+            await channel.send("제 버전은 4.2.7.1로 가장 최신버전이에요.")
+            await message.send("2021.07.07.수요일부터 도리봇은 미래가 창창한 기업들을 추천해주며, 개인정보 보호를 위한 보안용 랜덤 비밀번호를 생성합니다.  ")  
             await message.send("###############################")            
             await channel.send("Would recommend to you.")
             await channel.send("Say ?MBTI")    
@@ -319,6 +321,10 @@ async def on_message(message):
         await message.channel.send(channel,embed=embed)
     if message.content.startswith("8/15") or message.content.startswith("08/15"):
         await message.channel.send("*https://youtu.be/enl2iglR4-8")
+  
+
+
+
 
 
     # 2021년 04월 24일 오후 5시 03분 추가했습니다. 
@@ -454,9 +460,203 @@ async def on_message(message):
         if randomNum==17:
             await message.channel.send(embed=discord.Embed(title="RM17", color=0xff0000))  
         if randomNum==18:
-            await message.channel.send(embed=discord.Embed(title="RM18", color=0xff0000))         
+            await message.channel.send(embed=discord.Embed(title="RM18", color=0xff0000))
+
+
+
+    if message.content.startswith("?주식추천") or message.content.startswith("?주식"):    
+        dtime = datetime.datetime.now()
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
+        await message.channel.send(embed=embed)
+        await message.channel.send(embed=discord.Embed(title="당신에게 추천합니다. 몇몇 기업들은 미래가 매우 창창합니다.", color=0xfefefe))
+        randomNum = random.randrange(1, 24)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="테슬라", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="AMD", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="AT&T", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="카카오", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="애플", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="아마존닷컴", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="코카콜라", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="디즈니", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="SK텔레콤", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="LG", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="LG디스플레이", color=0xff0000)) 
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="크래프톤", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="구글", color=0xff0000)) 
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="텐센트", color=0xff0000)) 
+        if randomNum==15:
+            await message.channel.send(embed=discord.Embed(title="샤오미", color=0xff0000)) 
+        if randomNum==16:
+            await message.channel.send(embed=discord.Embed(title="마이크로소프트", color=0xff0000))
+        if randomNum==17:
+            await message.channel.send(embed=discord.Embed(title="엔비디아", color=0xff0000))  
+        if randomNum==18:
+            await message.channel.send(embed=discord.Embed(title="인텔", color=0xff0000))
+        if randomNum==19:
+            await message.channel.send(embed=discord.Embed(title="펩시콜라", color=0xff0000))
+        if randomNum==20:
+            await message.channel.send(embed=discord.Embed(title="쿠팡", color=0xff0000))
+        if randomNum==21:
+            await message.channel.send(embed=discord.Embed(title="삼성전자", color=0xff0000))
+        if randomNum==22:
+            await message.channel.send(embed=discord.Embed(title="스포티파이", color=0xff0000))
+        if randomNum==23:
+            await message.channel.send(embed=discord.Embed(title="페이스북", color=0xff0000))
+
+    if message.content.startswith("?RDKEY0") or message.content.startswith("?RDKEY1"):                                                                                                                                             
+
+        
+        dtime = datetime.datetime.now()
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
+        await message.channel.send(embed=embed)
+        await message.channel.send(embed=discord.Embed(title="해당 명령어는 반드시 개인 DM에서만 사용하세요!", color=0xfefefe))
+        randomNum = random.randrange(1, 31)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title=")v\96shbKNVkRFNEYD,r", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="n;!b[y5~NhXU:khb>MH^", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title=">HU9M.s<5,%sz.eGtq+<", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="46xu-uEkVF+<.%RQ69_3", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="LcW@]+7[c?=6aDNx'xV&", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="_t(^/9`&uL$5x3\##<c@", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="8J8c*)ARs3_G=2R^4x:?", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="6AED`4v*)s_N5Es>.7Lv", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="_cM;]tUVhx`=@[G_~8E3", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="D$M52x(aF)&.ES\)pj)N", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="u`+F}#q+PEPz6GSP=GKV", color=0xff0000)) 
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="fa)w/L4cMYHB,WW%jg5%", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="B45HXwaWTWQdhjM4mHES", color=0xff0000)) 
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="3PhbeP5ke8Pr6andzZXr", color=0xff0000)) 
+        if randomNum==15:
+            await message.channel.send(embed=discord.Embed(title="Dh7ZnDmKT7jYFc4fu6HF", color=0xff0000)) 
+        if randomNum==16:
+            await message.channel.send(embed=discord.Embed(title="jmvbPUus5SkFmwQju42m", color=0xff0000))
+        if randomNum==17:
+            await message.channel.send(embed=discord.Embed(title="uX35ZPxUgUErcaLAfLKM", color=0xff0000))  
+        if randomNum==18:
+            await message.channel.send(embed=discord.Embed(title="b9wyWZBBY3sSJQYmc4bA", color=0xff0000))
+        if randomNum==19:
+            await message.channel.send(embed=discord.Embed(title="MKCJYE7JnYq5hYc5gQNP", color=0xff0000))
+        if randomNum==20:
+            await message.channel.send(embed=discord.Embed(title="KcDxKd5cXHB3hs2B6QMy", color=0xff0000))
+        if randomNum==21:
+            await message.channel.send(embed=discord.Embed(title="5bEGPdmDb2tHaRg5LnFK", color=0xff0000))
+        if randomNum==22:
+            await message.channel.send(embed=discord.Embed(title="5LBPjjy4A2VMN6Y9h4F2", color=0xff0000))
+        if randomNum==23:
+            await message.channel.send(embed=discord.Embed(title="azcNF9GBx4EBPnrH3g6P", color=0xff0000))
+        if randomNum==24:
+            await message.channel.send(embed=discord.Embed(title="Hz+e7&S6-AS+8s$QrazZ", color=0xff0000))
+        if randomNum==25:
+            await message.channel.send(embed=discord.Embed(title="uU&zhF&?F9Z5jKG6ks4n", color=0xff0000))
+        if randomNum==26:
+            await message.channel.send(embed=discord.Embed(title="q#%z6%J=ALqxDg@H5ybj", color=0xff0000))
+        if randomNum==27:
+            await message.channel.send(embed=discord.Embed(title="-y^J?H?hHa=75GW_J?a6", color=0xff0000))
+        if randomNum==28:
+            await message.channel.send(embed=discord.Embed(title="eUWQ2L&m-8_g$dVhJV%-", color=0xff0000))
+        if randomNum==29:
+            await message.channel.send(embed=discord.Embed(title="S!g5gKkxg@SLWQ+hEGNg", color=0xff0000))
+        if randomNum==30:
+            await message.channel.send(embed=discord.Embed(title="b6^d%KgvYUk*9wv8Y&vb", color=0xff0000))  
 
     #The bot directly modifies the message.
+
+    if message.content.startswith("?RD_PassCode") or message.content.startswith("?비밀번호 생성") or message.content.startswith("?보안코드 생성"):
+
+        dtime = datetime.datetime.now()
+        embed = discord.Embed(title=str(dtime.year)+"- "+str(dtime.month)+"- "+str(dtime.day)+" "+str(dtime.minute)+": "+str(dtime.second)+"", color=0xff0000)
+        await message.channel.send(embed=embed)
+        await message.channel.send(embed=discord.Embed(title="해당 비밀번호는 오로지 당신같은 개인들을 위한 것입니다.", color=0xfefefe))
+        randomNum = random.randrange(1, 31)
+        if randomNum==1:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY01", color=0x00ff00))
+        if randomNum==2:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY02", color=0x00ff00))
+        if randomNum==3:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY03", color=0x00ff00))
+        if randomNum==4:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY04", color=0x00ff00))
+        if randomNum==5:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY05", color=0x00ff00))
+        if randomNum==6:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY06", color=0x00ff00))
+        if randomNum==7:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY07", color=0x00ff00))
+        if randomNum==8:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY08", color=0x00ff00))
+        if randomNum==9:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY09", color=0x00ff00))
+        if randomNum==10:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY10", color=0x00ff00))
+        if randomNum==11:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY11", color=0xff0000)) 
+        if randomNum==12:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY12", color=0xff0000)) 
+        if randomNum==13:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY13", color=0xff0000)) 
+        if randomNum==14:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY14", color=0xff0000)) 
+        if randomNum==15:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY15", color=0xff0000)) 
+        if randomNum==16:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY16", color=0xff0000))
+        if randomNum==17:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY17", color=0xff0000))  
+        if randomNum==18:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY18", color=0xff0000))
+        if randomNum==19:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY19", color=0xff0000))
+        if randomNum==20:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY20", color=0xff0000))
+        if randomNum==21:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY21", color=0xff0000))
+        if randomNum==22:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY22", color=0xff0000))
+        if randomNum==23:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY23", color=0xff0000))
+        if randomNum==24:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY24", color=0xff0000))
+        if randomNum==25:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY25", color=0xff0000))
+        if randomNum==26:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY26", color=0xff0000))
+        if randomNum==27:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY27", color=0xff0000))
+        if randomNum==28:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY28", color=0xff0000))
+        if randomNum==29:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY29", color=0xff0000))
+        if randomNum==30:
+            await message.channel.send(embed=discord.Embed(title="?RDKEY30", color=0xff0000))  
+
+        
     if message.content.startswith("오"):                     
         msg = await message.channel.send("Let's laugh for five seconds hahahaha.")
         await asyncio.sleep(4.0)
@@ -859,7 +1059,7 @@ async def on_message(message):
 
                  
 
-    if message.content.startswith("문재인") or message.content.startswith("전라도") or message.content.startswith("홍어") or message.content.startswith("통구이"):
+    if message.content.startswith("문재인") or message.content.startswith("전라도") or message.content.startswith("홍어") or message.content.startswith("통구이") or message.content.startswith("조선") or message.content.startswith("학벌") or message.content.startswith("인서울") or message.content.startswith("시바") or message.content.startswith("에휴") or message.content.startswith("아님말고") or message.content.startswith("아님 말고") or message.content.startswith("그냥") or message.content.startswith("쟤") or message.content.startswith("짱") or message.content.startswith("이 새끼") or message.content.startswith("뒤지") or message.content.startswith("뒤져"):
         msg = await message.channel.send("Doribot has detected an inappropriate expression!")
         await asyncio.sleep(4.0)
         await msg.edit(content="말 좀 이쁘게 써줘..삭제하는 거 힘들어.")      
@@ -3748,6 +3948,6 @@ async def on_message(message):
             await message.channel.send("Error : Not existing player", embed=embed)
                           
                                           
-                                                  
+                                                
 accross_token = os.environ["BOT_TOKEN"]
 app.run(accross_token)
