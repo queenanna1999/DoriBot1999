@@ -138,7 +138,7 @@ async def on_message(message):
             await message.author.dm_channel.send("2021.07.07.수요일부터 도리봇은 미래가 창창한 기업들을 추천해주며, 개인정보 보호를 위한 보안용 랜덤 비밀번호를 생성합니다. ") 
             await message.author.dm_channel.send("###############################")            
             await message.author.dm_channel.send("Would recommend to you.")
-            await message.author.dm_channel.send("Say ?MBTI")
+            await message.author.dm_channel.send("Say ?주식 or ?RD_PassCode")
         elif message.author.dm_channel is None:
             channel = await message.author.create_dm()
             await message.send("###############################")
@@ -146,7 +146,7 @@ async def on_message(message):
             await message.send("2021.07.07.수요일부터 도리봇은 미래가 창창한 기업들을 추천해주며, 개인정보 보호를 위한 보안용 랜덤 비밀번호를 생성합니다.  ")  
             await message.send("###############################")            
             await channel.send("Would recommend to you.")
-            await channel.send("Say ?MBTI")    
+            await channel.send("Say ?주식 or ?RD_PassCode")    
         
 
     if message.content.startswith("이스라엘"):
